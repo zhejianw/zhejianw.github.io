@@ -1,14 +1,10 @@
 ---
 layout: single
-title: "Research"
-permalink: /research/
+title: "Research Statement"
+permalink: /research-statement/
 author_profile: true
 ---
 
-# Research Statement
+You can view my Research Statement below or [download the PDF here](/files/research_statement.pdf){:target="_blank"}.
 
-👉 [**Download Research Statement (PDF)**](/files/Research_Statement.pdf){:target="_blank"}
-
----
-
-I study how technology access and government interventions affect human capital formation, focusing on development, education, and digital policy. My research combines quasi-experimental methods and large-scale microdata to understand behavioral and welfare consequences of digital regulations.
+<embed src="/files/research_statement.pdf" type="application/pdf" width="100%" height="900px" />
