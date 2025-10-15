@@ -4,7 +4,6 @@ collection: teaching
 type: "Undergraduate Courses"
 permalink: /teaching/2022-fall-instructor
 venue: "University of Delaware, Department of Economics"
-date: 2022-09-01
 location: "Newark, Delaware, USA"
 ---
 
