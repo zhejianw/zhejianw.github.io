@@ -13,12 +13,10 @@ location: "Newark, Delaware, USA"
 - **Introduction to Management Information Systems (MISY 261)** – Spring 2024  
 - **Quantitative Microeconomic Theory (ECON 301)** – Fall 2023  
 - **Urban Economics (ECON 393)** – Fall 2023  
+- **Economics of Health Policy (ECON 367)** – Fall 2021  
 
 ### Graduate Courses
 - **Microeconomic Theory I (ECON 811)** – Fall 2021  
 - **Microeconomic Theory II (ECON 813)** – Spring 2022  
-
-### Other
-- **Economics of Health Policy**, Fall 2021  
 
 As a **Teaching Assistant**, I supported instruction through leading review sessions, grading assignments and exams, and providing one-on-one assistance to students. These roles strengthened my ability to explain complex material clearly and to tailor instruction to different levels of quantitative preparation.
