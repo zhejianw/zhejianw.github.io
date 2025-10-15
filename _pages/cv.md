@@ -11,8 +11,8 @@ redirect_from:
 
 You can download my latest CV here:
 
-👉 [**Download CV (PDF)**](/files/Zhejian_Wang_CV.pdf){:target="_blank"}
+👉 [**Download CV (PDF)**](/files/Zhejian_CV.pdf){:target="_blank"}
 
 ---
 
-<embed src="/files/Zhejian_Wang_CV.pdf" type="application/pdf" width="100%" height="1000px" />
+<embed src="/files/Zhejian_CV.pdf" type="application/pdf" width="100%" height="1000px" />
