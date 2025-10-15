@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant Roles"
+title: "Teaching Assistant"
 collection: teaching
 type: "Undergraduate and Graduate Courses"
 permalink: /teaching/ta-roles
