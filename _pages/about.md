@@ -1,9 +1,10 @@
 ---
-layout: home
+layout: single
 title: "Welcome"
 permalink: /
 author_profile: true
 ---
+
 
 Welcome!
 
