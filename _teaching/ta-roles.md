@@ -5,6 +5,7 @@ type: "Undergraduate and Graduate Courses"
 permalink: /teaching/ta-roles
 venue: "University of Delaware, Department of Economics (multiple semesters, 2021–2025)"
 date: 2025-01-02
+show_date: false
 location: "Newark, Delaware, USA"
 ---
 
