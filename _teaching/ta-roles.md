@@ -3,7 +3,8 @@ title: "Teaching Assistant Roles"
 collection: teaching
 type: "Undergraduate and Graduate Courses"
 permalink: /teaching/ta-roles
-venue: "University of Delaware, Department of Economics"
+venue: "University of Delaware, Department of Economics (multiple semesters, 2021–2025)"
+date: 2025-01-02
 location: "Newark, Delaware, USA"
 ---
 
