@@ -3,10 +3,12 @@ title: "Instructor (Discussion Sections)"
 collection: teaching
 type: "Undergraduate Courses"
 permalink: /teaching/2022-fall-instructor
-venue: "University of Delaware, Department of Economics (multiple semesters, 2022–2023)"
-date: 2025-01-01
+venue: "University of Delaware, Department of Economics"
+date: 2022-09-01
+show_date: false
 location: "Newark, Delaware, USA"
 ---
+
 
 ### Courses Taught
 - **Introduction to Microeconomics (ECON 101)** – Fall 2022  
