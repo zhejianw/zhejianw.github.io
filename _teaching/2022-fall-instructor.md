@@ -3,7 +3,8 @@ title: "Instructor (Discussion Sections)"
 collection: teaching
 type: "Undergraduate Courses"
 permalink: /teaching/2022-fall-instructor
-venue: "University of Delaware, Department of Economics"
+venue: "University of Delaware, Department of Economics (multiple semesters, 2022–2023)"
+date: 2025-01-01
 location: "Newark, Delaware, USA"
 ---
 
