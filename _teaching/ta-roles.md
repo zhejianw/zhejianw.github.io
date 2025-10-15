@@ -1,0 +1,24 @@
+---
+title: "Teaching Assistant Roles"
+collection: teaching
+type: "Undergraduate and Graduate Courses"
+permalink: /teaching/ta-roles
+venue: "University of Delaware, Department of Economics"
+date: 2021-09-01
+location: "Newark, Delaware, USA"
+---
+
+### Undergraduate Courses
+- **Data Analysis for Economics and Business (ECON 306)** – Spring 2025  
+- **Introduction to Management Information Systems (MISY 261)** – Spring 2024  
+- **Quantitative Microeconomic Theory (ECON 301)** – Fall 2023  
+- **Urban Economics (ECON 393)** – Fall 2023  
+
+### Graduate Courses
+- **Microeconomic Theory I (ECON 811)** – Fall 2021  
+- **Microeconomic Theory II (ECON 813)** – Spring 2022  
+
+### Other
+- **Economics of Health Policy**, Fall 2021  
+
+As a **Teaching Assistant**, I supported instruction through leading review sessions, grading assignments and exams, and providing one-on-one assistance to students. These roles strengthened my ability to explain complex material clearly and to tailor instruction to different levels of quantitative preparation.
