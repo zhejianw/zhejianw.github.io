@@ -16,7 +16,7 @@ repository: "zhejianw/zhejianw.github.io"
 
 # Sidebar Author Information
 author:
-  avatar: "profile.png"
+  avatar: "/images/19.jpg"
   name: "Zhejian Wang"
   pronouns: "he/him"
   bio: "Ph.D. Candidate in Economics at the University of Delaware. Research in development economics, education, and digital policy."
