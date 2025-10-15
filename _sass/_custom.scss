@@ -1,0 +1,7 @@
+.author__avatar img {
+  width: 180px;         /* 控制显示大小 */
+  height: 180px;        /* 强制为正方形 */
+  object-fit: cover;    /* 自动裁剪 */
+  border-radius: 12px;  /* 方形圆角效果 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
