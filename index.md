@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 ---
 
-# Welcome!
+Welcome!
 
 I am **Zhejian Wang**, a Ph.D. Candidate in Economics at the University of Delaware.  
 My research focuses on **development economics**, **education**, and **digital policy**, 
