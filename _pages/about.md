@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-Welcome!
+
 
 I am **Zhejian Wang**, a Ph.D. Candidate in Economics at the **University of Delaware**.  
 My research focuses on *development economics, education, and digital policy*, examining how technology access and government interventions shape youth behavior and human-capital formation.  
