@@ -31,17 +31,6 @@ The study illustrates how large-scale data and automation can enhance empirical 
 
 ---
 
-## Research in Progress
-
-**Property Rights and Family Formation: Evidence from China’s 2011 Marriage Law Interpretation**  
-
-This project investigates how clarifying premarital property rights affected marriage and fertility decisions in China.  
-Using one-percent population census microdata, I exploit the 2011 judicial interpretation of the Marriage Law as a quasi-experimental shock.  
-Preliminary results show that the reform reduced marriage rates and delayed childbirth, especially among urban and higher-educated women, consistent with increased perceived financial risks of marriage.  
-This research contributes to understanding how property-rights institutions shape family formation and gender dynamics in developing economies.
-
----
-
 ## Future Research
 
 My future work extends these projects in several directions:  
@@ -52,6 +41,4 @@ My future work extends these projects in several directions:
 
 ---
 
-## Download
 
-- [Full Research Statement (PDF)](/files/Research_Statement.pdf){:target="_blank"}
