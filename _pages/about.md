@@ -15,4 +15,4 @@ My job-market paper, *“Restricting Video Games in China: Effects on Time Use, 
 
 📢 **I am on the 2025–26 academic job market.**  
 
-🔗 [Research](/research) [Teaching](/teaching) [CV](/files/Zhejian_CV.pdf) [Contact](/contact)
+🔗 [CV](/files/Zhejian_CV.pdf) 
