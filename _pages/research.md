@@ -15,7 +15,7 @@ Using nationally representative panel data (CFPS 2012–2022) and complementary 
 The restriction substantially reduced gaming and total internet use but did not improve study time, academic achievement, or health.  
 However, modest gains emerged in academically intensive settings, such as top-track high schools.  
 The findings highlight both the power and limits of strict behavioral regulation in improving human capital.  
-[Read Paper (PDF)](/files/JMP.pdf) • [Abstract](/files/JMP_Abstract.pdf)
+[Read Paper (PDF)](/files/JMP.pdf) 
 
 ---
 
@@ -27,7 +27,7 @@ This paper complements my job market paper by analyzing how game developers and 
 Using a self-constructed dataset of mobile game downloads, revenues, and activity—collected through automated web scraping and Python processing—I show that youth-oriented games suffered sharp declines in engagement, while adult games adjusted through content shifts and marketing strategies.  
 Event-study and difference-in-differences results reveal that gameplay concentrated on permitted weekends, reflecting behavioral adaptation under algorithmic enforcement.  
 The study illustrates how large-scale data and automation can enhance empirical research on technology regulation.  
-[Draft (PDF)](/files/OnlineGaming_Market.pdf)
+[Draft (PDF)](/files/chapter2.pdf)
 
 ---
 
