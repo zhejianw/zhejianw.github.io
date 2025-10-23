@@ -8,13 +8,9 @@ author_profile: true
 ## Job Market Paper
 
 **Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**  
-*Major revision, Journal of Development Economics*  
+*Resubmission invited to Journal of Development Economics*  
 
-This paper evaluates China’s 2021 gaming restriction that limits minors’ online play to one hour per day on weekends.  
-Using nationally representative panel data (CFPS 2012–2022) and complementary quasi-experimental strategies—including a difference-in-differences design and a regression kink design—I estimate the policy’s effects on minors’ digital behavior, academic performance, and well-being.  
-The restriction substantially reduced gaming and total internet use but did not improve study time, academic achievement, or health.  
-However, modest gains emerged in academically intensive settings, such as top-track high schools.  
-The findings highlight both the power and limits of strict behavioral regulation in improving human capital.  
+Abstract: In August 2021, China implemented a nationwide restriction banning weekday gaming for minors and limiting weekend play to one hour. Using nationally representative survey data and a difference-in-differences design, I find that the policy substantially reduced minors’ Internet and gaming time but did not improve academic performance, study effort, or health. Effects were stronger for girls and students from smaller households, yet consistent across regions with different Internet coverage. Peer effects within boarding schools indicate that behavioral restrictions spread through social networks, amplifying compliance even among untreated older students. Self-reported well-being declined modestly, suggesting short-run mental health costs from lost digital leisure. Complementary evidence from a city-level regression-kink design confirms no test-score gains. Overall, the policy effectively curtailed online activity but yielded limited human-capital benefits, highlighting that digital regulations without supportive measures may reduce welfare without improving learning outcomes. 
 [Read Paper (PDF)](/files/JMP.pdf) 
 
 ---
@@ -23,10 +19,7 @@ The findings highlight both the power and limits of strict behavioral regulation
 
 **Restricting Minors’ Online Gaming: Compliance, Evasion, and Market Responses in China**  
 
-This paper complements my job market paper by analyzing how game developers and players responded to the 2021 regulation.  
-Using a self-constructed dataset of mobile game downloads, revenues, and activity—collected through automated web scraping and Python processing—I show that youth-oriented games suffered sharp declines in engagement, while adult games adjusted through content shifts and marketing strategies.  
-Event-study and difference-in-differences results reveal that gameplay concentrated on permitted weekends, reflecting behavioral adaptation under algorithmic enforcement.  
-The study illustrates how large-scale data and automation can enhance empirical research on technology regulation.  
+Abstract: This paper analyzes how the 2021 gaming restriction for minors in China reshaped digital markets using difference-in-differences and event-study analyses of app-level downloads and revenues. The regulation sharply reduced usage of youth-oriented games while leaving adult-oriented titles less affected and stimulating growth in substitute activities such as e-books and social media. Gaming activity fell on weekdays but concentrated during permitted weekend hours, revealing strategic adaptation by users and firms. Market reactions were highly heterogeneous: some developers rebranded products, adjusted monetization models, or shifted advertising toward adult audiences. The results demonstrate that stringent behavioral regulation can generate substantial spillovers across adjacent digital sectors, influencing platform competition and business incentives. Ongoing work extends this analysis by exploring longer-run firm dynamics, entry and exit patterns, and how digital restrictions interact with innovation and content creation in the broader app ecosystem.
 [Read Paper (PDF)](/files/chapter2.pdf)
 
 ---
