@@ -27,7 +27,7 @@ This paper complements my job market paper by analyzing how game developers and 
 Using a self-constructed dataset of mobile game downloads, revenues, and activity—collected through automated web scraping and Python processing—I show that youth-oriented games suffered sharp declines in engagement, while adult games adjusted through content shifts and marketing strategies.  
 Event-study and difference-in-differences results reveal that gameplay concentrated on permitted weekends, reflecting behavioral adaptation under algorithmic enforcement.  
 The study illustrates how large-scale data and automation can enhance empirical research on technology regulation.  
-[Draft (PDF)](/files/chapter2.pdf)
+[Read Paper (PDF)](/files/chapter2.pdf)
 
 ---
 
