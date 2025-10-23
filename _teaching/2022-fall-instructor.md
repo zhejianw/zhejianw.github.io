@@ -1,5 +1,5 @@
 ---
-title: "Instructor (Discussion Sections)"
+title: "Instructor"
 collection: teaching
 type: "Undergraduate Courses"
 permalink: /teaching/2022-fall-instructor
