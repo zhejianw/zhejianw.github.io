@@ -17,7 +17,7 @@ Abstract: In August 2021, China implemented a nationwide restriction banning wee
 
 ## Working Paper
 
-**Restricting Minors’ Online Gaming: Compliance, Evasion, and Market Responses in China**  
+**Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**  
 
 Abstract: This paper analyzes how the 2021 gaming restriction for minors in China reshaped digital markets using difference-in-differences and event-study analyses of app-level downloads and revenues. The regulation sharply reduced usage of youth-oriented games while leaving adult-oriented titles less affected and stimulating growth in substitute activities such as e-books and social media. Gaming activity fell on weekdays but concentrated during permitted weekend hours, revealing strategic adaptation by users and firms. Market reactions were highly heterogeneous: some developers rebranded products, adjusted monetization models, or shifted advertising toward adult audiences. The results demonstrate that stringent behavioral regulation can generate substantial spillovers across adjacent digital sectors, influencing platform competition and business incentives. Ongoing work extends this analysis by exploring longer-run firm dynamics, entry and exit patterns, and how digital restrictions interact with innovation and content creation in the broader app ecosystem.
 [Read Paper (PDF)](/files/chapter2.pdf)
