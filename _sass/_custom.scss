@@ -1,7 +1,167 @@
+/* ==========================================================================
+   CUSTOM STYLES — Academic Job Market Website
+   ========================================================================== */
+
+/* Avatar styling */
 .author__avatar img {
-  width: 180px;         /* 控制显示大小 */
-  height: 180px;        /* 强制为正方形 */
-  object-fit: cover;    /* 自动裁剪 */
-  border-radius: 12px;  /* 方形圆角效果 */
+  width: 180px;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   REFERENCES GRID — Homepage
+   ========================================================================== */
+
+.references-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 2em;
+  margin: 1em 0;
+}
+
+.reference-item {
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.reference-item strong {
+  font-size: 1em;
+}
+
+@media (max-width: 600px) {
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   PAPER STATUS — Research pages
+   ========================================================================== */
+
+.paper-status {
+  display: block;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 0.2em;
+  margin-bottom: 0.8em;
+}
+
+/* ==========================================================================
+   ABSTRACT TOGGLE — Collapsible abstracts
+   ========================================================================== */
+
+details {
+  margin: 0.5em 0 1em 0;
+}
+
+.abstract-toggle {
+  cursor: pointer;
+  color: var(--global-link-color);
+  font-weight: 600;
+  font-size: 0.9em;
+  padding: 0.3em 0;
+}
+
+.abstract-toggle:hover {
+  color: var(--global-link-color-hover);
+}
+
+.abstract-text {
+  font-size: 0.92em;
+  line-height: 1.65;
+  color: #444;
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+  border-left: 3px solid #e0e0e0;
+}
+
+/* ==========================================================================
+   SECTION SPACING — Tighter content layout
+   ========================================================================== */
+
+.page__content h2 {
+  margin-top: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+}
+
+.page__content h2:first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   FOOTER — Simplified
+   ========================================================================== */
+
+.page__footer {
+  font-size: 0.8em;
+}
+
+/* ==========================================================================
+   CV PDF EMBED — Responsive
+   ========================================================================== */
+
+.cv-embed-wrapper {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  max-height: 1200px;
+}
+
+.cv-embed-wrapper embed {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Object fallback (supplements existing embed rule) */
+.cv-embed-wrapper object {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Mobile: hide embed (PDF viewers don't work inline on most phones) */
+@media (max-width: 600px) {
+  .cv-embed-wrapper {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   JOB MARKET MATERIALS — Button row on homepage
+   ========================================================================== */
+
+.jm-materials {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+.jm-materials .btn {
+  margin: 0.3em 0.2em;
+}
+
+/* Responsive: stack buttons on mobile */
+@media (max-width: 600px) {
+  .jm-materials .btn {
+    display: block;
+    margin: 0.4em auto;
+    max-width: 280px;
+  }
+}
+
+/* ==========================================================================
+   FOOTER — Enhanced with quick links
+   ========================================================================== */
+
+.page__footer-copyright {
+  margin-top: 0.5em;
 }

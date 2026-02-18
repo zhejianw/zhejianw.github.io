@@ -13,7 +13,7 @@
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{% if page.lang == 'zh' %}{{ base_path }}/zh/{% else %}{{ base_path }}/{% endif %}">{{ site.title }}</a>
+            <a href="{% if page.lang == 'zh' %}{{ base_path }}/zh/{% else %}{{ base_path }}/{% endif %}">{% if page.lang == 'zh' and site.title_zh %}{{ site.title_zh }}{% else %}{{ site.title }}{% endif %}</a>
           </li>
           {% for link in nav_items %}
             {% if link.url contains 'http' %}
@@ -35,9 +35,6 @@
             {% endif %}
           </li>
 
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>

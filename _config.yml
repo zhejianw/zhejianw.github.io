@@ -7,6 +7,7 @@
 locale: "en-US"
 site_theme: "default"
 title: "Zhejian Wang - Economics Ph.D. Candidate"
+title_zh: "汪哲健 - 经济学博士候选人"
 title_separator: "-"
 name: &name "Zhejian Wang"
 description: &description "Economics Ph.D. Candidate at the University of Delaware"
@@ -35,6 +36,9 @@ author_zh:
   employer: "特拉华大学"
   email: "zhejianw@udel.edu"
   github: "zhejianw"
+
+# Last updated date (displayed in footer)
+last_updated: "2025-02-18"
 
 # Publication categories
 publication_category:
@@ -112,31 +116,8 @@ kramdown:
   toc_levels: 1..6
 
 # ============================================
-# Navigation Menu (Top Bar)
+# Navigation is defined in _data/navigation.yml
 # ============================================
-main:
-  - title: "Home"
-    url: /
-  - title: "Research"
-    url: /research/
-  - title: "Teaching"
-    url: /teaching/
-  - title: "CV"
-    url: /files/Zhejian_CV.pdf
-
-# ============================================
-# Collections (custom content folders)
-# ============================================
-collections:
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
 
 # ============================================
 # Default layouts
@@ -147,24 +128,6 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
       author_profile: true
 
 # ============================================

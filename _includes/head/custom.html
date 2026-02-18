@@ -2,6 +2,11 @@
 
 <!-- start custom head snippets -->
 
+<!-- Google Fonts — Source Serif 4 for body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
@@ -13,5 +18,13 @@
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
+
+<!-- OpenGraph / Social Sharing -->
+<meta property="og:title" content="{{ page.title | default: site.title }}" />
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+<meta property="og:image" content="{{ site.url }}/images/19.jpg" />
+<meta name="twitter:card" content="summary" />
 
 <!-- end custom head snippets -->

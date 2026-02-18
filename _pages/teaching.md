@@ -35,5 +35,11 @@ These courses emphasized applying core economic principles to real-world problem
 - *Microeconomic Theory I (ECON 811)* — Fall 2021  
 - *Microeconomic Theory II (ECON 813)* — Spring 2022  
 
-As a Teaching Assistant, I supported instruction by leading review sessions, grading assignments and exams, and providing one-on-one assistance to students.  
+As a Teaching Assistant, I supported instruction by leading review sessions, grading assignments and exams, and providing one-on-one assistance to students.
 These roles strengthened my ability to explain complex material clearly and to tailor instruction to different levels of quantitative preparation.
+
+---
+
+## Teaching Evaluations
+
+Teaching evaluations are available upon request.
