@@ -2,6 +2,14 @@
 
 <meta charset="utf-8">
 
+{% if page.ref %}
+  {% assign en_page = site.pages | where: "ref", page.ref | where: "lang", "en" | first %}
+  {% assign zh_page = site.pages | where: "ref", page.ref | where: "lang", "zh" | first %}
+  {% if en_page %}<link rel="alternate" hreflang="en" href="{{ site.url }}{{ en_page.url }}" />{% endif %}
+  {% if zh_page %}<link rel="alternate" hreflang="zh" href="{{ site.url }}{{ zh_page.url }}" />{% endif %}
+  {% if en_page %}<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ en_page.url }}" />{% endif %}
+{% endif %}
+
 {% include seo.html %}
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">

@@ -3,6 +3,8 @@ layout: single
 title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
+lang: en
+ref: cv
 redirect_from:
   - /resume
 ---

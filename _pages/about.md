@@ -3,6 +3,8 @@ layout: single
 title: "Welcome"
 permalink: /
 author_profile: true
+lang: en
+ref: home
 ---
 
 I am **Zhejian Wang**, a Ph.D. Candidate in Economics at the **University of Delaware**.  

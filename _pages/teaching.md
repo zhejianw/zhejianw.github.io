@@ -3,6 +3,8 @@ layout: single
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
+lang: en
+ref: teaching
 ---
 
 ## Instructor

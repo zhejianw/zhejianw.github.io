@@ -25,6 +25,17 @@ author:
   email: "zhejianw@udel.edu"
   github: "zhejianw"
 
+# Chinese Author Information (for /zh/ pages)
+author_zh:
+  avatar: "19.jpg"
+  name: "汪哲健"
+  pronouns: "他/him"
+  bio: "特拉华大学经济学博士候选人。研究方向：发展经济学、教育与数字政策。"
+  location: "美国特拉华州纽瓦克"
+  employer: "特拉华大学"
+  email: "zhejianw@udel.edu"
+  github: "zhejianw"
+
 # Publication categories
 publication_category:
   workingpapers:

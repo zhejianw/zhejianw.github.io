@@ -3,6 +3,8 @@ layout: single
 title: "Research"
 permalink: /research/
 author_profile: true
+lang: en
+ref: research
 ---
 
 ## Research Papers
