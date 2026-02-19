@@ -7,7 +7,11 @@ lang: en
 ref: home
 ---
 
+<div class="hero-intro" markdown="1">
+
 I am **Zhejian Wang**, a Ph.D. candidate in Economics at the **University of Delaware** (expected 2026). My research lies in **applied microeconomics** and **development economics**, with a focus on how digitization and institutional change reshape behavior, markets, and welfare, particularly in China.
+
+</div>
 
 <div class="jm-materials">
   <a href="/files/Zhejian_CV.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a>

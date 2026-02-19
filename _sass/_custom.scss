@@ -1,8 +1,12 @@
 /* ==========================================================================
-   CUSTOM STYLES — Academic Job Market Website
+   PREMIUM REDESIGN — Custom Overrides
+   Academic Job Market Website — Zhejian Wang
    ========================================================================== */
 
-/* Avatar styling */
+/* ==========================================================================
+   AVATAR STYLING
+   ========================================================================== */
+
 .author__avatar img {
   width: 180px;
   height: auto;
@@ -10,7 +14,454 @@
   object-fit: cover;
   object-position: top;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.1);
+}
+
+/* ==========================================================================
+   SELECTION STYLING
+   ========================================================================== */
+
+::selection {
+  background: rgba(107, 91, 149, 0.2);
+  color: #1a1a2e;
+}
+
+::-moz-selection {
+  background: rgba(107, 91, 149, 0.2);
+  color: #1a1a2e;
+}
+
+/* ==========================================================================
+   SPACING & LAYOUT — Section headings with decorative gold bar
+   ========================================================================== */
+
+.page__content {
+  h2 {
+    margin-top: 3rem;
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid var(--global-border-color);
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--gold-accent);
+      margin-bottom: 0.5em;
+      border-radius: 2px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1.15em;
+  }
+
+  /* Readable line length */
+  p, li, dl {
+    max-width: 780px;
+  }
+}
+
+/* Decorative horizontal rules with centered diamond */
+.page__content hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--global-border-color);
+  position: relative;
+
+  &::after {
+    content: "◆";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--global-bg-color);
+    padding: 0 0.8em;
+    color: var(--gold-accent);
+    font-size: 0.65em;
+  }
+}
+
+/* ==========================================================================
+   SIDEBAR ENHANCEMENTS
+   ========================================================================== */
+
+.sidebar {
+  @media screen and (min-width: 1024px) {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--global-border-color);
+    padding: 1.5em 1em;
+  }
+}
+
+.sidebar .author__name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--gold-accent);
+    margin-top: 8px;
+    border-radius: 1px;
+  }
+}
+
+.author__bio {
+  font-size: 0.85em;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+}
+
+.author__urls-wrapper {
+  .btn--inverse {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: #fff;
+    }
+  }
+}
+
+/* ==========================================================================
+   BLOCKQUOTE STYLING
+   ========================================================================== */
+
+blockquote {
+  border-left: 3px solid var(--gold-accent) !important;
+  background: var(--sidebar-bg);
+  padding: 1em 1.5em !important;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+/* ==========================================================================
+   OLDSTYLE NUMERALS
+   ========================================================================== */
+
+.page__content p,
+.page__content li {
+  font-feature-settings: "onum" 1;
+}
+
+/* ==========================================================================
+   PAGE TITLE — Premium serif treatment
+   ========================================================================== */
+
+.page__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.2em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color);
+}
+
+/* ==========================================================================
+   HOMEPAGE HERO — Lede paragraph styling
+   ========================================================================== */
+
+.hero-intro {
+  p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--global-text-color);
+  }
+
+  p:first-child {
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================================================================
+   PREMIUM PILL BUTTONS — Job Market Materials
+   ========================================================================== */
+
+.jm-materials {
+  margin: 1.8em 0;
+  text-align: center;
+
+  .btn, .btn--info {
+    display: inline-block;
+    padding: 0.55em 1.6em;
+    margin: 0.3em 0.3em;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent-color) !important;
+    background: transparent !important;
+    border: 1.5px solid var(--accent-color) !important;
+    border-radius: 50px !important;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--accent-color) !important;
+      color: #fff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(107, 91, 149, 0.3);
+      text-decoration: none;
+    }
+
+    i {
+      margin-right: 0.3em;
+    }
+  }
+}
+
+/* ==========================================================================
+   NAVIGATION BAR — Frosted glass & refined styling
+   ========================================================================== */
+
+.masthead {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(250, 250, 248, 0.88) !important;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &::after {
+    background: transparent !important;
+  }
+}
+
+html[data-theme="dark"] .masthead {
+  background: rgba(26, 26, 46, 0.88) !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+.masthead__menu-item {
+  a {
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+}
+
+/* Active underline in accent color */
+.greedy-nav .visible-links a::before {
+  background: var(--accent-color) !important;
+  height: 2px;
+}
+
+/* Site title in serif */
+.masthead__menu-item--lg a {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+/* ==========================================================================
+   FOOTER — Dark, spacious, with gradient transition
+   ========================================================================== */
+
+.page__footer {
+  background-color: var(--global-footer-bg-color) !important;
+  color: #b0aec0;
+  border-top: none;
+  position: relative;
+
+  /* Gradient transition from content to footer */
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--global-footer-bg-color));
+    pointer-events: none;
+  }
+
+  footer {
+    padding: 2.5em 1em;
+  }
+
+  a {
+    color: var(--accent-color) !important;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #9b8bc5 !important;
+      text-decoration: none;
+    }
+  }
+
+  .fas, .fab, .far, .fal {
+    color: #8a889a;
+  }
+}
+
+.page__footer-follow {
+  .social-icons {
+    li {
+      a {
+        color: #b0aec0 !important;
+
+        &:hover {
+          color: var(--accent-color) !important;
+        }
+      }
+    }
+  }
+}
+
+.page__footer-copyright {
+  color: #6a687a;
+  font-size: 0.72rem;
+  margin-top: 1em;
+}
+
+/* ==========================================================================
+   RESEARCH PAGE — Paper Cards
+   ========================================================================== */
+
+.paper-card {
+  background: var(--card-bg);
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-left-color: var(--accent-color);
+    transform: translateY(-1px);
+  }
+
+  /* Paper title in serif */
+  h3, p > strong:first-child {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
+  h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    line-height: 1.35;
+
+    &::before {
+      display: none;
+    }
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  /* Coauthor text lighter */
+  > p {
+    color: var(--global-text-color-light);
+    font-size: 0.92em;
+    line-height: 1.7;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+/* Status pill badges */
+.paper-status {
+  display: inline-block !important;
+  padding: 0.2em 0.75em;
+  margin: 0.2em 0.3em 0.5em 0;
+  font-size: 0.73rem;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-weight: 500;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+  background: rgba(107, 91, 149, 0.1);
+  color: var(--accent-color);
+  border: 1px solid rgba(107, 91, 149, 0.2);
+}
+
+/* Abstract toggle — Elegant expander */
+details {
+  margin: 0.5em 0 0.8em 0;
+}
+
+.abstract-toggle {
+  cursor: pointer;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.85rem;
+  font-family: "Inter", -apple-system, sans-serif;
+  padding: 0.3em 0;
+  transition: color 0.3s ease;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::before {
+    content: "▸ ";
+    color: var(--gold-accent);
+    display: inline-block;
+  }
+
+  &:hover {
+    color: var(--accent-color-hover);
+  }
+}
+
+details[open] .abstract-toggle::before {
+  content: "▾ ";
+}
+
+.abstract-text {
+  font-size: 0.88em;
+  line-height: 1.7;
+  color: var(--global-text-color-light);
+  margin-top: 0.6em;
+  padding: 0.8em 0 0 0;
+  border-top: 1px solid var(--global-border-color);
+  border-left: none;
+  padding-left: 0;
+  animation: abstractFadeIn 0.3s ease;
+}
+
+@keyframes abstractFadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==========================================================================
@@ -41,70 +492,42 @@
 }
 
 /* ==========================================================================
-   PAPER STATUS — Research pages
+   TEACHING PAGE — Card layout
    ========================================================================== */
 
-.paper-status {
-  display: block;
-  color: #666;
-  font-size: 0.9em;
-  margin-top: 0.2em;
-  margin-bottom: 0.8em;
+.teaching-card {
+  background: var(--card-bg);
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+
+  &--instructor {
+    border-left: 3px solid var(--gold-accent);
+  }
+
+  &--ta {
+    border-left: 3px solid var(--accent-color);
+  }
+
+  h2 {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  /* Course names in italic serif */
+  li em, li i {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.02em;
+  }
 }
 
 /* ==========================================================================
-   ABSTRACT TOGGLE — Collapsible abstracts
-   ========================================================================== */
-
-details {
-  margin: 0.5em 0 1em 0;
-}
-
-.abstract-toggle {
-  cursor: pointer;
-  color: var(--global-link-color);
-  font-weight: 600;
-  font-size: 0.9em;
-  padding: 0.3em 0;
-}
-
-.abstract-toggle:hover {
-  color: var(--global-link-color-hover);
-}
-
-.abstract-text {
-  font-size: 0.92em;
-  line-height: 1.65;
-  color: #444;
-  margin-top: 0.5em;
-  padding-left: 0.5em;
-  border-left: 3px solid #e0e0e0;
-}
-
-/* ==========================================================================
-   SECTION SPACING — Tighter content layout
-   ========================================================================== */
-
-.page__content h2 {
-  margin-top: 1.5em;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #eee;
-}
-
-.page__content h2:first-child {
-  margin-top: 0;
-}
-
-/* ==========================================================================
-   FOOTER — Simplified
-   ========================================================================== */
-
-.page__footer {
-  font-size: 0.8em;
-}
-
-/* ==========================================================================
-   CV PDF EMBED — Responsive
+   CV PAGE — Premium embed and download button
    ========================================================================== */
 
 .cv-embed-wrapper {
@@ -112,56 +535,206 @@ details {
   height: 80vh;
   min-height: 600px;
   max-height: 1200px;
+  background: #fff;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(26, 26, 46, 0.08);
+  margin-top: 1rem;
+
+  embed, object {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 }
 
-.cv-embed-wrapper embed {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-}
-
-/* Object fallback (supplements existing embed rule) */
-.cv-embed-wrapper object {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-}
-
-/* Mobile: hide embed (PDF viewers don't work inline on most phones) */
 @media (max-width: 600px) {
   .cv-embed-wrapper {
     display: none;
   }
 }
 
-/* ==========================================================================
-   JOB MARKET MATERIALS — Button row on homepage
-   ========================================================================== */
+/* Premium filled button */
+.btn-premium {
+  display: inline-block;
+  padding: 0.65em 1.8em;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #fff !important;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none !important;
+  letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(107, 91, 149, 0.3);
 
-.jm-materials {
-  margin: 1.5em 0;
-  text-align: center;
-}
+  &:hover {
+    background: var(--accent-color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(107, 91, 149, 0.4);
+    color: #fff !important;
+  }
 
-.jm-materials .btn {
-  margin: 0.3em 0.2em;
-}
-
-/* Responsive: stack buttons on mobile */
-@media (max-width: 600px) {
-  .jm-materials .btn {
-    display: block;
-    margin: 0.4em auto;
-    max-width: 280px;
+  i {
+    margin-right: 0.4em;
   }
 }
 
 /* ==========================================================================
-   FOOTER — Enhanced with quick links
+   ANIMATIONS & MICRO-DETAILS
    ========================================================================== */
 
-.page__footer-copyright {
-  margin-top: 0.5em;
+/* Smooth link transitions */
+a {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Content fade-in on page load */
+.page__content {
+  animation: contentFadeIn 0.5s ease-out both;
+  animation-delay: 0.15s;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--global-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--global-border-color);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--global-text-color-light);
+  }
+}
+
+/* Subtle body background gradient */
+body {
+  background: linear-gradient(180deg, var(--global-bg-color) 0%, #f5f2ee 100%) !important;
+  background-attachment: fixed !important;
+}
+
+html[data-theme="dark"] body {
+  background: linear-gradient(180deg, var(--global-bg-color) 0%, #141425 100%) !important;
+}
+
+/* ==========================================================================
+   CHINESE LANGUAGE TYPOGRAPHY
+   ========================================================================== */
+
+[lang="zh"] {
+  .page__content p,
+  .page__content li {
+    line-height: 2.0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Serif SC", "Cormorant Garamond", "STSong", serif;
+    line-height: 1.4;
+  }
+
+  body, .page__content {
+    font-family: "Noto Sans SC", "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.9;
+  }
+
+  .sidebar .author__name {
+    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
+  }
+
+  .paper-card h3,
+  .paper-card p > strong:first-child {
+    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
+  }
+
+  .teaching-card li em {
+    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
+  }
+
+  .page__title {
+    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
+  }
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  .page__title {
+    font-size: 1.6em;
+  }
+
+  .hero-intro p {
+    font-size: 1rem;
+  }
+
+  .paper-card,
+  .teaching-card {
+    padding: 1.2rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .jm-materials .btn,
+  .jm-materials .btn--info {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0.4em auto;
+    text-align: center;
+  }
+
+  .page__content h2 {
+    margin-top: 2rem;
+    font-size: 1.35em;
+  }
+
+  .page__content hr {
+    margin: 2rem 0;
+  }
+
+  .cv-embed-wrapper {
+    min-height: 500px;
+  }
+
+  .page__footer::before {
+    height: 30px;
+    top: -30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .paper-card h3 {
+    font-size: 1.02em;
+  }
+
+  .paper-status {
+    display: block !important;
+    width: fit-content;
+  }
+
+  .btn-premium {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }

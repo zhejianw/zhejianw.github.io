@@ -7,6 +7,8 @@ lang: zh
 ref: teaching
 ---
 
+<div class="teaching-card teaching-card--instructor" markdown="1">
+
 ## 主讲教师
 
 **本科课程**，经济学系，特拉华大学（2022–2023）
@@ -18,7 +20,9 @@ ref: teaching
 学生单独选择我的讨论课，我负责准备教学材料、授课、批改作业和答疑。
 这些课程注重将经济学核心原理应用于现实问题。在每次讨论课中，我融入了简短的实证练习和政策案例，以巩固理论概念并培养学生的分析和定量技能。
 
----
+</div>
+
+<div class="teaching-card teaching-card--ta" markdown="1">
 
 ## 助教
 
@@ -37,6 +41,8 @@ ref: teaching
 
 作为助教，我通过组织复习课、批改作业和考试、为学生提供一对一辅导来支持教学。
 这些经历增强了我清晰解释复杂材料的能力，以及根据学生不同的定量准备水平调整教学的能力。
+
+</div>
 
 ---
 

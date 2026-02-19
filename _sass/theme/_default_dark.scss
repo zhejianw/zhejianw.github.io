@@ -33,22 +33,31 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Dark theme for the site */
+/* Dark theme for the site — Premium dark palette */
 html[data-theme="dark"] {
-    --global-base-color                 : #{$background};
-    --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
-    --global-thead-color                : #{$background-lighter};
+    --global-base-color                 : #8b7bab;
+    --global-bg-color                   : #1a1a2e;
+    --global-footer-bg-color            : #12121f;
+    --global-border-color               : #2d2d45;
+    --global-dark-border-color          : #3a3a55;
+    --global-code-background-color      : #22223a;
+    --global-code-text-color            : #c5c3d4;
+    --global-fig-caption-color          : #8a889a;
+    --global-link-color                 : #9b8bc5;
+    --global-link-color-hover           : #b5a5dd;
+    --global-link-color-visited         : #8b7bab;
+    --global-masthead-link-color        : #e0dee8;
+    --global-masthead-link-color-hover  : #9b8bc5;
+    --global-text-color                 : #e8e6f0;
+    --global-text-color-light           : #a5a3b5;
+    --global-thead-color                : #2a2a42;
+
+    /* Premium redesign custom properties */
+    --accent-color                      : #9b8bc5;
+    --accent-color-hover                : #b5a5dd;
+    --gold-accent                       : #d4b97e;
+    --sidebar-bg                        : #1e1e34;
+    --card-bg                           : #22223a;
+    --card-shadow                       : 0 2px 8px rgba(0, 0, 0, 0.2);
+    --card-shadow-hover                 : 0 4px 16px rgba(0, 0, 0, 0.3);
 }

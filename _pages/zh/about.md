@@ -7,7 +7,11 @@ lang: zh
 ref: home
 ---
 
+<div class="hero-intro" markdown="1">
+
 我是**汪哲健**，**特拉华大学**经济学博士候选人（预计2026年毕业）。我的研究方向为**应用微观经济学**和**发展经济学**，聚焦数字化与制度变迁如何重塑行为、市场和福利，尤其关注中国的实证研究。
+
+</div>
 
 <div class="jm-materials">
   <a href="/files/Zhejian_CV.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 简历</a>
