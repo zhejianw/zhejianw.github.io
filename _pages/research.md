@@ -12,7 +12,7 @@ ref: research
 <div class="paper-card" markdown="1">
 
 [**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**](/files/JMP.pdf){:target="_blank"}
-<span class="paper-status">Under review</span>
+<span class="paper-status">Revise and resubmit</span>
 
 <details open>
 <summary class="abstract-toggle">Abstract</summary>

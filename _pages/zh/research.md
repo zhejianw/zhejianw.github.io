@@ -12,7 +12,7 @@ ref: research
 <div class="paper-card" markdown="1">
 
 [**限制中国的电子游戏：对时间分配、学业成就与健康的影响**](/files/JMP.pdf){:target="_blank"}
-<span class="paper-status">审稿中</span>
+<span class="paper-status">修改后重新提交</span>
 
 <details open>
 <summary class="abstract-toggle">摘要</summary>
