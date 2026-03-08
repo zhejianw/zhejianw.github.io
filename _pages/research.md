@@ -49,7 +49,7 @@ This paper studies how China's 2021 gaming restriction for minors reshaped digit
 <details>
 <summary class="abstract-toggle">Abstract</summary>
 <p class="abstract-text">
-We study whether highly visible academic "superstars" generate local human-capital spillovers by shifting beliefs and inducing schooling responses. Using microdata from China's 2010 Population Census, we construct county-by-cohort exposure to the first emergence of a provincial Gaokao top scorer (1990--2005) based on the top scorer's high-school location. Exploiting staggered timing across counties, we estimate event-study and staggered difference-in-differences models. Exposure increases educational attainment for cohorts plausibly able to respond -- students one to two years younger than the top scorer. In this window, exposure to a science-track top scorer reduces dropout, raises years of schooling by 0.267 years, and increases tertiary attainment, with four-year college completion rising by 2.9 percentage points.
+We study whether highly visible academic "superstars" generate local human-capital spillovers by shifting beliefs and inducing schooling responses. Using large-scale population-based data with detailed geographic identifiers, we construct county-by-cohort exposure to the first emergence of a provincial Gaokao top scorer (1990--2005) based on the top scorer's high-school location. Exploiting staggered timing across counties, we estimate event-study and staggered difference-in-differences models. We find that exposure increases educational attainment for cohorts plausibly able to respond -- students one to two years younger than the top scorer -- reducing dropout, raising years of schooling, and increasing tertiary attainment.
 </p>
 </details>
 
@@ -63,7 +63,7 @@ We study whether highly visible academic "superstars" generate local human-capit
 <details>
 <summary class="abstract-toggle">Abstract</summary>
 <p class="abstract-text">
-In 2011, China's Supreme People's Court strengthened individual property rights over premarital housing, reducing expected redistribution upon divorce. We exploit this legal shock to estimate how property rights affect marriage timing in the presence of high housing costs. Using 2010 and 2015 census microdata, we implement a difference-in-differences design combined with entropy balancing. We find a distinct gender asymmetry: the reform significantly reduces marriage entry for young women in high-housing-price cities, while men's outcomes remain largely unchanged. Women in high-price areas experience an approximately 3 percentage point decline in marriage rates relative to low-price cities.
+In 2011, China's Supreme People's Court strengthened individual property rights over premarital housing, reducing expected redistribution upon divorce. We exploit this legal shock to estimate how property rights affect marriage timing in the presence of high housing costs. Using large-scale population and household data spanning multiple years, we implement a difference-in-differences design combined with entropy balancing. We find a distinct gender asymmetry: the reform significantly reduces marriage entry for young women in high-housing-price cities, while men's outcomes remain largely unchanged. The decline for women in high-price areas is economically meaningful relative to low-price cities.
 </p>
 </details>
 
@@ -76,7 +76,7 @@ In 2011, China's Supreme People's Court strengthened individual property rights 
 <details>
 <summary class="abstract-toggle">Abstract</summary>
 <p class="abstract-text">
-We study how lowering administrative barriers to legal marriage affects marriage timing and match composition in urban China. The 2003 Regulations on Marriage Registration removed key documentary requirements, sharply reducing registration frictions. Using 2010 China Population Census microdata and a monthly regression discontinuity in time design, we find a sizable increase in first-marriage registration at the cutoff of about 3.7 per 1,000 unmarried urban residents per month, with effects persisting beyond the implementation month. The reform also shifts match outcomes: spousal age and education gaps change and cross-jurisdiction marriages rise.
+We study how lowering administrative barriers to legal marriage affects marriage timing and match composition in urban China. The 2003 Regulations on Marriage Registration removed key documentary requirements, sharply reducing registration frictions. Using population-based records on marriage and demographics and a monthly regression discontinuity in time design, we find a sizable increase in first-marriage registrations at the implementation cutoff, with effects persisting beyond the initial month. The reform also shifts match outcomes: spousal age and education gaps change and cross-jurisdiction marriages rise.
 </p>
 </details>
 
@@ -90,7 +90,7 @@ We study how lowering administrative barriers to legal marriage affects marriage
 <details>
 <summary class="abstract-toggle">Abstract</summary>
 <p class="abstract-text">
-Using China's 1999 higher-education expansion as a cohort-based supply shock, we study rural–urban occupational mobility. We construct an LLM-based occupational socioeconomic-status score from free-text job descriptions in the 2015 1% Population Sample Survey. Post-expansion rural cohorts gain 0.25 points in occupational status relative to urban cohorts (closing approximately 17% of the raw gap). IV evidence supports a causal education channel: each additional year of schooling raises occupational status by about 0.21 points, with upgrading concentrated in moves from low-skill manual work into skilled trades and basic services.
+Using China's 1999 higher-education expansion as a cohort-based supply shock, we study rural–urban occupational mobility. We construct an LLM-based occupational socioeconomic-status score from free-text job descriptions in large-scale population survey records with detailed occupational information. Post-expansion rural cohorts experience meaningful gains in occupational status relative to urban cohorts, narrowing the rural–urban gap. IV evidence supports a causal education channel: additional schooling raises occupational status, with upgrading concentrated in moves from low-skill manual work into skilled trades and basic services.
 </p>
 </details>
 
