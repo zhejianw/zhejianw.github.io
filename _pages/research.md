@@ -31,26 +31,12 @@ China's 2021 regulation virtually eliminated weekday online gaming for minors an
 
 **Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
 
-<details>
-<summary class="abstract-toggle">Abstract</summary>
-<p class="abstract-text">
-This paper studies how China's 2021 gaming restriction for minors reshaped digital markets using app-level downloads and revenues. Difference-in-differences and event-study estimates show sharp declines in youth-oriented games, smaller effects for adult-oriented titles, and growth in substitutes such as e-books and social media. Usage shifts away from weekdays and toward permitted weekend hours, consistent with strategic adaptation by users and firms. Market responses are heterogeneous, including rebranding, monetization changes, and advertising re-targeting. Ongoing work examines longer-run firm dynamics (entry/exit) and innovation responses.
-</p>
-</details>
-
 </div>
 
 <div class="paper-card" markdown="1">
 
 **When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Ruoming Zhang)
 <span class="paper-status">Under review</span>
-
-<details>
-<summary class="abstract-toggle">Abstract</summary>
-<p class="abstract-text">
-We study whether highly visible academic "superstars" generate local human-capital spillovers by shifting beliefs and inducing schooling responses. Using large-scale population-based data with detailed geographic identifiers, we construct county-by-cohort exposure to the first emergence of a provincial Gaokao top scorer (1990--2005) based on the top scorer's high-school location. Exploiting staggered timing across counties, we estimate event-study and staggered difference-in-differences models. We find that exposure increases educational attainment for cohorts plausibly able to respond -- students one to two years younger than the top scorer -- reducing dropout, raising years of schooling, and increasing tertiary attainment.
-</p>
-</details>
 
 </div>
 
@@ -59,25 +45,11 @@ We study whether highly visible academic "superstars" generate local human-capit
 **Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
 <span class="paper-status">Under review</span>
 
-<details>
-<summary class="abstract-toggle">Abstract</summary>
-<p class="abstract-text">
-In 2011, China's Supreme People's Court strengthened individual property rights over premarital housing, reducing expected redistribution upon divorce. We exploit this legal shock to estimate how property rights affect marriage timing in the presence of high housing costs. Using large-scale population and household data spanning multiple years, we implement a difference-in-differences design combined with entropy balancing. We find a distinct gender asymmetry: the reform significantly reduces marriage entry for young women in high-housing-price cities, while men's outcomes remain largely unchanged. The decline for women in high-price areas is economically meaningful relative to low-price cities.
-</p>
-</details>
-
 </div>
 
 <div class="paper-card" markdown="1">
 
 **Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
-
-<details>
-<summary class="abstract-toggle">Abstract</summary>
-<p class="abstract-text">
-We study how lowering administrative barriers to legal marriage affects marriage timing and match composition in urban China. The 2003 Regulations on Marriage Registration removed key documentary requirements, sharply reducing registration frictions. Using population-based records on marriage and demographics and a monthly regression discontinuity in time design, we find a sizable increase in first-marriage registrations at the implementation cutoff, with effects persisting beyond the initial month. The reform also shifts match outcomes: spousal age and education gaps change and cross-jurisdiction marriages rise.
-</p>
-</details>
 
 </div>
 
@@ -85,13 +57,6 @@ We study how lowering administrative barriers to legal marriage affects marriage
 
 **From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
 <span class="paper-status">Under review. Draft available upon request.</span>
-
-<details>
-<summary class="abstract-toggle">Abstract</summary>
-<p class="abstract-text">
-Using China's 1999 higher-education expansion as a cohort-based supply shock, we study rural–urban occupational mobility. We construct an LLM-based occupational socioeconomic-status score from free-text job descriptions in large-scale population survey records with detailed occupational information. Post-expansion rural cohorts experience meaningful gains in occupational status relative to urban cohorts, narrowing the rural–urban gap. IV evidence supports a causal education channel: additional schooling raises occupational status, with upgrading concentrated in moves from low-skill manual work into skilled trades and basic services.
-</p>
-</details>
 
 </div>
 
