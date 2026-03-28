@@ -14,8 +14,8 @@ I am **Zhejian Wang**, a Ph.D. candidate in Economics at the **University of Del
 </div>
 
 <div class="jm-materials">
-  <a href="/cv/" class="btn btn--info"><i class="fas fa-file-pdf"></i> CV</a>
-  <a href="/research/" class="btn btn--info"><i class="fas fa-file-alt"></i> Research</a>
+  <a href="/cv/" class="btn btn--info"><i class="fas fa-user-graduate"></i> CV</a>
+  <a href="/research/" class="btn btn--info"><i class="fas fa-flask"></i> Research</a>
 </div>
 
 ## Research Fields

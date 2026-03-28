@@ -14,8 +14,8 @@ ref: home
 </div>
 
 <div class="jm-materials">
-  <a href="/zh/cv/" class="btn btn--info"><i class="fas fa-file-pdf"></i> 简历</a>
-  <a href="/zh/research/" class="btn btn--info"><i class="fas fa-file-alt"></i> 研究</a>
+  <a href="/zh/cv/" class="btn btn--info"><i class="fas fa-user-graduate"></i> 简历</a>
+  <a href="/zh/research/" class="btn btn--info"><i class="fas fa-flask"></i> 研究</a>
 </div>
 
 ## 研究领域
