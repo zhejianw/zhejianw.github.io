@@ -29,10 +29,4 @@ ref: cv
 
 ---
 
-<a href="/files/Zhejian_CV.pdf" class="btn btn--info btn-premium" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 下载完整简历 (PDF)</a>
-
-<div class="cv-embed-wrapper">
-  <object data="/files/Zhejian_CV.pdf" type="application/pdf" width="100%" height="100%">
-    <p>您的浏览器不支持内嵌PDF。<a href="/files/Zhejian_CV.pdf" target="_blank" rel="noopener">下载简历 (PDF)</a>。</p>
-  </object>
-</div>
+<p><em>完整简历可应要求提供，请联系 <a href="mailto:zhejianw@udel.edu">zhejianw@udel.edu</a>。</em></p>

@@ -14,8 +14,8 @@ ref: home
 </div>
 
 <div class="jm-materials">
-  <a href="/files/Zhejian_CV.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> 简历</a>
-  <a href="/files/JMP.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> 求职论文</a>
+  <a href="/zh/cv/" class="btn btn--info"><i class="fas fa-file-pdf"></i> 简历</a>
+  <a href="/zh/research/" class="btn btn--info"><i class="fas fa-file-alt"></i> 研究</a>
 </div>
 
 ## 研究领域
@@ -26,7 +26,7 @@ ref: home
 
 ## 求职论文
 
-[**限制中国的电子游戏：对时间分配、学业成就与健康的影响**](/files/JMP.pdf){:target="_blank" rel="noopener"}
+**限制中国的电子游戏：对时间分配、学业成就与健康的影响**
 
 中国2021年的监管政策几乎消除了未成年人工作日的在线游戏。利用全国代表性的CFPS数据和双重差分设计，我发现游戏时间大幅下降，但在学业成绩和健康方面未见稳健改善。[[完整摘要]](/zh/research/)
 
@@ -35,7 +35,7 @@ ref: home
 ## 推荐人
 
 **Jeremy Tobacman**（主席）、**George R. Parsons**、**Emily L. Battaglia**、**Desmond J. Toohey**
-<br><small>详细联系方式请见[简历](/files/Zhejian_CV.pdf){:target="_blank" rel="noopener"}。</small>
+<br><small>详细联系方式请见[简历页面](/zh/cv/)。</small>
 
 ---
 

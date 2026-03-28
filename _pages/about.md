@@ -14,8 +14,8 @@ I am **Zhejian Wang**, a Ph.D. candidate in Economics at the **University of Del
 </div>
 
 <div class="jm-materials">
-  <a href="/files/Zhejian_CV.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a>
-  <a href="/files/JMP.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Job Market Paper</a>
+  <a href="/cv/" class="btn btn--info"><i class="fas fa-file-pdf"></i> CV</a>
+  <a href="/research/" class="btn btn--info"><i class="fas fa-file-alt"></i> Research</a>
 </div>
 
 ## Research Fields
@@ -26,7 +26,7 @@ I am **Zhejian Wang**, a Ph.D. candidate in Economics at the **University of Del
 
 ## Job Market Paper
 
-[**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**](/files/JMP.pdf){:target="_blank" rel="noopener"}
+**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
 
 China's 2021 regulation virtually eliminated weekday online gaming for minors. Using nationally representative CFPS data in a difference-in-differences design, I find sharp declines in gaming but no robust improvements in academic performance or health outcomes. [[Full abstract]](/research/)
 
@@ -35,7 +35,7 @@ China's 2021 regulation virtually eliminated weekday online gaming for minors. U
 ## References
 
 **Jeremy Tobacman** (Chair), **George R. Parsons**, **Emily L. Battaglia**, **Desmond J. Toohey**
-<br><small>Full contact details available in [CV](/files/Zhejian_CV.pdf){:target="_blank" rel="noopener"}.</small>
+<br><small>Full contact details available on the [CV page](/cv/).</small>
 
 ---
 

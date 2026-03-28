@@ -11,7 +11,7 @@ ref: research
 
 <div class="paper-card" markdown="1">
 
-[**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**](/files/JMP.pdf){:target="_blank"}
+**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
 <span class="paper-status">Revise and resubmit</span>
 
 <details open>
@@ -30,7 +30,6 @@ China's 2021 regulation virtually eliminated weekday online gaming for minors an
 <div class="paper-card" markdown="1">
 
 **Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
-[[PDF]](/files/chapter2.pdf){:target="_blank"}
 
 <details>
 <summary class="abstract-toggle">Abstract</summary>

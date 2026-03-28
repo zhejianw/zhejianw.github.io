@@ -11,7 +11,7 @@ ref: research
 
 <div class="paper-card" markdown="1">
 
-[**限制中国的电子游戏：对时间分配、学业成就与健康的影响**](/files/JMP.pdf){:target="_blank"}
+**限制中国的电子游戏：对时间分配、学业成就与健康的影响**
 <span class="paper-status">修改后重新提交</span>
 
 <details open>
@@ -30,7 +30,6 @@ ref: research
 <div class="paper-card" markdown="1">
 
 **数字监管与市场反应：来自中国移动应用的证据**
-[[PDF]](/files/chapter2.pdf){:target="_blank"}
 
 <details>
 <summary class="abstract-toggle">摘要</summary>
