@@ -7,12 +7,14 @@ lang: en
 ref: research
 ---
 
-## Job Market Paper
+## Publication
 
 <div class="paper-card" markdown="1">
 
 **Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
-<span class="paper-status">Revise and resubmit</span>
+<span class="paper-status">Forthcoming, *Journal of Development Economics*</span>
+
+*Job Market Paper, 2025–26*
 
 <details open>
 <summary class="abstract-toggle">Abstract</summary>

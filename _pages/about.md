@@ -24,9 +24,10 @@ I am **Zhejian Wang**, a Ph.D. candidate in Economics at the **University of Del
 
 **Research Interests:** Economics of digitization; institutional change and policy; human capital and well-being
 
-## Job Market Paper
+## Publication
 
 **Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
+*Forthcoming, Journal of Development Economics* (Job Market Paper, 2025–26)
 
 China's 2021 regulation virtually eliminated weekday online gaming for minors. Using nationally representative CFPS data in a difference-in-differences design, I find sharp declines in gaming but no robust improvements in academic performance or health outcomes. [[Full abstract]](/research/)
 
