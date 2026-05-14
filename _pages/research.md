@@ -12,14 +12,14 @@ ref: research
 <div class="paper-card" markdown="1">
 
 **Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
-<span class="paper-status">Forthcoming, *Journal of Development Economics*</span>
+<span class="paper-status">*Journal of Development Economics*, 103812 (2026)</span>
 
 *Job Market Paper, 2025–26*
 
 <details open>
 <summary class="abstract-toggle">Abstract</summary>
 <p class="abstract-text">
-China's 2021 regulation virtually eliminated weekday online gaming for minors and limited play to one hour on weekends/holidays. Using nationally representative CFPS data (2020, 2022) in a difference-in-differences design, I find sharp declines in minors' gaming and total Internet use but no robust improvements in study effort, academic performance, or physical health, with suggestive declines in mental well-being. A complementary Regression Kink (RK) design using city mock-exam data around the age-18 cutoff likewise shows no robust exam effects.
+In 2021, the Chinese government introduced a highly restrictive policy that sharply limited minors' access to online video games, effectively eliminating weekday play and allowing only minimal play on weekends and holidays. Using nationally representative survey data and a difference-in-differences design, I find that the policy sharply reduced minors' gaming engagement and overall Internet use, reflecting substantial but incomplete compliance. However, these behavioral changes did not produce detectable short-run improvements in academic performance, nor clear evidence of an increase in study time. The health-related evidence is more limited, with no clear physical-health gains and suggestive indications of reduced mental well-being. Complementary evidence from city-level administrative data and a regression kink design likewise shows no robust effects on exam outcomes.
 </p>
 </details>
 

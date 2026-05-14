@@ -25,6 +25,7 @@ author:
   employer: "University of Delaware"
   email: "zhejianw@udel.edu"
   github: "zhejianw"
+  googlescholar: "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
 
 # Chinese Author Information (for /zh/ pages)
 author_zh:
@@ -36,6 +37,7 @@ author_zh:
   employer: "特拉华大学"
   email: "zhejianw@udel.edu"
   github: "zhejianw"
+  googlescholar: "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
 
 # Last updated date (displayed in footer)
 last_updated: "2025-02-18"
@@ -68,7 +70,7 @@ social:
   type: "Person"
   name: "Zhejian Wang"
   links:
-    - "https://scholar.google.com"
+    - "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
     - "https://www.linkedin.com/in/zhejianwang"
     - "https://github.com/zhejianw"
 
