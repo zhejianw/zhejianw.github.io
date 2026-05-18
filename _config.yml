@@ -7,7 +7,6 @@
 locale: "en-US"
 site_theme: "default"
 title: "Zhejian Wang - Economics Ph.D. Candidate"
-title_zh: "汪哲健 - 经济学博士候选人"
 title_separator: "-"
 name: &name "Zhejian Wang"
 description: &description "Economics Ph.D. Candidate at the University of Delaware"
@@ -23,18 +22,6 @@ author:
   bio: "Ph.D. Candidate in Economics at the University of Delaware. Research in development economics, education, and digital policy."
   location: "Newark, Delaware, USA"
   employer: "University of Delaware"
-  email: "zhejianw@udel.edu"
-  github: "zhejianw"
-  googlescholar: "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
-
-# Chinese Author Information (for /zh/ pages)
-author_zh:
-  avatar: "19.jpg"
-  name: "汪哲健"
-  pronouns: "他/him"
-  bio: "特拉华大学经济学博士候选人。研究方向：发展经济学、教育与数字政策。"
-  location: "美国特拉华州纽瓦克"
-  employer: "特拉华大学"
   email: "zhejianw@udel.edu"
   github: "zhejianw"
   googlescholar: "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"

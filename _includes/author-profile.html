@@ -1,18 +1,12 @@
 {% include base_path %}
 
-{% if page.lang == "zh" and site.author_zh %}
-  {% assign author = site.author_zh %}
-{% elsif page.author and site.data.authors[page.author] %}
+{% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}
 {% else %}
   {% assign author = site.author %}
 {% endif %}
 
-{% if page.lang == "zh" %}
-  {% assign ui_locale = "zh-CN" %}
-{% else %}
-  {% assign ui_locale = site.locale %}
-{% endif %}
+{% assign ui_locale = site.locale %}
 
 <div itemscope itemtype="https://schema.org/Person">
 
@@ -31,7 +25,7 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{% if page.lang == 'zh' %}联系方式{% else %}Contact{% endif %}</button>
+    <button class="btn btn--inverse">Contact</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}

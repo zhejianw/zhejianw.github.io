@@ -638,44 +638,6 @@ html[data-theme="dark"] body {
 }
 
 /* ==========================================================================
-   CHINESE LANGUAGE TYPOGRAPHY
-   ========================================================================== */
-
-[lang="zh"] {
-  .page__content p,
-  .page__content li {
-    line-height: 2.0;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Noto Serif SC", "Cormorant Garamond", "STSong", serif;
-    line-height: 1.4;
-  }
-
-  body, .page__content {
-    font-family: "Noto Sans SC", "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 1.9;
-  }
-
-  .sidebar .author__name {
-    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
-  }
-
-  .paper-card h3,
-  .paper-card p > strong:first-child {
-    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
-  }
-
-  .teaching-card li em {
-    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
-  }
-
-  .page__title {
-    font-family: "Noto Serif SC", "Cormorant Garamond", serif;
-  }
-}
-
-/* ==========================================================================
    MOBILE RESPONSIVENESS
    ========================================================================== */
 

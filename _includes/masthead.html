@@ -1,11 +1,5 @@
 {% include base_path %}
 
-{% if page.lang == "zh" %}
-  {% assign nav_items = site.data.navigation.main-zh %}
-{% else %}
-  {% assign nav_items = site.data.navigation.main %}
-{% endif %}
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -13,9 +7,9 @@
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{% if page.lang == 'zh' %}{{ base_path }}/zh/{% else %}{{ base_path }}/{% endif %}">{% if page.lang == 'zh' and site.title_zh %}{{ site.title_zh }}{% else %}{{ site.title }}{% endif %}</a>
+            <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
-          {% for link in nav_items %}
+          {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
@@ -23,18 +17,6 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
-
-          <!-- Language Switcher -->
-          <li class="masthead__menu-item persist tail">
-            {% if page.lang == "zh" %}
-              {% assign target_page = site.pages | where: "ref", page.ref | where: "lang", "en" | first %}
-              <a href="{{ target_page.url | default: '/' }}" title="Switch to English">English</a>
-            {% else %}
-              {% assign target_page = site.pages | where: "ref", page.ref | where: "lang", "zh" | first %}
-              <a href="{{ target_page.url | default: '/zh/' }}" title="切换到中文">中文</a>
-            {% endif %}
-          </li>
-
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
