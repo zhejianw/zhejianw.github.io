@@ -33,12 +33,16 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 
 **Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
 
+[Draft](/files/Digital_Regulation_and_Market_Responses.pdf)
+
 </div>
 
 <div class="paper-card" markdown="1">
 
-**When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Ruoming Zhang)
+**When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Wei Huang and Ruoming Zhang)
 <span class="paper-status">Under review</span>
+
+[Draft](/files/When_Success_Becomes_Salient_Local_Role_Models.pdf)
 
 </div>
 
@@ -46,6 +50,8 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 
 **Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
 <span class="paper-status">Under review</span>
+
+[Draft](/files/Premarital_Property_Rights_and_Marriage_Timing.pdf)
 
 </div>
 
@@ -58,7 +64,26 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
-<span class="paper-status">Under review. Draft available upon request.</span>
+<span class="paper-status">Under review</span>
+
+[Draft](/files/From_Seats_to_Status_Occupational_Mobility.pdf)
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**Higher-Education Expansion and Upper-Secondary Choice** (with Yiqun Tong and Ruoming Zhang)
+<span class="paper-status">Revise and resubmit, *Economic Modelling*</span>
+
+[Draft](/files/Higher_Education_Expansion_and_Upper_Secondary_Choice.pdf)
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**Governing Knowledge Reuse through Research Infrastructure: Evidence from the arXiv License Interface** (with Ruoming Zhang)
+
+[Draft](/files/Governing_Knowledge_Reuse_arXiv_License.pdf)
 
 </div>
 
