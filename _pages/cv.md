@@ -13,7 +13,7 @@ redirect_from:
 
 ## Education
 
-- **Ph.D. in Economics**, University of Delaware, 2020 -- 2026 (expected)
+- **Ph.D. in Economics**, University of Delaware, 2020 -- 2026
 - **M.A. in Economics**, University of Southern California, 2016
 - **B.S. in Management**, Southwestern University of Finance and Economics, 2014
 

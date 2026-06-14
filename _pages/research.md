@@ -14,8 +14,6 @@ ref: research
 **Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
 <span class="paper-status">*Journal of Development Economics*, 103812 (2026)</span>
 
-*Job Market Paper, 2025–26*
-
 <details open>
 <summary class="abstract-toggle">Abstract</summary>
 <p class="abstract-text">

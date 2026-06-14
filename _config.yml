@@ -1,15 +1,15 @@
 # ============================================
-# Zhejian Wang - Academic Job Market Website
+# Zhejian Wang - Personal Academic Website
 # Based on academicpages template
 # ============================================
 
 # Basic Site Settings
 locale: "en-US"
 site_theme: "default"
-title: "Zhejian Wang - Economics Ph.D. Candidate"
+title: "Zhejian Wang - Economics Ph.D."
 title_separator: "-"
 name: &name "Zhejian Wang"
-description: &description "Economics Ph.D. Candidate at the University of Delaware"
+description: &description "Economics Ph.D. from the University of Delaware"
 url: "https://zhejianw.github.io"
 baseurl: ""
 repository: "zhejianw/zhejianw.github.io"
@@ -19,7 +19,7 @@ author:
   avatar: "19.jpg"
   name: "Zhejian Wang"
   pronouns: "he/him"
-  bio: "Ph.D. Candidate in Economics at the University of Delaware. Research in development economics, education, and digital policy."
+  bio: "Economics Ph.D. from the University of Delaware. Research in development economics, education, and digital policy."
   location: "Newark, Delaware, USA"
   employer: "University of Delaware"
   email: "zhejianw@udel.edu"
