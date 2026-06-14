@@ -12,7 +12,7 @@ ref: research
 <div class="paper-card" markdown="1">
 
 **Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
-<span class="paper-status">*Journal of Development Economics*, 103812 (2026)</span>
+<span class="paper-status">*Journal of Development Economics*, 182, 103812 (2026)</span>
 
 <details open>
 <summary class="abstract-toggle">Abstract</summary>
@@ -25,63 +25,75 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 
 ---
 
-## Working Papers
-
-<div class="paper-card" markdown="1">
-
-**Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
-
-[Draft](/files/Digital_Regulation_and_Market_Responses.pdf)
-
-</div>
+## Working Papers — Education, Human Capital, and Family
 
 <div class="paper-card" markdown="1">
 
 **When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Wei Huang and Ruoming Zhang)
-<span class="paper-status">Under review</span>
+<span class="paper-status">Working paper</span>
 
-[Draft](/files/When_Success_Becomes_Salient_Local_Role_Models.pdf)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
-<span class="paper-status">Under review</span>
-
-[Draft](/files/Premarital_Property_Rights_and_Marriage_Timing.pdf)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
-<span class="paper-status">Under review</span>
-
-[Draft](/files/From_Seats_to_Status_Occupational_Mobility.pdf)
+[Draft](/files/Huang_Wang_Zhang_When_Success_Becomes_Salient.pdf)
 
 </div>
 
 <div class="paper-card" markdown="1">
 
 **Higher-Education Expansion and Upper-Secondary Choice** (with Yiqun Tong and Ruoming Zhang)
-<span class="paper-status">Revise and resubmit, *Economic Modelling*</span>
+<span class="paper-status">Revise and resubmit at *Economic Modelling*</span>
 
-[Draft](/files/Higher_Education_Expansion_and_Upper_Secondary_Choice.pdf)
+[Draft](/files/Tong_Wang_Zhang_Higher_Education_Expansion.pdf)
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
+<span class="paper-status">Revise and resubmit at *Review of Economics of the Household*</span>
+
+[Draft](/files/Wang_Zhang_Premarital_Property_Rights.pdf)
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**From Wanting Sons to Benchmarking Daughters: Female Names and the Changing Symbolic Expression of Son Preference in China** (with Ruoming Zhang)
+<span class="paper-status">Working paper</span>
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
+<span class="paper-status">Working paper</span>
+
+[Draft](/files/Tong_Wang_Zhang_From_Seats_to_Status.pdf)
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
+<span class="paper-status">Working paper</span>
+
+</div>
+
+---
+
+## Working Papers — Digital Economics and Technology Policy
+
+<div class="paper-card" markdown="1">
+
+**Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
+<span class="paper-status">Working paper</span>
 
 </div>
 
 <div class="paper-card" markdown="1">
 
 **Governing Knowledge Reuse through Research Infrastructure: Evidence from the arXiv License Interface** (with Ruoming Zhang)
+<span class="paper-status">Working paper</span>
 
-[Draft](/files/Governing_Knowledge_Reuse_arXiv_License.pdf)
+[Draft](/files/Wang_Zhang_Governing_Knowledge_Reuse.pdf)
 
 </div>
 
@@ -99,16 +111,8 @@ This project estimates the business returns to adopting generative AI as a produ
 
 <div class="paper-card" markdown="1">
 
-**Legal Clarification and Judicial Consistency: Evidence from China**
+**Generative AI and Scientific Production**
 
-This paper tests whether clarifying legal rules reduces judicial discretion and increases consistency in adjudication, exploiting the 2011 issuance of the Supreme People's Court Judicial Interpretation (III) on marriage property disputes.
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Digital Market Access and Local Development: Evidence from China**
-
-This paper evaluates whether expanding digital market access generates broad-based local development gains, using the staggered rollout of China's "E-Commerce Poverty Alleviation Counties" program and difference-in-differences methods.
+This project studies how generative AI affects researchers' search, writing, knowledge reuse, and the scientific production function.
 
 </div>

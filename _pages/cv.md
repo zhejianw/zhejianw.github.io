@@ -19,9 +19,11 @@ redirect_from:
 
 ## Research Fields
 
-**Fields:** Applied Microeconomics; Development Economics; Economics of Education
+**Fields:** Applied Microeconomics; Economics of Education; Development Economics; Labor Economics; Family Economics.
 
-**Research Interests:** Economics of digitization; institutional change and policy; human capital and well-being
+**Additional areas:** Digital Economy; Technology Policy; Platform Economics and Regulation.
+
+**Research interests:** Education policy, schooling choice, human capital formation, and educational equity; digital regulation and adolescent behavior; household decision-making, gender, and social norms; generative AI and digital technology.
 
 ## Teaching
 
@@ -31,4 +33,6 @@ redirect_from:
 
 ---
 
-<p><em>Full CV available upon request. Please contact <a href="mailto:zhejianw@udel.edu">zhejianw@udel.edu</a>.</em></p>
+A current version of my CV is available below.
+
+[Download CV](/files/Zhejian_Wang_CV.pdf)

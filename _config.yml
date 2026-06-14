@@ -19,15 +19,14 @@ author:
   avatar: "19.jpg"
   name: "Zhejian Wang"
   pronouns: "he/him"
-  bio: "Economics Ph.D. from the University of Delaware. Research in development economics, education, and digital policy."
+  bio: "Economics Ph.D., University of Delaware. Applied microeconomist studying education, human capital, digital regulation, and technology policy."
   location: "Newark, Delaware, USA"
   employer: "University of Delaware"
   email: "zhejianw@udel.edu"
   github: "zhejianw"
   googlescholar: "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
 
-# Last updated date (displayed in footer)
-last_updated: "2025-02-18"
+# (last-updated footer date removed)
 
 # Publication categories
 publication_category:
