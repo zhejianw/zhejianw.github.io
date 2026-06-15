@@ -65,7 +65,9 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 
 <div class="paper-card" markdown="1">
 
-**Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
+**Restricting Minors' Online Gaming: Compliance, Evasion, and Market Responses in China**
+
+[Draft](/files/Wang_Restricting_Minors_Online_Gaming.pdf)
 
 </div>
 
