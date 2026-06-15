@@ -53,21 +53,9 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 
 <div class="paper-card" markdown="1">
 
-**From Wanting Sons to Benchmarking Daughters: Female Names and the Changing Symbolic Expression of Son Preference in China** (with Ruoming Zhang)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
 **From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
 
 [Draft](/files/Tong_Wang_Zhang_From_Seats_to_Status.pdf)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
 
 </div>
 
@@ -106,5 +94,21 @@ This project estimates the business returns to adopting generative AI as a produ
 **Generative AI and Scientific Production**
 
 This project studies how generative AI affects researchers' search, writing, knowledge reuse, and the scientific production function.
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**From Wanting Sons to Benchmarking Daughters: Female Names and the Changing Symbolic Expression of Son Preference in China** (with Ruoming Zhang)
+
+This project studies gender norms, son preference, and symbolic family behavior reflected in changes in female names.
+
+</div>
+
+<div class="paper-card" markdown="1">
+
+**Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
+
+This project studies the effects of marriage-registration frictions on marriage outcomes.
 
 </div>
