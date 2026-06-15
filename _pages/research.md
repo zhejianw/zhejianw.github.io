@@ -30,7 +30,6 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Wei Huang and Ruoming Zhang)
-<span class="paper-status">Working paper</span>
 
 [Draft](/files/Huang_Wang_Zhang_When_Success_Becomes_Salient.pdf)
 
@@ -39,7 +38,6 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **Higher-Education Expansion and Upper-Secondary Choice** (with Yiqun Tong and Ruoming Zhang)
-<span class="paper-status">Revise and resubmit at *Economic Modelling*</span>
 
 [Draft](/files/Tong_Wang_Zhang_Higher_Education_Expansion.pdf)
 
@@ -48,7 +46,6 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
-<span class="paper-status">Revise and resubmit at *Review of Economics of the Household*</span>
 
 [Draft](/files/Wang_Zhang_Premarital_Property_Rights.pdf)
 
@@ -57,14 +54,12 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **From Wanting Sons to Benchmarking Daughters: Female Names and the Changing Symbolic Expression of Son Preference in China** (with Ruoming Zhang)
-<span class="paper-status">Working paper</span>
 
 </div>
 
 <div class="paper-card" markdown="1">
 
 **From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
-<span class="paper-status">Working paper</span>
 
 [Draft](/files/Tong_Wang_Zhang_From_Seats_to_Status.pdf)
 
@@ -73,7 +68,6 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
-<span class="paper-status">Working paper</span>
 
 </div>
 
@@ -84,14 +78,12 @@ In 2021, the Chinese government introduced a highly restrictive policy that shar
 <div class="paper-card" markdown="1">
 
 **Digital Regulation and Market Responses: Evidence from Chinese Mobile Apps**
-<span class="paper-status">Working paper</span>
 
 </div>
 
 <div class="paper-card" markdown="1">
 
 **Governing Knowledge Reuse through Research Infrastructure: Evidence from the arXiv License Interface** (with Ruoming Zhang)
-<span class="paper-status">Working paper</span>
 
 [Draft](/files/Wang_Zhang_Governing_Knowledge_Reuse.pdf)
 
