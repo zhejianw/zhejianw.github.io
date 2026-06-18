@@ -11,15 +11,8 @@ ref: research
 
 <div class="paper-card" markdown="1">
 
-**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
-<span class="paper-status">*Journal of Development Economics*, 182, 103812 (2026)</span>
-
-<details open>
-<summary class="abstract-toggle">Abstract</summary>
-<p class="abstract-text">
-In 2021, the Chinese government introduced a highly restrictive policy that sharply limited minors' access to online video games, effectively eliminating weekday play and allowing only minimal play on weekends and holidays. Using nationally representative survey data and a difference-in-differences design, I find that the policy sharply reduced minors' gaming engagement and overall Internet use, reflecting substantial but incomplete compliance. However, these behavioral changes did not produce detectable short-run improvements in academic performance, nor clear evidence of an increase in study time. The health-related evidence is more limited, with no clear physical-health gains and suggestive indications of reduced mental well-being. Complementary evidence from city-level administrative data and a regression kink design likewise shows no robust effects on exam outcomes.
-</p>
-</details>
+[**Restricting video games in China: Effects on time use, educational achievement, and health**](/research/restricting-video-games-china/)
+<span class="paper-status">*Journal of Development Economics*, **182**, 103812 (2026) · [DOI](https://doi.org/10.1016/j.jdeveco.2026.103812)</span>
 
 </div>
 

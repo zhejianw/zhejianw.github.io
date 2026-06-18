@@ -27,4 +27,31 @@
 <meta property="og:image" content="{{ site.url }}/images/19.jpg" />
 <meta name="twitter:card" content="summary" />
 
+<!-- Highwire Press citation metadata for Google Scholar / academic indexers -->
+{% if page.citation_title %}
+<meta name="citation_title" content="{{ page.citation_title }}">
+{% if page.citation_author %}
+  {% if page.citation_author.first %}
+    {% for author in page.citation_author %}
+<meta name="citation_author" content="{{ author }}">
+    {% endfor %}
+  {% else %}
+<meta name="citation_author" content="{{ page.citation_author }}">
+  {% endif %}
+{% endif %}
+{% if page.citation_publication_date %}<meta name="citation_publication_date" content="{{ page.citation_publication_date }}">{% endif %}
+{% if page.citation_journal_title %}<meta name="citation_journal_title" content="{{ page.citation_journal_title }}">{% endif %}
+{% if page.citation_volume %}<meta name="citation_volume" content="{{ page.citation_volume }}">{% endif %}
+{% if page.citation_issue %}<meta name="citation_issue" content="{{ page.citation_issue }}">{% endif %}
+{% if page.citation_firstpage %}<meta name="citation_firstpage" content="{{ page.citation_firstpage }}">{% endif %}
+{% if page.citation_lastpage %}<meta name="citation_lastpage" content="{{ page.citation_lastpage }}">{% endif %}
+{% if page.citation_doi %}<meta name="citation_doi" content="{{ page.citation_doi }}">{% endif %}
+{% if page.citation_publisher %}<meta name="citation_publisher" content="{{ page.citation_publisher }}">{% endif %}
+{% if page.citation_abstract_html_url %}<meta name="citation_abstract_html_url" content="{{ page.citation_abstract_html_url }}">{% endif %}
+{% if page.citation_pdf_url %}<meta name="citation_pdf_url" content="{{ page.citation_pdf_url }}">{% endif %}
+{% if page.citation_fulltext_html_url %}<meta name="citation_fulltext_html_url" content="{{ page.citation_fulltext_html_url }}">{% endif %}
+{% if page.citation_language %}<meta name="citation_language" content="{{ page.citation_language }}">{% endif %}
+{% if page.citation_keywords %}<meta name="citation_keywords" content="{{ page.citation_keywords }}">{% endif %}
+{% endif %}
+
 <!-- end custom head snippets -->

@@ -28,10 +28,7 @@ I received my Ph.D. in Economics from the **University of Delaware** in 2026. My
 
 ## Publication
 
-**Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health**
-*Journal of Development Economics*, 182, 103812 (2026)
-
-China's 2021 regulation virtually eliminated weekday online gaming for minors. Using nationally representative survey data in a difference-in-differences design, I find sharp declines in gaming engagement and Internet use but no robust short-run improvements in academic performance or health outcomes. [[Full abstract]](/research/)
+[**Restricting video games in China: Effects on time use, educational achievement, and health**](/research/restricting-video-games-china/) — *Journal of Development Economics*, **182**, 103812 (2026). [DOI](https://doi.org/10.1016/j.jdeveco.2026.103812).
 
 ---
 
