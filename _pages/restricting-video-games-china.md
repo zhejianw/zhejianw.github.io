@@ -2,9 +2,6 @@
 layout: single
 title: "Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health"
 permalink: /research/restricting-video-games-china/
-redirect_from:
-  - /files/JMP.pdf
-  - /files/JMP.pdf/
 author_profile: true
 lang: en
 excerpt: "Wang, Z. (2026). Restricting video games in China: Effects on time use, educational achievement, and health. Journal of Development Economics, 182, 103812."
