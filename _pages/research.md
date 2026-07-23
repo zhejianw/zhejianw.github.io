@@ -68,7 +68,7 @@ ref: research
 
 **Governing Knowledge Reuse through Research Infrastructure: Evidence from the arXiv License Interface** (with Ruoming Zhang)
 
-[Draft](/files/Wang_Zhang_Governing_Knowledge_Reuse.pdf)
+*Draft available upon request*
 
 </div>
 
@@ -80,15 +80,11 @@ ref: research
 
 **Generative AI as a Product Feature: Causal Evidence from iOS Apps**
 
-This project estimates the business returns to adopting generative AI as a product feature in mobile apps, building a daily panel for iOS apps that entered the Top-1000 charts during 2020--2025. Using event-study designs robust to staggered adoption, I estimate dynamic effects on revenue, downloads, growth, and rank.
-
 </div>
 
 <div class="paper-card" markdown="1">
 
 **Generative AI and Scientific Production**
-
-This project studies how generative AI affects researchers' search, writing, knowledge reuse, and the scientific production function.
 
 </div>
 
@@ -96,14 +92,10 @@ This project studies how generative AI affects researchers' search, writing, kno
 
 **From Wanting Sons to Benchmarking Daughters: Female Names and the Changing Symbolic Expression of Son Preference in China** (with Ruoming Zhang)
 
-This project studies gender norms, son preference, and symbolic family behavior reflected in changes in female names.
-
 </div>
 
 <div class="paper-card" markdown="1">
 
 **Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
-
-This project studies the effects of marriage-registration frictions on marriage outcomes.
 
 </div>
