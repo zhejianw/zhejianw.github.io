@@ -22,17 +22,9 @@ ref: research
 
 <div class="paper-card" markdown="1">
 
-**When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Wei Huang and Ruoming Zhang)
-
-[Draft](/files/Huang_Wang_Zhang_When_Success_Becomes_Salient.pdf)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
 **Higher-Education Expansion and Upper-Secondary Choice** (with Yiqun Tong and Ruoming Zhang)
 
-[Draft](/files/Tong_Wang_Zhang_Higher_Education_Expansion.pdf)
+[Draft (June 2026)](/files/Tong_Wang_Zhang_Higher_Education_Expansion.pdf)
 
 </div>
 
@@ -40,7 +32,7 @@ ref: research
 
 **Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
 
-[Draft](/files/Wang_Zhang_Premarital_Property_Rights.pdf)
+[Draft (June 2026)](/files/Wang_Zhang_Premarital_Property_Rights.pdf)
 
 </div>
 
@@ -48,7 +40,7 @@ ref: research
 
 **From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
 
-[Draft](/files/Tong_Wang_Zhang_From_Seats_to_Status.pdf)
+[Draft (June 2026)](/files/Tong_Wang_Zhang_From_Seats_to_Status.pdf)
 
 </div>
 
@@ -60,7 +52,7 @@ ref: research
 
 **Restricting Minors' Online Gaming: Compliance, Evasion, and Market Responses in China**
 
-[Draft](/files/Wang_Restricting_Minors_Online_Gaming.pdf)
+[Draft (June 2026)](/files/Wang_Restricting_Minors_Online_Gaming.pdf)
 
 </div>
 
@@ -78,6 +70,12 @@ ref: research
 
 <div class="paper-card" markdown="1">
 
+**When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Wei Huang and Ruoming Zhang)
+
+</div>
+
+<div class="paper-card" markdown="1">
+
 **Generative AI as a Product Feature: Causal Evidence from iOS Apps**
 
 </div>
@@ -85,12 +83,6 @@ ref: research
 <div class="paper-card" markdown="1">
 
 **Generative AI and Scientific Production**
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**From Wanting Sons to Benchmarking Daughters: Female Names and the Changing Symbolic Expression of Son Preference in China** (with Ruoming Zhang)
 
 </div>
 
