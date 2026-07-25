@@ -56,14 +56,6 @@ ref: research
 
 </div>
 
-<div class="paper-card" markdown="1">
-
-**Governing Knowledge Reuse through Research Infrastructure: Evidence from the arXiv License Interface** (with Ruoming Zhang)
-
-*Draft available upon request*
-
-</div>
-
 ---
 
 ## Work in Progress
