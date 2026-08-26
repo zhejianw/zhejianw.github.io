@@ -32,6 +32,64 @@ last_updated: 2026-08-26
 核心目标不是让文章“内容更多”，而是让文章更可信、更容易读、更难被攻击，并且形成最优叙事。
 ~~~
 
+## 二、Paper Identity 与 Contribution
+
+### Prompt 7：Paper Identity ★★★★★
+
+~~~text
+先不要逐句修改。站在 editor 和 applied microeconomist 的角度，判断这篇文章到底是一篇“什么文章”。
+
+请分别用一句话概括：
+
+- research question；
+- empirical design；
+- central finding；
+- paper-level contribution。
+
+然后判断目前 manuscript 是否围绕同一个清晰的 paper identity 展开。
+
+重点检查：
+
+- Title、Abstract、Introduction、Results、Discussion/Conclusion 所描述的是不是同一篇文章；
+- 是否同时存在几个彼此竞争的 paper identities；
+- 哪一个 identity 最强、最 defensible、最适合目标期刊；
+- 是否存在一些结果虽然有趣，但正在稀释主线；
+- contribution 是否建立在真正新的 margin 上，而不是仅仅“换数据、换国家、换 outcome”；
+- 作者是否把最重要的东西说小了，或者把次要结果说得太大。
+
+最后告诉我：
+
+**如果只能保留一个 central message，这篇文章最应该让读者记住什么。**
+~~~
+
+### Prompt 8：Claim Hierarchy ★★★★★
+
+~~~text
+把全文所有重要 claims 按层级重新梳理。
+
+区分：
+
+1. central claim；
+2. supporting claims；
+3. secondary findings；
+4. suggestive evidence；
+5. robustness evidence；
+6. contextual/descriptive evidence。
+
+检查目前 manuscript 是否错误地给不同证据相同的叙事权重。
+
+特别检查：
+
+- weak evidence 是否被写成 strong evidence；
+- null results 是否被写成 “no effect”；
+- statistically significant 是否被错误等同于 economically important；
+- descriptive evidence 是否被赋予 causal interpretation；
+- mechanism evidence 是否实际上只能支持 suggestive interpretation；
+- robustness results 是否正在抢占 main results 的叙事空间。
+
+重新给出一个最优的 claim hierarchy，并指出哪些 claims 应该升级、降级、移到 appendix 或删除。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
