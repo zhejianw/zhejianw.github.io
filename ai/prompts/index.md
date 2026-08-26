@@ -324,6 +324,80 @@ last_updated: 2026-08-26
 对于重要的 null finding，给出最准确的表述，并说明现有 confidence interval 能否支持 evidence of absence，还是只能支持 absence of evidence。
 ~~~
 
+## 六、Robustness、Heterogeneity、Mechanisms
+
+### Prompt 16：Robustness Architecture ★★★★☆
+
+**推荐模式：Extra High**
+
+~~~text
+不要单纯判断 robustness “够不够多”，而是重新设计 robustness architecture。
+
+对每一个 robustness exercise 回答：
+
+**它究竟在回应哪个明确的 identification、measurement、inference、interpretation、external-validity 或 referee concern？**
+
+如果没有明确 concern，直接指出。
+
+区分：
+
+- alternative specification；
+- sensitivity analysis；
+- falsification/placebo；
+- alternative sample；
+- alternative measurement；
+- inference robustness；
+- specification robustness。
+
+检查是否存在：
+
+- 多个 robustness 实际回答同一个问题；
+- 没有明确 purpose 的 specification dumping；
+- robustness 改变了 estimand，但正文仍把它解释为同一个 effect；
+- robustness 比 main result 更复杂、更难解释；
+- 重要 falsification 被埋得太深；
+- 无信息量的 robustness 占据正文；
+- 真正重要的 concern 没有对应的 targeted evidence，却存在大量低价值检查。
+
+最后为每项 robustness 标明：它回应的 concern、独立信息价值、与 main estimand 的关系，以及应当归入：
+
+**正文必须保留 / appendix 保留 / 可以删除。**
+~~~
+
+### Prompt 17：Heterogeneity and Mechanisms
+
+**推荐模式：Extra High；若 mechanism 是 central contribution，使用 Pro**
+
+~~~text
+审核 heterogeneity 和 mechanism 部分是否真的提高论文价值。
+
+重点区分：
+
+- treatment-effect heterogeneity；
+- mechanism evidence；
+- descriptive correlation；
+- exploratory subgroup analysis。
+
+检查：
+
+- subgroup 是否有 ex ante substantive motivation；
+- subgroup variable 是否为 pre-treatment；按 post-treatment variable 分组或 conditioning 是否可能引入偏误；
+- subgroup sample 是否过小；
+- interaction 与 subgroup regressions 的解释是否一致；
+- 是否正式检验组间 estimates 的差异，而不是把“一组显著、另一组不显著”当作组间差异；
+- multiple testing 是否成为问题，confirmatory 与 exploratory analyses 是否被准确区分；
+- heterogeneous estimates 是否真的彼此 statistically different；
+- mechanism outcome 的 timing 是否合理，是否位于可信的 causal chain 上；
+- 是否把 mediator / correlate 错误称为 mechanism；
+- evidence strength 是否足以支持 mechanism language。
+
+最后判断每组分析：
+
+**main text / appendix / drop。**
+
+不要因为已经做了分析，就默认它必须留在文章里。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
