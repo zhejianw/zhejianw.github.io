@@ -9,7 +9,7 @@ ref: home
 
 <div class="hero-intro" markdown="1">
 
-I received my Ph.D. in Economics from the **University of Delaware** in 2026. My research lies in **applied microeconomics**, with a focus on education, human capital, digital regulation, and family decision-making. Much of my work studies how policy and technological change reshape behavior, markets, and welfare, particularly in China.
+I am a Ph.D. candidate in Economics at the **University of Delaware**. I have successfully defended my dissertation, and the degree is pending formal conferral. I am an **applied microeconomist** working in the economics of education, digital economics, and family and household economics. My research examines how public policy and technological change shape human capital, digital behavior, and household decision-making, with a particular focus on China.
 
 </div>
 
@@ -20,9 +20,11 @@ I received my Ph.D. in Economics from the **University of Delaware** in 2026. My
 
 ## Research Fields
 
-**Fields:** Applied Microeconomics; Economics of Education; Development Economics; Labor Economics; Family Economics.
+**Umbrella field:** Applied Microeconomics.
 
-**Additional areas:** Digital Economy; Technology Policy; Platform Economics and Regulation.
+**Primary fields:** Economics of Education; Digital Economics; Family and Household Economics.
+
+**Cross-cutting areas:** Human Capital; Technology Policy and Regulation; Development Economics.
 
 **Research interests:** Education policy, schooling choice, human capital formation, and educational equity; digital regulation and adolescent behavior; household decision-making, gender, and social norms; generative AI and digital technology.
 
@@ -40,3 +42,4 @@ I received my Ph.D. in Economics from the **University of Delaware** in 2026. My
 ---
 
 Please feel free to contact me at [zhejianw@udel.edu](mailto:zhejianw@udel.edu).
+

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.1",
+  "visibility": "public",
+  "status": "current",
+  "last_updated": "2026-08-26",
+  "person": {
+    "name": "Zhejian Wang",
+    "pronouns": "he/him",
+    "field": "Economics",
+    "public_affiliation": "University of Delaware",
+    "public_email": "zhejianw@udel.edu",
+    "academic_status": {
+      "title": "Ph.D. Candidate in Economics",
+      "institution": "University of Delaware",
+      "dissertation_defended": true,
+      "degree_conferred": false,
+      "note": "Dissertation successfully defended; degree pending formal conferral."
+    },
+    "orcid": "https://orcid.org/0009-0001-0016-0421"
+  },
+  "research_profile": {
+    "umbrella_field": "Applied Microeconomics",
+    "primary_fields": [
+      "Economics of Education",
+      "Digital Economics",
+      "Family and Household Economics"
+    ],
+    "cross_cutting_areas": [
+      "Human Capital",
+      "Technology Policy and Regulation",
+      "Development Economics"
+    ]
+  },
+  "jel_code_pool": {
+    "core": ["I21", "I24", "I28", "D13", "J12", "J13", "L51", "L86", "O33"],
+    "project_specific": ["J22", "J24", "O15", "O34", "K36"],
+    "selection_rule": "Select only the three to five codes that fit the specific manuscript."
+  },
+  "canonical_links": {
+    "website": "https://zhejianwang.com/",
+    "research": "https://zhejianwang.com/research/",
+    "cv": "https://zhejianwang.com/cv/",
+    "ai_context": "https://zhejianwang.com/ai/context/",
+    "writing_guidance": "https://zhejianwang.com/ai/writing-guidance/",
+    "submission_profile": "https://zhejianwang.com/ai/submission-profile/",
+    "google_scholar": "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ",
+    "orcid": "https://orcid.org/0009-0001-0016-0421",
+    "github": "https://github.com/zhejianw"
+  },
+  "usage": {
+    "public_only": true,
+    "action_authorization": false,
+    "freshness_note": "Check last_updated and the live website before repeating time-sensitive claims."
+  }
+}

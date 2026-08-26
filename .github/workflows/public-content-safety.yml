@@ -1,0 +1,29 @@
+name: Public content safety
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-content-safety-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  guard:
+    name: Public repository guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository without persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Check public-content boundary
+        run: python3 scripts/public_repo_guard.py
+

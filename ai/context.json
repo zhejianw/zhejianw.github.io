@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "visibility": "public",
+  "status": "current",
+  "last_updated": "2026-08-26",
+  "identity": {
+    "name": "Zhejian Wang",
+    "pronouns": "he/him",
+    "title": "Ph.D. Candidate in Economics",
+    "institution": "University of Delaware",
+    "public_email": "zhejianw@udel.edu",
+    "orcid": "0009-0001-0016-0421",
+    "dissertation_status": "Successfully defended; degree pending formal conferral",
+    "degree_conferred": false
+  },
+  "research": {
+    "umbrella_field": "Applied Microeconomics",
+    "primary_fields": [
+      "Economics of Education",
+      "Digital Economics",
+      "Family and Household Economics"
+    ],
+    "cross_cutting_areas": [
+      "Human Capital",
+      "Technology Policy and Regulation",
+      "Development Economics"
+    ],
+    "summary": "Research on how public policy and technological change shape human capital, digital behavior, and household decision-making, with a particular focus on China."
+  },
+  "submission": {
+    "jel_core": ["I21", "I24", "I28", "D13", "J12", "J13", "L51", "L86", "O33"],
+    "jel_project_specific": ["J22", "J24", "O15", "O34", "K36"],
+    "jel_selection_rule": "Choose three to five codes for a specific manuscript; do not use the entire pool by default.",
+    "statements_rule": "Funding, conflicts of interest, data availability, ethics, and author contributions must be confirmed for each manuscript."
+  },
+  "collaboration": {
+    "preserve_claims_and_numerical_results": true,
+    "fabricated_citations_prohibited": true,
+    "distinguish_verified_facts_from_suggestions": true,
+    "external_submission_authorized": false,
+    "project_specific_material_is_not_in_this_public_context": true
+  },
+  "canonical_urls": {
+    "home": "https://zhejianwang.com/",
+    "research": "https://zhejianwang.com/research/",
+    "cv": "https://zhejianwang.com/cv/",
+    "ai_context": "https://zhejianwang.com/ai/context/",
+    "writing_guidance": "https://zhejianwang.com/ai/writing-guidance/",
+    "submission_profile": "https://zhejianwang.com/ai/submission-profile/"
+  }
+}

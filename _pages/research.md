@@ -7,6 +7,8 @@ lang: en
 ref: research
 ---
 
+My work is organized around three primary fields: **economics of education**, **digital economics**, and **family and household economics**, within the broader field of applied microeconomics.
+
 ## Publication
 
 <div class="paper-card" markdown="1">
@@ -83,3 +85,4 @@ ref: research
 **Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
 
 </div>
+

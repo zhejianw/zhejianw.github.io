@@ -1,4 +1,4 @@
-name: Scrape Talk Locations
+name: Validate Talk Locations
 
 on:
   push:
@@ -6,32 +6,40 @@ on:
       - 'talks/**'
       - '_talks/**'
       - 'talkmap.ipynb'
+      - '.github/workflows/scrape_talks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
+    name: Reproduce talk map
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
-    - uses: actions/checkout@v2
+      - name: Check out repository without persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'  # Specify the Python version you need
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.11'
 
-    - name: Install dependencies
-      run: |
-        pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
-        pip install getorg --upgrade
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check jupyter pandas requests beautifulsoup4 geopy getorg
 
-    - name: Run Jupyter Notebook
-      run: |
-        jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb
+      - name: Reproduce notebook
+        run: jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb
 
-    - name: Commit changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Automated update of talk locations" || echo "No changes to commit"
-        git push
+      - name: Require manual review of generated changes
+        run: |
+          if ! git diff --quiet -- talkmap_out.ipynb; then
+            echo "::error::talkmap_out.ipynb is not reproducible from the committed inputs. Regenerate it locally, review it, and commit it manually."
+            git diff --stat -- talkmap_out.ipynb
+            exit 1
+          fi
+
