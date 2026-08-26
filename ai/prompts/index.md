@@ -11,25 +11,37 @@ status: current
 last_updated: 2026-08-26
 ---
 
-## 1
+## 图表与附录
+
+### Prompt 1
 
 ~~~text
 考虑到读者受众是《期刊名》，从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度，包括标题、notes、里面的数学符号、缩写符号等等。
 ~~~
 
-## 2
+### Prompt 6
+
+~~~text
+你重新规划下图表的顺序（顺序是否妥当、是否能帮助叙述的flow），以及是否应该出现在正文，即是否应该从appendix转移到正文，是否应该从正文转移到appendix。整理appendix内容的顺序，section/subsection顺序，是否有适合从appendix转移到正文及正文的footnotes的。
+~~~
+
+## 全文结构与格式
+
+### Prompt 2
 
 ~~~text
 你把所有标题、子标题都过一遍，包括appendix和manuscript正文，看看是否需要修改和优化的，给出修改意见。从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度 。
 ~~~
 
-## 3
+### Prompt 3
 
 ~~~text
 将全文的格式都过一遍，重点检查粗体、斜体、段落首句的格式是否出现滥用的情况。
 ~~~
 
-## 4
+## 章节审核
+
+### Prompt 4：Introduction
 
 ~~~text
 这个稿件的introduction你审核下是否符合经典的投稿规范。
@@ -40,7 +52,7 @@ last_updated: 2026-08-26
 3. implication是否准确，是否在合理的范围提高本文的格调。
 ~~~
 
-## 5
+### Prompt 5：Discussion
 
 ~~~text
 Discussion
