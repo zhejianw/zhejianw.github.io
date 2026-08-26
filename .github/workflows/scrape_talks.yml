@@ -1,12 +1,6 @@
-name: Validate Talk Locations
+name: Validate Talk Map (manual)
 
 on:
-  push:
-    paths:
-      - 'talks/**'
-      - '_talks/**'
-      - 'talkmap.ipynb'
-      - '.github/workflows/scrape_talks.yml'
   workflow_dispatch:
 
 permissions:
@@ -42,4 +36,3 @@ jobs:
             git diff --stat -- talkmap_out.ipynb
             exit 1
           fi
-
