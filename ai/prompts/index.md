@@ -90,6 +90,49 @@ last_updated: 2026-08-26
 重新给出一个最优的 claim hierarchy，并指出哪些 claims 应该升级、降级、移到 appendix 或删除。
 ~~~
 
+## 三、Abstract 与 Conclusion
+
+### Prompt 9：Abstract ★★★★★
+
+~~~text
+按照《期刊名》的读者和 editor 的阅读习惯审核 Abstract。
+
+不要只做语言润色，重点判断 Abstract 是否完成了以下任务：
+
+- 很快让读者知道研究问题为什么值得研究；
+- 明确说清楚 data / institutional setting / empirical design；
+- 准确传达最重要的 findings；
+- numerical magnitudes 是否只保留真正有信息量的数字；
+- null findings 是否表达准确；
+- contribution 是否具体，而不是泛泛地说 “contributes to several literatures”；
+- implication 是否超出了 identification 能支持的范围；
+- 是否存在正文很重要但 Abstract 没有出现的东西；
+- 是否存在 Abstract 强调、但正文实际上不重要的东西。
+
+最后判断：
+
+**如果 editor 只读 Abstract，他会不会准确理解这篇文章是什么、做了什么、发现了什么、为什么值得送审。**
+~~~
+
+### Prompt 10：Conclusion
+
+~~~text
+审核 Conclusion 是否真正完成了文章的收束，而不是重复 Introduction 或变成第二个 Discussion。
+
+重点检查：
+
+- 是否简洁回到 research question；
+- 是否准确总结 strongest evidence；
+- 是否把 contribution 与 findings 联系起来；
+- 是否出现正文没有建立的新 argument；
+- 是否重复大量具体 regression results；
+- 是否在最后几段不必要地扩大政策含义；
+- 是否有必要明确 boundary conditions / external validity；
+- 是否可以进一步缩短。
+
+如果文章已经有较长 Discussion，尤其检查 Conclusion 是否还有独立存在的必要，以及 Discussion 和 Conclusion 的分工是否合理。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
