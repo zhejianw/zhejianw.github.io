@@ -263,6 +263,67 @@ last_updated: 2026-08-26
 对于每个重要差异，告诉我应该修改 regression、table / figure 的呈现、解释方式或措辞，还是只需要明确其边界。不要为了表面一致而强迫所有分析估计同一个 estimand。
 ~~~
 
+## 五、Results
+
+### Prompt 14：Results Narrative ★★★★★
+
+**推荐模式：Extra High**
+
+~~~text
+不要把 Results 当成 regression output 的说明书。
+
+请先结合 paper identity、claim hierarchy 和 analytic strategy，重新判断 Results section 的最优叙事顺序。
+
+重点审核：
+
+- 每个 subsection 是否围绕一个 substantive question，而不是围绕一张 table；
+- 关键结果段落是否先告诉读者 substantive finding，再提供最有信息量的 estimate 与 uncertainty，而不是机械采用同一种段落模板；
+- 是否出现逐列报告 coefficient / standard error / significance stars 的情况；
+- 哪些数字真正值得在正文出现；
+- economic magnitude 是否解释充分；
+- uncertainty 是否表达准确；
+- dependent mean / SD / baseline probability 是否在需要时帮助读者理解 magnitude；
+- null results 是否解释得过多；
+- heterogeneity / mechanism / robustness 是否打断 main-results flow；
+- substantive interpretation 或 causal language 是否超过 identification 能支持的范围；
+- figure 和 table 是否出现在读者最需要它们的位置。
+
+最后重新设计 Results 的 narrative spine：
+
+**读者应该按照什么顺序知道哪些事实，才能最自然地接受文章的 central claim。**
+
+给出建议的 subsection 顺序、每个 subsection 的一句话任务，以及需要前移、后移、合并或转入 appendix 的内容。
+~~~
+
+### Prompt 15：Null Results
+
+**推荐模式：Extra High；若 null finding 直接影响 central claim，使用 Pro**
+
+~~~text
+专门审核全文对 null / imprecise estimates 的处理。
+
+不要把 null 自动视为问题或不重要的结果；它的含义取决于 estimand、estimate、confidence interval、统计精度以及 economically meaningful effect 的范围。
+
+检查：
+
+- “no effect”“no evidence”“not statistically significant”“small and precisely estimated” 是否被正确区分；
+- confidence intervals 是否允许排除 economically meaningful effects；
+- 是否把 power 不足误写为 absence of effect；
+- 是否为了保护 paper 而过度弱化重要 null finding；
+- 是否有大量逐项解释 null outcomes 导致文章显得 defensive；
+- null finding 的正文或 appendix placement 是否由 substantive importance 决定，而不是由 statistical significance 决定。
+
+判断哪些 null findings：
+
+- 是论文的重要 substantive result；
+- 只是 secondary outcome；
+- 适合正文一句话概括；
+- 应进入 appendix；
+- 不值得讨论。
+
+对于重要的 null finding，给出最准确的表述，并说明现有 confidence interval 能否支持 evidence of absence，还是只能支持 absence of evidence。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
