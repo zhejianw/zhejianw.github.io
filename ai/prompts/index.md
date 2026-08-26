@@ -512,6 +512,109 @@ last_updated: 2026-08-26
 最后将问题分为：必须修正 / 需要查阅原文后核实 / 可选优化。
 ~~~
 
+## 八、全文横向一致性
+
+### Prompt 21：Full-Manuscript Consistency Audit ★★★★★
+
+**推荐模式：Extra High；manuscript 与 appendix 很长时可使用 Pro**
+
+~~~text
+不要评价文章好不好，专门寻找全文内部不一致。
+
+逐项核对 Title、Abstract、正文、Conclusion/Discussion、tables、figures、notes 和 appendix：
+
+- sample definition；
+- sample size；
+- dates；
+- policy description；
+- variable definitions；
+- treatment definition；
+- outcome units；
+- coefficient signs；
+- numerical magnitudes；
+- decimal precision；
+- table/figure numbering；
+- section references；
+- appendix references；
+- terminology；
+- abbreviations；
+- mathematical notation；
+- fixed effects；
+- clustering；
+- control variables；
+- significance notation；
+- main findings 的语言表述。
+
+特别寻找这种问题：
+
+**每一处单独看都没有错，但不同地方放在一起会产生矛盾。**
+
+不同 sample、estimand 或 specification 产生的差异不自动构成错误；判断它是否是有意差异、是否已清楚说明，以及对应 claim 是否匹配。
+
+只报告真正存在的问题，不要为了完整而编造问题。对每个问题给出发生冲突的具体位置、建议采用的 canonical value / definition / wording，以及修改后的连锁影响。
+~~~
+
+### Prompt 22：Revision Ripple-Effect Audit ★★★★★
+
+**推荐模式：Extra High；major revision 最终提交前可使用 Pro**
+
+~~~text
+这是修改稿，不要重新从头泛泛审稿。
+
+需要同时提供上一版 manuscript、当前 manuscript、上一轮 editor/referee 要求，以及 response memo 或 change log。缺少相关材料时，明确说明哪些要求无法核实，不要推测已经完成。
+
+首先逐项核实上一轮要求修改的内容是否真的完成，而不是仅仅表面上改了文字。对每项要求指出原要求、当前对应位置及完成证据。
+
+然后重点寻找：
+
+**旧问题解决之后，新修改有没有制造新的问题。**
+
+例如：
+
+- 改了 sample definition，但 table notes 没同步；
+- 改了主结论，但 Abstract / Discussion 仍保留旧表述；
+- 移动了 table，但正文引用顺序错了；
+- 新增 robustness 后，analytic strategy 没解释；
+- 删除 subsection 后，后文仍然引用；
+- 修改术语后全文 terminology 不统一；
+- 修改结果后 Introduction 中 numerical summary 没同步。
+
+把问题分成：
+
+1. 上一轮尚未完成；
+2. 已完成且没有问题；
+3. 修改后产生的新问题；
+4. 因材料或证据不足而无法核实。
+~~~
+
+### Prompt 23：Terminology and Notation Audit
+
+**推荐模式：High；重要稿件最终可用 Extra High 验收**
+
+~~~text
+专门审核全文 terminology、abbreviations 和 mathematical notation。
+
+重点检查：
+
+- 同一个概念是否用了多个名字；
+- 不同概念是否被相同简称混淆；
+- abbreviation 是否过多；
+- abbreviation 是否第一次出现时定义；
+- table 和正文缩写是否一致；
+- treatment / post / interaction term 命名是否直观；
+- mathematical symbols 是否有未定义、重复定义或意义变化；
+- β、δ、γ 等 notation 是否真的有必要；
+- equation notation 是否帮助理解，还是制造阅读成本。
+
+不要为了表面统一而替换领域内的标准术语、制度的正式名称，或确有必要区分的概念。
+
+原则：
+
+**能不用 notation 就不强行 notation；需要 notation 时必须全篇稳定。**
+
+最后给出 canonical terminology and notation map：列出推荐术语或符号、精确定义、首次定义位置、目前存在的 variants，以及需要同步修改的正文、equations、tables、figures、notes 和 appendix 位置。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
