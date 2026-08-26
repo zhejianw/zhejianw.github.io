@@ -133,6 +133,47 @@ last_updated: 2026-08-26
 如果文章已经有较长 Discussion，尤其检查 Conclusion 是否还有独立存在的必要，以及 Discussion 和 Conclusion 的分工是否合理。
 ~~~
 
+## 四、Data、Measures 与 Empirical Design
+
+### Prompt 11：Data and Measures ★★★★★
+
+~~~text
+从一个第一次接触这套数据的 applied microeconomics referee 的视角审核 Data and Measures。
+
+重点检查：
+
+### Sample
+
+- population、sampling frame、analysis sample 是否区分清楚；
+- inclusion/exclusion criteria 是否透明；
+- sample construction 是否可以被读者复现；
+- 各种 subsample 出现时是否有明确理由；
+- sample size 的变化是否能被解释。
+
+### Timing
+
+- survey timing、policy timing、treatment timing、outcome measurement timing 是否清楚；
+- 是否存在 reader 容易误解的时间关系。
+
+### Measures
+
+- treatment、outcomes、controls 的定义是否准确；
+- self-reported / administrative / constructed measures 是否交代清楚；
+- units、coding、normalization、direction 是否一致；
+- binary / continuous / standardized outcomes 的解释是否容易理解；
+- proxy variables 是否被描述得比其实际含义更强。
+
+### Presentation
+
+- 是否有过多 data-cleaning technical details 应该进入 appendix；
+- 是否有关键 measurement information 被埋在 footnote 或 appendix；
+- summary statistics 应该在哪里出现以及应该展示什么。
+
+最后模拟 referee：
+
+**如果我要攻击 sample selection、measurement error、representativeness 或 variable construction，最容易攻击哪几点？**
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
