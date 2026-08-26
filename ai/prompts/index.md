@@ -186,6 +186,48 @@ last_updated: 2026-08-26
 **如果我要攻击 sample selection、measurement error、representativeness 或 variable construction，最容易攻击哪几点？**
 ~~~
 
+### Prompt 12：Analytic Strategy / Identification ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+从 applied microeconometrics 的角度审核 Analytic Strategy。
+
+第一步不要看 regression 写得复杂不复杂，而是回答：
+
+**这篇文章究竟依靠什么 variation 识别什么 estimand？**
+
+然后检查：
+
+- treatment group / comparison group；
+- treatment timing；
+- identifying variation；
+- identifying assumptions；
+- estimand；
+- regression specification；
+
+这几个东西是否彼此一致。
+
+进一步检查：
+
+- control variables 是否必要，是否存在 bad controls；
+- fixed effects 的作用是否解释准确；
+- standard errors / clustering level 是否合理；
+- specification 是否与 institutional setting 一致；
+- coefficient interpretation 是否准确；
+- causal language 是否与 identification strength 匹配；
+- parallel trends、sorting、anticipation、spillover、composition 等 threats 中，哪些是真正 relevant；
+- 哪些 identification concerns 必须正文回应；
+- 哪些可以通过 appendix evidence 回应；
+- 哪些无法解决，只应该谨慎界定 interpretation。
+
+尤其避免把 Analytic Strategy 写成 regression specification 的堆积。
+
+目标是让一个懂计量但不了解这个 institutional setting 的读者，可以快速理解：
+
+**为什么这个 design 能回答 research question。**
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
