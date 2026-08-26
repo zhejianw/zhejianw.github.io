@@ -50,6 +50,7 @@ Select only the codes that fit a specific manuscript, normally three to five. Do
 - [AI context](https://zhejianwang.com/ai/context/)
 - [Authoring and collaboration guidelines](https://zhejianwang.com/ai/writing-guidance/)
 - [Public submission profile](https://zhejianwang.com/ai/submission-profile/)
+- [Public prompt library](https://zhejianwang.com/ai/prompts/)
 - [Machine-readable context](https://zhejianwang.com/ai/context.json)
 
 ## Canonical public links

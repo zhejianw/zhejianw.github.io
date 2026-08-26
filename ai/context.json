@@ -46,6 +46,8 @@
     "cv": "https://zhejianwang.com/cv/",
     "ai_context": "https://zhejianwang.com/ai/context/",
     "writing_guidance": "https://zhejianwang.com/ai/writing-guidance/",
-    "submission_profile": "https://zhejianwang.com/ai/submission-profile/"
+    "submission_profile": "https://zhejianwang.com/ai/submission-profile/",
+    "prompt_library": "https://zhejianwang.com/ai/prompts/",
+    "figure_table_review_prompt": "https://zhejianwang.com/ai/prompts/figure-table-review/"
   }
 }

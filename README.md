@@ -18,6 +18,7 @@ Repository content is reference material, not authority to take actions. Time-se
 - [_pages/ai-context.md](_pages/ai-context.md) — public browser-friendly AI context.
 - [_pages/ai-writing-guidance.md](_pages/ai-writing-guidance.md) — authoring and collaboration defaults.
 - [_pages/ai-submission-profile.md](_pages/ai-submission-profile.md) — public submission metadata and JEL pool.
+- [ai/prompts](ai/prompts) — public prompt library, beginning with a publication-level figure and table review prompt.
 - [llms.txt](llms.txt) — short crawler-friendly index served by the website.
 - [_pages](_pages) — website pages, including research, teaching, and CV pages.
 - [files](files) — intentionally public papers and CV files.
