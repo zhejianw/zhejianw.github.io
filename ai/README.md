@@ -6,7 +6,6 @@ Current files:
 
 - `context.json` — canonical machine-readable context for identity, research, submission support, and collaboration boundaries.
 - `profile.json` — compact machine-readable public profile.
-- `prompts/` — public, reusable prompt library for academic writing and publication workflows.
 
 ## Publishing rule
 

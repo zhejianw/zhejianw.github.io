@@ -7,8 +7,6 @@
 - [AI context](https://zhejianwang.com/ai/context/): Human-reviewed identity, academic status, research fields, and interpretation boundary.
 - [Authoring and collaboration guidelines](https://zhejianwang.com/ai/writing-guidance/): Safe defaults for manuscript and submission support.
 - [Public submission profile](https://zhejianwang.com/ai/submission-profile/): Public author metadata and a manuscript-specific JEL code pool.
-- [Public prompt library](https://zhejianwang.com/ai/prompts/): Reusable prompts for academic writing and publication workflows.
-- [Figure and table review prompt](https://zhejianwang.com/ai/prompts/figure-table-review/): Publication-level audit and revision prompt for figures, charts, and tables.
 - [Machine-readable context](https://zhejianwang.com/ai/context.json): Structured public identity, research, submission, and collaboration metadata.
 - [Research](https://zhejianwang.com/research/): Current public research page.
 - [Curriculum Vitae](https://zhejianwang.com/cv/): Current public HTML CV.

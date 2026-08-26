@@ -37,7 +37,6 @@ Zhejian Wang is an applied microeconomist working in the economics of education,
 - [Current HTML CV](/cv/)
 - [Authoring and collaboration guidelines](/ai/writing-guidance/)
 - [Public submission profile](/ai/submission-profile/)
-- [Public prompt library](/ai/prompts/)
 - [Machine-readable context](/ai/context.json)
 
 ## Interpretation boundary

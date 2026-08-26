@@ -5,6 +5,7 @@ permalink: /ai/prompts/figure-table-review/
 author_profile: false
 lang: en
 sitemap: false
+noindex: true
 visibility: public
 status: current
 last_updated: 2026-08-26
@@ -162,4 +163,3 @@ Do not invent missing facts or change results. Separate visible problems from ch
 ## Recommended attachments
 
 For the strongest review, provide the artifact, the paragraph that introduces it, the source code/data used to generate it, related exhibits, and the target journal's current figure/table instructions.
-

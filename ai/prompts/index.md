@@ -5,6 +5,7 @@ permalink: /ai/prompts/
 author_profile: false
 lang: en
 sitemap: false
+noindex: true
 visibility: public
 status: current
 last_updated: 2026-08-26
@@ -24,4 +25,3 @@ This library contains reusable, public prompts for academic writing and publicat
 4. Treat proposed substantive changes as recommendations requiring author review.
 
 Project-specific instructions, confidential drafts, referee correspondence, and active submission strategy do not belong in this public library.
-
