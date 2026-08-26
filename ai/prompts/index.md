@@ -398,6 +398,120 @@ last_updated: 2026-08-26
 不要因为已经做了分析，就默认它必须留在文章里。
 ~~~
 
+## 七、Literature
+
+### Prompt 18：Literature Positioning ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+不要把 literature review 当成 citation accumulation。
+
+围绕最接近本文的文献重新构造 intellectual positioning。
+
+需要实际检索并核实文献，不要凭印象虚构 papers、bibliographic details、findings 或 publication status。首先识别 3–8 篇真正 closest papers；如果真正接近的不足 3 篇，不要为了达到数量而填入 distant literature。
+
+请分别回答：
+
+- 完整 citation、版本及 publication status 是什么；
+- 它研究的问题是什么；
+- data / setting 是什么；
+- empirical design 是什么；
+- strongest finding 是什么；
+- 与本文最实质性的 overlap 在哪里；
+- 本文究竟增加了什么新的 evidence、identification、measurement、interpretation 或 information。
+
+然后判断目前 Introduction 是否：
+
+- 对 closest literature 讨论太少；
+- 对 distant literature 讨论太多；
+- 把 contribution 写成 “first paper to...” 式脆弱 novelty claim；
+- 构造了 strawman；
+- 用数据或 setting 的差异冒充 substantive contribution。
+
+最重要的是帮助我找到一个框架，使本文与 closest papers 的关系表现为：
+
+**extends / complements / reconciles / distinguishes / provides evidence on a previously unresolved margin**
+
+而不是人为制造冲突。最后给出最优 positioning logic，并明确哪些 novelty claims 可以保留、需要收窄或应当删除。
+~~~
+
+### Prompt 19：单篇文献深度审核 ★★★★★
+
+**推荐模式：Pro；仅用于真正 closest 或可能威胁论文的文献，普通文献使用 Extra High**
+
+~~~text
+仔细阅读这篇文章，并判断它对我的 manuscript 到底意味着什么。
+
+先确认所读文件的版本、日期和 publication status。不要只依赖 abstract 或 search snippet；如果无法访问足够的正文，明确标记哪些判断尚未核实。对重要判断尽量给出对应的 section、page、table 或 figure。
+
+不要只告诉我“应该引用”。
+
+分别回答：
+
+### Citation
+
+- 是否应该 cite；
+- 如果 cite，应该出现在 Introduction、Institutional Background、Methods、Results、Discussion 还是 Appendix；
+- 应该 cite 它的哪一个具体观点或发现。
+
+### Contribution
+
+- 它是否削弱本文 novelty；
+- overlap 到底发生在 research question、setting、data、design、outcome 还是 interpretation；
+- 哪些地方高度重合，哪些地方实际上不同；
+- manuscript 是否需要重新表述 contribution。
+
+### Substance
+
+- 它有没有提出本文应该回应的 substantive issue；
+- 是否应该在 Introduction 主动定位；
+- 是否应该在 Discussion 回应；
+- 是否有内容不值得主动展开，以免无意义地扩大文章负担。
+
+不能仅仅因为一篇直接相关的文献会削弱 novelty，就建议隐瞒或不引用；请区分 citation obligation 与叙事上是否需要展开。
+
+### Methodology
+
+- 它的方法论中有没有值得借鉴的设计、检验、measurement 或 presentation；
+- 如果方法较旧，哪些思想仍值得借鉴；
+- 哪些适合正文；
+- 哪些只值得作为 appendix robustness；
+- 哪些做法已经被更可靠的方法取代，不值得跟随。不要仅凭发表年份判断方法是否 outdated。
+
+最后给出总体判断：
+
+**必须精读并回应 / 应引用但不需要展开 / 可以普通引用 / 与本文关系很弱。**
+~~~
+
+### Prompt 20：Citation Audit
+
+**推荐模式：Extra High**
+
+~~~text
+对全文 citation 做一次独立审核，不讨论文字风格。
+
+区分两类任务：一是 manuscript 内部的 citation-reference 一致性；二是 citation 是否真正支持对应 statement。第二类判断必须建立在实际读取 source 的基础上；无法取得或尚未核实的 source 要明确标记，不要凭标题或印象判断。
+
+检查：
+
+- substantive factual claims 是否有 citation；
+- citation 是否真的支持对应 statement；
+- 是否引用 secondary source，而更适合引用 original source；
+- institutional facts 是否有 authoritative source；
+- 是否出现一个 citation 承担过多 claims；
+- 是否有 citation cluster；
+- 是否遗漏最接近的文献；
+- 是否存在相关性已经降低、但仍机械保留的旧引用；不要仅仅因为文献较旧就建议删除；
+- bibliography 中是否有正文未引用，或正文 citation 与 reference 不一致。
+
+特别检查 Introduction 和 Discussion：
+
+是否存在“看起来引用很多，但 intellectual engagement 很弱”的情况。
+
+最后将问题分为：必须修正 / 需要查阅原文后核实 / 可选优化。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
