@@ -228,6 +228,41 @@ last_updated: 2026-08-26
 **为什么这个 design 能回答 research question。**
 ~~~
 
+### Prompt 13：Estimand Audit
+
+**推荐模式：Pro**
+
+~~~text
+全文专门做一次 estimand audit。
+
+检查每一个主要 table / figure 实际估计的对象是什么、彼此是否可比。不同 exhibit 不必估计完全相同的对象；如果不同，判断这种差异是否有明确目的、是否被清楚披露、是否与相应 claim 匹配。
+
+包括：
+
+- unit of observation / aggregation level；
+- population / target population；
+- treatment；
+- comparison group；
+- treatment timing / time horizon；
+- outcome / outcome scale；
+- functional form；
+- conditioning set / fixed effects；
+- weighting；
+- sample restriction。
+
+重点寻找：
+
+- robustness specification 实际改变了 estimand，但正文仍把它解释成同一个 effect；
+- subsample analysis 改变了 target population；
+- standardized outcomes 改变了 interpretation；
+- PPML / LPM / OLS 等不同模型下 coefficient 被直接比较；
+- treatment definition 在不同 section 中发生细微变化。
+
+最后给出一个 estimand crosswalk：逐个列出主要 table / figure、上述 estimand elements 及其对应 claim，并标记为 same、intentionally different 或 unintentionally changed。
+
+对于每个重要差异，告诉我应该修改 regression、table / figure 的呈现、解释方式或措辞，还是只需要明确其边界。不要为了表面一致而强迫所有分析估计同一个 estimand。
+~~~
+
 ## 图表与附录
 
 ### Prompt 1
