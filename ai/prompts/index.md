@@ -921,3 +921,61 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 
 重点寻找 **high return / low marginal cost** 的修改，而不是重新设计整篇论文。
 ~~~
+
+## 十一、删减与叙事效率
+
+### Prompt 30：Compression Pass ★★★★★
+
+**推荐模式：Extra High**
+
+~~~text
+假设编辑要求 manuscript 在不损失 substantive content 的情况下缩短约 15–20%。
+
+不要机械删字，而是判断文章的信息结构。
+
+寻找：
+
+- 重复出现的 argument；
+- Introduction 与 Discussion 重复；
+- Results 重复 table 内容；
+- institutional background 过长；
+- robustness 在正文占比过高；
+- literature review 中不服务 contribution 的内容；
+- 可以合并的 paragraphs；
+- 可以转为 footnote 的内容；
+- 可以转 appendix 的内容；
+- 完全可以删除的内容。
+
+同时保护：
+
+- identification logic；
+- strongest findings；
+- contribution；
+- necessary caveats。
+
+目标是：
+
+**删完以后论文不是信息更少，而是 signal-to-noise ratio 更高。**
+~~~
+
+### Prompt 31：Paragraph-Level Narrative Audit
+
+**推荐模式：Extra High**
+
+~~~text
+逐段审核正文，但不要主要做 grammar editing。
+
+对每一段判断：
+
+- 这一段的唯一任务是什么；
+- 第一两句是否马上表达这个任务；
+- 是否同时承担两个以上不相关任务；
+- 是否与上一段自然衔接；
+- 是否与下一段形成 logical progression；
+- 是否有 sentence 可以删除而不损失信息；
+- 是否存在先给细节、后告诉读者为什么重要的问题。
+
+特别寻找：
+
+**technically correct but narratively misplaced** 的段落。
+~~~
