@@ -44,7 +44,29 @@
 
   function copyText(text) {
     if (navigator.clipboard && window.isSecureContext) {
-      return navigator.clipboard.writeText(text).catch(function () {
+      return new Promise(function (resolve, reject) {
+        var settled = false;
+        var timeout = window.setTimeout(function () {
+          if (!settled) {
+            settled = true;
+            reject(new Error("Clipboard API timed out"));
+          }
+        }, 1200);
+
+        navigator.clipboard.writeText(text).then(function () {
+          if (!settled) {
+            settled = true;
+            window.clearTimeout(timeout);
+            resolve();
+          }
+        }).catch(function (error) {
+          if (!settled) {
+            settled = true;
+            window.clearTimeout(timeout);
+            reject(error);
+          }
+        });
+      }).catch(function () {
         fallbackCopy(text);
       });
     }
