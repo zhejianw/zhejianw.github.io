@@ -823,3 +823,101 @@ discussion应该回应一些很容易会想到的、明显的文章缺陷（但�
 
 discussion可能也需要适当地与最接近的文献互动，讨论与其关系，是如何互补（而不是互相伤害，如果与近的文献观点违背，要尽量谈出一些框架使得两者可以共存）。
 ~~~
+
+## 十、外部攻击：Editor 与 Referee
+
+### Prompt 27：Five-Minute Editor Read ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+模拟《期刊名》的 editor。
+
+你没有时间仔细读全文，只按照真实 desk-review 的方式快速阅读：
+
+1. Title；
+2. Abstract；
+3. Introduction；
+4. main figures/tables；
+5. Conclusion；
+6. 必要时扫一眼 design。
+
+告诉我：
+
+- 你认为这篇文章是什么；
+- strongest selling point 是什么；
+- 最明显的 weakness 是什么；
+- contribution 是否足够清楚；
+- empirical design 是否让人产生立即的不信任；
+- 哪些地方让你觉得 manuscript 太长、太散或太复杂；
+- 哪个问题最可能导致 desk rejection。
+
+最后只给出 **最影响送审概率的修改意见**，不要把 minor wording issues 混进来。
+~~~
+
+### Prompt 28：Hostile Referee Simulation ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+假设你是一位专业、认真，但没有义务帮助作者的 referee。
+
+你的目标不是总结文章，而是寻找拒稿理由。
+
+请从以下方面攻击文章：
+
+- novelty；
+- identification；
+- measurement；
+- sample selection；
+- external validity；
+- interpretation；
+- statistical inference；
+- literature positioning；
+- robustness；
+- mechanisms；
+- presentation。
+
+但不要为了攻击而制造不成立的问题。
+
+每一个 concern 判断：
+
+- Fatal；
+- Major；
+- Moderate；
+- Minor。
+
+然后进一步区分：
+
+- manuscript 已经有证据可以回应，只是没有表达好；
+- 可以通过低成本修改或 appendix 解决；
+- 需要实质性新分析；
+- 基本无法解决，只能收窄 claim。
+
+最后告诉我：
+
+**如果只能提前消灭三个 referee concerns，最应该消灭哪三个。**
+~~~
+
+### Prompt 29：Friendly Senior Coauthor
+
+**推荐模式：Pro**
+
+~~~text
+现在不要模拟 referee，而是模拟一个非常强的 senior coauthor。
+
+你的目标不是挑错，而是在**尽量不增加大量新工作**的前提下，把文章提高一个档次。
+
+寻找：
+
+- 可以更锋利的 research question；
+- 可以更好的 framing；
+- 可以更聪明地组织已有 evidence 的方式；
+- 可以删掉的枝节；
+- 可以利用已有结果形成的更强 argument；
+- 一两个 high-return、low-cost 的 additional analyses；
+- 更好的 figure/table presentation；
+- 更准确、更有价值的 literature positioning。
+
+重点寻找 **high return / low marginal cost** 的修改，而不是重新设计整篇论文。
+~~~
