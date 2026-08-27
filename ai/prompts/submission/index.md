@@ -6,6 +6,7 @@ author_profile: false
 lang: zh-CN
 sitemap: false
 noindex: true
+prompt_library: true
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -35,6 +36,8 @@ last_updated: 2026-08-27
 
 ## Submission Prompt 1：Clean-Room Replication Package
 
+<p class="prompt-description">构建与定稿论文严格匹配的可复现交付包。</p>
+
 **推荐模式：Pro**
 
 ~~~text
@@ -42,6 +45,8 @@ last_updated: 2026-08-27
 ~~~
 
 ## Submission Prompt 2：Frozen Project Snapshot
+
+<p class="prompt-description">冻结足以完整重启项目的重要节点快照。</p>
 
 **推荐模式：Pro**
 

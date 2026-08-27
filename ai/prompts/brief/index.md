@@ -6,6 +6,7 @@ author_profile: false
 lang: zh-CN
 sitemap: false
 noindex: true
+prompt_library: true
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -34,6 +35,8 @@ last_updated: 2026-08-27
 **Layers：[Project Setup](/ai/prompts/setup/) · [Notes / Evidence](/ai/prompts/notes/) · Brief · [Manuscript](/ai/prompts/) · [Submission / Replication](/ai/prompts/submission/)**
 
 ## Brief Prompt 1
+
+<p class="prompt-description">从证据反推最强论文身份与合理发表上限。</p>
 
 **推荐模式：Pro**
 
@@ -109,6 +112,8 @@ last_updated: 2026-08-27
 
 ## Brief Prompt 2
 
+<p class="prompt-description">核实期刊信息并设计风险收益最优的投稿路径。</p>
+
 **推荐模式：Pro；执行时需要联网搜索并核实当前信息**
 
 ~~~text
@@ -143,6 +148,8 @@ last_updated: 2026-08-27
 
 ## Brief Prompt 3
 
+<p class="prompt-description">提炼并保存目标期刊的官方投稿约束。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -152,7 +159,41 @@ last_updated: 2026-08-27
 这一步只建立和更新 journal requirements，不修改 manuscript。后续所有审阅和修改默认以这些要求为约束。
 ~~~
 
-## Brief Prompt 4
+## Brief Prompt 4：Target-Journal Literature Map
+
+<p class="prompt-description">分级核实核心文献并识别定位与新颖性风险。</p>
+
+**推荐模式：Pro；执行时需要联网检索并核实文献**
+
+~~~text
+基于当前 notes / evidence、paper brief 和目标期刊，为这篇 paper 建立一份真正有用的参考文献目录。请实际检索并核实文献，不要凭印象补 papers、bibliographic details、findings 或 publication status。
+
+按重要性分为：
+
+1. **必须参考**
+2. **建议参考**
+3. **可以参考**
+
+优先识别真正 closest、会影响 paper identity / contribution / identification / interpretation 的文献，而不是为了完整而堆 citation。
+
+每篇文献简洁记录：
+
+- 完整 citation、版本和 publication status；
+- **OA 状态**：OA / 可合法获得 working-paper or repository version / 非 OA；
+- 为什么这篇文献对本项目重要；
+- 它与本文最关键的 overlap 或区别；
+- 最适合在本文哪里使用，或需要从中重点学习什么。
+
+特别留意：是否存在可能明显削弱 novelty、改变 framing、提供关键方法或解释、或 referee 很可能期待看到的文献。
+
+在质量相近时优先推荐 OA 或容易合法获取的版本，但不要为了 OA 排除真正重要的文献。
+
+最后指出目前**最值得优先精读的少数文献**，以及是否还存在明显的 literature blind spot。
+~~~
+
+## Brief Prompt 5
+
+<p class="prompt-description">结合目标期刊裁决论文主线、主张边界与证据结构。</p>
 
 **推荐模式：Pro**
 
@@ -178,7 +219,9 @@ last_updated: 2026-08-27
 如果当前 evidence 与该期刊并不匹配，直接指出，不要硬凑。
 ~~~
 
-## Brief Prompt 5
+## Brief Prompt 6
+
+<p class="prompt-description">依据锁定的 Brief 建立并迭代可编译论文工程。</p>
 
 **推荐模式：Pro**
 

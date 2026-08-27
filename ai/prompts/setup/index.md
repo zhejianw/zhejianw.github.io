@@ -6,6 +6,7 @@ author_profile: false
 lang: zh-CN
 sitemap: false
 noindex: true
+prompt_library: true
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -34,6 +35,8 @@ last_updated: 2026-08-27
 **Layers：Project Setup · [Notes / Evidence](/ai/prompts/notes/) · [Brief](/ai/prompts/brief/) · [Manuscript](/ai/prompts/) · [Submission / Replication](/ai/prompts/submission/)**
 
 ## Setup Prompt 1
+
+<p class="prompt-description">建立统一目录、状态文件与项目治理规则。</p>
 
 **推荐模式：High；已有目录复杂时使用 Extra High**
 
@@ -158,6 +161,8 @@ last_updated: 2026-08-27
 ~~~
 
 ## Setup Prompt 2：Environment Bootstrap
+
+<p class="prompt-description">验证实证与写作环境并记录长期配置。</p>
 
 **推荐模式：High；环境调用异常时使用 Extra High**
 

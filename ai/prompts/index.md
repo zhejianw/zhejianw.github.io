@@ -6,6 +6,7 @@ author_profile: false
 lang: zh-CN
 sitemap: false
 noindex: true
+prompt_library: true
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -39,6 +40,8 @@ last_updated: 2026-08-27
 
 ### Meta Prompt
 
+<p class="prompt-description">统领所有审阅任务的优先级与判断原则。</p>
+
 **推荐模式：随具体 Prompt；不单独运行**
 
 ~~~text
@@ -61,6 +64,8 @@ last_updated: 2026-08-27
 ## 二、Paper Identity 与 Contribution
 
 ### Prompt 7：Paper Identity ★★★★★
+
+<p class="prompt-description">锁定论文身份、核心贡献与唯一中心信息。</p>
 
 **推荐模式：Pro**
 
@@ -91,6 +96,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 8：Claim Hierarchy ★★★★★
+
+<p class="prompt-description">按证据强度重排全文主张及叙事权重。</p>
 
 **推荐模式：Pro**
 
@@ -124,6 +131,8 @@ last_updated: 2026-08-27
 
 ### Prompt 9：Abstract ★★★★★
 
+<p class="prompt-description">按目标期刊标准诊断摘要的信息结构。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -148,6 +157,8 @@ last_updated: 2026-08-27
 
 ### Prompt 10：Conclusion
 
+<p class="prompt-description">检查结论是否准确收束发现、边界与意义。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -170,6 +181,8 @@ last_updated: 2026-08-27
 ## 四、Data、Measures 与 Empirical Design
 
 ### Prompt 11：Data and Measures ★★★★★
+
+<p class="prompt-description">审核样本、时点、变量测量与呈现可信度。</p>
 
 **推荐模式：Extra High**
 
@@ -211,6 +224,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 12：Analytic Strategy / Identification ★★★★★
+
+<p class="prompt-description">明确识别变异、估计对象与因果主张边界。</p>
 
 **推荐模式：Pro**
 
@@ -254,6 +269,8 @@ last_updated: 2026-08-27
 
 ### Prompt 13：Estimand Audit
 
+<p class="prompt-description">核对各结果的估计对象、可比性与主张匹配。</p>
+
 **推荐模式：Pro**
 
 ~~~text
@@ -291,6 +308,8 @@ last_updated: 2026-08-27
 
 ### Prompt 14：Results Narrative ★★★★★
 
+<p class="prompt-description">以研究问题为主线重组结果章节叙事。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -320,6 +339,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 15：Null Results
+
+<p class="prompt-description">校准空结果的统计表述、精度与经济含义。</p>
 
 **推荐模式：Extra High；若 null finding 直接影响 central claim，使用 Pro**
 
@@ -351,6 +372,8 @@ last_updated: 2026-08-27
 ## 六、Robustness、Heterogeneity、Mechanisms
 
 ### Prompt 16：Robustness Architecture ★★★★☆
+
+<p class="prompt-description">让每项稳健性检验对应一个明确威胁。</p>
 
 **推荐模式：Extra High**
 
@@ -390,6 +413,8 @@ last_updated: 2026-08-27
 
 ### Prompt 27：Pre-Submission Robustness Adjudication ★★★★★
 
+<p class="prompt-description">投稿前裁决必补、可选与应停止的检验。</p>
+
 **推荐模式：Pro**
 
 ~~~text
@@ -409,6 +434,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 17：Heterogeneity and Mechanisms
+
+<p class="prompt-description">区分异质性、机制与探索性证据的价值。</p>
 
 **推荐模式：Extra High；若 mechanism 是 central contribution，使用 Pro**
 
@@ -446,6 +473,8 @@ last_updated: 2026-08-27
 
 ### Prompt 18：Literature Positioning ★★★★★
 
+<p class="prompt-description">核实最近文献并建立可辩护的贡献定位。</p>
+
 **推荐模式：Pro**
 
 ~~~text
@@ -481,6 +510,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 19：单篇文献深度审核 ★★★★★
+
+<p class="prompt-description">深读单篇文献并判断其对本项目的意义。</p>
 
 **推荐模式：Pro；仅用于真正 closest 或可能威胁论文的文献，普通文献使用 Extra High**
 
@@ -530,6 +561,8 @@ last_updated: 2026-08-27
 
 ### Prompt 20：Citation Audit
 
+<p class="prompt-description">核查引文支持、完整性与参考文献一致性。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -559,6 +592,8 @@ last_updated: 2026-08-27
 ## 八、全文横向一致性
 
 ### Prompt 21：Full-Manuscript Consistency Audit ★★★★★
+
+<p class="prompt-description">查找正文、图表与附录中的内部不一致。</p>
 
 **推荐模式：Extra High；manuscript 与 appendix 很长时可使用 Pro**
 
@@ -600,6 +635,8 @@ last_updated: 2026-08-27
 
 ### Prompt 22：Revision Ripple-Effect Audit ★★★★★
 
+<p class="prompt-description">核验修改要求并追踪改动的连锁影响。</p>
+
 **推荐模式：Extra High；major revision 最终提交前可使用 Pro**
 
 ~~~text
@@ -633,6 +670,8 @@ last_updated: 2026-08-27
 
 ### Prompt 23：Terminology and Notation Audit
 
+<p class="prompt-description">统一术语、缩写和数学符号的定义与使用。</p>
+
 **推荐模式：High；重要稿件最终可用 Extra High 验收**
 
 ~~~text
@@ -663,6 +702,8 @@ last_updated: 2026-08-27
 
 ### Prompt 1
 
+<p class="prompt-description">全面优化单个图表的正确性、排版与可读性。</p>
+
 **推荐模式：High；重要稿件最终可用 Extra High 验收**
 
 ~~~text
@@ -671,6 +712,8 @@ last_updated: 2026-08-27
 
 ### Prompt 6
 
+<p class="prompt-description">重排正文与附录图表以改善叙事流和归属。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -678,6 +721,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 24：Standalone Table/Figure Audit
+
+<p class="prompt-description">检验图表脱离正文后能否被准确理解。</p>
 
 **推荐模式：High；复杂或承载核心结论的 table / figure 使用 Extra High**
 
@@ -714,6 +759,8 @@ last_updated: 2026-08-27
 
 ### Prompt 25：Footnote Audit
 
+<p class="prompt-description">判定脚注去留、位置及其对正文的影响。</p>
+
 **推荐模式：High；footnotes 很多或涉及重要识别与解释问题时使用 Extra High**
 
 ~~~text
@@ -743,6 +790,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 26：Appendix as Evidence Architecture
+
+<p class="prompt-description">按功能重建附录的支持性证据架构。</p>
 
 **推荐模式：Extra High；appendix 很长或承载核心 identification evidence 时可使用 Pro**
 
@@ -779,6 +828,8 @@ last_updated: 2026-08-27
 
 ### Prompt 2
 
+<p class="prompt-description">优化正文与附录标题的准确性和叙事性。</p>
+
 **推荐模式：High；重要稿件最终可用 Extra High 验收**
 
 ~~~text
@@ -786,6 +837,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 3
+
+<p class="prompt-description">排查粗体、斜体与段首格式的滥用。</p>
 
 **推荐模式：High**
 
@@ -796,6 +849,8 @@ last_updated: 2026-08-27
 ## 章节审核
 
 ### Prompt 4：Introduction
+
+<p class="prompt-description">按经典投稿规范审核引言结构、钩子与贡献。</p>
 
 **推荐模式：Extra High**
 
@@ -809,6 +864,8 @@ last_updated: 2026-08-27
 ~~~
 
 ### Prompt 5：Discussion
+
+<p class="prompt-description">控制讨论范围并妥善回应外推与潜在缺陷。</p>
 
 **推荐模式：Extra High；涉及 weakness 取舍或全局裁决时使用 Pro**
 
@@ -827,6 +884,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 ## 十、外部攻击：Editor 与 Referee
 
 ### Prompt 27：Five-Minute Editor Read ★★★★★
+
+<p class="prompt-description">模拟编辑快速初筛并识别桌拒风险。</p>
 
 **推荐模式：Pro**
 
@@ -856,6 +915,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 ~~~
 
 ### Prompt 28：Hostile Referee Simulation ★★★★★
+
+<p class="prompt-description">模拟严苛审稿人寻找最强拒稿理由。</p>
 
 **推荐模式：Pro**
 
@@ -901,6 +962,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 
 ### Prompt 29：Friendly Senior Coauthor
 
+<p class="prompt-description">在少增新工作的前提下寻找论文提档机会。</p>
+
 **推荐模式：Pro**
 
 ~~~text
@@ -925,6 +988,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 ## 十一、删减与叙事效率
 
 ### Prompt 30：Compression Pass ★★★★★
+
+<p class="prompt-description">在不损失实质内容下压缩论文篇幅。</p>
 
 **推荐模式：Extra High**
 
@@ -960,6 +1025,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 
 ### Prompt 31：Paragraph-Level Narrative Audit
 
+<p class="prompt-description">按段诊断任务、主题句、衔接与删改价值。</p>
+
 **推荐模式：Extra High**
 
 ~~~text
@@ -983,6 +1050,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 ## 十三、一个很有价值的最终 Meta-Prompt
 
 ### Prompt 33：What Am I Not Seeing? ★★★★★
+
+<p class="prompt-description">跳出清单识别作者最可能忽视的关键问题。</p>
 
 **推荐模式：Pro**
 
@@ -1018,6 +1087,8 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 ## 十四、用于多轮修改后的“总验收”
 
 ### Prompt 34：Manuscript Integration Audit ★★★★★
+
+<p class="prompt-description">验收多轮修改后的逻辑闭环与全文统一性。</p>
 
 **推荐模式：Pro**
 

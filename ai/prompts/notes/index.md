@@ -6,6 +6,7 @@ author_profile: false
 lang: zh-CN
 sitemap: false
 noindex: true
+prompt_library: true
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -35,6 +36,8 @@ last_updated: 2026-08-27
 
 ## Notes Prompt 1
 
+<p class="prompt-description">围绕具体研究问题扩展可复用证据层。</p>
+
 ~~~text
 基于目录中现有的自动科研工作流，对“中国成年人的幸福感与抑郁/沮丧是否出现分化？——基于 CGSS 2012–2023 七期重复截面的证据”进行充分探索。
 目标是尽可能扩充高质量、可复用的 notes/evidence layer，而不是尽快形成故事。系统探索所有有 substantive meaning 且 defensible 的 estimand 和 specification families，包括合理的 dependent variables/codings、controls、FE、clustering/inference、functional forms、weights、sample restrictions，以及 distributional、heterogeneity、decomposition 等分析；主动补充我没有点到但值得探索的方向。不要机械做 specification 笛卡尔积，也不要按显著性筛选结果。
@@ -43,7 +46,13 @@ last_updated: 2026-08-27
 
 ## Notes Prompt 2
 
+<p class="prompt-description">按模块推进证据发现、压力测试、矛盾解决与收敛。</p>
+
 **使用方式：以下模块必须逐个喂给 AI，不能一起喂。**
+
+### 0. 总控
+
+<p class="prompt-description">限定证据层目标、保存范围与基本纪律。</p>
 
 ~~~text
 ## 0. 总控
@@ -55,6 +64,10 @@ last_updated: 2026-08-27
 ~~~
 
 ---
+
+### H1. 横向：Research-space expansion
+
+<p class="prompt-description">横向发现具有实质价值的新研究分支。</p>
 
 ~~~text
 ## H1. 横向：Research-space expansion
@@ -69,6 +82,10 @@ last_updated: 2026-08-27
 
 ---
 
+### H2. 横向：Empirical-space expansion
+
+<p class="prompt-description">围绕明确问题扩展可辩护的实证选择。</p>
+
 ~~~text
 ## H2. 横向：Empirical-space expansion
 
@@ -81,6 +98,10 @@ last_updated: 2026-08-27
 ~~~
 
 ---
+
+### V1. 纵向：Deep investigation
+
+<p class="prompt-description">深挖关键分支并裁定其证据状态。</p>
 
 ~~~text
 ## V1. 纵向：Deep investigation
@@ -95,6 +116,10 @@ last_updated: 2026-08-27
 
 ---
 
+### V2. 纵向：Adversarial audit
+
+<p class="prompt-description">以真实失效机制对核心发现进行压力测试。</p>
+
 ~~~text
 ## V2. 纵向：Adversarial audit
 
@@ -108,6 +133,10 @@ last_updated: 2026-08-27
 
 ---
 
+### H3. 再横向：Evidence-conditioned discovery
+
+<p class="prompt-description">从既有异常与矛盾中发现新研究方向。</p>
+
 ~~~text
 ## H3. 再横向：Evidence-conditioned discovery
 
@@ -120,6 +149,10 @@ last_updated: 2026-08-27
 ~~~
 
 ---
+
+### C1. 收敛：Branch adjudication
+
+<p class="prompt-description">汇总证据、裁决分支并安排后续资源。</p>
 
 ~~~text
 ## C1. 收敛：Branch adjudication
@@ -138,6 +171,10 @@ last_updated: 2026-08-27
 
 ---
 
+### X1. 按需：Contradiction resolution
+
+<p class="prompt-description">解释冲突证据并设计可区分的新检验。</p>
+
 ~~~text
 ## X1. 按需：Contradiction resolution
 
@@ -152,6 +189,10 @@ last_updated: 2026-08-27
 ~~~
 
 ---
+
+### 循环
+
+<p class="prompt-description">规定探索循环、插入条件与停止标准。</p>
 
 ~~~text
 ## 循环
