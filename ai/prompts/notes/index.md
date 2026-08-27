@@ -11,6 +11,26 @@ status: current
 last_updated: 2026-08-27
 ---
 
+<style>
+.page__content .highlighter-rouge,
+.page__content .highlight,
+.page__content pre {
+  max-width: 100%;
+}
+
+.page__content pre,
+.page__content pre code {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.page__content .highlight,
+.page__content pre {
+  overflow-x: visible !important;
+}
+</style>
+
 **Layers：[Manuscript](/ai/prompts/) · Notes / Evidence**
 
 ## Notes Prompt 1
@@ -22,6 +42,8 @@ last_updated: 2026-08-27
 ~~~
 
 ## Notes Prompt 2
+
+**使用方式：以下模块必须逐个喂给 AI，不能一起喂。**
 
 ~~~text
 ## 0. 总控
