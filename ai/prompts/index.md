@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Prompt库"
+title: "Prompt 库 · Manuscript Layer"
 permalink: /ai/prompts/
 author_profile: false
 lang: zh-CN
@@ -8,8 +8,12 @@ sitemap: false
 noindex: true
 visibility: public
 status: current
-last_updated: 2026-08-26
+last_updated: 2026-08-27
 ---
+
+**Layers：Manuscript · [Notes / Evidence](/ai/prompts/notes/)**
+
+本页收录 manuscript-level 的审阅、诊断、重组与投稿前检查 Prompts。
 
 ## 通用审阅原则
 
