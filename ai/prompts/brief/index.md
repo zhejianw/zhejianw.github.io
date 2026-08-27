@@ -177,3 +177,34 @@ last_updated: 2026-08-27
 
 如果当前 evidence 与该期刊并不匹配，直接指出，不要硬凑。
 ~~~
+
+## Brief Prompt 5
+
+**推荐模式：Pro**
+
+~~~text
+基于已经锁定的 manuscript brief、notes / evidence base、目标期刊要求和提供的 JDE `.tex` 参考稿，建立这篇 paper 的 manuscript layer。
+
+直接创建和迭代实际 manuscript，不要只给 outline 或写作建议。
+
+### 基本约束
+
+- **Manuscript 是唯一的 living document。** 始终维护一个 authoritative current version；重大修改前可以备份，但不要不断生成彼此竞争的 V1/V2/V3。Brief 和 manuscript 可以删改重构；notes / evidence layer 原则上 append-only，旧结果即使被降级为 dead end 也不从 evidence history 中抹掉。
+- **交付必须是可工作的 LaTeX project。** 创建/维护 `.tex` 及必要文件，并成功编译生成可直接审阅的 PDF。每轮 substantive revision 后重新编译并检查明显的引用、浮动体、分页、overflow 和 cross-reference 问题。
+- **Brief 决定 paper identity，evidence 决定事实边界。** 所有 claims、数字、样本、结果和 interpretation 必须能回到现有 evidence。可以自主选择、压缩和重组 evidence，但不要虚构或为了填满论文而扩大分析。
+- **以提供的 JDE `.tex` 作为主要 style reference。** 学习其成熟的 citation、spacing、sectioning、equation、footnote、figure/table placement、caption/note 和整体 LaTeX 习惯；吸收格式和工程规范，不机械复制其内容结构。
+- Manuscript 原则上包含经济学论文常规模块：**Abstract、Introduction、Background / Institutional Context、Data、Empirical Methodology / Strategy、Results、Heterogeneity / Mechanisms（如有必要）、Discussion、Conclusion**。这不是刚性模板；根据 paper identity 和 evidence 自主合并、拆分、重排或省略不必要模块。
+- **Figures / tables 是 evidence architecture 的一部分。** 正文只保留理解 central question、identification 和 main claims 真正需要的 exhibits；supporting diagnostics、robustness、secondary outcomes 和技术性材料优先进入 appendix。图表应简洁、可独立理解、格式统一，并放在最有利于阅读 flow 的位置。不要为了展示已有分析而堆积 exhibits。
+
+### 写作原则
+
+始终按高水平 economics manuscript 的标准构建论文，不因目标期刊层级较低而降低 identification、claim discipline、写作、图表或排版标准。
+
+让文章围绕清晰的：
+
+**research question → empirical leverage / identification → evidence → interpretation → contribution**
+
+自然展开。
+
+在具体 section、篇幅、figure/table 组合和叙事顺序上保持自主判断。优先形成一篇完整、自洽、克制、可以直接从 PDF 整体审阅并继续迭代的 manuscript，而不是过早追求局部文字完美。
+~~~
