@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zhejianw.github.io/sitemap.xml
+Sitemap: https://zhejianwang.com/sitemap.xml

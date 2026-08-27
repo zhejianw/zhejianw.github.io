@@ -36,48 +36,124 @@ last_updated: 2026-08-27
 
 {% include prompt-layer-tabs.html %}
 
-本页收录 manuscript-level 的审阅、诊断、重组与投稿前检查 Prompts。
+本页是 manuscript layer 的审阅工作台：Quick Passes 用于快速扫描，Deep Audits 用于系统判断与最终裁决。
+
+<div class="prompt-usage-note">
+  <strong>常用路线</strong><br>
+  <strong>Substantive revision:</strong> <a href="#prompt-paper-identity">Identity</a> → <a href="#prompt-identification-strategy">Identification</a> → <a href="#prompt-results-narrative">Results</a> → <a href="#prompt-integration-audit">Integration</a><br>
+  <strong>Pre-submission:</strong> <a href="#prompt-editor-five-minute-read">Editor</a> → <a href="#prompt-hostile-referee">Referee</a> → <a href="#prompt-pre-submission-robustness">Robustness Adjudication</a> → <a href="#prompt-manuscript-consistency">Consistency</a> → <a href="#prompt-final-manuscript-audit">Final Audit</a><br>
+  <strong>Local revision:</strong> 直接选择对应的 section 或 exhibit Prompt。
+</div>
 
 <nav class="prompt-section-toc" aria-label="Manuscript prompt sections">
   <strong>Jump to</strong>
-  <a href="#group-foundations-identity">Identity</a><span class="toc-separator">·</span>
-  <a href="#group-empirical-core">Empirical Core</a><span class="toc-separator">·</span>
-  <a href="#group-credibility-literature">Credibility</a><span class="toc-separator">·</span>
-  <a href="#group-consistency-presentation">Consistency</a><span class="toc-separator">·</span>
-  <a href="#group-structure-sections">Structure</a><span class="toc-separator">·</span>
-  <a href="#group-editor-referee">Referee</a><span class="toc-separator">·</span>
-  <a href="#group-compression-narrative">Compression</a><span class="toc-separator">·</span>
-  <a href="#group-final-audit">Final Audit</a>
+  <a href="#quick-passes">Quick</a><span class="toc-separator">·</span>
+  <a href="#deep-audits">Deep</a><span class="toc-separator">·</span>
+  <a href="#deep-a-identity">A Identity</a><span class="toc-separator">·</span>
+  <a href="#deep-b-sections">B Sections</a><span class="toc-separator">·</span>
+  <a href="#deep-c-evidence">C Evidence</a><span class="toc-separator">·</span>
+  <a href="#deep-d-literature">D Literature</a><span class="toc-separator">·</span>
+  <a href="#deep-e-exhibits">E Exhibits</a><span class="toc-separator">·</span>
+  <a href="#deep-f-consistency">F Consistency</a><span class="toc-separator">·</span>
+  <a href="#deep-g-adversarial">G Adversarial</a><span class="toc-separator">·</span>
+  <a href="#deep-h-convergence">H Convergence</a>
 </nav>
 
-## 通用审阅原则 {#group-foundations-identity}
+## General instruction — optional {#prompt-meta-review-principles}
 
-### Meta Prompt {#prompt-meta-review-principles}
-
-<p class="prompt-description">统领所有审阅任务的优先级与判断原则。</p>
+<p class="prompt-description">可按需附在具体审阅 Prompt 前；无需每次单独运行。</p>
 
 **推荐模式：随具体 Prompt；不单独运行**
 
 ~~~text
-不要机械地按照我列出的项目逐项打勾。先完整理解文章，再判断真正影响论文质量、可信度和发表概率的问题。我的问题只是审阅视角，不是对你的约束；如果你发现我没有提到但更重要的问题，优先指出。
-
-修改建议要有优先级。区分哪些是必须修改、哪些是明显改善、哪些只是可选优化。
-
-不要为了“显得完整”而机械建议增加 regression、robustness 或 literature。新增分析必须能够解决一个明确的 identification、interpretation、positioning 或 referee concern，否则宁可不加。
-
-对每个重要问题尽量说明：
-
-1. 问题出现在哪里；
-2. 为什么是问题；
-3. 最优修改方向；
-4. 修改后是否会对文章其他部分产生连锁影响。
-
-核心目标不是让文章“内容更多”，而是让文章更可信、更容易读、更难被攻击，并且形成最优叙事。
+先完整理解 manuscript，再判断真正影响论文质量、可信度、叙事和发表概率的问题。以下要求只是审阅视角，不是 checklist；如果存在更重要的问题，优先处理。不要为了完整而建议低边际价值的新增分析。
 ~~~
 
-## 二、Paper Identity 与 Contribution
+## Quick Passes {#quick-passes}
 
-### Prompt 7：Paper Identity ★★★★★ {#prompt-paper-identity}
+短、开放，适合快速扫描。需要系统裁决时，使用后面的 Deep Audits。
+
+### Q1 · Figure / Table {#prompt-table-figure-general-audit}
+
+<p class="prompt-description">全面优化单个图表的正确性、排版与可读性。</p>
+
+**推荐模式：High；重要稿件最终可用 Extra High 验收**
+
+~~~text
+考虑到读者受众是《期刊名》，从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度，包括标题、notes、里面的数学符号、缩写符号等等。
+~~~
+
+### Q2 · Headings {#prompt-heading-audit}
+
+<p class="prompt-description">优化正文与附录标题的准确性和叙事性。</p>
+
+**推荐模式：High；重要稿件最终可用 Extra High 验收**
+
+~~~text
+你把所有标题、子标题都过一遍，包括appendix和manuscript正文，看看是否需要修改和优化的，给出修改意见。从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度 。
+~~~
+
+### Q3 · Formatting {#prompt-formatting-audit}
+
+<p class="prompt-description">排查粗体、斜体与段首格式的滥用。</p>
+
+**推荐模式：High**
+
+~~~text
+将全文的格式都过一遍，重点检查粗体、斜体、段落首句的格式是否出现滥用的情况。
+~~~
+
+### Q4 · Introduction {#prompt-introduction-audit}
+
+<p class="prompt-description">按经典投稿规范审核引言结构、钩子与贡献。</p>
+
+**推荐模式：Extra High**
+
+~~~text
+这个稿件的introduction你审核下是否符合经典的投稿规范。
+
+0. 结构是否合理，篇幅等是否合理，是否缺失模块。
+1. hook是否合适，是否能引起读者的注意。是否在合适的地方提出research idea，对research idea描述是否准确。literature 和 contribution的介绍是否优秀，是否过于泛泛而谈。
+2. finding部分是否准确，是否有不该出现的过于详细的内容，是否有该出现但是没出现的内容。是否过于计量化、统计化，读者是否能快速理解。
+3. implication是否准确，是否在合理的范围提高本文的格调。
+~~~
+
+### Q5 · Discussion {#prompt-discussion-audit}
+
+<p class="prompt-description">控制讨论范围并妥善回应外推与潜在缺陷。</p>
+
+**推荐模式：Extra High；涉及 weakness 取舍或全局裁决时使用 Pro**
+
+~~~text
+Discussion
+
+你想想，discussion有什么修改意见。
+
+我对于discussion没有什么太多很多指引，我的想法是，很多内容应该埋在appendix，而不应该堆在discussion（discussion很容易成为垃圾堆）。
+
+discussion应该回应一些很容易会想到的、明显的文章缺陷（但是不一定能够解决，只能适当做些讨论），这一块很微妙，不能成为自害，但是又不能对明显应该讨论的话题缺失。如果能用文章提到的主体数据回应最好了，或者用容易获得的公开数据、统计数据回应也很好，实在不行利用同行审阅后的文献的观点/内容回应也可以。可以讨论的话题，例如如何外推我们的发现（或者说为什么不能外推、什么时候适合外推）；例如一些selection bias，measurement error，endogenous，representative
+
+discussion可能也需要适当地与最接近的文献互动，讨论与其关系，是如何互补（而不是互相伤害，如果与近的文献观点违背，要尽量谈出一些框架使得两者可以共存）。
+~~~
+
+### Q6 · Exhibit Order {#prompt-exhibit-ordering}
+
+<p class="prompt-description">重排正文与附录图表以改善叙事流和归属。</p>
+
+**推荐模式：Extra High**
+
+~~~text
+你重新规划下图表的顺序（顺序是否妥当、是否能帮助叙述的flow），以及是否应该出现在正文，即是否应该从appendix转移到正文，是否应该从正文转移到appendix。整理appendix内容的顺序，section/subsection顺序，是否有适合从appendix转移到正文及正文的footnotes的。
+~~~
+
+
+<div id="deep-audits" class="prompt-transition-label">Deep Audits</div>
+
+按研究者实际使用顺序组织，用于全局判断、系统审核和投稿前收敛。
+
+## A. Whole-paper identity {#deep-a-identity}
+
+### Paper Identity {#prompt-paper-identity}
 
 <p class="prompt-description">锁定论文身份、核心贡献与唯一中心信息。</p>
 
@@ -109,7 +185,7 @@ last_updated: 2026-08-27
 **如果只能保留一个 central message，这篇文章最应该让读者记住什么。**
 ~~~
 
-### Prompt 8：Claim Hierarchy ★★★★★ {#prompt-claim-hierarchy}
+### Claim Hierarchy {#prompt-claim-hierarchy}
 
 <p class="prompt-description">按证据强度重排全文主张及叙事权重。</p>
 
@@ -141,9 +217,10 @@ last_updated: 2026-08-27
 重新给出一个最优的 claim hierarchy，并指出哪些 claims 应该升级、降级、移到 appendix 或删除。
 ~~~
 
-## 三、Abstract 与 Conclusion {#group-empirical-core}
 
-### Prompt 9：Abstract ★★★★★ {#prompt-abstract-audit}
+## B. Section audits {#deep-b-sections}
+
+### Abstract {#prompt-abstract-audit}
 
 <p class="prompt-description">按目标期刊标准诊断摘要的信息结构。</p>
 
@@ -169,32 +246,34 @@ last_updated: 2026-08-27
 **如果 editor 只读 Abstract，他会不会准确理解这篇文章是什么、做了什么、发现了什么、为什么值得送审。**
 ~~~
 
-### Prompt 10：Conclusion {#prompt-conclusion-audit}
+<p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-introduction-audit">Q4 Introduction</a></p>
 
-<p class="prompt-description">检查结论是否准确收束发现、边界与意义。</p>
+### Background / Institutional Context {#prompt-background-institutional-context}
+
+<p class="prompt-description">判断制度背景是否为研究问题与识别提供了足够、准确且克制的支撑。</p>
 
 **推荐模式：Extra High**
 
 ~~~text
-审核 Conclusion 是否真正完成了文章的收束，而不是重复 Introduction 或变成第二个 Discussion。
+从一个第一次接触这一 institutional setting 的 applied microeconomics referee 视角，审核 Background / Institutional Context。
 
-重点检查：
+重点不是语言润色，而是判断这一节是否只提供理解 research question、treatment、timing、comparison group 和 identification 所必需的制度信息。
 
-- 是否简洁回到 research question；
-- 是否准确总结 strongest evidence；
-- 是否把 contribution 与 findings 联系起来；
-- 是否出现正文没有建立的新 argument；
-- 是否重复大量具体 regression results；
-- 是否在最后几段不必要地扩大政策含义；
-- 是否有必要明确 boundary conditions / external validity；
-- 是否可以进一步缩短。
+检查：
 
-如果文章已经有较长 Discussion，尤其检查 Conclusion 是否还有独立存在的必要，以及 Discussion 和 Conclusion 的分工是否合理。
+- chronology 是否清楚，读者能否准确理解关键事件发生的先后顺序；
+- statutory rules、formal policy、actual implementation 和 enforcement 是否被正确区分；
+- policy coverage、eligibility、exceptions、geographic scope 和 implementation intensity 是否交代到足以理解 empirical design；
+- 重要 institutional claims 是否有可靠、权威且真正支持对应事实的 source；
+- 是否写成与 research question 无关的政策百科；
+- 是否遗漏 identification 所依赖、但读者无法自行推断的制度细节；
+- 是否把 Results、mechanism 或作者的 interpretation 提前写进 Background；
+- 哪些细节应留在正文，哪些更适合 footnote 或 appendix。
+
+最后给出一个最小但充分的 section structure，并指出必须补充、可以压缩、应移动和可以删除的内容。
 ~~~
 
-## 四、Data、Measures 与 Empirical Design
-
-### Prompt 11：Data and Measures ★★★★★ {#prompt-data-measures}
+### Data & Measures {#prompt-data-measures}
 
 <p class="prompt-description">审核样本、时点、变量测量与呈现可信度。</p>
 
@@ -237,7 +316,7 @@ last_updated: 2026-08-27
 **如果我要攻击 sample selection、measurement error、representativeness 或 variable construction，最容易攻击哪几点？**
 ~~~
 
-### Prompt 12：Analytic Strategy / Identification ★★★★★ {#prompt-identification-strategy}
+### Analytic Strategy / Identification {#prompt-identification-strategy}
 
 <p class="prompt-description">明确识别变异、估计对象与因果主张边界。</p>
 
@@ -281,7 +360,103 @@ last_updated: 2026-08-27
 **为什么这个 design 能回答 research question。**
 ~~~
 
-### Prompt 13：Estimand Audit {#prompt-estimand-audit}
+### Results Narrative {#prompt-results-narrative}
+
+<p class="prompt-description">以研究问题为主线重组结果章节叙事。</p>
+
+**推荐模式：Extra High**
+
+~~~text
+不要把 Results 当成 regression output 的说明书。
+
+请先结合 paper identity、claim hierarchy 和 analytic strategy，重新判断 Results section 的最优叙事顺序。
+
+重点审核：
+
+- 每个 subsection 是否围绕一个 substantive question，而不是围绕一张 table；
+- 关键结果段落是否先告诉读者 substantive finding，再提供最有信息量的 estimate 与 uncertainty，而不是机械采用同一种段落模板；
+- 是否出现逐列报告 coefficient / standard error / significance stars 的情况；
+- 哪些数字真正值得在正文出现；
+- economic magnitude 是否解释充分；
+- uncertainty 是否表达准确；
+- dependent mean / SD / baseline probability 是否在需要时帮助读者理解 magnitude；
+- null results 是否解释得过多；
+- heterogeneity / mechanism / robustness 是否打断 main-results flow；
+- substantive interpretation 或 causal language 是否超过 identification 能支持的范围；
+- figure 和 table 是否出现在读者最需要它们的位置。
+
+最后重新设计 Results 的 narrative spine：
+
+**读者应该按照什么顺序知道哪些事实，才能最自然地接受文章的 central claim。**
+
+给出建议的 subsection 顺序、每个 subsection 的一句话任务，以及需要前移、后移、合并或转入 appendix 的内容。
+~~~
+
+### Heterogeneity & Mechanisms {#prompt-heterogeneity-mechanisms}
+
+<p class="prompt-description">区分异质性、机制与探索性证据的价值。</p>
+
+**推荐模式：Extra High；若 mechanism 是 central contribution，使用 Pro**
+
+~~~text
+审核 heterogeneity 和 mechanism 部分是否真的提高论文价值。
+
+重点区分：
+
+- treatment-effect heterogeneity；
+- mechanism evidence；
+- descriptive correlation；
+- exploratory subgroup analysis。
+
+检查：
+
+- subgroup 是否有 ex ante substantive motivation；
+- subgroup variable 是否为 pre-treatment；按 post-treatment variable 分组或 conditioning 是否可能引入偏误；
+- subgroup sample 是否过小；
+- interaction 与 subgroup regressions 的解释是否一致；
+- 是否正式检验组间 estimates 的差异，而不是把“一组显著、另一组不显著”当作组间差异；
+- multiple testing 是否成为问题，confirmatory 与 exploratory analyses 是否被准确区分；
+- heterogeneous estimates 是否真的彼此 statistically different；
+- mechanism outcome 的 timing 是否合理，是否位于可信的 causal chain 上；
+- 是否把 mediator / correlate 错误称为 mechanism；
+- evidence strength 是否足以支持 mechanism language。
+
+最后判断每组分析：
+
+**main text / appendix / drop。**
+
+不要因为已经做了分析，就默认它必须留在文章里。
+~~~
+
+<p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-discussion-audit">Q5 Discussion</a></p>
+
+### Conclusion {#prompt-conclusion-audit}
+
+<p class="prompt-description">检查结论是否准确收束发现、边界与意义。</p>
+
+**推荐模式：Extra High**
+
+~~~text
+审核 Conclusion 是否真正完成了文章的收束，而不是重复 Introduction 或变成第二个 Discussion。
+
+重点检查：
+
+- 是否简洁回到 research question；
+- 是否准确总结 strongest evidence；
+- 是否把 contribution 与 findings 联系起来；
+- 是否出现正文没有建立的新 argument；
+- 是否重复大量具体 regression results；
+- 是否在最后几段不必要地扩大政策含义；
+- 是否有必要明确 boundary conditions / external validity；
+- 是否可以进一步缩短。
+
+如果文章已经有较长 Discussion，尤其检查 Conclusion 是否还有独立存在的必要，以及 Discussion 和 Conclusion 的分工是否合理。
+~~~
+
+
+## C. Evidence & inference {#deep-c-evidence}
+
+### Estimand Audit {#prompt-estimand-audit}
 
 <p class="prompt-description">核对各结果的估计对象、可比性与主张匹配。</p>
 
@@ -318,41 +493,7 @@ last_updated: 2026-08-27
 对于每个重要差异，告诉我应该修改 regression、table / figure 的呈现、解释方式或措辞，还是只需要明确其边界。不要为了表面一致而强迫所有分析估计同一个 estimand。
 ~~~
 
-## 五、Results
-
-### Prompt 14：Results Narrative ★★★★★ {#prompt-results-narrative}
-
-<p class="prompt-description">以研究问题为主线重组结果章节叙事。</p>
-
-**推荐模式：Extra High**
-
-~~~text
-不要把 Results 当成 regression output 的说明书。
-
-请先结合 paper identity、claim hierarchy 和 analytic strategy，重新判断 Results section 的最优叙事顺序。
-
-重点审核：
-
-- 每个 subsection 是否围绕一个 substantive question，而不是围绕一张 table；
-- 关键结果段落是否先告诉读者 substantive finding，再提供最有信息量的 estimate 与 uncertainty，而不是机械采用同一种段落模板；
-- 是否出现逐列报告 coefficient / standard error / significance stars 的情况；
-- 哪些数字真正值得在正文出现；
-- economic magnitude 是否解释充分；
-- uncertainty 是否表达准确；
-- dependent mean / SD / baseline probability 是否在需要时帮助读者理解 magnitude；
-- null results 是否解释得过多；
-- heterogeneity / mechanism / robustness 是否打断 main-results flow；
-- substantive interpretation 或 causal language 是否超过 identification 能支持的范围；
-- figure 和 table 是否出现在读者最需要它们的位置。
-
-最后重新设计 Results 的 narrative spine：
-
-**读者应该按照什么顺序知道哪些事实，才能最自然地接受文章的 central claim。**
-
-给出建议的 subsection 顺序、每个 subsection 的一句话任务，以及需要前移、后移、合并或转入 appendix 的内容。
-~~~
-
-### Prompt 15：Null Results {#prompt-null-results}
+### Null Results {#prompt-null-results}
 
 <p class="prompt-description">校准空结果的统计表述、精度与经济含义。</p>
 
@@ -383,9 +524,7 @@ last_updated: 2026-08-27
 对于重要的 null finding，给出最准确的表述，并说明现有 confidence interval 能否支持 evidence of absence，还是只能支持 absence of evidence。
 ~~~
 
-## 六、Robustness、Heterogeneity、Mechanisms {#group-credibility-literature}
-
-### Prompt 16：Robustness Architecture ★★★★☆ {#prompt-robustness-architecture}
+### Robustness Architecture {#prompt-robustness-architecture}
 
 <p class="prompt-description">让每项稳健性检验对应一个明确威胁。</p>
 
@@ -425,67 +564,10 @@ last_updated: 2026-08-27
 **正文必须保留 / appendix 保留 / 可以删除。**
 ~~~
 
-### Prompt 27：Pre-Submission Robustness Adjudication ★★★★★ {#prompt-pre-submission-robustness}
 
-<p class="prompt-description">投稿前裁决必补、可选与应停止的检验。</p>
+## D. Literature {#deep-d-literature}
 
-**推荐模式：Pro**
-
-~~~text
-请把这篇已经较成熟的 manuscript 和 appendix 当作接近投稿版本，从 senior referee / editor 的角度重新审视。
-
-重点不是继续扩张分析，而是判断：**还有哪些 robustness / diagnostic 是真正有必要补的，哪些只是 nice-to-have，哪些即使能做也没有必要做。**
-
-优先寻找可能影响 identification、interpretation、credibility 或 referee decision 的缺口，并特别注意现有 robustness 是否已经足以回应这些 concern。
-
-请给出一个有边界的裁决：
-
-- **应当现在做**
-- **有价值但可不做**
-- **不建议再做**
-
-不要因为“还可以做”就建议增加分析，也不要为了预防所有可能的 referee comment 而过度自害。目标是找到投稿前边际价值最高的少数 robustness。
-~~~
-
-### Prompt 17：Heterogeneity and Mechanisms {#prompt-heterogeneity-mechanisms}
-
-<p class="prompt-description">区分异质性、机制与探索性证据的价值。</p>
-
-**推荐模式：Extra High；若 mechanism 是 central contribution，使用 Pro**
-
-~~~text
-审核 heterogeneity 和 mechanism 部分是否真的提高论文价值。
-
-重点区分：
-
-- treatment-effect heterogeneity；
-- mechanism evidence；
-- descriptive correlation；
-- exploratory subgroup analysis。
-
-检查：
-
-- subgroup 是否有 ex ante substantive motivation；
-- subgroup variable 是否为 pre-treatment；按 post-treatment variable 分组或 conditioning 是否可能引入偏误；
-- subgroup sample 是否过小；
-- interaction 与 subgroup regressions 的解释是否一致；
-- 是否正式检验组间 estimates 的差异，而不是把“一组显著、另一组不显著”当作组间差异；
-- multiple testing 是否成为问题，confirmatory 与 exploratory analyses 是否被准确区分；
-- heterogeneous estimates 是否真的彼此 statistically different；
-- mechanism outcome 的 timing 是否合理，是否位于可信的 causal chain 上；
-- 是否把 mediator / correlate 错误称为 mechanism；
-- evidence strength 是否足以支持 mechanism language。
-
-最后判断每组分析：
-
-**main text / appendix / drop。**
-
-不要因为已经做了分析，就默认它必须留在文章里。
-~~~
-
-## 七、Literature
-
-### Prompt 18：Literature Positioning ★★★★★ {#prompt-literature-positioning}
+### Literature Positioning {#prompt-literature-positioning}
 
 <p class="prompt-description">核实最近文献并建立可辩护的贡献定位。</p>
 
@@ -523,7 +605,7 @@ last_updated: 2026-08-27
 而不是人为制造冲突。最后给出最优 positioning logic，并明确哪些 novelty claims 可以保留、需要收窄或应当删除。
 ~~~
 
-### Prompt 19：单篇文献深度审核 ★★★★★ {#prompt-single-paper-review}
+### Single-Paper Deep Review {#prompt-single-paper-review}
 
 <p class="prompt-description">深读单篇文献并判断其对本项目的意义。</p>
 
@@ -573,7 +655,7 @@ last_updated: 2026-08-27
 **必须精读并回应 / 应引用但不需要展开 / 可以普通引用 / 与本文关系很弱。**
 ~~~
 
-### Prompt 20：Citation Audit {#prompt-citation-audit}
+### Citation Audit {#prompt-citation-audit}
 
 <p class="prompt-description">核查引文支持、完整性与参考文献一致性。</p>
 
@@ -603,9 +685,119 @@ last_updated: 2026-08-27
 最后将问题分为：必须修正 / 需要查阅原文后核实 / 可选优化。
 ~~~
 
-## 八、全文横向一致性 {#group-consistency-presentation}
 
-### Prompt 21：Full-Manuscript Consistency Audit ★★★★★ {#prompt-manuscript-consistency}
+## E. Exhibits & Appendix {#deep-e-exhibits}
+
+### Standalone Table / Figure Audit {#prompt-standalone-exhibit-audit}
+
+<p class="prompt-description">检验图表脱离正文后能否被准确理解。</p>
+
+**推荐模式：High；复杂或承载核心结论的 table / figure 使用 Extra High**
+
+~~~text
+假设读者只看这一张 table / figure，不读正文。
+
+判断它是否能够基本独立理解。不要把“独立理解”理解为把方法和背景全部塞进 notes；目标是让读者能够正确理解展示对象、关键比较、结果及其不确定性。区分 table 和 figure，只检查实际适用的项目。
+
+检查：
+
+- title 是否准确；
+- subtitle / panel title 是否必要；
+- dependent variable 是否清楚；
+- sample 是否清楚；
+- units 是否清楚；
+- treatment variable、comparison group / reference category 是否清楚；
+- fixed effects / controls 是否表达准确；
+- standard errors / clustering 是否清楚；
+- stars 是否定义；
+- estimates、confidence intervals、axes、legends 或 scales 是否容易正确解读；
+- mean / SD 是否需要；
+- observation count 是否需要；
+- notes 是否过长；
+- abbreviation 是否过多；
+- decimal precision 是否统一；
+- 表格或图形的视觉 hierarchy 是否合理。
+
+同时判断：
+
+**哪些信息应该在表内，哪些应该在 notes，哪些应该在正文，哪些根本不需要出现。**
+
+如需修改，给出 revised title / panel titles / notes，以及必要的版式调整；不要为了显得完整而重写没有问题的部分。
+~~~
+
+<p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-exhibit-ordering">Q6 Exhibit Order</a></p>
+
+### Footnote Audit {#prompt-footnote-audit}
+
+<p class="prompt-description">判定脚注去留、位置及其对正文的影响。</p>
+
+**推荐模式：High；footnotes 很多或涉及重要识别与解释问题时使用 Extra High**
+
+~~~text
+把全文 footnotes 单独审核一遍。审核时结合 footnote 所在的正文句子判断，不要孤立阅读；尤其检查移除 footnote 后，正文是否仍然准确、完整且不会误导。
+
+判断每一个 footnote 应该属于：
+
+- 正文；
+- footnote；
+- appendix；
+- 删除。
+
+特别寻找：
+
+- 核心 identifying assumption 被埋在 footnote；
+- 重要 sample information 被埋在 footnote；
+- substantive result 被埋在 footnote；
+- 会实质改变 claim 的 qualification 被埋在 footnote；
+- 很长的 defensive footnote；
+- 与主线无关的 literature discussion；
+- technical detail 本应进入 appendix；
+- footnote 只是因为作者舍不得删除而存在。
+
+目标不是减少 footnote 数量本身，而是保证 footnote 真正承担“有用但会打断正文”的信息。
+
+只列出需要处理的 footnotes，并对每一处说明位置、推荐归属、原因和具体修改方向；没有问题的 footnotes 可以整体确认，不必逐条复述。
+~~~
+
+### Appendix as Evidence Architecture {#prompt-appendix-architecture}
+
+<p class="prompt-description">按功能重建附录的支持性证据架构。</p>
+
+**推荐模式：Extra High；appendix 很长或承载核心 identification evidence 时可使用 Pro**
+
+~~~text
+不要把 appendix 当成主文放不下内容的垃圾场。
+
+把 appendix 看成 supporting evidence architecture。
+
+对每一个 appendix section / table / figure 判断它服务于什么：
+
+- identification；
+- robustness；
+- measurement；
+- institutional detail；
+- supplementary result；
+- derivation / technical material。
+
+同时建立 appendix item 与正文中具体 claim、concern 或引用位置之间的对应关系。
+
+检查：
+
+- 是否存在没有被正文引用的 orphan appendix；
+- 是否存在 appendix 内容其实对 main identification 太重要，应该进入正文；
+- 是否有正文内容可以放心移入 appendix；
+- appendix 顺序是否应该跟随正文中问题出现的顺序；
+- section / subsection hierarchy 是否清楚；
+- 同一 concern 的证据是否散落在多个位置；
+- 正文是否在读者需要相应证据时，准确指向 appendix。
+
+最终重新规划整个 appendix 的结构，并给出 proposed outline、各现有项目的新位置，以及需要同步修改的正文 cross-references。不要仅仅为了形式整齐而重排；每项调整都应改善证据与主文 claim 的对应关系。
+~~~
+
+
+## F. Cross-manuscript {#deep-f-consistency}
+
+### Full-Manuscript Consistency Audit {#prompt-manuscript-consistency}
 
 <p class="prompt-description">查找正文、图表与附录中的内部不一致。</p>
 
@@ -647,7 +839,39 @@ last_updated: 2026-08-27
 只报告真正存在的问题，不要为了完整而编造问题。对每个问题给出发生冲突的具体位置、建议采用的 canonical value / definition / wording，以及修改后的连锁影响。
 ~~~
 
-### Prompt 22：Revision Ripple-Effect Audit ★★★★★ {#prompt-revision-ripple-effect}
+### Terminology & Notation Audit {#prompt-terminology-notation}
+
+<p class="prompt-description">统一术语、缩写和数学符号的定义与使用。</p>
+
+**推荐模式：High；重要稿件最终可用 Extra High 验收**
+
+~~~text
+专门审核全文 terminology、abbreviations 和 mathematical notation。
+
+重点检查：
+
+- 同一个概念是否用了多个名字；
+- 不同概念是否被相同简称混淆；
+- abbreviation 是否过多；
+- abbreviation 是否第一次出现时定义；
+- table 和正文缩写是否一致；
+- treatment / post / interaction term 命名是否直观；
+- mathematical symbols 是否有未定义、重复定义或意义变化；
+- β、δ、γ 等 notation 是否真的有必要；
+- equation notation 是否帮助理解，还是制造阅读成本。
+
+不要为了表面统一而替换领域内的标准术语、制度的正式名称，或确有必要区分的概念。
+
+原则：
+
+**能不用 notation 就不强行 notation；需要 notation 时必须全篇稳定。**
+
+最后给出 canonical terminology and notation map：列出推荐术语或符号、精确定义、首次定义位置、目前存在的 variants，以及需要同步修改的正文、equations、tables、figures、notes 和 appendix 位置。
+~~~
+
+<p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-heading-audit">Q2 Headings</a> · <a href="#prompt-formatting-audit">Q3 Formatting</a></p>
+
+### Revision Ripple-Effect Audit {#prompt-revision-ripple-effect}
 
 <p class="prompt-description">核验修改要求并追踪改动的连锁影响。</p>
 
@@ -682,222 +906,10 @@ last_updated: 2026-08-27
 4. 因材料或证据不足而无法核实。
 ~~~
 
-### Prompt 23：Terminology and Notation Audit {#prompt-terminology-notation}
 
-<p class="prompt-description">统一术语、缩写和数学符号的定义与使用。</p>
+## G. Adversarial {#deep-g-adversarial}
 
-**推荐模式：High；重要稿件最终可用 Extra High 验收**
-
-~~~text
-专门审核全文 terminology、abbreviations 和 mathematical notation。
-
-重点检查：
-
-- 同一个概念是否用了多个名字；
-- 不同概念是否被相同简称混淆；
-- abbreviation 是否过多；
-- abbreviation 是否第一次出现时定义；
-- table 和正文缩写是否一致；
-- treatment / post / interaction term 命名是否直观；
-- mathematical symbols 是否有未定义、重复定义或意义变化；
-- β、δ、γ 等 notation 是否真的有必要；
-- equation notation 是否帮助理解，还是制造阅读成本。
-
-不要为了表面统一而替换领域内的标准术语、制度的正式名称，或确有必要区分的概念。
-
-原则：
-
-**能不用 notation 就不强行 notation；需要 notation 时必须全篇稳定。**
-
-最后给出 canonical terminology and notation map：列出推荐术语或符号、精确定义、首次定义位置、目前存在的 variants，以及需要同步修改的正文、equations、tables、figures、notes 和 appendix 位置。
-~~~
-
-## 九、图表、Footnotes、Appendix
-
-### Prompt 1 {#prompt-table-figure-general-audit}
-
-<p class="prompt-description">全面优化单个图表的正确性、排版与可读性。</p>
-
-**推荐模式：High；重要稿件最终可用 Extra High 验收**
-
-~~~text
-考虑到读者受众是《期刊名》，从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度，包括标题、notes、里面的数学符号、缩写符号等等。
-~~~
-
-### Prompt 6 {#prompt-exhibit-ordering}
-
-<p class="prompt-description">重排正文与附录图表以改善叙事流和归属。</p>
-
-**推荐模式：Extra High**
-
-~~~text
-你重新规划下图表的顺序（顺序是否妥当、是否能帮助叙述的flow），以及是否应该出现在正文，即是否应该从appendix转移到正文，是否应该从正文转移到appendix。整理appendix内容的顺序，section/subsection顺序，是否有适合从appendix转移到正文及正文的footnotes的。
-~~~
-
-### Prompt 24：Standalone Table/Figure Audit {#prompt-standalone-exhibit-audit}
-
-<p class="prompt-description">检验图表脱离正文后能否被准确理解。</p>
-
-**推荐模式：High；复杂或承载核心结论的 table / figure 使用 Extra High**
-
-~~~text
-假设读者只看这一张 table / figure，不读正文。
-
-判断它是否能够基本独立理解。不要把“独立理解”理解为把方法和背景全部塞进 notes；目标是让读者能够正确理解展示对象、关键比较、结果及其不确定性。区分 table 和 figure，只检查实际适用的项目。
-
-检查：
-
-- title 是否准确；
-- subtitle / panel title 是否必要；
-- dependent variable 是否清楚；
-- sample 是否清楚；
-- units 是否清楚；
-- treatment variable、comparison group / reference category 是否清楚；
-- fixed effects / controls 是否表达准确；
-- standard errors / clustering 是否清楚；
-- stars 是否定义；
-- estimates、confidence intervals、axes、legends 或 scales 是否容易正确解读；
-- mean / SD 是否需要；
-- observation count 是否需要；
-- notes 是否过长；
-- abbreviation 是否过多；
-- decimal precision 是否统一；
-- 表格或图形的视觉 hierarchy 是否合理。
-
-同时判断：
-
-**哪些信息应该在表内，哪些应该在 notes，哪些应该在正文，哪些根本不需要出现。**
-
-如需修改，给出 revised title / panel titles / notes，以及必要的版式调整；不要为了显得完整而重写没有问题的部分。
-~~~
-
-### Prompt 25：Footnote Audit {#prompt-footnote-audit}
-
-<p class="prompt-description">判定脚注去留、位置及其对正文的影响。</p>
-
-**推荐模式：High；footnotes 很多或涉及重要识别与解释问题时使用 Extra High**
-
-~~~text
-把全文 footnotes 单独审核一遍。审核时结合 footnote 所在的正文句子判断，不要孤立阅读；尤其检查移除 footnote 后，正文是否仍然准确、完整且不会误导。
-
-判断每一个 footnote 应该属于：
-
-- 正文；
-- footnote；
-- appendix；
-- 删除。
-
-特别寻找：
-
-- 核心 identifying assumption 被埋在 footnote；
-- 重要 sample information 被埋在 footnote；
-- substantive result 被埋在 footnote；
-- 会实质改变 claim 的 qualification 被埋在 footnote；
-- 很长的 defensive footnote；
-- 与主线无关的 literature discussion；
-- technical detail 本应进入 appendix；
-- footnote 只是因为作者舍不得删除而存在。
-
-目标不是减少 footnote 数量本身，而是保证 footnote 真正承担“有用但会打断正文”的信息。
-
-只列出需要处理的 footnotes，并对每一处说明位置、推荐归属、原因和具体修改方向；没有问题的 footnotes 可以整体确认，不必逐条复述。
-~~~
-
-### Prompt 26：Appendix as Evidence Architecture {#prompt-appendix-architecture}
-
-<p class="prompt-description">按功能重建附录的支持性证据架构。</p>
-
-**推荐模式：Extra High；appendix 很长或承载核心 identification evidence 时可使用 Pro**
-
-~~~text
-不要把 appendix 当成主文放不下内容的垃圾场。
-
-把 appendix 看成 supporting evidence architecture。
-
-对每一个 appendix section / table / figure 判断它服务于什么：
-
-- identification；
-- robustness；
-- measurement；
-- institutional detail；
-- supplementary result；
-- derivation / technical material。
-
-同时建立 appendix item 与正文中具体 claim、concern 或引用位置之间的对应关系。
-
-检查：
-
-- 是否存在没有被正文引用的 orphan appendix；
-- 是否存在 appendix 内容其实对 main identification 太重要，应该进入正文；
-- 是否有正文内容可以放心移入 appendix；
-- appendix 顺序是否应该跟随正文中问题出现的顺序；
-- section / subsection hierarchy 是否清楚；
-- 同一 concern 的证据是否散落在多个位置；
-- 正文是否在读者需要相应证据时，准确指向 appendix。
-
-最终重新规划整个 appendix 的结构，并给出 proposed outline、各现有项目的新位置，以及需要同步修改的正文 cross-references。不要仅仅为了形式整齐而重排；每项调整都应改善证据与主文 claim 的对应关系。
-~~~
-
-## 全文结构与格式 {#group-structure-sections}
-
-### Prompt 2 {#prompt-heading-audit}
-
-<p class="prompt-description">优化正文与附录标题的准确性和叙事性。</p>
-
-**推荐模式：High；重要稿件最终可用 Extra High 验收**
-
-~~~text
-你把所有标题、子标题都过一遍，包括appendix和manuscript正文，看看是否需要修改和优化的，给出修改意见。从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度 。
-~~~
-
-### Prompt 3 {#prompt-formatting-audit}
-
-<p class="prompt-description">排查粗体、斜体与段首格式的滥用。</p>
-
-**推荐模式：High**
-
-~~~text
-将全文的格式都过一遍，重点检查粗体、斜体、段落首句的格式是否出现滥用的情况。
-~~~
-
-## 章节审核
-
-### Prompt 4：Introduction {#prompt-introduction-audit}
-
-<p class="prompt-description">按经典投稿规范审核引言结构、钩子与贡献。</p>
-
-**推荐模式：Extra High**
-
-~~~text
-这个稿件的introduction你审核下是否符合经典的投稿规范。
-
-0. 结构是否合理，篇幅等是否合理，是否缺失模块。
-1. hook是否合适，是否能引起读者的注意。是否在合适的地方提出research idea，对research idea描述是否准确。literature 和 contribution的介绍是否优秀，是否过于泛泛而谈。
-2. finding部分是否准确，是否有不该出现的过于详细的内容，是否有该出现但是没出现的内容。是否过于计量化、统计化，读者是否能快速理解。
-3. implication是否准确，是否在合理的范围提高本文的格调。
-~~~
-
-### Prompt 5：Discussion {#prompt-discussion-audit}
-
-<p class="prompt-description">控制讨论范围并妥善回应外推与潜在缺陷。</p>
-
-**推荐模式：Extra High；涉及 weakness 取舍或全局裁决时使用 Pro**
-
-~~~text
-Discussion
-
-你想想，discussion有什么修改意见。
-
-我对于discussion没有什么太多很多指引，我的想法是，很多内容应该埋在appendix，而不应该堆在discussion（discussion很容易成为垃圾堆）。
-
-discussion应该回应一些很容易会想到的、明显的文章缺陷（但是不一定能够解决，只能适当做些讨论），这一块很微妙，不能成为自害，但是又不能对明显应该讨论的话题缺失。如果能用文章提到的主体数据回应最好了，或者用容易获得的公开数据、统计数据回应也很好，实在不行利用同行审阅后的文献的观点/内容回应也可以。可以讨论的话题，例如如何外推我们的发现（或者说为什么不能外推、什么时候适合外推）；例如一些selection bias，measurement error，endogenous，representative
-
-discussion可能也需要适当地与最接近的文献互动，讨论与其关系，是如何互补（而不是互相伤害，如果与近的文献观点违背，要尽量谈出一些框架使得两者可以共存）。
-~~~
-
-## 十、外部攻击：Editor 与 Referee {#group-editor-referee}
-
-### Prompt 27：Five-Minute Editor Read ★★★★★ {#prompt-editor-five-minute-read}
+### Five-Minute Editor Read {#prompt-editor-five-minute-read}
 
 <p class="prompt-description">模拟编辑快速初筛并识别桌拒风险。</p>
 
@@ -928,7 +940,7 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 最后只给出 **最影响送审概率的修改意见**，不要把 minor wording issues 混进来。
 ~~~
 
-### Prompt 28：Hostile Referee Simulation ★★★★★ {#prompt-hostile-referee}
+### Hostile Referee Simulation {#prompt-hostile-referee}
 
 <p class="prompt-description">模拟严苛审稿人寻找最强拒稿理由。</p>
 
@@ -974,7 +986,7 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 **如果只能提前消灭三个 referee concerns，最应该消灭哪三个。**
 ~~~
 
-### Prompt 29：Friendly Senior Coauthor {#prompt-senior-coauthor}
+### Friendly Senior Coauthor {#prompt-senior-coauthor}
 
 <p class="prompt-description">在少增新工作的前提下寻找论文提档机会。</p>
 
@@ -999,9 +1011,45 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 重点寻找 **high return / low marginal cost** 的修改，而不是重新设计整篇论文。
 ~~~
 
-## 十一、删减与叙事效率 {#group-compression-narrative}
+### What Am I Not Seeing? {#prompt-unseen-risks}
 
-### Prompt 30：Compression Pass ★★★★★ {#prompt-compression-pass}
+<p class="prompt-description">跳出清单识别作者最可能忽视的关键问题。</p>
+
+**推荐模式：Pro**
+
+~~~text
+前面不要套用任何固定 checklist。
+
+完整阅读 manuscript 后，回答一个问题：
+
+**作为作者，我现在最可能没有意识到什么？**
+
+可以是：
+
+- paper identity；
+- contribution；
+- identification；
+- reader confusion；
+- hidden contradiction；
+- closest literature；
+- interpretation；
+- presentation；
+- referee concern；
+- 一个被低估的 strong result；
+- 一个被高估的 weak result；
+- 一个不值得继续投入时间的部分。
+
+不要重复那些明显、机械、任何文章都适用的建议。
+
+寻找只有在真正理解这篇 manuscript 后才会发现的问题。
+
+最后只告诉我最重要的 3–5 个。
+~~~
+
+
+## H. Convergence {#deep-h-convergence}
+
+### Compression Pass {#prompt-compression-pass}
 
 <p class="prompt-description">在不损失实质内容下压缩论文篇幅。</p>
 
@@ -1037,7 +1085,7 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 **删完以后论文不是信息更少，而是 signal-to-noise ratio 更高。**
 ~~~
 
-### Prompt 31：Paragraph-Level Narrative Audit {#prompt-paragraph-narrative}
+### Paragraph-Level Narrative Audit {#prompt-paragraph-narrative}
 
 <p class="prompt-description">按段诊断任务、主题句、衔接与删改价值。</p>
 
@@ -1061,46 +1109,29 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 **technically correct but narratively misplaced** 的段落。
 ~~~
 
-## 十三、一个很有价值的最终 Meta-Prompt {#group-final-audit}
+### Pre-Submission Robustness Adjudication {#prompt-pre-submission-robustness}
 
-### Prompt 33：What Am I Not Seeing? ★★★★★ {#prompt-unseen-risks}
-
-<p class="prompt-description">跳出清单识别作者最可能忽视的关键问题。</p>
+<p class="prompt-description">投稿前裁决必补、可选与应停止的检验。</p>
 
 **推荐模式：Pro**
 
 ~~~text
-前面不要套用任何固定 checklist。
+请把这篇已经较成熟的 manuscript 和 appendix 当作接近投稿版本，从 senior referee / editor 的角度重新审视。
 
-完整阅读 manuscript 后，回答一个问题：
+重点不是继续扩张分析，而是判断：**还有哪些 robustness / diagnostic 是真正有必要补的，哪些只是 nice-to-have，哪些即使能做也没有必要做。**
 
-**作为作者，我现在最可能没有意识到什么？**
+优先寻找可能影响 identification、interpretation、credibility 或 referee decision 的缺口，并特别注意现有 robustness 是否已经足以回应这些 concern。
 
-可以是：
+请给出一个有边界的裁决：
 
-- paper identity；
-- contribution；
-- identification；
-- reader confusion；
-- hidden contradiction；
-- closest literature；
-- interpretation；
-- presentation；
-- referee concern；
-- 一个被低估的 strong result；
-- 一个被高估的 weak result；
-- 一个不值得继续投入时间的部分。
+- **应当现在做**
+- **有价值但可不做**
+- **不建议再做**
 
-不要重复那些明显、机械、任何文章都适用的建议。
-
-寻找只有在真正理解这篇 manuscript 后才会发现的问题。
-
-最后只告诉我最重要的 3–5 个。
+不要因为“还可以做”就建议增加分析，也不要为了预防所有可能的 referee comment 而过度自害。目标是找到投稿前边际价值最高的少数 robustness。
 ~~~
 
-## 十四、用于多轮修改后的“总验收”
-
-### Prompt 34：Manuscript Integration Audit ★★★★★ {#prompt-integration-audit}
+### Manuscript Integration Audit {#prompt-integration-audit}
 
 <p class="prompt-description">验收多轮修改后的逻辑闭环与全文统一性。</p>
 
@@ -1133,4 +1164,35 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 2. 最大的三个 remaining weaknesses；
 3. 下一轮修改最应该集中在哪里；
 4. 哪些部分已经足够好，不应该继续折腾。
+~~~
+
+### Final Manuscript Audit {#prompt-final-manuscript-audit}
+
+<p class="prompt-description">对今天即将上传的最终 manuscript PDF 做技术、合规与一致性验收。</p>
+
+**推荐模式：Pro；必须基于实际最终 PDF，并尽量同时提供目标期刊要求**
+
+~~~text
+把当前 manuscript 和 appendix 的实际最终 PDF 当作今天就要提交的版本，做一次 Final Manuscript Audit。
+
+这一步不要重新发明 paper identity，也不要因为“还可以做”而建议新增分析。只寻找不能安全带进投稿系统的问题，包括：
+
+- journal-specific format、length 和 file requirements；
+- anonymous manuscript 是否真正匿名；
+- title、Abstract、keywords、JEL codes 和 title-page information；
+- section、equation、table、figure、footnote 和 appendix numbering；
+- 正文引用、cross-references、dangling references 和缺失 exhibits；
+- citations、bibliography entries、publication details 和未对应 references；
+- sample sizes、dates、variable names、numerical magnitudes、signs、rounding 和 statistical notation 的不一致；
+- table / figure titles、notes、units、abbreviations、stars、controls、fixed effects 和 clustering information；
+- PDF rendering，包括 overflow、截断、空白页、异常分页、字体、公式、图表清晰度和不可点击或错误的 links；
+- PDF metadata、comments、draft labels、占位文本或其他不应进入投稿系统的痕迹。
+
+给出一个有边界的结果：
+
+1. **上传前必须修复**；
+2. **进入 submission system 后必须人工核对**；
+3. **已经安全，不应继续折腾**。
+
+只报告真实存在或确实无法核实的问题。不要把一般性的写作偏好混入最终清单。
 ~~~

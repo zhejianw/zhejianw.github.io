@@ -337,7 +337,11 @@
     shell.appendChild(block);
 
     var metadata = findPromptMetadata(heading, shell);
-    wrapPromptCard(heading, shell, metadata);
+    var card = wrapPromptCard(heading, shell, metadata);
+
+    if (/^Q[1-6]\s*[·:]/.test(headingText)) {
+      card.classList.add("is-quick-pass");
+    }
 
     if (config.collapsePrompts) {
       setPromptExpanded(shell, false);
