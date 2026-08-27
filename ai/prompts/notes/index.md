@@ -52,8 +52,11 @@ last_updated: 2026-08-27
 
 目标是建立尽可能完整、可靠、可复用的 evidence base。所有有信息价值的 positive、null、unstable、failed、contradictory 和 dead-end 结果都保留，并匹配 code、log 和 output。不要按显著性筛选，也不要机械穷举无意义的 specifications。
 
+~~~
+
 ---
 
+~~~text
 ## H1. 横向：Research-space expansion
 
 围绕当前研究问题做横向探索。
@@ -62,8 +65,11 @@ last_updated: 2026-08-27
 
 目标是扩大有价值的研究空间，而不是形成故事。
 
+~~~
+
 ---
 
+~~~text
 ## H2. 横向：Empirical-space expansion
 
 对当前值得研究的 branches，探索其他有 substantive meaning 且 defensible 的 measurement、sample、specification 和 inference choices，包括合理的 outcome coding、controls、FE、functional forms、weights、clustering / inference 和 sample definitions。
@@ -72,8 +78,11 @@ last_updated: 2026-08-27
 
 不要按显著性筛选，也不要机械穷举组合。
 
+~~~
+
 ---
 
+~~~text
 ## V1. 纵向：Deep investigation
 
 选择当前最值得深挖、最可能改变研究判断的 branch，充分向下探索。
@@ -82,8 +91,11 @@ last_updated: 2026-08-27
 
 完整保留 evidence、code、log、output 和判断理由；不要因为出现漂亮结果而提前停止。
 
+~~~
+
 ---
 
+~~~text
 ## V2. 纵向：Adversarial audit
 
 针对当前最影响研究结论的 finding 或 claim，主动尝试把它推翻，包括重要的 positive、null 和 heterogeneous findings。
@@ -92,8 +104,11 @@ last_updated: 2026-08-27
 
 攻击应针对真实的 failure mode，而不是为了改变显著性而搜索 specification。
 
+~~~
+
 ---
 
+~~~text
 ## H3. 再横向：Evidence-conditioned discovery
 
 重新阅读当前 notes、results、异常、矛盾和 dead ends。
@@ -102,8 +117,11 @@ last_updated: 2026-08-27
 
 只扩展有 substantive 或 diagnostic value 的方向。
 
+~~~
+
 ---
 
+~~~text
 ## C1. 收敛：Branch adjudication
 
 整理并裁决当前 research state。
@@ -116,8 +134,11 @@ last_updated: 2026-08-27
 
 不要进入 manuscript brief。
 
+~~~
+
 ---
 
+~~~text
 ## X1. 按需：Contradiction resolution
 
 当重要 evidence 彼此冲突时调用。
@@ -128,8 +149,11 @@ last_updated: 2026-08-27
 
 优先寻找能够区分 competing explanations 的新证据，而不是替某个结果辩护。
 
+~~~
+
 ---
 
+~~~text
 ## 循环
 
 **H1 → H2 → V1 → V2 → H3 → C1 → loop**
