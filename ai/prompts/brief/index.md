@@ -31,7 +31,7 @@ last_updated: 2026-08-27
 }
 </style>
 
-**Layers：[Manuscript](/ai/prompts/) · [Notes / Evidence](/ai/prompts/notes/) · Brief**
+**Layers：[Notes / Evidence](/ai/prompts/notes/) · Brief · [Manuscript](/ai/prompts/)**
 
 ## Brief Prompt 1
 
