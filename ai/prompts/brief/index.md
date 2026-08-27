@@ -151,3 +151,29 @@ last_updated: 2026-08-27
 区分 **mandatory / recommended / unclear**。不要把一般学术惯例误当成该刊规定。
 这一步只建立和更新 journal requirements，不修改 manuscript。后续所有审阅和修改默认以这些要求为约束。
 ~~~
+
+## Brief Prompt 4
+
+**推荐模式：Pro**
+
+~~~text
+基于当前 notes / evidence base、已经形成的 paper brief，以及目标期刊的 audience、定位和投稿规范，重新裁决这篇 paper 的最优版本。
+
+不要开始写 manuscript。先决定：
+
+- 最强且最适合该期刊的 research question；
+- central claim 和 claim boundary；
+- 哪些 evidence 构成 paper backbone；
+- 哪些作为 supporting / diagnostic / robustness evidence；
+- 哪些虽然有信息价值，但不应进入这篇 paper；
+- heterogeneity、mechanism、null results 和 secondary outcomes 应占什么权重；
+- 最适合该期刊的 contribution 和 positioning；
+- 哪些 claims 应升级、降级或删除。
+
+期刊定位只用于选择最优叙事和证据组合，**不能成为降低 identification、writing 或 evidence standards 的理由**，也不要为了迎合期刊而夸大 contribution。
+
+最后给出一个简洁的 **journal-specific manuscript brief**：\
+**question → identification → central claim → supporting claims → evidence spine → contribution → scope/boundary**。
+
+如果当前 evidence 与该期刊并不匹配，直接指出，不要硬凑。
+~~~
