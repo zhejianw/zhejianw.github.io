@@ -979,3 +979,73 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 
 **technically correct but narratively misplaced** 的段落。
 ~~~
+
+## 十三、一个很有价值的最终 Meta-Prompt
+
+### Prompt 33：What Am I Not Seeing? ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+前面不要套用任何固定 checklist。
+
+完整阅读 manuscript 后，回答一个问题：
+
+**作为作者，我现在最可能没有意识到什么？**
+
+可以是：
+
+- paper identity；
+- contribution；
+- identification；
+- reader confusion；
+- hidden contradiction；
+- closest literature；
+- interpretation；
+- presentation；
+- referee concern；
+- 一个被低估的 strong result；
+- 一个被高估的 weak result；
+- 一个不值得继续投入时间的部分。
+
+不要重复那些明显、机械、任何文章都适用的建议。
+
+寻找只有在真正理解这篇 manuscript 后才会发现的问题。
+
+最后只告诉我最重要的 3–5 个。
+~~~
+
+## 十四、用于多轮修改后的“总验收”
+
+### Prompt 34：Manuscript Integration Audit ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+这篇文章已经经历很多轮局部修改。
+
+现在不要再把 Introduction、Data、Results、Discussion 分开看，而是把 manuscript 当成一个完整产品。
+
+检查整篇文章是否形成以下完整链条：
+
+**Question → Institutional Setting → Identification → Evidence → Interpretation → Contribution → Implication**
+
+寻找任何断裂：
+
+- Introduction 提出的问题后面没有回答；
+- design 识别的 estimand 与 research question 不一致；
+- Results 回答了一个与 Introduction 不完全相同的问题；
+- Discussion 讨论的 implication 超出了 Results；
+- contribution 依赖正文没有真正建立的 finding；
+- appendix 解决了 concern，但正文没有告诉读者；
+- title / abstract 承诺了正文并未交付的内容。
+
+最后不要给我几十条零散修改意见。
+
+告诉我：
+
+1. 整篇文章现在是否已经“立住”；
+2. 最大的三个 remaining weaknesses；
+3. 下一轮修改最应该集中在哪里；
+4. 哪些部分已经足够好，不应该继续折腾。
+~~~
