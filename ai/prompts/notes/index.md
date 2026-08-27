@@ -31,7 +31,7 @@ last_updated: 2026-08-27
 }
 </style>
 
-**Layers：[Project Setup](/ai/prompts/setup/) · Notes / Evidence · [Brief](/ai/prompts/brief/) · [Manuscript](/ai/prompts/)**
+**Layers：[Project Setup](/ai/prompts/setup/) · Notes / Evidence · [Brief](/ai/prompts/brief/) · [Manuscript](/ai/prompts/) · [Submission / Replication](/ai/prompts/submission/)**
 
 ## Notes Prompt 1
 

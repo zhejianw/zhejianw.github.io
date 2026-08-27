@@ -31,7 +31,7 @@ last_updated: 2026-08-27
 }
 </style>
 
-**Layers：[Project Setup](/ai/prompts/setup/) · [Notes / Evidence](/ai/prompts/notes/) · [Brief](/ai/prompts/brief/) · Manuscript**
+**Layers：[Project Setup](/ai/prompts/setup/) · [Notes / Evidence](/ai/prompts/notes/) · [Brief](/ai/prompts/brief/) · Manuscript · [Submission / Replication](/ai/prompts/submission/)**
 
 本页收录 manuscript-level 的审阅、诊断、重组与投稿前检查 Prompts。
 
