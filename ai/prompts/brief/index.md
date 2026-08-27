@@ -140,3 +140,14 @@ last_updated: 2026-08-27
 
 目标是最大化这篇 paper 的**最终发表价值**，同时考虑时间、接受概率、费用和 revision 成本，而不是单纯追求最高 IF。
 ~~~
+
+## Brief Prompt 3
+
+**推荐模式：Extra High**
+
+~~~text
+下面是目标期刊的官方投稿要求。请完整阅读并作为本项目后续 manuscript、appendix 和 submission preparation 的期刊规范保存。
+提炼并记录所有与投稿有关的硬性要求和重要建议，包括格式、字数、匿名、标题页、abstract、keywords、分类代码、图表、参考文献、appendix / supplementary materials、data/code statement、文件要求、费用和 OA 等。
+区分 **mandatory / recommended / unclear**。不要把一般学术惯例误当成该刊规定。
+这一步只建立和更新 journal requirements，不修改 manuscript。后续所有审阅和修改默认以这些要求为约束。
+~~~
