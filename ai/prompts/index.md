@@ -615,7 +615,7 @@ last_updated: 2026-08-26
 最后给出 canonical terminology and notation map：列出推荐术语或符号、精确定义、首次定义位置、目前存在的 variants，以及需要同步修改的正文、equations、tables、figures、notes 和 appendix 位置。
 ~~~
 
-## 图表与附录
+## 九、图表、Footnotes、Appendix
 
 ### Prompt 1
 
@@ -631,6 +631,104 @@ last_updated: 2026-08-26
 
 ~~~text
 你重新规划下图表的顺序（顺序是否妥当、是否能帮助叙述的flow），以及是否应该出现在正文，即是否应该从appendix转移到正文，是否应该从正文转移到appendix。整理appendix内容的顺序，section/subsection顺序，是否有适合从appendix转移到正文及正文的footnotes的。
+~~~
+
+### Prompt 24：Standalone Table/Figure Audit
+
+**推荐模式：High；复杂或承载核心结论的 table / figure 使用 Extra High**
+
+~~~text
+假设读者只看这一张 table / figure，不读正文。
+
+判断它是否能够基本独立理解。不要把“独立理解”理解为把方法和背景全部塞进 notes；目标是让读者能够正确理解展示对象、关键比较、结果及其不确定性。区分 table 和 figure，只检查实际适用的项目。
+
+检查：
+
+- title 是否准确；
+- subtitle / panel title 是否必要；
+- dependent variable 是否清楚；
+- sample 是否清楚；
+- units 是否清楚；
+- treatment variable、comparison group / reference category 是否清楚；
+- fixed effects / controls 是否表达准确；
+- standard errors / clustering 是否清楚；
+- stars 是否定义；
+- estimates、confidence intervals、axes、legends 或 scales 是否容易正确解读；
+- mean / SD 是否需要；
+- observation count 是否需要；
+- notes 是否过长；
+- abbreviation 是否过多；
+- decimal precision 是否统一；
+- 表格或图形的视觉 hierarchy 是否合理。
+
+同时判断：
+
+**哪些信息应该在表内，哪些应该在 notes，哪些应该在正文，哪些根本不需要出现。**
+
+如需修改，给出 revised title / panel titles / notes，以及必要的版式调整；不要为了显得完整而重写没有问题的部分。
+~~~
+
+### Prompt 25：Footnote Audit
+
+**推荐模式：High；footnotes 很多或涉及重要识别与解释问题时使用 Extra High**
+
+~~~text
+把全文 footnotes 单独审核一遍。审核时结合 footnote 所在的正文句子判断，不要孤立阅读；尤其检查移除 footnote 后，正文是否仍然准确、完整且不会误导。
+
+判断每一个 footnote 应该属于：
+
+- 正文；
+- footnote；
+- appendix；
+- 删除。
+
+特别寻找：
+
+- 核心 identifying assumption 被埋在 footnote；
+- 重要 sample information 被埋在 footnote；
+- substantive result 被埋在 footnote；
+- 会实质改变 claim 的 qualification 被埋在 footnote；
+- 很长的 defensive footnote；
+- 与主线无关的 literature discussion；
+- technical detail 本应进入 appendix；
+- footnote 只是因为作者舍不得删除而存在。
+
+目标不是减少 footnote 数量本身，而是保证 footnote 真正承担“有用但会打断正文”的信息。
+
+只列出需要处理的 footnotes，并对每一处说明位置、推荐归属、原因和具体修改方向；没有问题的 footnotes 可以整体确认，不必逐条复述。
+~~~
+
+### Prompt 26：Appendix as Evidence Architecture
+
+**推荐模式：Extra High；appendix 很长或承载核心 identification evidence 时可使用 Pro**
+
+~~~text
+不要把 appendix 当成主文放不下内容的垃圾场。
+
+把 appendix 看成 supporting evidence architecture。
+
+对每一个 appendix section / table / figure 判断它服务于什么：
+
+- identification；
+- robustness；
+- measurement；
+- institutional detail；
+- supplementary result；
+- derivation / technical material。
+
+同时建立 appendix item 与正文中具体 claim、concern 或引用位置之间的对应关系。
+
+检查：
+
+- 是否存在没有被正文引用的 orphan appendix；
+- 是否存在 appendix 内容其实对 main identification 太重要，应该进入正文；
+- 是否有正文内容可以放心移入 appendix；
+- appendix 顺序是否应该跟随正文中问题出现的顺序；
+- section / subsection hierarchy 是否清楚；
+- 同一 concern 的证据是否散落在多个位置；
+- 正文是否在读者需要相应证据时，准确指向 appendix。
+
+最终重新规划整个 appendix 的结构，并给出 proposed outline、各现有项目的新位置，以及需要同步修改的正文 cross-references。不要仅仅为了形式整齐而重排；每项调整都应改善证据与主文 claim 的对应关系。
 ~~~
 
 ## 全文结构与格式
