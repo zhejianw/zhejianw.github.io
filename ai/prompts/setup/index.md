@@ -156,3 +156,19 @@ last_updated: 2026-08-27
 
 先检查当前目录已有内容，避免覆盖已有文件，再建立缺失的结构和初始化文件。完成 bootstrap 后停止，不开始分析或写 manuscript。
 ~~~
+
+## Setup Prompt 2：Environment Bootstrap
+
+**推荐模式：High；环境调用异常时使用 Extra High**
+
+~~~text
+初始化并记录本项目的基础工作环境与长期规则：
+
+- 本项目以 **Stata** 为主要实证环境。确认 Stata 可被当前工作目录稳定调用；如不能，解决调用、PATH、license 或必要 package 问题，并验证能够实际运行 `.do` 文件。
+- 确认 **LaTeX** 工具链可用，并实际编译一个最小 `.tex` 生成 PDF；后续 manuscript 均维护可编译的 LaTeX + PDF。
+- 将稳定的环境信息和必要依赖简洁写入 `PROJECT.md`；不要为此建立复杂的管理体系。
+- 与我交互以中文为主，必要时保留英文术语；项目中的正式产物一律使用英文，原始资料或必须保留原文的内容除外。
+- 对后续 session 仍然重要的状态或决定，应写入项目中合适的现有文件，而不是只留在对话里。
+
+完成环境确认和记录后停止，不开始 substantive research。
+~~~
