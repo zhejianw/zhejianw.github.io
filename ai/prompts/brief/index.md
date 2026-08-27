@@ -106,3 +106,37 @@ last_updated: 2026-08-27
 
 **如果一个非常强的 applied microeconomist 拿到这套 evidence，并把它做到能够做到的最好，这篇 paper 的合理上限在哪里。**
 ~~~
+
+## Brief Prompt 2
+
+**推荐模式：Pro；执行时需要联网搜索并核实当前信息**
+
+~~~text
+基于当前 paper brief、evidence 和上一轮对 publication ceiling 的判断，为这篇文章寻找最合适的投稿期刊，并设计最优投稿路径。
+
+请主动搜索并核实当前信息，不要只依赖已有知识。
+
+对最有可能的候选期刊比较：
+
+- paper fit 与实际发表同类文章的情况；
+- 年发文量；
+- acceptance / desk-reject 情况（没有可靠公开数据时明确说明并合理估计）；
+- submission fee、publication fee、是否可以选择非 OA 而不支付 APC；
+- 最新 Impact Factor；
+- 是否 SSCI；
+- economics profession 内的认可度和定位；
+- 审稿速度、R&R 摩擦和发表难度；
+- 作者身份或研究方法是否可能存在明显的 field-fit friction。
+
+不要机械罗列大量期刊。重点寻找**风险—收益比最优**的选择。
+
+最后给出：
+
+1. **首选期刊**
+2. **第二、第三选择**
+3. **建议的投稿顺序**
+4. 每一步被拒后为什么转投下一本
+5. 哪些看似档次高但实际上不值得投，哪些看似稍低但性价比很高
+
+目标是最大化这篇 paper 的**最终发表价值**，同时考虑时间、接受概率、费用和 revision 成本，而不是单纯追求最高 IF。
+~~~
