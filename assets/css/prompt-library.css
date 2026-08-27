@@ -61,6 +61,11 @@
   scrollbar-width: thin;
 }
 
+.prompt-section-toc {
+  flex-wrap: wrap;
+  overflow-x: visible;
+}
+
 .prompt-workflow strong,
 .prompt-section-toc strong {
   flex: 0 0 auto;
@@ -415,6 +420,11 @@
   .prompt-section-toc {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
+  }
+
+  .prompt-section-toc {
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
   .prompt-copy-shell pre {
