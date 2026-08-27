@@ -11,6 +11,26 @@ status: current
 last_updated: 2026-08-27
 ---
 
+<style>
+.page__content .highlighter-rouge,
+.page__content .highlight,
+.page__content pre {
+  max-width: 100%;
+}
+
+.page__content pre,
+.page__content pre code {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.page__content .highlight,
+.page__content pre {
+  overflow-x: visible !important;
+}
+</style>
+
 **Layers：Manuscript · [Notes / Evidence](/ai/prompts/notes/)**
 
 本页收录 manuscript-level 的审阅、诊断、重组与投稿前检查 Prompts。
@@ -366,6 +386,26 @@ last_updated: 2026-08-27
 最后为每项 robustness 标明：它回应的 concern、独立信息价值、与 main estimand 的关系，以及应当归入：
 
 **正文必须保留 / appendix 保留 / 可以删除。**
+~~~
+
+### Prompt 27：Pre-Submission Robustness Adjudication ★★★★★
+
+**推荐模式：Pro**
+
+~~~text
+请把这篇已经较成熟的 manuscript 和 appendix 当作接近投稿版本，从 senior referee / editor 的角度重新审视。
+
+重点不是继续扩张分析，而是判断：**还有哪些 robustness / diagnostic 是真正有必要补的，哪些只是 nice-to-have，哪些即使能做也没有必要做。**
+
+优先寻找可能影响 identification、interpretation、credibility 或 referee decision 的缺口，并特别注意现有 robustness 是否已经足以回应这些 concern。
+
+请给出一个有边界的裁决：
+
+- **应当现在做**
+- **有价值但可不做**
+- **不建议再做**
+
+不要因为“还可以做”就建议增加分析，也不要为了预防所有可能的 referee comment 而过度自害。目标是找到投稿前边际价值最高的少数 robustness。
 ~~~
 
 ### Prompt 17：Heterogeneity and Mechanisms
