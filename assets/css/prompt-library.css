@@ -1,5 +1,201 @@
+.prompt-layer-nav {
+  position: sticky;
+  top: 70px;
+  z-index: 18;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.35rem;
+  max-width: 100%;
+  margin: 0 0 1.1rem;
+  padding: 0.42rem;
+  overflow-x: auto;
+  border: 1px solid #dedbe7;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 14px rgba(31, 27, 54, 0.07);
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prompt-layer-nav a,
+.prompt-layer-nav .is-current {
+  flex: 0 0 auto;
+  padding: 0.42rem 0.72rem;
+  border-radius: 7px;
+  color: #565d6c;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.prompt-layer-nav a:hover,
+.prompt-layer-nav a:focus-visible {
+  background: #f0edf6;
+  color: #5c4d84;
+}
+
+.prompt-layer-nav .is-current {
+  background: #67578f;
+  color: #ffffff;
+}
+
+.prompt-workflow,
+.prompt-section-toc {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  max-width: 100%;
+  margin: 0 0 1.45rem;
+  padding: 0.7rem 0.82rem;
+  overflow-x: auto;
+  border: 1px solid #e7e3ee;
+  border-radius: 9px;
+  background: #faf9fc;
+  color: #626979;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.76rem;
+  line-height: 1.3;
+  scrollbar-width: thin;
+}
+
+.prompt-workflow strong,
+.prompt-section-toc strong {
+  flex: 0 0 auto;
+  color: #343044;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.prompt-workflow a,
+.prompt-section-toc a {
+  flex: 0 0 auto;
+  color: #625487;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.prompt-workflow a:hover,
+.prompt-workflow a:focus-visible,
+.prompt-section-toc a:hover,
+.prompt-section-toc a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.prompt-workflow .workflow-arrow,
+.prompt-section-toc .toc-separator {
+  flex: 0 0 auto;
+  color: #aaa4b8;
+}
+
+.prompt-usage-note {
+  margin: -0.25rem 0 1.15rem;
+  padding: 0.72rem 0.82rem;
+  border-left: 3px solid #8a7aaa;
+  background: #f8f6fb;
+  color: #555d6c;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.prompt-transition-label {
+  margin: 2rem 0 0.75rem;
+  color: #74668f;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.prompt-card {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  overflow: visible;
+  border: 1px solid #dedbe7;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(31, 27, 54, 0.055);
+}
+
+.prompt-card > h2,
+.prompt-card > h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin-top: 0;
+  padding-top: 0;
+  scroll-margin-top: 8rem;
+}
+
+.prompt-anchor-link {
+  flex: 0 0 auto;
+  color: #8c849e;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72em;
+  font-weight: 500;
+  opacity: 0.42;
+  text-decoration: none;
+}
+
+.prompt-card > h2:hover .prompt-anchor-link,
+.prompt-card > h3:hover .prompt-anchor-link,
+.prompt-anchor-link:focus-visible {
+  opacity: 1;
+}
+
+.prompt-mode {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.36rem;
+  margin: 0.15rem 0 0.72rem;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.prompt-mode-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.45rem;
+  padding: 0.16rem 0.48rem;
+  border: 1px solid #cbc5da;
+  border-radius: 999px;
+  background: #f4f1f8;
+  color: #5b4e7c;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.prompt-mode-badge.is-web {
+  border-color: #c6d4df;
+  background: #f0f6fa;
+  color: #406478;
+}
+
+.prompt-mode-badge.is-sequence {
+  border-color: #d8cfb4;
+  background: #faf7ed;
+  color: #756336;
+}
+
+.prompt-mode-note {
+  color: #6c7280;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 .prompt-description {
-  margin: -0.1rem 0 0.65rem;
+  margin: -0.1rem 0 0.58rem;
   color: #5e6472;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.92rem;
@@ -21,7 +217,7 @@
 }
 
 .prompt-copy-shell {
-  margin: 0.8rem 0 1.8rem;
+  margin: 0.72rem 0 0;
   overflow: hidden;
   border: 1px solid #dedbe7;
   border-radius: 10px;
@@ -53,7 +249,7 @@
 .prompt-copy-button {
   appearance: none;
   flex: 0 0 auto;
-  min-height: 2rem;
+  min-height: 2.25rem;
   padding: 0.34rem 0.72rem;
   border: 1px solid #6b5b95;
   border-radius: 7px;
@@ -65,6 +261,37 @@
   font-weight: 600;
   line-height: 1;
   transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+
+.prompt-toggle-button,
+.prompt-view-button {
+  appearance: none;
+  min-height: 2.25rem;
+  padding: 0.34rem 0.66rem;
+  border: 1px solid #ccc6d8;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #5e6472;
+  cursor: pointer;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.prompt-toggle-button:hover,
+.prompt-toggle-button:focus-visible,
+.prompt-view-button:hover,
+.prompt-view-button:focus-visible {
+  border-color: #76679a;
+  color: #5c4d84;
+}
+
+.prompt-view-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin: -0.75rem 0 1.15rem;
 }
 
 .prompt-copy-button:hover {
@@ -112,6 +339,21 @@
   background: #fbfbfd;
 }
 
+.prompt-copy-shell [hidden] {
+  display: none !important;
+}
+
+.prompt-card:target,
+.prompt-card.is-hash-target {
+  border-color: #9b8bbd;
+  box-shadow: 0 0 0 3px rgba(107, 91, 149, 0.11);
+}
+
+.page__content h2[id],
+.page__content h3[id] {
+  scroll-margin-top: 8rem;
+}
+
 @media (max-width: 600px) {
   .prompt-description {
     font-size: 0.88rem;
@@ -128,7 +370,50 @@
     padding-left: 0.8rem;
   }
 
+  .prompt-toggle-button,
+  .prompt-view-button {
+    min-height: 2.75rem;
+  }
+
+  .prompt-card {
+    padding: 0.82rem;
+    border-radius: 9px;
+  }
+
+  .prompt-layer-nav {
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+    border-radius: 8px;
+  }
+
+  .prompt-workflow,
+  .prompt-section-toc {
+    margin-right: -0.1rem;
+    margin-left: -0.1rem;
+  }
+
   .prompt-copy-shell pre {
     padding: 0.9rem;
+  }
+}
+
+@media print {
+  .prompt-layer-nav,
+  .prompt-workflow,
+  .prompt-section-toc,
+  .prompt-view-controls,
+  .prompt-copy-toolbar,
+  .prompt-anchor-link {
+    display: none !important;
+  }
+
+  .prompt-copy-shell [hidden] {
+    display: block !important;
+  }
+
+  .prompt-card {
+    break-inside: avoid;
+    border-color: #bbbbbb;
+    box-shadow: none;
   }
 }

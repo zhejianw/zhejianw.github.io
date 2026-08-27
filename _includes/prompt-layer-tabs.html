@@ -1,0 +1,7 @@
+<nav class="prompt-layer-nav" aria-label="Prompt layers">
+  {% if page.prompt_layer == "setup" %}<span class="is-current" aria-current="page">Setup</span>{% else %}<a href="{{ '/ai/prompts/setup/' | relative_url }}">Setup</a>{% endif %}
+  {% if page.prompt_layer == "notes" %}<span class="is-current" aria-current="page">Notes</span>{% else %}<a href="{{ '/ai/prompts/notes/' | relative_url }}">Notes</a>{% endif %}
+  {% if page.prompt_layer == "brief" %}<span class="is-current" aria-current="page">Brief</span>{% else %}<a href="{{ '/ai/prompts/brief/' | relative_url }}">Brief</a>{% endif %}
+  {% if page.prompt_layer == "manuscript" %}<span class="is-current" aria-current="page">Manuscript</span>{% else %}<a href="{{ '/ai/prompts/' | relative_url }}">Manuscript</a>{% endif %}
+  {% if page.prompt_layer == "submission" %}<span class="is-current" aria-current="page">Submission</span>{% else %}<a href="{{ '/ai/prompts/submission/' | relative_url }}">Submission</a>{% endif %}
+</nav>

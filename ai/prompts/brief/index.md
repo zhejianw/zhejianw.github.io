@@ -7,6 +7,7 @@ lang: zh-CN
 sitemap: false
 noindex: true
 prompt_library: true
+prompt_layer: brief
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -32,9 +33,20 @@ last_updated: 2026-08-27
 }
 </style>
 
-**Layers：[Project Setup](/ai/prompts/setup/) · [Notes / Evidence](/ai/prompts/notes/) · Brief · [Manuscript](/ai/prompts/) · [Submission / Replication](/ai/prompts/submission/)**
+{% include prompt-layer-tabs.html %}
 
-## Brief Prompt 1
+<nav class="prompt-workflow" aria-label="Brief workflow">
+  <strong>Workflow</strong>
+  <a href="/ai/prompts/notes/">Evidence</a><span class="workflow-arrow">→</span>
+  <a href="#paper-ceiling">Ceiling</a><span class="workflow-arrow">→</span>
+  <a href="#journal-mapping">Journal</a><span class="workflow-arrow">→</span>
+  <a href="#journal-requirements">Requirements</a><span class="workflow-arrow">→</span>
+  <a href="#literature-map">Literature</a><span class="workflow-arrow">→</span>
+  <a href="#journal-brief">Locked Brief</a><span class="workflow-arrow">→</span>
+  <a href="#build-manuscript">Manuscript</a>
+</nav>
+
+## Brief Prompt 1 · Paper Ceiling {#paper-ceiling}
 
 <p class="prompt-description">从证据反推最强论文身份与合理发表上限。</p>
 
@@ -110,7 +122,7 @@ last_updated: 2026-08-27
 **如果一个非常强的 applied microeconomist 拿到这套 evidence，并把它做到能够做到的最好，这篇 paper 的合理上限在哪里。**
 ~~~
 
-## Brief Prompt 2
+## Brief Prompt 2 · Journal Mapping {#journal-mapping}
 
 <p class="prompt-description">核实期刊信息并设计风险收益最优的投稿路径。</p>
 
@@ -146,7 +158,7 @@ last_updated: 2026-08-27
 目标是最大化这篇 paper 的**最终发表价值**，同时考虑时间、接受概率、费用和 revision 成本，而不是单纯追求最高 IF。
 ~~~
 
-## Brief Prompt 3
+## Brief Prompt 3 · Journal Requirements {#journal-requirements}
 
 <p class="prompt-description">提炼并保存目标期刊的官方投稿约束。</p>
 
@@ -159,7 +171,7 @@ last_updated: 2026-08-27
 这一步只建立和更新 journal requirements，不修改 manuscript。后续所有审阅和修改默认以这些要求为约束。
 ~~~
 
-## Brief Prompt 4：Target-Journal Literature Map
+## Brief Prompt 4 · Literature Map {#literature-map}
 
 <p class="prompt-description">分级核实核心文献并识别定位与新颖性风险。</p>
 
@@ -191,9 +203,9 @@ last_updated: 2026-08-27
 最后指出目前**最值得优先精读的少数文献**，以及是否还存在明显的 literature blind spot。
 ~~~
 
-## Brief Prompt 5
+## Brief Prompt 5 · Lock Manuscript Brief {#journal-brief}
 
-<p class="prompt-description">结合目标期刊裁决论文主线、主张边界与证据结构。</p>
+<p class="prompt-description">锁定面向目标期刊的论文主线、主张边界与证据结构。</p>
 
 **推荐模式：Pro**
 
@@ -219,9 +231,11 @@ last_updated: 2026-08-27
 如果当前 evidence 与该期刊并不匹配，直接指出，不要硬凑。
 ~~~
 
-## Brief Prompt 6
+<div class="prompt-transition-label" aria-hidden="true">↓ Transition to Manuscript</div>
 
-<p class="prompt-description">依据锁定的 Brief 建立并迭代可编译论文工程。</p>
+## Build Manuscript {#build-manuscript}
+
+<p class="prompt-description">将已锁定的 Brief 转化为唯一可编译论文工程。</p>
 
 **推荐模式：Pro**
 

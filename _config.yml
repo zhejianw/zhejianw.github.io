@@ -9,7 +9,7 @@ title: "Zhejian Wang - Applied Microeconomist"
 title_separator: "-"
 name: &name "Zhejian Wang"
 description: &description "Ph.D. Candidate in Economics at the University of Delaware; dissertation successfully defended and degree pending formal conferral"
-url: "https://zhejianw.github.io"
+url: "https://zhejianwang.com"
 baseurl: ""
 repository: "zhejianw/zhejianw.github.io"
 
@@ -129,4 +129,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-

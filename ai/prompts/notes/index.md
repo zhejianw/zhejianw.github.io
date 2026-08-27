@@ -7,6 +7,7 @@ lang: zh-CN
 sitemap: false
 noindex: true
 prompt_library: true
+prompt_layer: notes
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -32,11 +33,13 @@ last_updated: 2026-08-27
 }
 </style>
 
-**Layers：[Project Setup](/ai/prompts/setup/) · Notes / Evidence · [Brief](/ai/prompts/brief/) · [Manuscript](/ai/prompts/) · [Submission / Replication](/ai/prompts/submission/)**
+{% include prompt-layer-tabs.html %}
 
-## Notes Prompt 1
+## Notes Prompt 1 · Single-Prompt Exploration {#case-specific-notes-exploration}
 
 <p class="prompt-description">围绕具体研究问题扩展可复用证据层。</p>
+
+**推荐模式：Pro；边界明确的单项探索可使用 Extra High**
 
 ~~~text
 基于目录中现有的自动科研工作流，对“中国成年人的幸福感与抑郁/沮丧是否出现分化？——基于 CGSS 2012–2023 七期重复截面的证据”进行充分探索。
@@ -44,15 +47,29 @@ last_updated: 2026-08-27
 所有有信息价值的探索，包括 null、unstable、failed 和被关闭的路线，都匹配 code 和 log 写入 notes，并保留判断理由。只有经充分探索后仍然稳定、有意义、可辩护的素材进入 manuscript brief，再由 manuscript brief 加工到 manuscript。
 ~~~
 
-## Notes Prompt 2
+## Notes Prompt 2 · Modular Evidence Workflow {#modular-evidence-workflow}
 
 <p class="prompt-description">按模块推进证据发现、压力测试、矛盾解决与收敛。</p>
 
-**使用方式：以下模块必须逐个喂给 AI，不能一起喂。**
+<p class="prompt-usage-note"><strong>使用方式：</strong>以下模块必须逐个喂给 AI，不能一起喂。</p>
 
-### 0. 总控
+<nav class="prompt-workflow" aria-label="Notes evidence workflow">
+  <strong>Cycle</strong>
+  <a href="#notes-control">0</a><span class="workflow-arrow">→</span>
+  <a href="#research-space-expansion">H1</a><span class="workflow-arrow">→</span>
+  <a href="#empirical-space-expansion">H2</a><span class="workflow-arrow">→</span>
+  <a href="#deep-investigation">V1</a><span class="workflow-arrow">→</span>
+  <a href="#adversarial-audit">V2</a><span class="workflow-arrow">→</span>
+  <a href="#evidence-conditioned-discovery">H3</a><span class="workflow-arrow">→</span>
+  <a href="#branch-adjudication">C1</a><span class="workflow-arrow">→ loop</span>
+  <span class="workflow-arrow">· conflict →</span><a href="#contradiction-resolution">X1</a>
+</nav>
+
+### 0. 总控 {#notes-control}
 
 <p class="prompt-description">限定证据层目标、保存范围与基本纪律。</p>
+
+**推荐模式：High**
 
 ~~~text
 ## 0. 总控
@@ -65,9 +82,11 @@ last_updated: 2026-08-27
 
 ---
 
-### H1. 横向：Research-space expansion
+### H1. 横向：Research-space expansion {#research-space-expansion}
 
 <p class="prompt-description">横向发现具有实质价值的新研究分支。</p>
+
+**推荐模式：Extra High**
 
 ~~~text
 ## H1. 横向：Research-space expansion
@@ -82,9 +101,11 @@ last_updated: 2026-08-27
 
 ---
 
-### H2. 横向：Empirical-space expansion
+### H2. 横向：Empirical-space expansion {#empirical-space-expansion}
 
 <p class="prompt-description">围绕明确问题扩展可辩护的实证选择。</p>
+
+**推荐模式：Extra High**
 
 ~~~text
 ## H2. 横向：Empirical-space expansion
@@ -99,9 +120,11 @@ last_updated: 2026-08-27
 
 ---
 
-### V1. 纵向：Deep investigation
+### V1. 纵向：Deep investigation {#deep-investigation}
 
 <p class="prompt-description">深挖关键分支并裁定其证据状态。</p>
+
+**推荐模式：Extra High；决定性分支可使用 Pro**
 
 ~~~text
 ## V1. 纵向：Deep investigation
@@ -116,9 +139,11 @@ last_updated: 2026-08-27
 
 ---
 
-### V2. 纵向：Adversarial audit
+### V2. 纵向：Adversarial audit {#adversarial-audit}
 
 <p class="prompt-description">以真实失效机制对核心发现进行压力测试。</p>
+
+**推荐模式：Extra High；核心结论最终压力测试可使用 Pro**
 
 ~~~text
 ## V2. 纵向：Adversarial audit
@@ -133,9 +158,11 @@ last_updated: 2026-08-27
 
 ---
 
-### H3. 再横向：Evidence-conditioned discovery
+### H3. 再横向：Evidence-conditioned discovery {#evidence-conditioned-discovery}
 
 <p class="prompt-description">从既有异常与矛盾中发现新研究方向。</p>
+
+**推荐模式：Extra High**
 
 ~~~text
 ## H3. 再横向：Evidence-conditioned discovery
@@ -150,9 +177,11 @@ last_updated: 2026-08-27
 
 ---
 
-### C1. 收敛：Branch adjudication
+### C1. 收敛：Branch adjudication {#branch-adjudication}
 
 <p class="prompt-description">汇总证据、裁决分支并安排后续资源。</p>
+
+**推荐模式：Pro**
 
 ~~~text
 ## C1. 收敛：Branch adjudication
@@ -171,9 +200,11 @@ last_updated: 2026-08-27
 
 ---
 
-### X1. 按需：Contradiction resolution
+### X1. 按需：Contradiction resolution {#contradiction-resolution}
 
 <p class="prompt-description">解释冲突证据并设计可区分的新检验。</p>
+
+**推荐模式：Pro**
 
 ~~~text
 ## X1. 按需：Contradiction resolution
@@ -190,9 +221,11 @@ last_updated: 2026-08-27
 
 ---
 
-### 循环
+### 循环 {#notes-cycle}
 
 <p class="prompt-description">规定探索循环、插入条件与停止标准。</p>
+
+**推荐模式：流程控制说明；必须逐个喂，不能与其他模块一起喂**
 
 ~~~text
 ## 循环

@@ -17,8 +17,14 @@
 
 {% if page.prompt_library %}
 <!-- Prompt library controls -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/prompt-library.css"/>
-<script defer src="{{ base_path }}/assets/js/prompt-library.js"></script>
+{% capture prompt_asset_version %}{{ site.github.build_revision | default: '20260827' }}{% endcapture %}
+<link rel="stylesheet" href="{{ base_path }}/assets/css/prompt-library.css?v={{ prompt_asset_version | strip }}"/>
+<script>
+window.promptLibraryConfig = {
+  collapsePrompts: {% if page.prompt_collapse %}true{% else %}false{% endif %}
+};
+</script>
+<script defer src="{{ base_path }}/assets/js/prompt-library.js?v={{ prompt_asset_version | strip }}"></script>
 {% endif %}
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->

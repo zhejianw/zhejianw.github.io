@@ -7,6 +7,7 @@ lang: zh-CN
 sitemap: false
 noindex: true
 prompt_library: true
+prompt_layer: setup
 visibility: public
 status: current
 last_updated: 2026-08-27
@@ -32,9 +33,9 @@ last_updated: 2026-08-27
 }
 </style>
 
-**Layers：Project Setup · [Notes / Evidence](/ai/prompts/notes/) · [Brief](/ai/prompts/brief/) · [Manuscript](/ai/prompts/) · [Submission / Replication](/ai/prompts/submission/)**
+{% include prompt-layer-tabs.html %}
 
-## Setup Prompt 1
+## Setup Prompt 1 · Workspace Bootstrap {#project-workspace-bootstrap}
 
 <p class="prompt-description">建立统一目录、状态文件与项目治理规则。</p>
 
@@ -160,7 +161,7 @@ last_updated: 2026-08-27
 先检查当前目录已有内容，避免覆盖已有文件，再建立缺失的结构和初始化文件。完成 bootstrap 后停止，不开始分析或写 manuscript。
 ~~~
 
-## Setup Prompt 2：Environment Bootstrap
+## Setup Prompt 2 · Environment Bootstrap {#environment-bootstrap}
 
 <p class="prompt-description">验证实证与写作环境并记录长期配置。</p>
 
