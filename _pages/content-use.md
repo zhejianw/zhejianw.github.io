@@ -13,28 +13,22 @@ last_updated: 2026-08-28
 <p class="taste-document-note"><strong>Effective and last reviewed:</strong> August 28, 2026. This page describes the site owner's permissions and preferences; it does not replace applicable law or a separate written license.</p>
 
 <div class="taste-card-grid">
-  <section class="taste-content-card taste-content-card--seven taste-content-card--blue" markdown="1">
-
-## Permitted uses
-
-Subject to applicable law and any third-party rights, the following uses are welcome:
-
-- reading and navigating the site as an individual;
-- linking to public pages and making accurate academic citations;
-- limited quotation or reuse that is authorized by law;
-- conventional search indexing that follows this site's technical signals; and
-- retrieval of a specific URL that a human intentionally supplies to an AI assistant for that human's immediate task, provided the retrieval is not used for model training, persistent ingestion, profiling, or external action.
-
+  <section class="taste-content-card taste-content-card--seven taste-content-card--blue">
+    <h2>Permitted uses</h2>
+    <p>Subject to applicable law and any third-party rights, the following uses are welcome:</p>
+    <ul>
+      <li>reading and navigating the site as an individual;</li>
+      <li>linking to public pages and making accurate academic citations;</li>
+      <li>limited quotation or reuse that is authorized by law;</li>
+      <li>conventional search indexing that follows this site's technical signals; and</li>
+      <li>retrieval of a specific URL that a human intentionally supplies to an AI assistant for that human's immediate task, provided the retrieval is not used for model training, persistent ingestion, profiling, or external action.</li>
+    </ul>
   </section>
 
-  <section class="taste-content-card taste-content-card--five taste-content-card--warm" markdown="1">
-
-## Ask first
-
-Written permission is required before using original site content for a commercial dataset, a searchable corpus, model evaluation or benchmarking, a persistent vector database, or another use outside the permissions above, unless applicable law independently authorizes that use.
-
-[Request permission](mailto:zhejianw@udel.edu?subject=Website%20content%20use%20request)
-
+  <section class="taste-content-card taste-content-card--five taste-content-card--warm">
+    <h2>Ask first</h2>
+    <p>Written permission is required before using original site content for a commercial dataset, a searchable corpus, model evaluation or benchmarking, a persistent vector database, or another use outside the permissions above, unless applicable law independently authorizes that use.</p>
+    <p><a href="mailto:zhejianw@udel.edu?subject=Website%20content%20use%20request">Request permission</a></p>
   </section>
 </div>
 
