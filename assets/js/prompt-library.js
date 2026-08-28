@@ -2,6 +2,29 @@
   "use strict";
 
   var config = window.promptLibraryConfig || {};
+  var recentStorageKey = "zhejian-prompt-recently-copied";
+
+  function getRecentlyCopied() {
+    try {
+      var stored = JSON.parse(window.localStorage.getItem(recentStorageKey) || "[]");
+      return Array.isArray(stored) ? stored : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function rememberCopied(promptId) {
+    var recent = getRecentlyCopied().filter(function (item) {
+      return item !== promptId;
+    });
+
+    recent.unshift(promptId);
+    try {
+      window.localStorage.setItem(recentStorageKey, JSON.stringify(recent.slice(0, 8)));
+    } catch (error) {
+      return;
+    }
+  }
 
   function findPromptHeadingElement(node) {
     var current = node.previousElementSibling;
@@ -304,6 +327,7 @@
 
       copyText(code.textContent).then(function () {
         button.disabled = false;
+        rememberCopied(heading.id);
         setButtonState(button, status, "copied");
       }).catch(function () {
         button.disabled = false;
@@ -353,11 +377,9 @@
       return;
     }
 
-    var toc = content.querySelector(".prompt-section-toc");
-
-    if (!toc) {
-      return;
-    }
+    var anchor = content.querySelector(".prompt-section-toc") ||
+      content.querySelector(".prompt-workflow") ||
+      content.querySelector(".prompt-layer-nav");
 
     var controls = document.createElement("div");
     var expand = document.createElement("button");
@@ -385,7 +407,288 @@
 
     controls.appendChild(expand);
     controls.appendChild(collapse);
-    toc.parentNode.insertBefore(controls, toc.nextSibling);
+    if (anchor) {
+      anchor.parentNode.insertBefore(controls, anchor.nextSibling);
+    } else {
+      content.insertBefore(controls, content.firstChild);
+    }
+  }
+
+  function initLayerNav() {
+    var nav = document.querySelector(".prompt-layer-nav");
+
+    if (!nav) {
+      return;
+    }
+
+    var current = nav.querySelector(".is-current");
+    var frameRequested = false;
+
+    function updateOverflowState() {
+      frameRequested = false;
+      var maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+      nav.classList.toggle("can-scroll-left", nav.scrollLeft > 4);
+      nav.classList.toggle("can-scroll-right", nav.scrollLeft < maxScroll - 4);
+    }
+
+    function requestOverflowUpdate() {
+      if (!frameRequested) {
+        frameRequested = true;
+        window.requestAnimationFrame(updateOverflowState);
+      }
+    }
+
+    if (current) {
+      nav.scrollLeft = Math.max(0, current.offsetLeft - (nav.clientWidth - current.offsetWidth) / 2);
+    }
+
+    updateOverflowState();
+    nav.addEventListener("scroll", requestOverflowUpdate, { passive: true });
+    window.addEventListener("resize", requestOverflowUpdate);
+  }
+
+  function createCommandPalette(content) {
+    var cards = Array.prototype.slice.call(content.querySelectorAll(".prompt-card"));
+
+    if (cards.length < 2 || content.querySelector(".prompt-command-dialog")) {
+      return;
+    }
+
+    var records = cards.map(function (card) {
+      var heading = card.querySelector("h2, h3");
+      var description = card.querySelector(".prompt-description");
+      var mode = card.querySelector(".prompt-mode");
+      var code = card.querySelector(".prompt-copy-shell code") || card.querySelector(".prompt-copy-shell pre");
+      return {
+        id: card.getAttribute("data-prompt-id"),
+        title: heading ? heading.textContent.replace(/#\s*$/, "").trim() : "Untitled prompt",
+        description: description ? description.textContent.trim() : "",
+        mode: mode ? mode.textContent.trim() : "",
+        code: code ? code.textContent : ""
+      };
+    });
+
+    var controls = content.querySelector(".prompt-view-controls");
+    var trigger = document.createElement("button");
+    var dialog = document.createElement("dialog");
+    var panel = document.createElement("div");
+    var header = document.createElement("div");
+    var title = document.createElement("h2");
+    var close = document.createElement("button");
+    var input = document.createElement("input");
+    var help = document.createElement("p");
+    var results = document.createElement("div");
+    var status = document.createElement("p");
+    var visibleRecords = records.slice();
+    var selectedIndex = 0;
+
+    trigger.type = "button";
+    trigger.className = "prompt-view-button prompt-command-trigger";
+    trigger.textContent = "Search prompts";
+    trigger.setAttribute("aria-keyshortcuts", "Control+K Meta+K");
+    trigger.setAttribute("title", "Search this prompt layer (Ctrl/Command + K)");
+
+    if (controls) {
+      controls.insertBefore(trigger, controls.firstChild);
+    } else {
+      content.insertBefore(trigger, content.firstChild);
+    }
+
+    dialog.className = "prompt-command-dialog";
+    dialog.setAttribute("aria-labelledby", "prompt-command-title");
+    panel.className = "prompt-command-panel";
+    header.className = "prompt-command-header";
+    title.id = "prompt-command-title";
+    title.textContent = "Find a prompt";
+    close.type = "button";
+    close.className = "prompt-command-close";
+    close.textContent = "Close";
+    close.setAttribute("aria-label", "Close prompt search");
+    input.type = "search";
+    input.className = "prompt-command-input";
+    input.placeholder = "Search title, description, or mode";
+    input.setAttribute("autocomplete", "off");
+    input.setAttribute("role", "combobox");
+    input.setAttribute("aria-autocomplete", "list");
+    input.setAttribute("aria-haspopup", "listbox");
+    input.setAttribute("aria-expanded", "false");
+    input.setAttribute("aria-controls", "prompt-command-results");
+    input.setAttribute("aria-label", "Search prompts in this layer");
+    help.className = "prompt-command-help";
+    help.textContent = "Arrow keys select · Enter opens · Ctrl/Command + Enter copies";
+    results.id = "prompt-command-results";
+    results.className = "prompt-command-results";
+    results.setAttribute("role", "listbox");
+    status.className = "prompt-command-status";
+    status.setAttribute("role", "status");
+    status.setAttribute("aria-live", "polite");
+
+    header.appendChild(title);
+    header.appendChild(close);
+    panel.appendChild(header);
+    panel.appendChild(input);
+    panel.appendChild(help);
+    panel.appendChild(results);
+    panel.appendChild(status);
+    dialog.appendChild(panel);
+    document.body.appendChild(dialog);
+
+    function select(index) {
+      if (!visibleRecords.length) {
+        selectedIndex = 0;
+        input.removeAttribute("aria-activedescendant");
+        return;
+      }
+
+      selectedIndex = (index + visibleRecords.length) % visibleRecords.length;
+      Array.prototype.forEach.call(results.querySelectorAll(".prompt-command-result"), function (item, itemIndex) {
+        var selected = itemIndex === selectedIndex;
+        item.classList.toggle("is-selected", selected);
+        item.setAttribute("aria-selected", String(selected));
+        if (selected) {
+          input.setAttribute("aria-activedescendant", item.id);
+          item.scrollIntoView({ block: "nearest" });
+        }
+      });
+    }
+
+    function openRecord(record) {
+      if (!record) {
+        return;
+      }
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+      if (window.location.hash === "#" + record.id) {
+        revealHashTarget();
+      } else {
+        window.location.hash = record.id;
+      }
+    }
+
+    function copyRecord(record) {
+      if (!record || !record.code) {
+        return;
+      }
+      copyText(record.code).then(function () {
+        rememberCopied(record.id);
+        status.textContent = "Copied: " + record.title;
+        renderResults(input.value);
+      }).catch(function () {
+        status.textContent = "Copy failed. Open the prompt and copy manually.";
+      });
+    }
+
+    function renderResults(query) {
+      var needle = query.trim().toLowerCase();
+      var recent = getRecentlyCopied();
+
+      visibleRecords = records.filter(function (record) {
+        return !needle || [record.title, record.description, record.mode].join(" ").toLowerCase().indexOf(needle) !== -1;
+      }).slice(0, 20);
+
+      results.textContent = "";
+      visibleRecords.forEach(function (record, index) {
+        var button = document.createElement("button");
+        var titleLine = document.createElement("span");
+        var descriptionLine = document.createElement("span");
+        var metaLine = document.createElement("span");
+
+        button.type = "button";
+        button.id = "prompt-command-result-" + index;
+        button.className = "prompt-command-result";
+        button.setAttribute("role", "option");
+        button.setAttribute("tabindex", "-1");
+        button.setAttribute("aria-selected", "false");
+        titleLine.className = "prompt-command-result__title";
+        titleLine.textContent = record.title;
+        descriptionLine.className = "prompt-command-result__description";
+        descriptionLine.textContent = record.description;
+        metaLine.className = "prompt-command-result__meta";
+        metaLine.textContent = [record.mode, recent.indexOf(record.id) !== -1 ? "Recently copied" : ""].filter(Boolean).join(" · ");
+        button.appendChild(titleLine);
+        if (record.description) {
+          button.appendChild(descriptionLine);
+        }
+        if (metaLine.textContent) {
+          button.appendChild(metaLine);
+        }
+        button.addEventListener("mouseenter", function () {
+          select(index);
+        });
+        button.addEventListener("click", function () {
+          openRecord(record);
+        });
+        results.appendChild(button);
+      });
+
+      selectedIndex = 0;
+      select(0);
+      status.textContent = visibleRecords.length ? visibleRecords.length + " prompt" + (visibleRecords.length === 1 ? "" : "s") : "No matching prompts";
+    }
+
+    function openPalette() {
+      if (dialog.open) {
+        input.focus();
+        return;
+      }
+      input.value = "";
+      renderResults("");
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+      window.setTimeout(function () {
+        input.setAttribute("aria-expanded", "true");
+        input.focus();
+      }, 0);
+    }
+
+    trigger.addEventListener("click", openPalette);
+    close.addEventListener("click", function () {
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+    });
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog && typeof dialog.close === "function") {
+        dialog.close();
+      }
+    });
+    dialog.addEventListener("close", function () {
+      input.setAttribute("aria-expanded", "false");
+    });
+    input.addEventListener("input", function () {
+      renderResults(input.value);
+    });
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        select(selectedIndex + 1);
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        select(selectedIndex - 1);
+      } else if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+        event.preventDefault();
+        copyRecord(visibleRecords[selectedIndex]);
+      } else if (event.key === "Enter") {
+        event.preventDefault();
+        openRecord(visibleRecords[selectedIndex]);
+      }
+    });
+    document.addEventListener("keydown", function (event) {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        openPalette();
+      }
+    });
+
+    renderResults("");
   }
 
   function revealHashTarget() {
@@ -432,6 +735,8 @@
 
     Array.prototype.forEach.call(content.querySelectorAll("pre"), enhancePromptBlock);
     addViewControls(content);
+    initLayerNav();
+    createCommandPalette(content);
     revealHashTarget();
     window.addEventListener("hashchange", revealHashTarget);
   }

@@ -1,0 +1,23 @@
+{% assign person = site.data.person %}
+
+<div itemscope itemtype="https://schema.org/Person">
+  <div class="author__avatar">
+    <img src="{{ '/images/portrait/zhejian-wang-480.jpg' | relative_url }}" alt="Portrait of {{ person.name }}" fetchpriority="high">
+  </div>
+  <div class="author__content">
+    <h2 class="author__name" itemprop="name">{{ person.name }}</h2>
+    <p class="author__pronouns">{{ person.pronouns }}</p>
+    <p class="author__bio" itemprop="description">{{ person.sidebar_bio }}</p>
+  </div>
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse" type="button">Contact</button>
+    <ul class="author__urls social-icons">
+      <li class="author__desktop">{{ person.location }}</li>
+      <li class="author__desktop">{{ person.institution }}</li>
+      <li><a href="mailto:{{ person.email }}">{{ person.email }}</a></li>
+      <li><a href="{{ person.google_scholar }}">Google Scholar</a></li>
+      <li><a href="{{ person.orcid_url }}">ORCID</a></li>
+      <li><a href="{{ person.github }}">GitHub</a></li>
+    </ul>
+  </div>
+</div>

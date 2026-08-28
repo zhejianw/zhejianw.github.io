@@ -81,7 +81,18 @@ def add_issue(issues: list[tuple[str, str]], rule: str, path: Path) -> None:
 
 def validate_ai_metadata(path: Path, data: bytes, issues: list[tuple[str, str]]) -> None:
     relative = path.relative_to(ROOT).as_posix()
-    if relative == "AI_CONTEXT.md" or (
+    if relative.startswith("ai/prompts/") and path.suffix.lower() == ".md":
+        text = data.decode("utf-8", errors="replace")
+        required = (
+            "visibility: unlisted-public",
+            "status:",
+            "last_updated:",
+            "noindex: true",
+            "sitemap: false",
+        )
+        if not all(item in text for item in required):
+            add_issue(issues, "PROMPT_UNLISTED_METADATA_REQUIRED", path)
+    elif relative == "AI_CONTEXT.md" or (
         relative.startswith("ai/") and path.suffix.lower() == ".md" and path.name != "README.md"
     ):
         text = data.decode("utf-8", errors="replace")
@@ -97,6 +108,19 @@ def validate_ai_metadata(path: Path, data: bytes, issues: list[tuple[str, str]])
             return
         if profile.get("visibility") != "public" or not profile.get("last_updated"):
             add_issue(issues, "PROFILE_PUBLIC_METADATA_REQUIRED", path)
+
+    if relative == "ai/context.json":
+        try:
+            context = json.loads(data.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            add_issue(issues, "CONTEXT_JSON_INVALID", path)
+            return
+        if (
+            context.get("visibility") != "public"
+            or not context.get("last_updated")
+            or context.get("canonical_source") != "https://zhejianwang.com/ai/context.json"
+        ):
+            add_issue(issues, "CONTEXT_CANONICAL_METADATA_REQUIRED", path)
 
 
 def main() -> int:

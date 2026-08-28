@@ -1,3 +1,24 @@
-<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+{% if page.taste_motion %}
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+{% endif %}
+<script defer src="{{ base_path }}/assets/js/taste-site.js"></script>
+
+{% if page.mathjax %}
+<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+{% endif %}
+
+{% if page.plotly %}
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js"></script>
+{% endif %}
+
+{% if page.mermaid %}
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true, theme: "default" });
+  await mermaid.run({ querySelector: "code.language-mermaid" });
+</script>
+{% endif %}
 
 {% include analytics.html %}

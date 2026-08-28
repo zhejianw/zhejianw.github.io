@@ -1,0 +1,15 @@
+{% include base_path %}
+{% assign person = site.data.person %}
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    <li><a href="{{ person.cv_pdf | relative_url }}"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> CV</a></li>
+    <li><a href="mailto:{{ person.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+    <li><a href="{{ person.google_scholar }}">Google Scholar</a></li>
+    <li><a href="{{ person.orcid_url }}">ORCID</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">
+  &copy; {{ site.time | date: '%Y' }} {{ person.name }}. Classic academic view.
+</div>

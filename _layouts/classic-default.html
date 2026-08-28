@@ -1,0 +1,26 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="{{ page.lang | default: site.locale | default: 'en' }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% if page.noindex %}<meta name="robots" content="noindex, nofollow, noarchive">{% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/classic.css' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">
+  </head>
+  <body class="classic-site">
+    {% include browser-upgrade.html %}
+    <a class="classic-skip-link" href="#main">Skip to content</a>
+    {% include classic/masthead.html %}
+
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>{% include classic/footer.html %}</footer>
+    </div>
+    {% include classic/scripts.html %}
+  </body>
+</html>

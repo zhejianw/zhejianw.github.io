@@ -1,37 +1,41 @@
 ---
-layout: archive
+layout: single
 title: "Sitemap"
 permalink: /sitemap/
-author_profile: true
+author_profile: false
+excerpt: "A concise directory of the site's public, human-facing pages."
 ---
 
-{% include base_path %}
+<div class="taste-card-grid">
+  <section class="taste-content-card taste-content-card--seven taste-content-card--blue" markdown="1">
 
-A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+## Academic profile
 
-<h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
+- [Home]({{ '/' | relative_url }})
+- [Research]({{ '/research/' | relative_url }})
+- [Teaching]({{ '/teaching/' | relative_url }})
+- [Curriculum Vitae]({{ '/cv/' | relative_url }})
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+  </section>
 
-{% capture written_label %}'None'{% endcapture %}
+  <section class="taste-content-card taste-content-card--five taste-content-card--warm" markdown="1">
 
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+## Published research
+
+- [Restricting video games in China: Effects on time use, educational achievement, and health]({{ '/research/restricting-video-games-china/' | relative_url }})
+
+  </section>
+
+  <section class="taste-content-card taste-content-card--full" markdown="1">
+
+## Public AI references
+
+- [AI Collaboration Reference]({{ '/ai/' | relative_url }})
+- [Public AI Context]({{ '/ai/context/' | relative_url }})
+- [Public Submission Profile]({{ '/ai/submission-profile/' | relative_url }})
+- [Authoring and Collaboration Guidelines]({{ '/ai/writing-guidance/' | relative_url }})
+
+Machine-readable crawlers can use the [XML sitemap]({{ '/sitemap.xml' | relative_url }}), [LLM-facing summary]({{ '/llms.txt' | relative_url }}), or the public [JSON context]({{ '/ai/context.json' | relative_url }}).
+
+  </section>
+</div>

@@ -1,0 +1,24 @@
+home:
+  label: Home
+  modern: /
+  classic: /classic/
+
+research:
+  label: Research
+  modern: /research/
+  classic: /classic/research/
+
+teaching:
+  label: Teaching
+  modern: /teaching/
+  classic: /classic/teaching/
+
+cv:
+  label: CV
+  modern: /cv/
+  classic: /classic/cv/
+
+publication-video-games:
+  label: Published article
+  modern: /research/restricting-video-games-china/
+  classic: /classic/research/restricting-video-games-china/

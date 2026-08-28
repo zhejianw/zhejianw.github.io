@@ -2,8 +2,12 @@
 layout: single
 title: "Restricting Video Games in China: Effects on Time Use, Educational Achievement, and Health"
 permalink: /research/restricting-video-games-china/
-author_profile: true
+author_profile: false
 lang: en
+ref: publication-video-games
+taste_compact_title: true
+last_updated: 2026-08-28
+seo_image: "social/restricting-video-games-china.jpg"
 excerpt: "Wang, Z. (2026). Restricting video games in China: Effects on time use, educational achievement, and health. Journal of Development Economics, 182, 103812."
 
 # Highwire Press citation metadata (consumed by head/custom.html for Google Scholar)
@@ -21,40 +25,39 @@ citation_language: "en"
 citation_keywords: "Video games; Internet regulation; Adolescents; Education; Health; China; Difference-in-differences; Regression kink"
 ---
 
-<div class="paper-card" markdown="1">
+{% assign paper = site.data.research.papers['restricting-video-games-china'] %}
 
-**Zhejian Wang**
+<article class="taste-paper-feature taste-reveal">
+  <div>
+    <p class="taste-card__kind">Peer-reviewed article</p>
+    <h2>Published in the Journal of Development Economics</h2>
+    <p><strong>Zhejian Wang</strong></p>
+  </div>
+  <div class="taste-paper-feature__meta">
+    <p>Volume {{ paper.volume }} · Article {{ paper.article }} · {{ paper.year }}<br>{{ paper.publisher }}</p>
+    <p><a href="{{ paper.doi }}">ScienceDirect</a> · <a href="{{ paper.repec }}">RePEc / IDEAS</a></p>
+  </div>
+</article>
 
-*Journal of Development Economics*, Vol. 182, Article 103812 (2026).
-DOI: [10.1016/j.jdeveco.2026.103812](https://doi.org/10.1016/j.jdeveco.2026.103812).
-Publisher: Elsevier (North-Holland).
-
-[Publisher version (ScienceDirect)](https://doi.org/10.1016/j.jdeveco.2026.103812){:.btn .btn--info}
-[RePEc / IDEAS entry](https://ideas.repec.org/a/eee/deveco/v182y2026ics0304387826000957.html){:.btn .btn--info}
-
----
+<div class="taste-actions taste-paper-actions">
+  <a class="taste-button taste-button--primary" href="{{ paper.doi }}">Open article</a>
+  <button class="taste-button" type="button" data-copy-target="#paper-citation-text">Copy citation</button>
+  <button class="taste-button" type="button" data-copy-target="#paper-bibtex-text">Copy BibTeX</button>
+  <span class="taste-copy-status" role="status" aria-live="polite"></span>
+</div>
 
 ## Abstract
 
-In 2021, the Chinese government introduced a highly restrictive policy that sharply limited minors' access to online video games, effectively eliminating weekday play and allowing only minimal play on weekends and holidays. Using nationally representative survey data and a difference-in-differences design, I find that the policy sharply reduced minors' gaming engagement and overall Internet use, reflecting substantial but incomplete compliance. However, these behavioral changes did not produce detectable short-run improvements in academic performance, nor clear evidence of an increase in study time. The health-related evidence is more limited, with no clear physical-health gains and suggestive indications of reduced mental well-being. Complementary evidence from city-level administrative data and a regression kink design likewise shows no robust effects on exam outcomes.
+{{ paper.abstract }}
 
 ## Citation
 
-Wang, Z. (2026). Restricting video games in China: Effects on time use, educational achievement, and health. *Journal of Development Economics*, *182*, 103812. <https://doi.org/10.1016/j.jdeveco.2026.103812>
+<p id="paper-citation-text">{{ paper.citation_text }}</p>
 
 ### BibTeX
 
 ```bibtex
-@article{Wang2026Restricting,
-  title   = {Restricting video games in China: Effects on time use, educational achievement, and health},
-  author  = {Wang, Zhejian},
-  journal = {Journal of Development Economics},
-  volume  = {182},
-  pages   = {103812},
-  year    = {2026},
-  doi     = {10.1016/j.jdeveco.2026.103812},
-  publisher = {Elsevier}
-}
+{{ paper.bibtex }}
 ```
 
-</div>
+<pre id="paper-bibtex-text" class="taste-visually-hidden" aria-hidden="true">{{ paper.bibtex }}</pre>

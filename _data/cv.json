@@ -1,152 +1,142 @@
 {
+  "schema_version": "1.0",
+  "status": "current-public-profile",
+  "last_updated": "2026-08-28",
+  "canonical_url": "https://zhejianwang.com/cv/",
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Zhejian Wang",
+    "label": "Ph.D. Candidate in Economics",
+    "email": "zhejianw@udel.edu",
+    "website": "https://zhejianwang.com/",
+    "summary": "Zhejian Wang is a Ph.D. Candidate in Economics at the University of Delaware and an applied microeconomist studying digital regulation, education policy, and household institutions.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Newark",
+      "region": "Delaware",
+      "countryCode": "US"
     },
     "profiles": [
       {
         "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
       },
       {
         "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
+        "url": "https://orcid.org/0009-0001-0016-0421"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "url": "https://github.com/zhejianw"
       }
     ]
   },
-  "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "degree": "Ph.D. Candidate in Economics",
+      "institution": "University of Delaware",
+      "years": "2020-present",
+      "note": "Dissertation successfully defended; degree pending formal conferral."
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
+      "degree": "M.A. in Economics",
+      "institution": "University of Southern California",
+      "year": 2016
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "degree": "B.S. in Management",
+      "institution": "Southwestern University of Finance and Economics",
+      "year": 2014
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+  "work": [
+    {
+      "organization": "Caitong Securities Co., Ltd.",
+      "unit": "Internet Industry Research Division",
+      "roles": "Assistant Analyst (2017-2018); Analyst (2019-2020)",
+      "years": "2017-2020",
+      "location": "Shanghai, China",
+      "description": "Covered digital-platform firms and technology regulation as a sell-side equity analyst. CFA charterholder."
+    }
+  ],
+  "skills": {
+    "software": [
+      "Stata",
+      "R",
+      "Python",
+      "LaTeX",
+      "SQL"
+    ],
+    "languages": [
+      "Mandarin Chinese (native)",
+      "English (fluent)"
+    ]
+  },
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "title": "Restricting video games in China: Effects on time use, educational achievement, and health",
+      "journal": "Journal of Development Economics",
+      "volume": "182",
+      "article": "103812",
+      "year": 2026,
+      "doi": "https://doi.org/10.1016/j.jdeveco.2026.103812"
+    }
+  ],
+  "research_programs": [
+    {
+      "id": "digital",
+      "title": "Digital regulation and platforms",
+      "summary": "Policy, platform behavior, and market responses in digital environments.",
+      "paper_ids": [
+        "restricting-video-games-china",
+        "minors-online-gaming",
+        "generative-ai-apps"
+      ]
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "id": "education",
+      "title": "Education and human capital",
+      "summary": "Education policy, schooling choice, mobility, and locally salient role models.",
+      "paper_ids": [
+        "higher-education-expansion-choice",
+        "seats-to-status",
+        "local-role-models"
+      ]
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "id": "household",
+      "title": "Household institutions",
+      "summary": "Property rights, administrative frictions, marriage, and family decisions.",
+      "paper_ids": [
+        "premarital-property-rights",
+        "registration-frictions-marriage"
+      ]
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "event": "University of Delaware Economics Seminar Series",
+      "date": "December 2025"
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "event": "University of Delaware ESGA Conference",
+      "date": "October 2025"
     }
   ],
-  "teaching": [
+  "references": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "name": "Jeremy Tobacman (Chair)",
+      "contact": "Available upon request"
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
+      "name": "George R. Parsons",
+      "contact": "Available upon request"
+    },
     {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "name": "Emily L. Battaglia",
+      "contact": "Available upon request"
+    },
+    {
+      "name": "Desmond J. Toohey",
+      "contact": "Available upon request"
     }
   ]
 }

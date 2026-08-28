@@ -1,25 +1,32 @@
 {% include base_path %}
+{% assign version_route = site.data.version_routes[page.ref] %}
 
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
-          </li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+<header class="taste-header" data-taste-header>
+  <div class="taste-header__inner">
+    <a class="taste-wordmark" href="{{ '/' | relative_url }}" aria-label="Zhejian Wang, home">
+      <span class="taste-wordmark__monogram" aria-hidden="true">ZW</span>
+      <span class="taste-wordmark__name">Zhejian Wang</span>
+    </a>
+
+    <button class="taste-menu-toggle" type="button" aria-expanded="false" aria-controls="taste-primary-nav">
+      <span class="taste-menu-toggle__label">Menu</span>
+      <span class="taste-menu-toggle__line" aria-hidden="true"></span>
+      <span class="taste-menu-toggle__line" aria-hidden="true"></span>
+    </button>
+
+    <nav class="taste-primary-nav" id="taste-primary-nav" aria-label="Primary navigation">
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}
+          {% assign link_url = link.url %}
+        {% else %}
+          {% assign link_url = link.url | relative_url %}
+        {% endif %}
+        <a href="{{ link_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {% endfor %}
+      {% if version_route.classic %}
+        <a class="taste-version-link" href="{{ version_route.classic | relative_url }}" aria-label="Open the classic view of this page">Classic view</a>
+      {% endif %}
+      <a href="#site-contact">Contact</a>
+    </nav>
   </div>
-</div>
+</header>

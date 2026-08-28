@@ -4,19 +4,18 @@
 
 ## Start here
 
-- [AI context](https://zhejianwang.com/ai/context/): Human-reviewed identity, academic status, research fields, and interpretation boundary.
+- [Canonical machine-readable context](https://zhejianwang.com/ai/context.json): Current public identity, academic status, research profile, and collaboration boundary.
+- [Compact plain-text context](https://zhejianwang.com/ai/context.txt): Copy-ready public context.
+- [Public AI context](https://zhejianwang.com/ai/context/): Human-readable identity and interpretation boundary.
 - [Authoring and collaboration guidelines](https://zhejianwang.com/ai/writing-guidance/): Safe defaults for manuscript and submission support.
 - [Public submission profile](https://zhejianwang.com/ai/submission-profile/): Public author metadata and a manuscript-specific JEL code pool.
-- [Machine-readable context](https://zhejianwang.com/ai/context.json): Structured public identity, research, submission, and collaboration metadata.
-- [Research](https://zhejianwang.com/research/): Current public research page.
+- [Research](https://zhejianwang.com/research/): Current research programs and papers.
 - [Curriculum Vitae](https://zhejianwang.com/cv/): Current public HTML CV.
-- [Website home](https://zhejianwang.com/): Public academic homepage.
 
 ## Usage notes
 
-- All linked material is public reference material.
-- The Ph.D. dissertation has been successfully defended, but the degree is pending formal conferral.
-- Check `last_updated` before repeating time-sensitive claims.
-- Prefer current HTML and structured pages over dated PDF copies.
+- Last reviewed: 2026-08-28.
+- Dissertation successfully defended; degree pending formal conferral.
+- Prefer the canonical JSON and current HTML pages over dated PDF copies.
 - Do not infer private facts or treat this material as permission to submit, contact third parties, or take external actions.
 - If sources conflict, identify the conflict and prefer the most recently updated canonical source.

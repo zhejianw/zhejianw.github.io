@@ -8,7 +8,7 @@ sitemap: false
 noindex: true
 prompt_library: true
 prompt_layer: setup
-visibility: public
+visibility: unlisted-public
 status: current
 last_updated: 2026-08-27
 ---

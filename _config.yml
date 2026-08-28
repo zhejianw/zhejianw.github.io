@@ -8,16 +8,18 @@ site_theme: "default"
 title: "Zhejian Wang - Applied Microeconomist"
 title_separator: "-"
 name: &name "Zhejian Wang"
-description: &description "Ph.D. Candidate in Economics at the University of Delaware; dissertation successfully defended and degree pending formal conferral"
+description: &description "Applied microeconomist studying digital regulation, education policy, and household institutions"
 url: "https://zhejianwang.com"
 baseurl: ""
 repository: "zhejianw/zhejianw.github.io"
+og_image: "social/zhejian-wang-social-card.jpg"
+og_description: "Zhejian Wang is an applied microeconomist studying digital regulation, education policy, and household institutions."
 
 author:
-  avatar: "19.jpg"
+  avatar: "portrait/zhejian-wang-480.jpg"
   name: "Zhejian Wang"
   pronouns: "he/him"
-  bio: "Ph.D. Candidate in Economics, University of Delaware. Applied microeconomist working in the economics of education, digital economics, and family and household economics."
+  bio: "Ph.D. Candidate in Economics, University of Delaware. Applied microeconomist studying digital regulation, education policy, and household institutions."
   location: "Newark, Delaware, USA"
   employer: "University of Delaware"
   email: "zhejianw@udel.edu"
@@ -66,6 +68,19 @@ include:
   - images
   - ai
 exclude:
+  - AI_CONTEXT.md
+  - CONTRIBUTING.md
+  - SECURITY.md
+  - Zhejian_CV.pdf
+  - images/19.jpg
+  - ai/README.md
+  - files/JMP.pdf
+  - files/bibtex1.bib
+  - markdown_generator
+  - talkmap
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - talkmap.py
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -103,6 +118,20 @@ defaults:
     values:
       layout: single
       author_profile: true
+  - scope:
+      path: "ai/prompts"
+    values:
+      prompt_collapse: true
+      noindex: true
+      sitemap: false
+      visibility: unlisted-public
+  - scope:
+      path: "classic"
+    values:
+      layout: classic-single
+      version: classic
+      noindex: true
+      sitemap: false
 
 sass:
   sass_dir: _sass

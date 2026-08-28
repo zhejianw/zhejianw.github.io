@@ -4,10 +4,10 @@ title: "Authoring and Collaboration Guidelines"
 permalink: /ai/writing-guidance/
 author_profile: false
 lang: en
-sitemap: false
+excerpt: "Project-independent defaults for evidence-based academic writing assistance."
 visibility: public
 status: current
-last_updated: 2026-08-26
+last_updated: 2026-08-28
 ---
 
 These are public, project-independent defaults for assisting Zhejian Wang with academic writing. A manuscript's explicit instructions and source text take precedence.

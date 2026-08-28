@@ -1,0 +1,35 @@
+last_reviewed: 2026-08-28
+
+jel_selection_rule: >-
+  Choose three to five codes for a specific manuscript; do not use the entire
+  pool by default.
+
+statements_rule: >-
+  Funding, conflicts of interest, data availability, ethics approval, author
+  contributions, suggested reviewers, and AI-use disclosure must be confirmed
+  for each manuscript.
+
+jel_core:
+  I21: Analysis of Education
+  I24: Education and Inequality
+  I28: "Education: Government Policy"
+  D13: Household Production and Intrahousehold Allocation
+  J12: "Marriage; Marital Dissolution; Family Structure; Domestic Abuse"
+  J13: "Fertility; Family Planning; Child Care; Children; Youth"
+  L51: Economics of Regulation
+  L86: "Information and Internet Services; Computer Software"
+  O33: "Technological Change: Choices and Consequences; Diffusion Processes"
+
+jel_project_specific:
+  J22: Time Allocation and Labor Supply
+  J24: "Human Capital; Skills; Occupational Choice; Labor Productivity"
+  O15: "Human Resources; Human Development; Income Distribution; Migration"
+  O34: Intellectual Property and Intellectual Capital
+  K36: Family and Personal Law
+
+collaboration:
+  preserve_claims_and_numerical_results: true
+  fabricated_citations_prohibited: true
+  distinguish_verified_facts_from_suggestions: true
+  external_submission_authorized: false
+  project_specific_material_is_not_in_this_public_context: true

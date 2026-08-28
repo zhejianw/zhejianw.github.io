@@ -2,87 +2,52 @@
 layout: single
 title: "Research"
 permalink: /research/
-author_profile: true
+author_profile: false
 lang: en
 ref: research
+last_updated: 2026-08-28
+excerpt: "Research programs in digital regulation, education and human capital, and household institutions."
 ---
 
-My work is organized around three primary fields: **economics of education**, **digital economics**, and **family and household economics**, within the broader field of applied microeconomics.
+{% assign research = site.data.research %}
+{% assign publication = research.papers[research.featured_publication] %}
 
-## Publication
+<p class="taste-lede">My research is organized around three connected programs: digital regulation and platforms, education and human capital, and household institutions. Across them, I use policy variation and large-scale microdata to study consequential behavioral responses.</p>
 
-<div class="paper-card" markdown="1">
+<p class="taste-eyebrow">Peer-reviewed publication</p>
 
-[**Restricting video games in China: Effects on time use, educational achievement, and health**](/research/restricting-video-games-china/)
-<span class="paper-status">*Journal of Development Economics*, **182**, 103812 (2026) · [DOI](https://doi.org/10.1016/j.jdeveco.2026.103812)</span>
+<article class="taste-paper-feature">
+  <div>
+    <h2><a href="{{ publication.details_url | relative_url }}">{{ publication.full_title }}</a></h2>
+    <p>{{ publication.question }}</p>
+  </div>
+  <div class="taste-paper-feature__meta">
+    <p><em>{{ publication.journal }}</em><br>Volume {{ publication.volume }} · Article {{ publication.article }} · {{ publication.year }}</p>
+    <p><a href="{{ publication.doi }}">DOI</a> · <a href="{{ publication.details_url | relative_url }}">Paper details</a></p>
+  </div>
+</article>
 
-</div>
+{% for program in research.programs %}
+<section class="taste-research-program" id="program-{{ program.id }}" aria-labelledby="program-{{ program.id }}-title">
+  <header class="taste-research-program__header">
+    <h2 id="program-{{ program.id }}-title">{{ program.title }}</h2>
+    <p>{{ program.summary }}</p>
+  </header>
 
----
-
-## Working Papers — Education, Human Capital, and Family
-
-<div class="paper-card" markdown="1">
-
-**Higher-Education Expansion and Upper-Secondary Choice** (with Yiqun Tong and Ruoming Zhang)
-
-[Draft (June 2026)](/files/Tong_Wang_Zhang_Higher_Education_Expansion.pdf)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Premarital Property Rights and Marriage Timing: Evidence from Urban China** (with Ruoming Zhang)
-
-[Draft (June 2026)](/files/Wang_Zhang_Premarital_Property_Rights.pdf)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**From Seats to Status: China's 1999 Higher-Education Expansion and Urban–Rural Occupational Mobility** (with Yiqun Tong and Ruoming Zhang)
-
-[Draft (June 2026)](/files/Tong_Wang_Zhang_From_Seats_to_Status.pdf)
-
-</div>
-
----
-
-## Working Papers — Digital Economics and Technology Policy
-
-<div class="paper-card" markdown="1">
-
-**Restricting Minors' Online Gaming: Compliance, Evasion, and Market Responses in China**
-
-[Draft (June 2026)](/files/Wang_Restricting_Minors_Online_Gaming.pdf)
-
-</div>
-
----
-
-## Work in Progress
-
-<div class="paper-card" markdown="1">
-
-**When Success Becomes Salient: Local Role Models and Schooling Decisions** (with Wei Huang and Ruoming Zhang)
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Generative AI as a Product Feature: Causal Evidence from iOS Apps**
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Generative AI and Scientific Production**
-
-</div>
-
-<div class="paper-card" markdown="1">
-
-**Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes** (with Ruoming Zhang)
-
-</div>
-
+  <div class="taste-paper-list">
+    {% for paper_id in program.paper_ids %}
+      {% unless paper_id == research.featured_publication %}
+        {% assign paper = research.papers[paper_id] %}
+        <article class="taste-paper-card">
+          <p class="taste-card__kind">{{ paper.status }}</p>
+          <h3>{% if paper.details_url %}<a href="{{ paper.details_url | relative_url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
+          <p>{{ paper.authors }}</p>
+          <p>{{ paper.question }}</p>
+          {% if paper.evidence %}<p class="taste-paper-card__evidence"><strong>Evidence:</strong> {{ paper.evidence }}</p>{% endif %}
+          {% if paper.pdf %}<p><a href="{{ paper.pdf | relative_url }}">Open draft</a></p>{% elsif paper.details_url %}<p><a href="{{ paper.details_url | relative_url }}">Paper details</a> · <a href="{{ paper.doi }}">DOI</a></p>{% endif %}
+        </article>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

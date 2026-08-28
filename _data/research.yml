@@ -1,0 +1,146 @@
+last_reviewed: 2026-08-28
+featured_publication: restricting-video-games-china
+selected_home:
+  - restricting-video-games-china
+  - higher-education-expansion-choice
+  - premarital-property-rights
+  - minors-online-gaming
+
+papers:
+  restricting-video-games-china:
+    title: "Restricting Video Games in China"
+    full_title: "Restricting video games in China: Effects on time use, educational achievement, and health"
+    authors: Zhejian Wang
+    status: Peer-reviewed publication
+    journal: Journal of Development Economics
+    volume: "182"
+    article: "103812"
+    year: 2026
+    doi: https://doi.org/10.1016/j.jdeveco.2026.103812
+    details_url: /research/restricting-video-games-china/
+    question: >-
+      How did China's strict limits on minors' online gaming affect digital
+      behavior, education, and health?
+    evidence: >-
+      Nationally representative survey data and city-level administrative data;
+      difference-in-differences and regression kink designs.
+    abstract: >-
+      In 2021, the Chinese government introduced a highly restrictive policy
+      that sharply limited minors' access to online video games, effectively
+      eliminating weekday play and allowing only minimal play on weekends and
+      holidays. Using nationally representative survey data and a
+      difference-in-differences design, I find that the policy sharply reduced
+      minors' gaming engagement and overall Internet use, reflecting
+      substantial but incomplete compliance. However, these behavioral changes
+      did not produce detectable short-run improvements in academic performance,
+      nor clear evidence of an increase in study time. The health-related
+      evidence is more limited, with no clear physical-health gains and
+      suggestive indications of reduced mental well-being. Complementary
+      evidence from city-level administrative data and a regression kink design
+      likewise shows no robust effects on exam outcomes.
+    citation_text: >-
+      Wang, Z. (2026). Restricting video games in China: Effects on time use,
+      educational achievement, and health. Journal of Development Economics,
+      182, 103812. https://doi.org/10.1016/j.jdeveco.2026.103812
+    repec: https://ideas.repec.org/a/eee/deveco/v182y2026ics0304387826000957.html
+    publisher: Elsevier (North-Holland)
+    bibtex: |-
+      @article{Wang2026Restricting,
+        title = {Restricting video games in China: Effects on time use, educational achievement, and health},
+        author = {Wang, Zhejian},
+        journal = {Journal of Development Economics},
+        volume = {182},
+        pages = {103812},
+        year = {2026},
+        doi = {10.1016/j.jdeveco.2026.103812},
+        publisher = {Elsevier}
+      }
+
+  minors-online-gaming:
+    title: "Restricting Minors' Online Gaming: Compliance, Evasion, and Market Responses in China"
+    authors: Zhejian Wang
+    status: Working paper
+    field: Digital regulation and platforms
+    question: >-
+      Examines compliance, evasion, and market responses to age-based limits on
+      online gaming in China.
+    pdf: /files/Wang_Restricting_Minors_Online_Gaming.pdf
+
+  generative-ai-apps:
+    title: "Generative AI as a Product Feature: Causal Evidence from iOS Apps"
+    authors: Zhejian Wang
+    status: Work in progress
+    field: Digital regulation and platforms
+    question: >-
+      Studies how adding generative-AI functionality changes product demand in
+      mobile-app markets.
+
+  higher-education-expansion-choice:
+    title: "Higher-Education Expansion and Upper-Secondary Choice"
+    authors: Yiqun Tong, Zhejian Wang, and Ruoming Zhang
+    status: Working paper
+    field: Education and human capital
+    question: >-
+      Studies how China's higher-education expansion changed students' choices
+      between academic and vocational upper-secondary tracks.
+    pdf: /files/Tong_Wang_Zhang_Higher_Education_Expansion.pdf
+
+  seats-to-status:
+    title: "From Seats to Status: China's 1999 Higher-Education Expansion and Urban-Rural Occupational Mobility"
+    authors: Yiqun Tong, Zhejian Wang, and Ruoming Zhang
+    status: Working paper
+    field: Education and human capital
+    question: >-
+      Examines whether the 1999 higher-education expansion changed urban-rural
+      occupational mobility.
+    pdf: /files/Tong_Wang_Zhang_From_Seats_to_Status.pdf
+
+  local-role-models:
+    title: "When Success Becomes Salient: Local Role Models and Schooling Decisions"
+    authors: Zhejian Wang, Wei Huang, and Ruoming Zhang
+    status: Work in progress
+    field: Education and human capital
+    question: >-
+      Examines whether locally salient examples of academic success change
+      schooling decisions.
+
+  premarital-property-rights:
+    title: "Premarital Property Rights and Marriage Timing: Evidence from Urban China"
+    authors: Zhejian Wang and Ruoming Zhang
+    status: Working paper
+    field: Household institutions
+    question: >-
+      Examines how a nationwide clarification of premarital property rights
+      affected marriage timing across cohorts and places.
+    pdf: /files/Wang_Zhang_Premarital_Property_Rights.pdf
+
+  registration-frictions-marriage:
+    title: "Less Paperwork, More Marriages: Registration Frictions and Marriage Outcomes"
+    authors: Zhejian Wang and Ruoming Zhang
+    status: Work in progress
+    field: Household institutions
+    question: >-
+      Examines how lower administrative frictions in marriage registration
+      affect marriage outcomes.
+
+programs:
+  - id: digital
+    title: Digital regulation and platforms
+    summary: Policy, platform behavior, and market responses in digital environments.
+    paper_ids:
+      - restricting-video-games-china
+      - minors-online-gaming
+      - generative-ai-apps
+  - id: education
+    title: Education and human capital
+    summary: Education policy, schooling choice, mobility, and locally salient role models.
+    paper_ids:
+      - higher-education-expansion-choice
+      - seats-to-status
+      - local-role-models
+  - id: household
+    title: Household institutions
+    summary: Property rights, administrative frictions, marriage, and family decisions.
+    paper_ids:
+      - premarital-property-rights
+      - registration-frictions-marriage

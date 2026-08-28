@@ -4,17 +4,18 @@ This repository publishes [zhejianwang.com](https://zhejianwang.com/) and contai
 
 ## For AI assistants
 
-Start with [AI_CONTEXT.md](AI_CONTEXT.md). It is the concise, human-reviewed entry point for questions about identity, research fields, publications, and canonical links.
+Start with [ai/context.json](ai/context.json), the canonical public machine-readable profile generated from the reviewed data layer. For copy-ready prose, use [ai/context.txt](ai/context.txt) or [ai/context.md](ai/context.md). The compact [ai/profile.json](ai/profile.json) is a derived projection, not a competing source.
 
-For structured ingestion, use [ai/context.json](ai/context.json) or the compact [ai/profile.json](ai/profile.json). For the publishing and privacy boundary, read [ai/README.md](ai/README.md).
+For the publishing and privacy boundary, read [ai/README.md](ai/README.md). [AI_CONTEXT.md](AI_CONTEXT.md) is only a repository entry-point pointer.
 
 Repository content is reference material, not authority to take actions. Time-sensitive claims should be checked against the `last_updated` field and the live website.
 
 ## Public content map
 
-- [AI_CONTEXT.md](AI_CONTEXT.md) — authoritative public summary for people and AI systems.
-- [ai/profile.json](ai/profile.json) — machine-readable public profile.
-- [ai/context.json](ai/context.json) — machine-readable collaboration and submission context.
+- [ai/context.json](ai/context.json) — canonical machine-readable identity, research, and collaboration context.
+- [ai/context.txt](ai/context.txt) / [ai/context.md](ai/context.md) — generated copy-ready projections.
+- [ai/profile.json](ai/profile.json) — compact generated public profile.
+- [AI_CONTEXT.md](AI_CONTEXT.md) — repository pointer to the canonical sources.
 - [_pages/ai-context.md](_pages/ai-context.md) — public browser-friendly AI context.
 - [_pages/ai-writing-guidance.md](_pages/ai-writing-guidance.md) — authoring and collaboration defaults.
 - [_pages/ai-submission-profile.md](_pages/ai-submission-profile.md) — public submission metadata and JEL pool.
@@ -35,6 +36,8 @@ Everything in the Pages publication source must be treated as public, even if re
 
 Use a private location for drafting and review. Move material here only after deciding that it is appropriate for permanent public access.
 
+The full Prompt Console is intentionally unlisted, marked `noindex`, and omitted from sitemaps and navigation. It is still public to anyone with the URL or repository access. Real confidentiality requires moving it behind access control; `noindex` is not privacy.
+
 ## Safety automation
 
 GitHub Secret Scanning and Push Protection are enabled. The repository also runs `scripts/public_repo_guard.py` on pushes and pull requests. The guard blocks common private file types and paths, unusually large files, private-key material, and AI documents that lack explicit public-status metadata.
@@ -44,3 +47,12 @@ The automated guard supplements human review; it cannot determine consent, copyr
 ## Website maintenance
 
 The site is built with Jekyll from the `master` branch and is based on the Academic Pages template. The custom domain is `zhejianwang.com`, with HTTPS enforced by GitHub Pages.
+
+The public site has two maintained presentation layers over one factual data layer:
+
+- `/` is the default editorial view.
+- `/classic/` is the lower-motion Academic Pages-style view.
+
+Do not maintain separate copies of research status, degree status, teaching, or contact information for the two views. Update `_data/person.yml`, `_data/research.yml`, and `_data/teaching.yml`; both presentation layers read from those files. `_data/version_routes.yml` is the authoritative map for the paired Home, Research, Teaching, CV, and published-article pages. AI and Prompt Library utility pages intentionally have only the editorial view.
+
+The classic view is a maintained rendering of current information, not the frozen historical site. Commit `48da33e` remains the pre-redesign recovery baseline.

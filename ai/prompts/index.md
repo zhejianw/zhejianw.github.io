@@ -9,9 +9,9 @@ noindex: true
 prompt_library: true
 prompt_layer: manuscript
 prompt_collapse: true
-visibility: public
+visibility: unlisted-public
 status: current
-last_updated: 2026-08-27
+last_updated: 2026-08-28
 ---
 
 <style>
@@ -683,6 +683,38 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 是否存在“看起来引用很多，但 intellectual engagement 很弱”的情况。
 
 最后将问题分为：必须修正 / 需要查阅原文后核实 / 可选优化。
+~~~
+
+### Incremental Literature Discovery & Reading Triage {#prompt-incremental-literature-discovery}
+
+<p class="prompt-description">向现有文献边界外扩展，并按阅读、下载和新颖性风险筛选增量文献。</p>
+
+**推荐模式：Extra High；需要联网检索并核实文献，涉及 closest-paper 或 novelty 威胁的最终裁决可使用 Pro**
+
+~~~text
+基于当前 paper、已有参考文献和研究定位，继续向外搜索还有哪些真正值得我**阅读或下载**的文献。
+
+目标约 20 篇；如果高价值文献不足 20 篇，不要为了凑数加入弱相关文献。不要重复我已经充分掌握、且没有新增信息价值的 papers。
+
+主动寻找可能影响本文：
+
+- contribution / closest-literature positioning；
+- identification、measurement 或 empirical strategy；
+- interpretation、mechanism 和 alternative explanations；
+- external validity、boundary conditions 或 discussion；
+- referee 很可能期待作者知道的相关研究。
+
+按 **必须读 / 建议读 / 可以读** 分级，并按优先级排序。
+
+每篇简洁说明：
+
+- citation 与 publication status；
+- OA / working-paper / repository version 是否可合法获得；
+- 为什么值得读；
+- 它具体可能改变、补强或挑战本文什么；
+- **建议：精读并下载 / 下载备用 / 只需引用或了解**。
+
+优先真正有增量信息价值的文献，而不是做宽泛的 citation accumulation。若发现可能实质威胁 novelty 或 current framing 的文献，单独标出来。
 ~~~
 
 

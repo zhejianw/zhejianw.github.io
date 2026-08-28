@@ -1,0 +1,28 @@
+{% include base_path %}
+{% assign version_route = site.data.version_routes[page.ref] %}
+
+<div class="masthead classic-masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Classic site navigation">
+        <button type="button" aria-label="Toggle navigation"><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg persist">
+            <a href="{{ '/classic/' | relative_url }}">{{ site.title }}</a>
+          </li>
+          {% for route_pair in site.data.version_routes %}
+            {% assign route_key = route_pair[0] %}
+            {% assign route = route_pair[1] %}
+            {% unless route_key == 'home' or route_key == 'publication-video-games' %}
+              <li class="masthead__menu-item"><a href="{{ route.classic | relative_url }}"{% if page.ref == route_key %} aria-current="page"{% endif %}>{{ route.label }}</a></li>
+            {% endunless %}
+          {% endfor %}
+          {% if version_route.modern %}
+            <li class="masthead__menu-item persist tail"><a class="classic-version-link" href="{{ version_route.modern | relative_url }}">New view</a></li>
+          {% endif %}
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

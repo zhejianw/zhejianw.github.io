@@ -5,25 +5,21 @@ layout: compress
 {% include base_path %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+<html lang="{{ page.lang | default: site.locale | default: 'en' }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body class="taste-site{% if page.layout == 'home-taste' %} is-home{% endif %}{% if page.prompt_library %} is-prompt-library{% endif %}">
 
     {% include browser-upgrade.html %}
+    <a class="taste-skip-link" href="#main">Skip to content</a>
     {% include masthead.html %}
 
     {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+    {% include footer.html %}
 
     {% include scripts.html %}
 

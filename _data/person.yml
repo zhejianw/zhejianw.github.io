@@ -1,0 +1,101 @@
+last_reviewed: 2026-08-28
+
+name: Zhejian Wang
+pronouns: he/him
+title: Ph.D. Candidate in Economics
+institution: University of Delaware
+college: Alfred Lerner College of Business and Economics
+location: Newark, Delaware, USA
+degree_status: Dissertation successfully defended; degree pending formal conferral.
+dissertation_defended: true
+degree_conferred: false
+
+email: zhejianw@udel.edu
+website: https://zhejianwang.com/
+orcid_id: 0009-0001-0016-0421
+orcid_url: https://orcid.org/0009-0001-0016-0421
+google_scholar: https://scholar.google.com/citations?user=fQDiJ1QAAAAJ
+github: https://github.com/zhejianw
+cv_pdf: /files/Zhejian_Wang_CV.pdf
+cv_pdf_as_of: March 2026
+
+umbrella_field: Applied Microeconomics
+primary_fields:
+  - Economics of Education
+  - Digital Economics
+  - Family and Household Economics
+cross_cutting_areas:
+  - Human Capital
+  - Technology Policy and Regulation
+  - Development Economics
+
+research_statement: >-
+  I study how digital regulation, education policy, and household institutions
+  shape human capital and behavior. My work uses policy variation and
+  large-scale microdata, with a primary focus on China.
+
+short_bio: >-
+  Zhejian Wang is a Ph.D. Candidate in Economics at the University of Delaware
+  and an applied microeconomist studying digital regulation, education policy,
+  and household institutions.
+
+sidebar_bio: >-
+  Ph.D. Candidate in Economics, University of Delaware. Applied
+  microeconomist studying digital regulation, education policy, and household
+  institutions.
+
+education:
+  - degree: Ph.D. Candidate in Economics
+    institution: University of Delaware
+    years: 2020-present
+    note: Dissertation successfully defended; degree pending formal conferral.
+  - degree: M.A. in Economics
+    institution: University of Southern California
+    year: 2016
+  - degree: B.S. in Management
+    institution: Southwestern University of Finance and Economics
+    year: 2014
+
+fellowships_and_funding:
+  - title: Graduate Fellowship
+    institution: University of Delaware
+    years: 2020-2025
+  - title: Third-Year Summer Research Stipend
+    institution: University of Delaware
+    year: Summer 2023
+  - title: Research Assistant to David Stockman
+    institution: University of Delaware
+    year: Spring 2024
+
+industry_experience:
+  - organization: Caitong Securities Co., Ltd.
+    unit: Internet Industry Research Division
+    roles: Assistant Analyst (2017-2018); Analyst (2019-2020)
+    years: 2017-2020
+    location: Shanghai, China
+    description: >-
+      Covered digital-platform firms and technology regulation as a sell-side
+      equity analyst. CFA charterholder.
+
+skills:
+  software:
+    - Stata
+    - R
+    - Python
+    - LaTeX
+    - SQL
+  languages:
+    - Mandarin Chinese (native)
+    - English (fluent)
+
+presentations:
+  - event: University of Delaware Economics Seminar Series
+    date: December 2025
+  - event: University of Delaware ESGA Conference
+    date: October 2025
+
+academic_references:
+  - Jeremy Tobacman (Chair)
+  - George R. Parsons
+  - Emily L. Battaglia
+  - Desmond J. Toohey

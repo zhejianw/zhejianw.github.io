@@ -9,7 +9,7 @@ noindex: true
 prompt_library: true
 prompt_layer: submission
 prompt_collapse: true
-visibility: public
+visibility: unlisted-public
 status: current
 last_updated: 2026-08-27
 ---

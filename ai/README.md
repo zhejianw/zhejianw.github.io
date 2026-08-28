@@ -4,8 +4,11 @@ This directory contains intentionally public, compact, machine-readable material
 
 Current files:
 
-- `context.json` — canonical machine-readable context for identity, research, submission support, and collaboration boundaries.
-- `profile.json` — compact machine-readable public profile.
+- `context.json` — canonical generated machine-readable context for identity, research, submission support, and collaboration boundaries.
+- `context.txt` and `context.md` — generated copy-ready projections.
+- `profile.json` — compact generated public profile.
+
+Volatile facts are maintained in `_data/person.yml`, `_data/research.yml`, and `_data/ai_defaults.yml`. Regenerate public outputs with `python3 scripts/render_public_ai.py` and verify them with `python3 scripts/render_public_ai.py --check`.
 
 ## Publishing rule
 
@@ -19,6 +22,8 @@ Draft privately. Publish here only after confirming all of the following:
 6. Superseded claims are updated or explicitly marked as historical.
 
 Do not use this public repository as an inbox. Unsorted material belongs in a private staging location.
+
+The Prompt Console is unlisted, excluded from sitemaps, and marked `noindex`, but it remains public by URL and in repository source. Do not store confidential prompts there.
 
 ## Recommended format for future topic files
 

@@ -1,8 +1,9 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "visibility": "public",
   "status": "current",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-28",
+  "derived_from": "https://zhejianwang.com/ai/context.json",
   "person": {
     "name": "Zhejian Wang",
     "pronouns": "he/him",
@@ -29,15 +30,11 @@
       "Human Capital",
       "Technology Policy and Regulation",
       "Development Economics"
-    ]
-  },
-  "jel_code_pool": {
-    "core": ["I21", "I24", "I28", "D13", "J12", "J13", "L51", "L86", "O33"],
-    "project_specific": ["J22", "J24", "O15", "O34", "K36"],
-    "selection_rule": "Select only the three to five codes that fit the specific manuscript."
+    ],
+    "summary": "I study how digital regulation, education policy, and household institutions shape human capital and behavior. My work uses policy variation and large-scale microdata, with a primary focus on China."
   },
   "canonical_links": {
-    "website": "https://zhejianwang.com/",
+    "home": "https://zhejianwang.com/",
     "research": "https://zhejianwang.com/research/",
     "cv": "https://zhejianwang.com/cv/",
     "ai_context": "https://zhejianwang.com/ai/context/",

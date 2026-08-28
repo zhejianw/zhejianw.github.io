@@ -1,0 +1,49 @@
+name: Build website review artifact
+
+on:
+  push:
+    branches:
+      - taste-redesign-review
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate canonical public data
+        run: |
+          python -m pip install --disable-pip-version-check -r scripts/requirements-site-tools.txt
+          python scripts/render_public_ai.py --check
+          python scripts/public_repo_guard.py
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with the GitHub Pages Jekyll runtime
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697
+        with:
+          source: .
+          destination: ./_site
+          future: true
+
+      - name: Upload review artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: website-review-${{ github.sha }}
+          path: ./_site
+          if-no-files-found: error
+          retention-days: 14

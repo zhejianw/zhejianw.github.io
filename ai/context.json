@@ -1,16 +1,18 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "visibility": "public",
   "status": "current",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-28",
+  "canonical_source": "https://zhejianwang.com/ai/context.json",
   "identity": {
     "name": "Zhejian Wang",
     "pronouns": "he/him",
     "title": "Ph.D. Candidate in Economics",
     "institution": "University of Delaware",
+    "college": "Alfred Lerner College of Business and Economics",
     "public_email": "zhejianw@udel.edu",
     "orcid": "0009-0001-0016-0421",
-    "dissertation_status": "Successfully defended; degree pending formal conferral",
+    "dissertation_status": "Dissertation successfully defended; degree pending formal conferral.",
     "degree_conferred": false
   },
   "research": {
@@ -25,13 +27,37 @@
       "Technology Policy and Regulation",
       "Development Economics"
     ],
-    "summary": "Research on how public policy and technological change shape human capital, digital behavior, and household decision-making, with a particular focus on China."
+    "summary": "I study how digital regulation, education policy, and household institutions shape human capital and behavior. My work uses policy variation and large-scale microdata, with a primary focus on China."
+  },
+  "confirmed_publication": {
+    "title": "Restricting video games in China: Effects on time use, educational achievement, and health",
+    "journal": "Journal of Development Economics",
+    "volume": "182",
+    "article": "103812",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.jdeveco.2026.103812"
   },
   "submission": {
-    "jel_core": ["I21", "I24", "I28", "D13", "J12", "J13", "L51", "L86", "O33"],
-    "jel_project_specific": ["J22", "J24", "O15", "O34", "K36"],
+    "jel_core": [
+      "I21",
+      "I24",
+      "I28",
+      "D13",
+      "J12",
+      "J13",
+      "L51",
+      "L86",
+      "O33"
+    ],
+    "jel_project_specific": [
+      "J22",
+      "J24",
+      "O15",
+      "O34",
+      "K36"
+    ],
     "jel_selection_rule": "Choose three to five codes for a specific manuscript; do not use the entire pool by default.",
-    "statements_rule": "Funding, conflicts of interest, data availability, ethics, and author contributions must be confirmed for each manuscript."
+    "statements_rule": "Funding, conflicts of interest, data availability, ethics approval, author contributions, suggested reviewers, and AI-use disclosure must be confirmed for each manuscript."
   },
   "collaboration": {
     "preserve_claims_and_numerical_results": true,

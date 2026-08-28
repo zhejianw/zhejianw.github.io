@@ -15,6 +15,7 @@
   box-shadow: 0 4px 14px rgba(31, 27, 54, 0.07);
   scrollbar-width: thin;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
 }
 
 .prompt-layer-nav a,
@@ -29,6 +30,7 @@
   line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
+  scroll-snap-align: center;
 }
 
 .prompt-layer-nav a:hover,
@@ -320,6 +322,7 @@
 .prompt-view-controls {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 0.45rem;
   margin: -0.75rem 0 1.15rem;
 }
@@ -381,7 +384,7 @@
 
 .page__content h2[id],
 .page__content h3[id] {
-  scroll-margin-top: 8rem;
+  scroll-margin-top: calc(var(--taste-header-height, 84px) + 84px);
 }
 
 @media (max-width: 600px) {
@@ -422,6 +425,10 @@
     margin-left: -0.1rem;
   }
 
+  .prompt-command-trigger {
+    flex: 1 0 100%;
+  }
+
   .prompt-section-toc {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -450,5 +457,318 @@
     break-inside: avoid;
     border-color: #bbbbbb;
     box-shadow: none;
+  }
+}
+
+/* Taste redesign: prompt-library utility layer */
+
+.is-prompt-library .prompt-layer-nav,
+.is-prompt-library .prompt-workflow,
+.is-prompt-library .prompt-section-toc,
+.is-prompt-library .prompt-usage-note,
+.is-prompt-library .prompt-transition-label,
+.is-prompt-library .prompt-related-quick,
+.is-prompt-library .prompt-anchor-link,
+.is-prompt-library .prompt-mode,
+.is-prompt-library .prompt-description,
+.is-prompt-library .prompt-copy-status,
+.is-prompt-library .prompt-copy-button,
+.is-prompt-library .prompt-toggle-button,
+.is-prompt-library .prompt-view-button {
+  font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
+}
+
+.is-prompt-library .prompt-layer-nav {
+  top: calc(var(--taste-header-height, 84px) + 12px);
+  z-index: 90;
+  padding: 0.5rem;
+  border: 1px solid var(--taste-ink, #10161b);
+  border-radius: 0;
+  background: rgba(244, 241, 233, 0.96);
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+}
+
+.is-prompt-library .prompt-layer-nav a,
+.is-prompt-library .prompt-layer-nav .is-current {
+  min-height: 44px;
+  padding: 0.72rem 0.9rem;
+  border-radius: 0;
+  color: var(--taste-ink-soft, #46525b);
+}
+
+.is-prompt-library .prompt-layer-nav a:hover,
+.is-prompt-library .prompt-layer-nav a:focus-visible {
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-blue, #153d59);
+}
+
+.is-prompt-library .prompt-layer-nav .is-current {
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-red-dark, #7d281f);
+}
+
+.is-prompt-library .prompt-workflow,
+.is-prompt-library .prompt-section-toc {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--taste-line, rgba(16, 22, 27, 0.18));
+  border-radius: 0;
+  color: var(--taste-ink-soft, #46525b);
+  background: var(--taste-paper-warm, #e9e1d2);
+}
+
+.is-prompt-library .prompt-workflow strong,
+.is-prompt-library .prompt-section-toc strong,
+.is-prompt-library .prompt-workflow a,
+.is-prompt-library .prompt-section-toc a {
+  color: var(--taste-ink, #10161b);
+}
+
+.is-prompt-library .prompt-usage-note {
+  border-left-color: var(--taste-red, #b23a2b);
+  color: var(--taste-ink-soft, #46525b);
+  background: var(--taste-paper-warm, #e9e1d2);
+}
+
+.is-prompt-library .prompt-card {
+  margin-bottom: 1px;
+  padding: clamp(1.15rem, 2.8vw, 2rem);
+  border: 1px solid var(--taste-ink, #10161b);
+  border-radius: 0;
+  background: var(--taste-cream, #fcfaf5);
+  box-shadow: none;
+}
+
+.is-prompt-library .taste-page--prompt .prompt-card > h2,
+.is-prompt-library .taste-page--prompt .prompt-card > h3 {
+  max-width: 100%;
+  margin: 0 0 0.8rem !important;
+  font-family: var(--taste-display, "Cabinet Grotesk", "Segoe UI", sans-serif);
+  font-size: clamp(1.35rem, 2.5vw, 2.25rem) !important;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.is-prompt-library .prompt-card.is-quick-pass {
+  border-left: 5px solid var(--taste-red, #b23a2b);
+  background: var(--taste-paper-warm, #e9e1d2);
+}
+
+.is-prompt-library .prompt-description {
+  color: var(--taste-ink-soft, #46525b);
+}
+
+.is-prompt-library .prompt-description::before,
+.is-prompt-library .prompt-mode-badge {
+  border-radius: 0;
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-blue, #153d59);
+}
+
+.is-prompt-library .prompt-copy-shell {
+  border: 1px solid var(--taste-line, rgba(16, 22, 27, 0.18));
+  border-radius: 0;
+  background: var(--taste-paper, #f4f1e9);
+  box-shadow: none;
+}
+
+.is-prompt-library .prompt-copy-toolbar {
+  border-bottom-color: var(--taste-line, rgba(16, 22, 27, 0.18));
+  background: var(--taste-paper-warm, #e9e1d2);
+}
+
+.is-prompt-library .prompt-copy-button,
+.is-prompt-library .prompt-toggle-button,
+.is-prompt-library .prompt-view-button {
+  min-height: 44px;
+  border-color: var(--taste-ink, #10161b);
+  border-radius: 0;
+  color: var(--taste-ink, #10161b);
+  background: var(--taste-cream, #fcfaf5);
+}
+
+.is-prompt-library .prompt-copy-button:hover,
+.is-prompt-library .prompt-copy-button:focus-visible,
+.is-prompt-library .prompt-toggle-button:hover,
+.is-prompt-library .prompt-toggle-button:focus-visible,
+.is-prompt-library .prompt-view-button:hover,
+.is-prompt-library .prompt-view-button:focus-visible {
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-ink, #10161b);
+}
+
+.is-prompt-library .prompt-copy-shell pre,
+.is-prompt-library .prompt-copy-shell pre code {
+  color: var(--taste-ink, #10161b);
+  background: var(--taste-cream, #fcfaf5);
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.is-prompt-library .prompt-card:target,
+.is-prompt-library .prompt-card.is-hash-target {
+  border-color: var(--taste-red, #b23a2b);
+  box-shadow: inset 5px 0 0 var(--taste-red, #b23a2b);
+}
+
+.is-prompt-library .prompt-layer-nav.can-scroll-right:not(.can-scroll-left) {
+  -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 42px), transparent 100%);
+  mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 42px), transparent 100%);
+}
+
+.is-prompt-library .prompt-layer-nav.can-scroll-left:not(.can-scroll-right) {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 42px, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 42px, #000 100%);
+}
+
+.is-prompt-library .prompt-layer-nav.can-scroll-left.can-scroll-right {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%);
+}
+
+.prompt-command-dialog {
+  width: min(760px, calc(100% - 32px));
+  max-width: none;
+  max-height: min(760px, calc(100vh - 48px));
+  max-height: min(760px, calc(100dvh - 48px));
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--taste-ink, #10161b);
+  border-radius: 0;
+  color: var(--taste-ink, #10161b);
+  background: var(--taste-cream, #fcfaf5);
+  box-shadow: 0 28px 80px rgba(16, 22, 27, 0.28);
+}
+
+.prompt-command-dialog::backdrop {
+  background: rgba(16, 22, 27, 0.58);
+  backdrop-filter: blur(4px);
+}
+
+.prompt-command-panel {
+  display: flex;
+  max-height: min(760px, calc(100vh - 48px));
+  max-height: min(760px, calc(100dvh - 48px));
+  padding: clamp(20px, 4vw, 34px);
+  flex-direction: column;
+}
+
+.prompt-command-header {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.prompt-command-header h2 {
+  margin: 0;
+  font-family: var(--taste-display, "Cabinet Grotesk", "Segoe UI", sans-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.prompt-command-close {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--taste-ink, #10161b);
+  color: var(--taste-ink, #10161b);
+  background: transparent;
+  font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.prompt-command-input {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid var(--taste-ink, #10161b);
+  border-radius: 0;
+  color: var(--taste-ink, #10161b);
+  background: #fff;
+  font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
+  font-size: 1rem;
+}
+
+.prompt-command-input:focus {
+  outline: 3px solid rgba(178, 58, 43, 0.24);
+  outline-offset: 2px;
+}
+
+.prompt-command-help,
+.prompt-command-status {
+  margin: 10px 0 0;
+  color: var(--taste-ink-soft, #46525b);
+  font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
+  font-size: 0.72rem;
+}
+
+.prompt-command-results {
+  min-height: 0;
+  margin-top: 16px;
+  overflow-y: auto;
+  border-top: 1px solid var(--taste-line, rgba(16, 22, 27, 0.18));
+}
+
+.prompt-command-result {
+  display: flex;
+  width: 100%;
+  padding: 16px 12px;
+  align-items: flex-start;
+  border: 0;
+  border-bottom: 1px solid var(--taste-line, rgba(16, 22, 27, 0.18));
+  color: var(--taste-ink, #10161b);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prompt-command-result:hover,
+.prompt-command-result.is-selected,
+.prompt-command-result:focus-visible {
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-blue, #153d59);
+}
+
+.prompt-command-result__title {
+  font-family: var(--taste-display, "Cabinet Grotesk", "Segoe UI", sans-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.prompt-command-result__description {
+  font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
+  font-size: 0.82rem;
+  opacity: 0.84;
+}
+
+.prompt-command-result__meta {
+  margin-top: 3px;
+  font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+@media (max-width: 600px) {
+  .prompt-command-help { display: none; }
+  .prompt-command-panel { padding: 18px; }
+  .prompt-command-dialog { max-height: calc(100dvh - 24px); }
+}
+
+@media print {
+  .prompt-command-trigger,
+  .prompt-command-dialog {
+    display: none !important;
   }
 }
