@@ -10,7 +10,7 @@ prompt_library: true
 prompt_layer: setup
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-27
+last_updated: 2026-08-28
 ---
 
 <style>
@@ -177,4 +177,28 @@ last_updated: 2026-08-27
 - 对后续 session 仍然重要的状态或决定，应写入项目中合适的现有文件，而不是只留在对话里。
 
 完成环境确认和记录后停止，不开始 substantive research。
+~~~
+
+## Setup Prompt 3 · Session Handoff Refresh {#session-handoff-refresh}
+
+<p class="prompt-description">在重要节点结束时刷新当前交接状态，确保下一次 AI 冷启动能够准确续接。</p>
+
+**推荐模式：High；项目状态复杂或路径分散时使用 Extra High**
+
+~~~text
+更新根目录 `HANDOFF.md`，用于下一次 AI session 冷启动接手本项目。
+
+只记录对后续继续工作真正重要的当前状态：
+
+- 当前阶段与目标；
+- authoritative files / code / outputs 的准确路径；
+- 本轮真正改变了什么；
+- 已定的重要决策及必要理由；
+- 尚未解决的问题或不确定性；
+- 下一步最合理的少数动作；
+- 如有未完成运行或环境问题，说明从哪里继续。
+
+保持简洁，优先更新当前状态而不是无限 append。不要把 research notes、完整 changelog、所有操作细节或长期历史复制进 HANDOFF；这些应留在对应的 notes / archive / git history 中。
+
+目标是：一个没有本次聊天上下文的新 session，只读 `PROJECT.md`、`HANDOFF.md` 和其中指向的文件，就能准确继续工作。
 ~~~
