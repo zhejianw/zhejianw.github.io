@@ -903,6 +903,19 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 
 <p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-heading-audit">Q2 Headings</a> · <a href="#prompt-formatting-audit">Q3 Formatting</a></p>
 
+### Review Comment Adjudication {#prompt-review-comment-adjudication}
+
+<p class="prompt-description">识别外部审阅意见背后的真实 concern，并选择副作用最小的有效回应。</p>
+
+**推荐模式：Extra High；涉及全文重构或相互冲突的意见时使用 Pro**
+
+~~~text
+不要机械执行我给你的意见。先判断每条意见背后真正的 concern 是什么，再选择最小、最有效、对全文副作用最小的解决方式。若现有内容已经实质解决该 concern，不要为了“回应意见”而重复修改。
+以下是 GPT Pro 对当前 manuscript 的审阅意见：
+
+[粘贴意见]
+~~~
+
 ### Revision Ripple-Effect Audit {#prompt-revision-ripple-effect}
 
 <p class="prompt-description">核验修改要求并追踪改动的连锁影响。</p>
