@@ -7,9 +7,10 @@
     <li><a href="mailto:{{ person.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
     <li><a href="{{ person.google_scholar }}">Google Scholar</a></li>
     <li><a href="{{ person.orcid_url }}">ORCID</a></li>
+    <li><a href="{{ '/content-use/' | relative_url }}">Content &amp; AI use</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">
+<div class="page__footer-copyright" data-nosnippet>
   &copy; {{ site.time | date: '%Y' }} {{ person.name }}. Classic academic view.
 </div>

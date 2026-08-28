@@ -28,7 +28,7 @@ excerpt: "Applied microeconomist studying digital regulation, education policy, 
         <a class="taste-button taste-button--primary" href="{{ '/research/' | relative_url }}">Explore research</a>
         <a class="taste-button" href="{{ '/cv/' | relative_url }}">View current CV</a>
       </div>
-      <nav class="taste-home-links" aria-label="Academic profiles and contact">
+      <nav class="taste-home-links" aria-label="Academic profiles and contact" data-nosnippet>
         <a href="{{ person.google_scholar }}">Google Scholar</a>
         <a href="{{ person.orcid_url }}">ORCID</a>
         <a href="mailto:{{ person.email }}">Email</a>

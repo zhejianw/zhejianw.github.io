@@ -5,12 +5,14 @@ permalink: /ai/writing-guidance/
 author_profile: false
 lang: en
 excerpt: "Project-independent defaults for evidence-based academic writing assistance."
-visibility: public
+visibility: unlisted-public
+noindex: true
+sitemap: false
 status: current
 last_updated: 2026-08-28
 ---
 
-These are public, project-independent defaults for assisting Zhejian Wang with academic writing. A manuscript's explicit instructions and source text take precedence.
+These are unlisted, public-by-URL, project-independent defaults for an assistant that receives this exact link from Zhejian Wang. A manuscript's explicit instructions and source text take precedence. Use is governed by the [content-use policy](/content-use/).
 
 ## Evidence and accuracy
 

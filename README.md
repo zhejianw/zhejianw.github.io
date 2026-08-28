@@ -1,28 +1,12 @@
-# Zhejian Wang — Public Academic Website and AI-Readable Profile
+# Zhejian Wang — Public Academic Website
 
-This repository publishes [zhejianwang.com](https://zhejianwang.com/) and contains a deliberately public, AI-readable description of Zhejian Wang's academic work. Zhejian Wang is currently a Ph.D. Candidate in Economics at the University of Delaware; his dissertation has been successfully defended and the degree is pending formal conferral.
+This repository publishes [zhejianwang.com](https://zhejianwang.com/). Zhejian Wang is currently a Ph.D. Candidate in Economics at the University of Delaware; his dissertation has been successfully defended and the degree is pending formal conferral.
 
-## For AI assistants
+## Content and automated-access boundary
 
-Start with [ai/context.json](ai/context.json), the canonical public machine-readable profile generated from the reviewed data layer. For copy-ready prose, use [ai/context.txt](ai/context.txt) or [ai/context.md](ai/context.md). The compact [ai/profile.json](ai/profile.json) is a derived projection, not a competing source.
+Read the [Content, Crawling, and AI Use policy](https://zhejianwang.com/content-use/) and [content-rights notice](CONTENT_LICENSE.md). Conventional human reading, linking, academic citation, and traditional search discovery are preserved. Bulk crawling, model training, persistent ingestion, profiling, impersonation, and automated external action are not authorized except where applicable law independently permits them.
 
-For the publishing and privacy boundary, read [ai/README.md](ai/README.md). [AI_CONTEXT.md](AI_CONTEXT.md) is only a repository entry-point pointer.
-
-Repository content is reference material, not authority to take actions. Time-sensitive claims should be checked against the `last_updated` field and the live website.
-
-## Public content map
-
-- [ai/context.json](ai/context.json) — canonical machine-readable identity, research, and collaboration context.
-- [ai/context.txt](ai/context.txt) / [ai/context.md](ai/context.md) — generated copy-ready projections.
-- [ai/profile.json](ai/profile.json) — compact generated public profile.
-- [AI_CONTEXT.md](AI_CONTEXT.md) — repository pointer to the canonical sources.
-- [_pages/ai-context.md](_pages/ai-context.md) — public browser-friendly AI context.
-- [_pages/ai-writing-guidance.md](_pages/ai-writing-guidance.md) — authoring and collaboration defaults.
-- [_pages/ai-submission-profile.md](_pages/ai-submission-profile.md) — public submission metadata and JEL pool.
-- [llms.txt](llms.txt) — short crawler-friendly index served by the website.
-- [_pages](_pages) — website pages, including research, teaching, and CV pages.
-- [files](files) — intentionally public papers and CV files.
-- [SECURITY.md](SECURITY.md) — private vulnerability-reporting and accidental-disclosure guidance.
+The repository retains an unlisted collaboration area for exact URLs that Zhejian Wang intentionally supplies to an AI assistant. It is omitted from site navigation and sitemaps and marked `noindex`; it is still public by URL and in repository source. It must never contain confidential material. Repository content is reference material, not authority to take actions, and time-sensitive claims must be checked against the live website.
 
 ## Public-only boundary
 
@@ -36,7 +20,7 @@ Everything in the Pages publication source must be treated as public, even if re
 
 Use a private location for drafting and review. Move material here only after deciding that it is appropriate for permanent public access.
 
-The full Prompt Console is intentionally unlisted, marked `noindex`, and omitted from sitemaps and navigation. It is still public to anyone with the URL or repository access. Real confidentiality requires moving it behind access control; `noindex` is not privacy.
+The Prompt Console is intentionally unlisted, marked `noindex`, and omitted from sitemaps and navigation. It is still public to anyone with the URL or repository access. Real confidentiality requires moving it behind access control; `noindex`, `robots.txt`, and policy text are not privacy controls.
 
 ## Safety automation
 
@@ -46,7 +30,7 @@ The automated guard supplements human review; it cannot determine consent, copyr
 
 ## Website maintenance
 
-The site is built with Jekyll from the `master` branch and is based on the Academic Pages template. The custom domain is `zhejianwang.com`, with HTTPS enforced by GitHub Pages.
+The production site is built with Jekyll from the `master` branch and is based on the Academic Pages template. Preview changes are validated on `taste-redesign-review` before promotion. The custom domain is `zhejianwang.com`, with HTTPS enforced by GitHub Pages.
 
 The public site has two maintained presentation layers over one factual data layer:
 

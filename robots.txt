@@ -1,3 +1,68 @@
+# Automated-access preferences for https://zhejianwang.com/
+#
+# Conventional search indexing remains available. Model training, bulk corpus
+# collection, and automated AI-search indexing are not authorized. Robots rules
+# are notices for compliant crawlers, not access control. See /content-use/.
+
+# Model training and large-scale corpus collection
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: MistralAI-Training
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# Automated AI-search and answer indexes
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: Claude-SearchBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Amzn-SearchBot
+Disallow: /
+
+User-agent: MistralAI-Index
+Disallow: /
+
+User-agent: DuckAssistBot
+Disallow: /
+
+User-agent: meta-webindexer
+Disallow: /
+
+# Google non-search research crawlers. This does not block Google Search.
+User-agent: GoogleOther
+Disallow: /
+
+User-agent: GoogleOther-Image
+Disallow: /
+
+User-agent: GoogleOther-Video
+Disallow: /
+
+# Human-directed retrieval of an exact URL remains governed by /content-use/.
+# Do not add hidden or unlisted paths here: robots.txt is publicly readable.
 User-agent: *
 Allow: /
 

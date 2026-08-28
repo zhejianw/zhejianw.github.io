@@ -5,7 +5,9 @@ permalink: /ai/context/
 author_profile: false
 lang: en
 excerpt: "A human-reviewed public reference for AI assistants and collaborators."
-visibility: public
+visibility: unlisted-public
+noindex: true
+sitemap: false
 status: current
 last_updated: 2026-08-28
 ---
@@ -14,7 +16,7 @@ last_updated: 2026-08-28
 {% assign research = site.data.research %}
 {% assign publication = research.papers[research.featured_publication] %}
 
-This page is a human-reviewed public reference for AI assistants and collaborators. It contains only information approved for public disclosure.
+This unlisted page is a human-reviewed, public-by-URL reference for an AI assistant or collaborator that receives this exact link from Zhejian Wang. It contains only information approved for public disclosure and is governed by the [content-use policy](/content-use/).
 
 ## Identity and current status
 

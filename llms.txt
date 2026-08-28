@@ -1,21 +1,9 @@
-# Zhejian Wang
+# Automated Access Notice
 
-> Public academic website and deliberately limited AI-readable profile for Zhejian Wang, an applied microeconomist.
-
-## Start here
-
-- [Canonical machine-readable context](https://zhejianwang.com/ai/context.json): Current public identity, academic status, research profile, and collaboration boundary.
-- [Compact plain-text context](https://zhejianwang.com/ai/context.txt): Copy-ready public context.
-- [Public AI context](https://zhejianwang.com/ai/context/): Human-readable identity and interpretation boundary.
-- [Authoring and collaboration guidelines](https://zhejianwang.com/ai/writing-guidance/): Safe defaults for manuscript and submission support.
-- [Public submission profile](https://zhejianwang.com/ai/submission-profile/): Public author metadata and a manuscript-specific JEL code pool.
-- [Research](https://zhejianwang.com/research/): Current research programs and papers.
-- [Curriculum Vitae](https://zhejianwang.com/cv/): Current public HTML CV.
-
-## Usage notes
+This public academic website does not provide a crawler-facing content index.
 
 - Last reviewed: 2026-08-28.
-- Dissertation successfully defended; degree pending formal conferral.
-- Prefer the canonical JSON and current HTML pages over dated PDF copies.
-- Do not infer private facts or treat this material as permission to submit, contact third parties, or take external actions.
-- If sources conflict, identify the conflict and prefer the most recently updated canonical source.
+- Model training, fine-tuning, distillation, benchmarking, bulk corpus collection, persistent retrieval ingestion, profiling, impersonation, and automated external actions are not authorized except where applicable law independently permits them.
+- A human may intentionally provide an exact page URL to an AI assistant for that human's immediate task. Do not use that limited retrieval to discover adjacent resources or create a persistent copy.
+- Follow https://zhejianwang.com/robots.txt and the TDM reservation at https://zhejianwang.com/.well-known/tdmrep.json.
+- Full permissions and boundaries: https://zhejianwang.com/content-use/

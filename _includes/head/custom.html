@@ -3,9 +3,18 @@
 <!-- start custom head snippets -->
 
 {% if page.noindex %}
-<meta name="robots" content="noindex, nofollow, noarchive">
-<meta name="googlebot" content="noindex, nofollow, noarchive">
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noimageindex">
+{% else %}
+<!-- Keep conventional search discovery while withholding page text from search
+     snippets and Google AI Overviews / AI Mode. -->
+<meta name="robots" content="index, follow, nosnippet, max-image-preview:standard, max-video-preview:0">
+<meta name="googlebot" content="index, follow, nosnippet, max-image-preview:standard, max-video-preview:0">
 {% endif %}
+<!-- Additional vendor-specific AI-use controls. The origin-wide TDM
+     reservation is published at /.well-known/tdmrep.json. -->
+<meta name="bingbot" content="noarchive">
+<meta name="applebot" content="nosnippet">
 
 <!-- Editorial typography -->
 <link rel="preconnect" href="https://api.fontshare.com">
@@ -13,11 +22,6 @@
 
 <!-- Taste redesign layer; kept separate from the upstream theme for easy rollback. -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/taste.css">
-
-<!-- Canonical AI-readable discovery endpoints. -->
-<link rel="alternate" type="application/json" href="{{ '/ai/context.json' | absolute_url }}" title="Machine-readable academic profile">
-<link rel="alternate" type="text/plain" href="{{ '/llms.txt' | absolute_url }}" title="LLM-facing site summary">
-<link rel="author" href="{{ '/ai/context/' | absolute_url }}">
 
 {% if page.url == '/' %}
 <link rel="preload" as="image" type="image/avif" href="{{ '/images/portrait/zhejian-wang-768.avif' | relative_url }}" imagesrcset="{{ '/images/portrait/zhejian-wang-480.avif' | relative_url }} 480w, {{ '/images/portrait/zhejian-wang-768.avif' | relative_url }} 768w, {{ '/images/portrait/zhejian-wang-1200.avif' | relative_url }} 1200w" imagesizes="(max-width: 760px) 88vw, (max-width: 1060px) 36vw, 400px">

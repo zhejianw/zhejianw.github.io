@@ -33,3 +33,9 @@ collaboration:
   distinguish_verified_facts_from_suggestions: true
   external_submission_authorized: false
   project_specific_material_is_not_in_this_public_context: true
+  exact_url_retrieval_for_a_human_requested_task: permitted
+  bulk_crawling_or_persistent_ingestion: not_authorized
+  model_training_fine_tuning_or_distillation: not_authorized
+  profiling_impersonation_or_high_impact_decisions: not_authorized
+  external_actions_require_explicit_authorization: true
+  content_use_policy: https://zhejianwang.com/content-use/

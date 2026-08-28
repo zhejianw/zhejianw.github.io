@@ -18,6 +18,8 @@ This is a public academic website repository. It is not an approved location for
 
 The automated public-content guard and GitHub Secret Scanning reduce accidental disclosure risk but do not replace human review.
 
+Automated access, text-and-data mining, and AI use are separately addressed in the website's [Content, Crawling, and AI Use policy](https://zhejianwang.com/content-use/) and the repository's [content-rights notice](CONTENT_LICENSE.md).
+
 ## Non-security corrections
 
 Corrections to public biographical, research, publication, or teaching information may be reported through an ordinary issue. Do not include non-public supporting documents.

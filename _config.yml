@@ -63,17 +63,20 @@ analytics:
 
 include:
   - .htaccess
+  - .well-known
   - _pages
   - files
   - images
   - ai
 exclude:
   - AI_CONTEXT.md
+  - CONTENT_LICENSE.md
   - CONTRIBUTING.md
   - SECURITY.md
   - Zhejian_CV.pdf
   - images/19.jpg
   - ai/README.md
+  - ai/context.md
   - files/JMP.pdf
   - files/bibtex1.bib
   - markdown_generator

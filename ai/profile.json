@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2",
-  "visibility": "public",
+  "visibility": "unlisted-public",
   "status": "current",
   "last_updated": "2026-08-28",
   "derived_from": "https://zhejianwang.com/ai/context.json",
@@ -47,6 +47,9 @@
   "usage": {
     "public_only": true,
     "action_authorization": false,
+    "human_directed_exact_url_retrieval": true,
+    "bulk_crawling_or_model_training_authorized": false,
+    "content_use_policy": "https://zhejianwang.com/content-use/",
     "freshness_note": "Check last_updated and the live website before repeating time-sensitive claims."
   }
 }

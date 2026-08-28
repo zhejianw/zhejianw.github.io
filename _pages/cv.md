@@ -18,7 +18,7 @@ redirect_from:
 
 <p class="taste-lede">{{ person.short_bio }} {{ person.degree_status }}</p>
 
-<div class="taste-actions">
+<div class="taste-actions" data-nosnippet>
   <a class="taste-button taste-button--primary" href="mailto:{{ person.email }}">Email</a>
   <a class="taste-button" href="{{ person.cv_pdf | relative_url }}">PDF CV · {{ person.cv_pdf_as_of }}</a>
 </div>
@@ -159,4 +159,6 @@ redirect_from:
 
 ## Academic references
 
+<div data-nosnippet>
 <p>{{ person.academic_references | join: ", " }}. Contact details are available upon request.</p>
+</div>

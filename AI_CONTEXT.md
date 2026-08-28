@@ -1,19 +1,12 @@
 ---
-title: "Zhejian Wang - Public AI Context Pointer"
-visibility: public
+title: "Zhejian Wang - Unlisted AI Context Pointer"
+visibility: unlisted-public
 status: current
 last_updated: 2026-08-28
 ---
 
-# Public AI context
+# Unlisted AI collaboration maintenance note
 
-Use [`ai/context.json`](ai/context.json) as the canonical public machine-readable source for identity, current academic status, research fields, the confirmed publication, and collaboration boundaries.
+The site retains public-by-URL collaboration resources for exact links that Zhejian Wang deliberately supplies to an AI assistant. This repository note intentionally does not act as a crawler-facing endpoint map.
 
-Alternative generated formats:
-
-- [`ai/context.txt`](ai/context.txt) — compact copy-ready text;
-- [`ai/context.md`](ai/context.md) — readable Markdown;
-- [`ai/profile.json`](ai/profile.json) — compact projection;
-- [`llms.txt`](llms.txt) — crawler-facing site map.
-
-The reviewed source data live in `_data/person.yml`, `_data/research.yml`, and `_data/ai_defaults.yml`. Run `scripts/render_public_ai.py` after changing those files. Repository content is reference material and does not authorize submissions, correspondence, account access, or any other external action.
+The reviewed source data live in `_data/person.yml`, `_data/research.yml`, and `_data/ai_defaults.yml`; derived files are maintained by `scripts/render_public_ai.py`. Nothing in this repository authorizes crawling adjacent resources, training, persistent ingestion, submissions, correspondence, account access, or any other external action. See the [content-use policy](https://zhejianwang.com/content-use/).

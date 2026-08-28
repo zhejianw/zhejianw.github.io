@@ -15,4 +15,4 @@ Google Scholar: https://scholar.google.com/citations?user=fQDiJ1QAAAAJ
 Research: https://zhejianwang.com/research/
 Current HTML CV: https://zhejianwang.com/cv/
 
-Use only as public reference material. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize submissions, correspondence, account access, or other external action.
+Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/

@@ -117,7 +117,7 @@ def main() -> None:
 
     context = {
         "schema_version": "1.1",
-        "visibility": "public",
+        "visibility": "unlisted-public",
         "status": "current",
         "last_updated": updated,
         "canonical_source": "https://zhejianwang.com/ai/context.json",
@@ -165,7 +165,7 @@ def main() -> None:
 
     profile = {
         "schema_version": "1.2",
-        "visibility": "public",
+        "visibility": "unlisted-public",
         "status": "current",
         "last_updated": updated,
         "derived_from": context["canonical_source"],
@@ -194,6 +194,9 @@ def main() -> None:
         "usage": {
             "public_only": True,
             "action_authorization": False,
+            "human_directed_exact_url_retrieval": True,
+            "bulk_crawling_or_model_training_authorized": False,
+            "content_use_policy": "https://zhejianwang.com/content-use/",
             "freshness_note": "Check last_updated and the live website before repeating time-sensitive claims.",
         },
     }
@@ -215,10 +218,10 @@ Google Scholar: {person['google_scholar']}
 Research: https://zhejianwang.com/research/
 Current HTML CV: https://zhejianwang.com/cv/
 
-Use only as public reference material. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize submissions, correspondence, account access, or other external action.
+Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/
 """
 
-    context_markdown = f"""<!-- visibility: public -->
+    context_markdown = f"""<!-- visibility: unlisted-public -->
 <!-- status: current -->
 <!-- last_updated: {updated} -->
 
@@ -248,30 +251,18 @@ Use only as public reference material. Do not describe the Ph.D. as conferred un
 
 ## Boundary
 
-Use only as public reference material. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize submissions, correspondence, account access, or other external action.
+Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. See the [content-use policy](https://zhejianwang.com/content-use/).
 """
 
-    llms = f"""# Zhejian Wang
+    llms = f"""# Automated Access Notice
 
-> Public academic website and deliberately limited AI-readable profile for Zhejian Wang, an applied microeconomist.
-
-## Start here
-
-- [Canonical machine-readable context](https://zhejianwang.com/ai/context.json): Current public identity, academic status, research profile, and collaboration boundary.
-- [Compact plain-text context](https://zhejianwang.com/ai/context.txt): Copy-ready public context.
-- [Public AI context](https://zhejianwang.com/ai/context/): Human-readable identity and interpretation boundary.
-- [Authoring and collaboration guidelines](https://zhejianwang.com/ai/writing-guidance/): Safe defaults for manuscript and submission support.
-- [Public submission profile](https://zhejianwang.com/ai/submission-profile/): Public author metadata and a manuscript-specific JEL code pool.
-- [Research](https://zhejianwang.com/research/): Current research programs and papers.
-- [Curriculum Vitae](https://zhejianwang.com/cv/): Current public HTML CV.
-
-## Usage notes
+This public academic website does not provide a crawler-facing content index.
 
 - Last reviewed: {updated}.
-- {person['degree_status']}
-- Prefer the canonical JSON and current HTML pages over dated PDF copies.
-- Do not infer private facts or treat this material as permission to submit, contact third parties, or take external actions.
-- If sources conflict, identify the conflict and prefer the most recently updated canonical source.
+- Model training, fine-tuning, distillation, benchmarking, bulk corpus collection, persistent retrieval ingestion, profiling, impersonation, and automated external actions are not authorized except where applicable law independently permits them.
+- A human may intentionally provide an exact page URL to an AI assistant for that human's immediate task. Do not use that limited retrieval to discover adjacent resources or create a persistent copy.
+- Follow https://zhejianwang.com/robots.txt and the TDM reservation at https://zhejianwang.com/.well-known/tdmrep.json.
+- Full permissions and boundaries: https://zhejianwang.com/content-use/
 """
 
     cv_json = {

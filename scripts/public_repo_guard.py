@@ -52,6 +52,13 @@ BLOCKED_PATH_PARTS = {
 
 ALLOWED_ENV_FILES = {".env.example"}
 
+UNLISTED_AI_HTML_PAGES = {
+    "_pages/ai-context.md",
+    "_pages/ai-submission-profile.md",
+    "_pages/ai-writing-guidance.md",
+    "ai/index.md",
+}
+
 PRIVATE_KEY_PATTERN = re.compile(
     ("-----BEGIN " + r"(?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----").encode()
 )
@@ -81,7 +88,18 @@ def add_issue(issues: list[tuple[str, str]], rule: str, path: Path) -> None:
 
 def validate_ai_metadata(path: Path, data: bytes, issues: list[tuple[str, str]]) -> None:
     relative = path.relative_to(ROOT).as_posix()
-    if relative.startswith("ai/prompts/") and path.suffix.lower() == ".md":
+    if relative in UNLISTED_AI_HTML_PAGES:
+        text = data.decode("utf-8", errors="replace")
+        required = (
+            "visibility: unlisted-public",
+            "status:",
+            "last_updated:",
+            "noindex: true",
+            "sitemap: false",
+        )
+        if not all(item in text for item in required):
+            add_issue(issues, "AI_HTML_UNLISTED_METADATA_REQUIRED", path)
+    elif relative.startswith("ai/prompts/") and path.suffix.lower() == ".md":
         text = data.decode("utf-8", errors="replace")
         required = (
             "visibility: unlisted-public",
@@ -96,9 +114,9 @@ def validate_ai_metadata(path: Path, data: bytes, issues: list[tuple[str, str]])
         relative.startswith("ai/") and path.suffix.lower() == ".md" and path.name != "README.md"
     ):
         text = data.decode("utf-8", errors="replace")
-        required = ("visibility: public", "status:", "last_updated:")
+        required = ("visibility: unlisted-public", "status:", "last_updated:")
         if not all(item in text for item in required):
-            add_issue(issues, "AI_METADATA_REQUIRED", path)
+            add_issue(issues, "AI_UNLISTED_METADATA_REQUIRED", path)
 
     if relative == "ai/profile.json":
         try:
@@ -106,8 +124,8 @@ def validate_ai_metadata(path: Path, data: bytes, issues: list[tuple[str, str]])
         except (UnicodeDecodeError, json.JSONDecodeError):
             add_issue(issues, "PROFILE_JSON_INVALID", path)
             return
-        if profile.get("visibility") != "public" or not profile.get("last_updated"):
-            add_issue(issues, "PROFILE_PUBLIC_METADATA_REQUIRED", path)
+        if profile.get("visibility") != "unlisted-public" or not profile.get("last_updated"):
+            add_issue(issues, "PROFILE_UNLISTED_METADATA_REQUIRED", path)
 
     if relative == "ai/context.json":
         try:
@@ -116,11 +134,11 @@ def validate_ai_metadata(path: Path, data: bytes, issues: list[tuple[str, str]])
             add_issue(issues, "CONTEXT_JSON_INVALID", path)
             return
         if (
-            context.get("visibility") != "public"
+            context.get("visibility") != "unlisted-public"
             or not context.get("last_updated")
             or context.get("canonical_source") != "https://zhejianwang.com/ai/context.json"
         ):
-            add_issue(issues, "CONTEXT_CANONICAL_METADATA_REQUIRED", path)
+            add_issue(issues, "CONTEXT_UNLISTED_METADATA_REQUIRED", path)
 
 
 def main() -> int:

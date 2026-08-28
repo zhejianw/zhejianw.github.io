@@ -6,7 +6,15 @@ layout: compress
 <html lang="{{ page.lang | default: site.locale | default: 'en' }}" class="no-js">
   <head>
     {% include head.html %}
-    {% if page.noindex %}<meta name="robots" content="noindex, nofollow, noarchive">{% endif %}
+    {% if page.noindex %}
+      <meta name="robots" content="noindex, nofollow, noimageindex">
+      <meta name="googlebot" content="noindex, nofollow, noimageindex">
+    {% else %}
+      <meta name="robots" content="index, follow, nosnippet, max-image-preview:standard, max-video-preview:0">
+      <meta name="googlebot" content="index, follow, nosnippet, max-image-preview:standard, max-video-preview:0">
+    {% endif %}
+    <meta name="bingbot" content="noarchive">
+    <meta name="applebot" content="nosnippet">
     <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/classic.css' | relative_url }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">

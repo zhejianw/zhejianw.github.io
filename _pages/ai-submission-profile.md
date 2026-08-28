@@ -5,7 +5,9 @@ permalink: /ai/submission-profile/
 author_profile: false
 lang: en
 excerpt: "Reusable public metadata for preparing academic materials."
-visibility: public
+visibility: unlisted-public
+noindex: true
+sitemap: false
 status: current
 last_updated: 2026-08-28
 ---
@@ -13,7 +15,7 @@ last_updated: 2026-08-28
 {% assign person = site.data.person %}
 {% assign ai = site.data.ai_defaults %}
 
-This page contains public, reusable metadata for preparing academic materials. It is not a completed submission form and does not authorize submission.
+This unlisted page contains public-by-URL, reusable metadata for an assistant that receives this exact link from Zhejian Wang. It is not a completed submission form, does not authorize submission, and is governed by the [content-use policy](/content-use/).
 
 ## Author metadata
 
