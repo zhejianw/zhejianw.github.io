@@ -81,6 +81,7 @@ exclude:
   - files/JMP.pdf
   - files/bibtex1.bib
   - markdown_generator
+  - scripts
   - talkmap
   - talkmap.ipynb
   - talkmap_out.ipynb
