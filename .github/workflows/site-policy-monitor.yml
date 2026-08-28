@@ -1,0 +1,31 @@
+name: Monitor live crawler and security signals
+
+on:
+  schedule:
+    - cron: "17 11 1,15 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-policy-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    name: Check deployed policy endpoints
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository without persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Check source policy invariants
+        run: python3 scripts/public_repo_guard.py
+
+      - name: Check deployed policy endpoints
+        run: python3 scripts/check_live_policy.py

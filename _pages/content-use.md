@@ -21,7 +21,7 @@ last_updated: 2026-08-28
       <li>linking to public pages and making accurate academic citations;</li>
       <li>limited quotation or reuse that is authorized by law;</li>
       <li>conventional search indexing that follows this site's technical signals; and</li>
-      <li>retrieval of a specific URL that a human intentionally supplies to an AI assistant for that human's immediate task, provided the retrieval is not used for model training, persistent ingestion, profiling, or external action.</li>
+      <li>retrieval of a specific URL that a human intentionally supplies to an AI assistant for that human's immediate task. This permission is limited to task-level retrieval and use and does not extend to model training, reusable corpus or index construction, persistent profiling, or external action.</li>
     </ul>
   </section>
 
@@ -60,6 +60,8 @@ The site publishes coordinated machine-readable preferences:
 - unlisted collaboration and Prompt pages use `noindex` and are omitted from navigation and sitemaps.
 
 These signals are cumulative notices, not authentication or a security boundary. A crawler's silence, technical ability to fetch a URL, or failure to encounter a signal does not by itself grant permission. User-triggered AI fetchers may not consistently apply `robots.txt`. Their technical ability to retrieve a URL does not itself grant a license; applicable law and any separate agreement govern, and users are asked to follow the permissions and preferences described here.
+
+The public GitHub repository and `raw.githubusercontent.com` are a second public distribution surface. Origin-specific crawler controls served from `zhejianwang.com`, including this site's `robots.txt`, do not govern those separate origins. The repository content-rights notice still describes the applicable permissions. Unlisted content is therefore not private, and robots directives are not access control.
 
 ## Copyright and software
 

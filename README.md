@@ -8,6 +8,8 @@ Read the [Content, Crawling, and AI Use policy](https://zhejianwang.com/content-
 
 The repository retains an unlisted collaboration area for exact URLs that Zhejian Wang intentionally supplies to an AI assistant. It is omitted from site navigation and sitemaps and marked `noindex`; it is still public by URL and in repository source. It must never contain confidential material. Repository content is reference material, not authority to take actions, and time-sensitive claims must be checked against the live website.
 
+The public GitHub repository and `raw.githubusercontent.com` are a second public distribution surface. Origin-specific crawler directives served by `zhejianwang.com` do not govern those origins. The repository content-rights notice still describes the applicable permissions; unlisted is not private, and `robots.txt` is not access control.
+
 ## Public-only boundary
 
 Everything in the Pages publication source must be treated as public, even if repository visibility changes. Do not add:
@@ -24,9 +26,11 @@ The Prompt Console is intentionally unlisted, marked `noindex`, and omitted from
 
 ## Safety automation
 
-GitHub Secret Scanning and Push Protection are enabled. The repository also runs `scripts/public_repo_guard.py` on pushes and pull requests. The guard blocks common private file types and paths, unusually large files, private-key material, and AI documents that lack explicit public-status metadata.
+GitHub Secret Scanning and Push Protection are enabled (last verified 2026-08-28). The repository also runs `scripts/public_repo_guard.py` on pushes and pull requests. The guard blocks common private file types and paths, unusually large files, private-key material, and AI documents that lack explicit public-status metadata.
 
 The automated guard supplements human review; it cannot determine consent, copyright, research-data licensing, or whether a true statement should be public.
+
+`BOT_REGISTRY.md` records each named crawler control and its first-party source. It is reviewed every six months. A twice-monthly scheduled workflow checks the live HTTPS policy endpoints, media types, required directives, and `security.txt` expiry. GitHub may suspend scheduled workflows after prolonged repository inactivity, so this is a maintenance alarm rather than an uptime guarantee.
 
 ## Website maintenance
 

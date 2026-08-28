@@ -62,6 +62,10 @@ User-agent: GoogleOther-Video
 Disallow: /
 
 # Human-directed retrieval of an exact URL remains governed by /content-use/.
+# Claude-User is explicit so a future wildcard change does not silently block it.
+User-agent: Claude-User
+Allow: /
+
 # Do not add hidden or unlisted paths here: robots.txt is publicly readable.
 User-agent: *
 Allow: /

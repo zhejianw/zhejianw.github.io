@@ -70,6 +70,7 @@ include:
   - ai
 exclude:
   - AI_CONTEXT.md
+  - BOT_REGISTRY.md
   - CONTENT_LICENSE.md
   - CONTRIBUTING.md
   - SECURITY.md
