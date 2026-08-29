@@ -143,31 +143,38 @@ async function main() {
     { width: 768, height: 1024, name: "tablet" },
     { width: 1440, height: 1000, name: "desktop" },
   ]) {
-    await page.setViewportSize({ width: viewport.width, height: viewport.height });
-    await openPromptPage(page, "/ai/prompts/");
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
-    if (overflow > 1) {
-      const offenders = await page.locator("body *").evaluateAll((nodes) => nodes
-        .map((node) => {
-          const rect = node.getBoundingClientRect();
-          return {
-            tag: node.tagName.toLowerCase(),
-            className: typeof node.className === "string" ? node.className : "",
-            left: Math.round(rect.left),
-            right: Math.round(rect.right),
-            width: Math.round(rect.width),
-          };
-        })
-        .filter((item) => item.right > document.documentElement.clientWidth + 1 || item.left < -1)
-        .slice(0, 8));
-      throw new Error(`${viewport.name}: horizontal page overflow is ${overflow}px; offenders: ${JSON.stringify(offenders)}`);
+    const visualPage = await context.newPage();
+    visualPage.setDefaultTimeout(10000);
+    visualPage.setDefaultNavigationTimeout(15000);
+    await visualPage.setViewportSize({ width: viewport.width, height: viewport.height });
+    try {
+      await openPromptPage(visualPage, "/ai/prompts/");
+      const overflow = await visualPage.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      if (overflow > 1) {
+        const offenders = await visualPage.locator("body *").evaluateAll((nodes) => nodes
+          .map((node) => {
+            const rect = node.getBoundingClientRect();
+            return {
+              tag: node.tagName.toLowerCase(),
+              className: typeof node.className === "string" ? node.className : "",
+              left: Math.round(rect.left),
+              right: Math.round(rect.right),
+              width: Math.round(rect.width),
+            };
+          })
+          .filter((item) => item.right > document.documentElement.clientWidth + 1 || item.left < -1)
+          .slice(0, 8));
+        throw new Error(`${viewport.name}: horizontal page overflow is ${overflow}px; offenders: ${JSON.stringify(offenders)}`);
+      }
+      await visualPage.locator(".taste-page-hero").screenshot({
+        path: path.join(screenshotDir, `prompt-library-${viewport.name}-hero.png`),
+      });
+      await visualPage.locator(".prompt-card").first().screenshot({
+        path: path.join(screenshotDir, `prompt-library-${viewport.name}-first-card.png`),
+      });
+    } finally {
+      await visualPage.close();
     }
-    await page.locator(".taste-page-hero").screenshot({
-      path: path.join(screenshotDir, `prompt-library-${viewport.name}-hero.png`),
-    });
-    await page.locator(".prompt-card").first().screenshot({
-      path: path.join(screenshotDir, `prompt-library-${viewport.name}-first-card.png`),
-    });
   }
 
   await browser.close();
