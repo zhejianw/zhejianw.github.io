@@ -931,6 +931,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 检查全文数字精度和 rounding 是否一致、合理。相同类型的 estimates、standard errors、means、p-values 和 percentages 在正文、tables / figures、appendix 与 submission materials 中应遵循稳定的 precision convention；必要时可以因量纲、数值大小或识别需求使用不同小数位，但这种差异应有清晰理由，不能显得随意。特别排查同一结果因不同 rounding 而在不同位置看起来不一致。
 ~~~
 
+### Numbering & Reference Order Audit {#prompt-numbering-reference-order-audit}
+
+<p class="prompt-description">核对全文结构、图表、公式和附录编号及其引用顺序。</p>
+
+**推荐模式：High**
+
+~~~text
+检查全文所有 section、subsection、equation、table、figure、appendix 及其正文引用的编号与出现顺序。原则上编号应随 manuscript 的阅读顺序自然递增，避免先引用后编号、编号倒序、跳号、重复编号或正文与 appendix 顺序不一致；只有在期刊规范或明确叙事需要下才保留例外。
+~~~
+
 ### Terminology & Notation Audit {#prompt-terminology-notation}
 
 <p class="prompt-description">统一术语、缩写和数学符号的定义与使用。</p>
