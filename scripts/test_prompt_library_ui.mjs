@@ -126,6 +126,7 @@ async function main() {
   await deepLinkCard.waitFor();
   assert(await deepLinkCard.locator("[data-prompt-body]").isVisible(), "Deep link did not reveal the prompt body");
   await deepLinkCard.locator(".prompt-link-button").click();
+  await deepLinkCard.locator(".prompt-copy-status").waitFor({ state: "visible" });
   assert((await deepLinkCard.locator(".prompt-copy-status").textContent()).includes("link copied"), "Copy Link did not report success");
   assert((await page.evaluate(() => navigator.clipboard.readText())).endsWith("#prompt-conclusion-audit"), "Copy Link copied the wrong URL");
 
