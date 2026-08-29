@@ -6,7 +6,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-27
+last_updated: 2026-08-29
 ---
 
 {% include prompt-layer-tabs.html %}
@@ -65,6 +65,10 @@ last_updated: 2026-08-27
 - 数月后重新启动项目时应该先读什么、先运行什么、再做什么。
 
 生成 manifest，记录 snapshot 中关键文件及校验信息，并检查内部路径和引用有效。尽可能在独立环境中验证核心代码 / replication entry point 仍可运行。Snapshot 中不得保留个人凭据、API keys、无关机器路径、AI 对话痕迹或不必要的临时材料。
+
+在冻结前先扫描 snapshot 中的最长 relative paths 和预计完整 Windows paths；发现明显接近系统或工具限制的路径时先处理，并保留明显的 path-length margin，而不是刚好卡在某个固定字符数上。
+
+同时检查 snapshot 的 portability，尤其是 Windows 路径长度。避免不必要的深层目录、重复嵌套和过长的 folder / file names；确保 snapshot 放入普通备份目录、复制到其他 Windows 机器或解压后仍能正常访问。若现有项目路径过长，只在 snapshot 内做最小必要的缩短或扁平化，并在 manifest / `ARCHIVE_README.md` 中保留原路径与 snapshot 路径的对应关系，不要因此修改 active project 或破坏 replication 的内部引用。完成后实际将 snapshot 复制到一个独立目录并检查是否存在 path-too-long、missing file 或复制失败；不得通过 Skip 忽略失败文件。
 
 最后从“几个月后一个没有当前聊天上下文的新 session 接手项目”的视角审计一次：如果仅获得这个 snapshot，是否能够准确知道**项目是什么、做到哪里、为什么做成这样、哪些路不要重复走、结果如何复现、下一步从哪里开始**。只有这些问题都能回答，才视为冻结完成。冻结后不要再修改该 snapshot；未来重大节点另建新的 snapshot。
 ~~~
