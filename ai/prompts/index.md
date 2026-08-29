@@ -380,6 +380,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 这篇研究的 identification 依赖什么关键假设？按照 applied microeconomics 的常规标准，经济学家通常会期待看到哪些对应检验、诊断或证据？我们目前是否已经做了，是否做对了，是否还有真正重要的缺口。
 ~~~
 
+### Empirical Specification Audit {#prompt-empirical-specification-audit}
+
+<p class="prompt-description">检查实证设定是否准确承载 identification、estimand 与系数解释。</p>
+
+**推荐模式：Extra High；设计复杂或用于最终方法裁决时使用 Pro**
+
+~~~text
+从 applied microeconomics 读者的角度重新审核 empirical specification。判断它是否准确承载 identification 和 estimand，读者能否无歧义理解每个符号、变量、FE、controls 和 coefficient interpretation；notation 是否符合经济学惯例，是否存在不必要、反常或容易误解的写法。说明主要 FE / controls 实际承担什么作用——识别、处理 concern、提高精度，还是只是常规设定——以及 manuscript 当前的解释是否准确。再按这一类设计的通常做法判断，我们是否遗漏了读者会合理期待、且 substantively defensible 的 specification 或 diagnostic；重要但不适合作为 main specification 的内容至少应在 appendix 中有回应。不要机械增加 regressions，只指出真正影响理解、可信度或可辩护性的地方。
+~~~
+
 ### Results Narrative {#prompt-results-narrative}
 
 <p class="prompt-description">以研究问题为主线重组结果章节叙事。</p>
