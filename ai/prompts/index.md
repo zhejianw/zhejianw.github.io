@@ -911,6 +911,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 只报告真正存在的问题，不要为了完整而编造问题。对每个问题给出发生冲突的具体位置、建议采用的 canonical value / definition / wording，以及修改后的连锁影响。
 ~~~
 
+### Key Number Cross-Check {#prompt-key-number-cross-check}
+
+<p class="prompt-description">以权威结果为准，对账 manuscript 与投稿材料中重复出现的关键数字。</p>
+
+**推荐模式：High；材料较多或最终投稿前使用 Extra High**
+
+~~~text
+核对 manuscript 及 Highlights 等 submission materials 中所有重复出现的关键数字。确保 Title、Abstract、Introduction、Results、Conclusion 以及其他位置对同一 finding 的样本、estimand、单位、基准、绝对/相对幅度和 rounding 完全一致；即使采用不同表达方式，也不能让读者得到不同的数量级理解。以 authoritative results / outputs 为准。
+~~~
+
 ### Terminology & Notation Audit {#prompt-terminology-notation}
 
 <p class="prompt-description">统一术语、缩写和数学符号的定义与使用。</p>
