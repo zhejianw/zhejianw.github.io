@@ -1001,6 +1001,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 4. 因材料或证据不足而无法核实。
 ~~~
 
+### Revision Residue Audit {#prompt-revision-residue-audit}
+
+<p class="prompt-description">清除多轮讨论、纠错和旧方案在最终成品中的无价值残留。</p>
+
+**推荐模式：High；全文经历大量迭代时使用 Extra High**
+
+~~~text
+检查当前 output 是否残留了多轮讨论、纠错或旧方案的痕迹。最终文本只应保留已经裁决后的当前结论和最优方案；被否定、替代或仅用于讨论的旧说法不要因为对话历史而进入成品，除非它本身具有明确的 substantive value。
+~~~
+
 
 ## G. Adversarial {#deep-g-adversarial}
 
