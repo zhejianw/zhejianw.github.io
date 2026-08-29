@@ -156,7 +156,7 @@ async function main() {
     }
     await page.screenshot({
       path: path.join(screenshotDir, `prompt-library-${viewport.name}.png`),
-      fullPage: true,
+      fullPage: false,
     });
   }
 
