@@ -19,7 +19,8 @@
 }
 
 .prompt-layer-nav a,
-.prompt-layer-nav .is-current {
+.prompt-layer-nav .is-current,
+.prompt-layer-find {
   flex: 0 0 auto;
   padding: 0.42rem 0.72rem;
   border-radius: 7px;
@@ -34,7 +35,9 @@
 }
 
 .prompt-layer-nav a:hover,
-.prompt-layer-nav a:focus-visible {
+.prompt-layer-nav a:focus-visible,
+.prompt-layer-find:hover,
+.prompt-layer-find:focus-visible {
   background: #f0edf6;
   color: #5c4d84;
 }
@@ -42,6 +45,19 @@
 .prompt-layer-nav .is-current {
   background: #67578f;
   color: #ffffff;
+}
+
+.prompt-layer-find {
+  appearance: none;
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  flex: 0 0 auto;
+  min-height: 44px;
+  margin-left: auto;
+  border: 1px solid #67578f;
+  background: #ffffff;
+  cursor: pointer;
 }
 
 .prompt-workflow,
@@ -278,6 +294,10 @@
   text-align: right;
 }
 
+.prompt-copy-status:empty {
+  display: none;
+}
+
 .prompt-copy-button {
   appearance: none;
   flex: 0 0 auto;
@@ -295,6 +315,7 @@
   transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
 }
 
+.prompt-link-button,
 .prompt-toggle-button,
 .prompt-view-button {
   appearance: none;
@@ -311,6 +332,8 @@
   line-height: 1;
 }
 
+.prompt-link-button:hover,
+.prompt-link-button:focus-visible,
 .prompt-toggle-button:hover,
 .prompt-toggle-button:focus-visible,
 .prompt-view-button:hover,
@@ -387,25 +410,49 @@
   scroll-margin-top: calc(var(--taste-header-height, 84px) + 84px);
 }
 
+.prompt-link-button.is-copied {
+  border-color: #35825b;
+  background: #35825b;
+  color: #ffffff;
+}
+
+.prompt-link-button.is-error {
+  border-color: #a74747;
+  background: #a74747;
+  color: #ffffff;
+}
+
 @media (max-width: 600px) {
   .prompt-description {
     font-size: 0.88rem;
   }
 
   .prompt-copy-toolbar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     min-height: 3rem;
     padding: 0.42rem 0.5rem;
   }
 
+  .prompt-link-button,
+  .prompt-toggle-button,
   .prompt-copy-button {
+    order: 1;
+    width: 100%;
     min-height: 2.75rem;
-    padding-right: 0.8rem;
-    padding-left: 0.8rem;
+    padding-right: 0.45rem;
+    padding-left: 0.45rem;
   }
 
-  .prompt-toggle-button,
   .prompt-view-button {
     min-height: 2.75rem;
+  }
+
+  .prompt-copy-status:not(:empty) {
+    grid-column: 1 / -1;
+    order: 2;
+    padding: 0.25rem 0.15rem 0.1rem;
+    text-align: left;
   }
 
   .prompt-card {
@@ -462,6 +509,11 @@
 
 /* Taste redesign: prompt-library utility layer */
 
+.is-prompt-library {
+  --taste-body: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --taste-display: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
 .is-prompt-library .prompt-layer-nav,
 .is-prompt-library .prompt-workflow,
 .is-prompt-library .prompt-section-toc,
@@ -473,6 +525,7 @@
 .is-prompt-library .prompt-description,
 .is-prompt-library .prompt-copy-status,
 .is-prompt-library .prompt-copy-button,
+.is-prompt-library .prompt-link-button,
 .is-prompt-library .prompt-toggle-button,
 .is-prompt-library .prompt-view-button {
   font-family: var(--taste-body, "Satoshi", "Segoe UI", sans-serif);
@@ -578,6 +631,7 @@
 }
 
 .is-prompt-library .prompt-copy-button,
+.is-prompt-library .prompt-link-button,
 .is-prompt-library .prompt-toggle-button,
 .is-prompt-library .prompt-view-button {
   min-height: 44px;
@@ -589,6 +643,8 @@
 
 .is-prompt-library .prompt-copy-button:hover,
 .is-prompt-library .prompt-copy-button:focus-visible,
+.is-prompt-library .prompt-link-button:hover,
+.is-prompt-library .prompt-link-button:focus-visible,
 .is-prompt-library .prompt-toggle-button:hover,
 .is-prompt-library .prompt-toggle-button:focus-visible,
 .is-prompt-library .prompt-view-button:hover,
@@ -601,6 +657,9 @@
 .is-prompt-library .prompt-copy-shell pre code {
   color: var(--taste-ink, #10161b);
   background: var(--taste-cream, #fcfaf5);
+  font-family: var(--taste-body, "Segoe UI", sans-serif) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.7 !important;
   white-space: pre-wrap !important;
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -625,6 +684,32 @@
 .is-prompt-library .prompt-layer-nav.can-scroll-left.can-scroll-right {
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%);
   mask-image: linear-gradient(to right, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%);
+}
+
+.is-prompt-library .prompt-layer-nav.has-find {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.is-prompt-library .prompt-layer-find {
+  min-height: 44px;
+  padding: 0.72rem 0.9rem;
+  border: 1px solid var(--taste-ink, #10161b);
+  border-radius: 0;
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-blue, #153d59);
+  box-shadow: -12px 0 16px var(--taste-paper, #f4f1e9);
+  font-family: var(--taste-body, "Segoe UI", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.is-prompt-library .prompt-layer-find:hover,
+.is-prompt-library .prompt-layer-find:focus-visible {
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-red-dark, #7d281f);
 }
 
 .prompt-command-dialog {
@@ -700,6 +785,36 @@
   outline-offset: 2px;
 }
 
+.prompt-command-scopes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 12px;
+  border: 1px solid var(--taste-ink, #10161b);
+}
+
+.prompt-command-scope {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 0;
+  color: var(--taste-ink, #10161b);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--taste-body, "Segoe UI", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.prompt-command-scope + .prompt-command-scope {
+  border-left: 1px solid var(--taste-ink, #10161b);
+}
+
+.prompt-command-scope:hover,
+.prompt-command-scope:focus-visible,
+.prompt-command-scope.is-active {
+  color: var(--taste-cream, #fcfaf5);
+  background: var(--taste-blue, #153d59);
+}
+
 .prompt-command-help,
 .prompt-command-status {
   margin: 10px 0 0;
@@ -768,6 +883,7 @@
 
 @media print {
   .prompt-command-trigger,
+  .prompt-layer-find,
   .prompt-command-dialog {
     display: none !important;
   }

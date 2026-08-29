@@ -225,6 +225,36 @@
     }
   }
 
+  function setLinkButtonState(button, status, state) {
+    window.clearTimeout(button.copyResetTimer);
+    button.classList.remove("is-copied", "is-error");
+
+    if (state === "copied") {
+      button.textContent = "Link Copied";
+      button.classList.add("is-copied");
+      status.textContent = "Prompt link copied";
+    } else if (state === "error") {
+      button.textContent = "Copy Failed";
+      button.classList.add("is-error");
+      status.textContent = "Copy the page address manually";
+    } else {
+      button.textContent = "Copy Link";
+      status.textContent = "";
+    }
+
+    if (state !== "idle") {
+      button.copyResetTimer = window.setTimeout(function () {
+        setLinkButtonState(button, status, "idle");
+      }, 2200);
+    }
+  }
+
+  function promptUrl(promptId) {
+    var url = new URL(window.location.href);
+    url.hash = promptId;
+    return url.toString();
+  }
+
   function setPromptExpanded(shell, expanded) {
     var body = shell.querySelector("[data-prompt-body]");
     var toggle = shell.querySelector(".prompt-toggle-button");
@@ -305,6 +335,7 @@
     var shell = document.createElement("div");
     var toolbar = document.createElement("div");
     var status = document.createElement("span");
+    var linkButton = document.createElement("button");
     var button = document.createElement("button");
 
     shell.className = "prompt-copy-shell";
@@ -312,6 +343,10 @@
     status.className = "prompt-copy-status";
     status.setAttribute("role", "status");
     status.setAttribute("aria-live", "polite");
+
+    linkButton.type = "button";
+    linkButton.className = "prompt-link-button";
+    linkButton.textContent = "Copy Link";
 
     button.type = "button";
     button.className = "prompt-copy-button";
@@ -321,6 +356,20 @@
     button.setAttribute("aria-label", "Copy prompt: " + headingText);
     button.setAttribute("title", "Copy prompt: " + headingText);
     button.setAttribute("data-prompt-index", String(index + 1));
+
+    linkButton.setAttribute("aria-label", "Copy link to prompt: " + headingText);
+    linkButton.setAttribute("title", "Copy link to prompt: " + headingText);
+    linkButton.addEventListener("click", function () {
+      linkButton.disabled = true;
+
+      copyText(promptUrl(heading.id)).then(function () {
+        linkButton.disabled = false;
+        setLinkButtonState(linkButton, status, "copied");
+      }).catch(function () {
+        linkButton.disabled = false;
+        setLinkButtonState(linkButton, status, "error");
+      });
+    });
 
     button.addEventListener("click", function () {
       button.disabled = true;
@@ -334,6 +383,9 @@
         setButtonState(button, status, "error");
       });
     });
+
+    toolbar.appendChild(status);
+    toolbar.appendChild(linkButton);
 
     if (config.collapsePrompts) {
       var toggle = document.createElement("button");
@@ -354,7 +406,6 @@
       block.setAttribute("data-prompt-body", "");
     }
 
-    toolbar.appendChild(status);
     toolbar.appendChild(button);
     parent.insertBefore(shell, block);
     shell.appendChild(toolbar);
@@ -464,23 +515,34 @@
         title: heading ? heading.textContent.replace(/#\s*$/, "").trim() : "Untitled prompt",
         description: description ? description.textContent.trim() : "",
         mode: mode ? mode.textContent.trim() : "",
-        code: code ? code.textContent : ""
+        code: code ? code.textContent : "",
+        layer: config.currentLayer || "current",
+        url: window.location.pathname + window.location.search + "#" + card.getAttribute("data-prompt-id"),
+        isLocal: true
       };
     });
 
     var controls = content.querySelector(".prompt-view-controls");
+    var layerNav = content.querySelector(".prompt-layer-nav");
     var trigger = document.createElement("button");
+    var stickyTrigger = document.createElement("button");
     var dialog = document.createElement("dialog");
     var panel = document.createElement("div");
     var header = document.createElement("div");
     var title = document.createElement("h2");
     var close = document.createElement("button");
+    var scopeControls = document.createElement("div");
+    var layerScopeButton = document.createElement("button");
+    var allScopeButton = document.createElement("button");
     var input = document.createElement("input");
     var help = document.createElement("p");
     var results = document.createElement("div");
     var status = document.createElement("p");
     var visibleRecords = records.slice();
     var selectedIndex = 0;
+    var searchScope = "layer";
+    var crossLayerRecords = [];
+    var crossLayerState = "idle";
 
     trigger.type = "button";
     trigger.className = "prompt-view-button prompt-command-trigger";
@@ -494,6 +556,16 @@
       content.insertBefore(trigger, content.firstChild);
     }
 
+    stickyTrigger.type = "button";
+    stickyTrigger.className = "prompt-layer-find";
+    stickyTrigger.textContent = "Find";
+    stickyTrigger.setAttribute("aria-keyshortcuts", "Control+K Meta+K");
+    stickyTrigger.setAttribute("title", "Find a prompt (Ctrl/Command + K)");
+    if (layerNav) {
+      layerNav.classList.add("has-find");
+      layerNav.appendChild(stickyTrigger);
+    }
+
     dialog.className = "prompt-command-dialog";
     dialog.setAttribute("aria-labelledby", "prompt-command-title");
     panel.className = "prompt-command-panel";
@@ -504,9 +576,19 @@
     close.className = "prompt-command-close";
     close.textContent = "Close";
     close.setAttribute("aria-label", "Close prompt search");
+    scopeControls.className = "prompt-command-scopes";
+    scopeControls.setAttribute("aria-label", "Search scope");
+    layerScopeButton.type = "button";
+    layerScopeButton.className = "prompt-command-scope is-active";
+    layerScopeButton.textContent = "This layer";
+    layerScopeButton.setAttribute("aria-pressed", "true");
+    allScopeButton.type = "button";
+    allScopeButton.className = "prompt-command-scope";
+    allScopeButton.textContent = "All layers";
+    allScopeButton.setAttribute("aria-pressed", "false");
     input.type = "search";
     input.className = "prompt-command-input";
-    input.placeholder = "Search title, description, or mode";
+    input.placeholder = "Search title, description, mode, or prompt text";
     input.setAttribute("autocomplete", "off");
     input.setAttribute("role", "combobox");
     input.setAttribute("aria-autocomplete", "list");
@@ -526,6 +608,9 @@
     header.appendChild(title);
     header.appendChild(close);
     panel.appendChild(header);
+    scopeControls.appendChild(layerScopeButton);
+    scopeControls.appendChild(allScopeButton);
+    panel.appendChild(scopeControls);
     panel.appendChild(input);
     panel.appendChild(help);
     panel.appendChild(results);
@@ -561,7 +646,9 @@
       } else {
         dialog.removeAttribute("open");
       }
-      if (window.location.hash === "#" + record.id) {
+      if (!record.isLocal) {
+        window.location.assign(record.url);
+      } else if (window.location.hash === "#" + record.id) {
         revealHashTarget();
       } else {
         window.location.hash = record.id;
@@ -569,25 +656,62 @@
     }
 
     function copyRecord(record) {
-      if (!record || !record.code) {
+      if (!record) {
         return;
       }
-      copyText(record.code).then(function () {
-        rememberCopied(record.id);
-        status.textContent = "Copied: " + record.title;
+      var text = record.code || new URL(record.url, window.location.origin).toString();
+      copyText(text).then(function () {
+        if (record.code) {
+          rememberCopied(record.id);
+        }
         renderResults(input.value);
+        status.textContent = (record.code ? "Copied prompt: " : "Copied link: ") + record.title;
       }).catch(function () {
         status.textContent = "Copy failed. Open the prompt and copy manually.";
+      });
+    }
+
+    function recentlyFirst(source, recent) {
+      var rank = {};
+      recent.forEach(function (id, index) {
+        rank[id] = index;
+      });
+      return source.slice().sort(function (left, right) {
+        var leftRank = Object.prototype.hasOwnProperty.call(rank, left.id) ? rank[left.id] : Number.MAX_SAFE_INTEGER;
+        var rightRank = Object.prototype.hasOwnProperty.call(rank, right.id) ? rank[right.id] : Number.MAX_SAFE_INTEGER;
+        return leftRank - rightRank;
       });
     }
 
     function renderResults(query) {
       var needle = query.trim().toLowerCase();
       var recent = getRecentlyCopied();
+      var source = searchScope === "all" ? crossLayerRecords : records;
 
-      visibleRecords = records.filter(function (record) {
-        return !needle || [record.title, record.description, record.mode].join(" ").toLowerCase().indexOf(needle) !== -1;
-      }).slice(0, 20);
+      if (searchScope === "all" && crossLayerState === "loading") {
+        results.textContent = "";
+        status.textContent = "Loading the metadata-only cross-layer index…";
+        visibleRecords = [];
+        return;
+      }
+
+      if (searchScope === "all" && crossLayerState === "error") {
+        results.textContent = "";
+        status.textContent = "Cross-layer index unavailable. Search this layer instead.";
+        visibleRecords = [];
+        return;
+      }
+
+      visibleRecords = source.filter(function (record) {
+        var searchable = searchScope === "all" ?
+          [record.layer, record.title, record.description, record.url] :
+          [record.title, record.description, record.mode, record.code];
+        return !needle || searchable.join(" ").toLowerCase().indexOf(needle) !== -1;
+      });
+
+      if (!needle && searchScope === "layer") {
+        visibleRecords = recentlyFirst(visibleRecords, recent);
+      }
 
       results.textContent = "";
       visibleRecords.forEach(function (record, index) {
@@ -607,7 +731,11 @@
         descriptionLine.className = "prompt-command-result__description";
         descriptionLine.textContent = record.description;
         metaLine.className = "prompt-command-result__meta";
-        metaLine.textContent = [record.mode, recent.indexOf(record.id) !== -1 ? "Recently copied" : ""].filter(Boolean).join(" · ");
+        metaLine.textContent = [
+          searchScope === "all" ? record.layer : "",
+          record.mode,
+          searchScope === "layer" && recent.indexOf(record.id) !== -1 ? "Recently copied" : ""
+        ].filter(Boolean).join(" · ");
         button.appendChild(titleLine);
         if (record.description) {
           button.appendChild(descriptionLine);
@@ -626,7 +754,64 @@
 
       selectedIndex = 0;
       select(0);
-      status.textContent = visibleRecords.length ? visibleRecords.length + " prompt" + (visibleRecords.length === 1 ? "" : "s") : "No matching prompts";
+      status.textContent = visibleRecords.length ?
+        visibleRecords.length + " prompt" + (visibleRecords.length === 1 ? "" : "s") + (!needle && searchScope === "layer" && recent.length ? " · recent copies first" : "") :
+        "No matching prompts";
+    }
+
+    function loadCrossLayerIndex() {
+      if (crossLayerState !== "idle") {
+        return;
+      }
+      crossLayerState = "loading";
+      renderResults(input.value);
+      window.fetch(config.crossLayerIndexUrl, { credentials: "same-origin" }).then(function (response) {
+        if (!response.ok) {
+          throw new Error("Prompt index request failed");
+        }
+        return response.json();
+      }).then(function (data) {
+        if (!Array.isArray(data)) {
+          throw new Error("Prompt index is invalid");
+        }
+        crossLayerRecords = data.map(function (record) {
+          return {
+            id: record.id || record.url,
+            title: record.title || "Untitled prompt",
+            description: record.description || "",
+            mode: "",
+            code: "",
+            layer: record.layer || "Unknown",
+            url: record.url,
+            isLocal: false
+          };
+        });
+        crossLayerState = "ready";
+        renderResults(input.value);
+      }).catch(function () {
+        crossLayerState = "error";
+        renderResults(input.value);
+      });
+    }
+
+    function setSearchScope(scope) {
+      searchScope = scope;
+      layerScopeButton.classList.toggle("is-active", scope === "layer");
+      layerScopeButton.setAttribute("aria-pressed", String(scope === "layer"));
+      allScopeButton.classList.toggle("is-active", scope === "all");
+      allScopeButton.setAttribute("aria-pressed", String(scope === "all"));
+      input.placeholder = scope === "layer" ?
+        "Search title, description, mode, or prompt text" :
+        "Search layer, title, description, or URL";
+      input.setAttribute("aria-label", scope === "layer" ? "Search prompts in this layer" : "Search prompts across all layers");
+      help.textContent = scope === "layer" ?
+        "Arrow keys select · Enter opens · Ctrl/Command + Enter copies" :
+        "Metadata only · Enter opens · Ctrl/Command + Enter copies link";
+      if (scope === "all" && crossLayerState === "idle") {
+        loadCrossLayerIndex();
+      } else {
+        renderResults(input.value);
+      }
     }
 
     function openPalette() {
@@ -648,6 +833,15 @@
     }
 
     trigger.addEventListener("click", openPalette);
+    stickyTrigger.addEventListener("click", openPalette);
+    layerScopeButton.addEventListener("click", function () {
+      setSearchScope("layer");
+      input.focus();
+    });
+    allScopeButton.addEventListener("click", function () {
+      setSearchScope("all");
+      input.focus();
+    });
     close.addEventListener("click", function () {
       if (typeof dialog.close === "function") {
         dialog.close();
@@ -688,7 +882,7 @@
       }
     });
 
-    renderResults("");
+    setSearchScope("layer");
   }
 
   function revealHashTarget() {
@@ -735,8 +929,8 @@
 
     Array.prototype.forEach.call(content.querySelectorAll("pre"), enhancePromptBlock);
     addViewControls(content);
-    initLayerNav();
     createCommandPalette(content);
+    initLayerNav();
     revealHashTarget();
     window.addEventListener("hashchange", revealHashTarget);
   }

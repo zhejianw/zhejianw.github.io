@@ -16,9 +16,16 @@
 <meta name="bingbot" content="noarchive">
 <meta name="applebot" content="nosnippet">
 
+{% if page.prompt_library %}
+<!-- Do not disclose unlisted Prompt Library paths to outbound sites. -->
+<meta name="referrer" content="no-referrer">
+{% endif %}
+
 <!-- Editorial typography -->
+{% unless page.prompt_library %}
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700,800&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+{% endunless %}
 
 <!-- Taste redesign layer; kept separate from the upstream theme for easy rollback. -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/taste.css">
@@ -36,7 +43,9 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/prompt-library.css?v={{ prompt_asset_version | strip }}"/>
 <script>
 window.promptLibraryConfig = {
-  collapsePrompts: {% if page.prompt_collapse %}true{% else %}false{% endif %}
+  collapsePrompts: {% if page.prompt_collapse %}true{% else %}false{% endif %},
+  currentLayer: {{ page.prompt_layer | jsonify }},
+  crossLayerIndexUrl: {{ '/assets/data/prompt-index.json' | relative_url | jsonify }}
 };
 </script>
 <script defer src="{{ base_path }}/assets/js/prompt-library.js?v={{ prompt_asset_version | strip }}"></script>
@@ -47,7 +56,11 @@ window.promptLibraryConfig = {
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
+{% if page.prompt_library %}
+<link rel="manifest" href="{{ base_path }}/images/prompt-library.webmanifest"/>
+{% else %}
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
+{% endif %}
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#f4f1e9"/>
 

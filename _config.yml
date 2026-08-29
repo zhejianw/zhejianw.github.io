@@ -126,10 +126,16 @@ defaults:
   - scope:
       path: "ai/prompts"
     values:
+      layout: single
+      author_profile: false
+      lang: zh-CN
+      prompt_library: true
       prompt_collapse: true
       noindex: true
       sitemap: false
       visibility: unlisted-public
+      status: current
+      analytics: false
   - scope:
       path: "classic"
     values:

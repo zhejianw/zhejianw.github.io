@@ -25,5 +25,7 @@ jobs:
           persist-credentials: false
 
       - name: Check public-content boundary
-        run: python3 scripts/public_repo_guard.py
+        run: |
+          python3 scripts/build_prompt_index.py --check
+          python3 scripts/public_repo_guard.py
 

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - taste-redesign-review
+      - master
   pull_request:
   workflow_dispatch:
 
@@ -28,6 +29,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check -r scripts/requirements-site-tools.txt
           python scripts/render_public_ai.py --check
+          python scripts/build_prompt_index.py --check
           python scripts/public_repo_guard.py
 
       - name: Configure GitHub Pages
@@ -39,6 +41,30 @@ jobs:
           source: .
           destination: ./_site
           future: true
+
+      - name: Install browser regression runtime
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Test Prompt Library in Chromium
+        run: |
+          python -m http.server 4173 --bind 127.0.0.1 --directory _site > /tmp/prompt-library-server.log 2>&1 &
+          for attempt in {1..20}; do
+            curl --fail --silent http://127.0.0.1:4173/ > /dev/null && break
+            sleep 0.25
+          done
+          curl --fail --silent http://127.0.0.1:4173/ > /dev/null
+          node scripts/test_prompt_library_ui.mjs
+
+      - name: Upload Prompt Library viewport captures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: prompt-library-ui-${{ github.sha }}
+          path: tmp/prompt-library-ui
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Upload review artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
