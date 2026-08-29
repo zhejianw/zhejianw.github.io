@@ -33,6 +33,7 @@ async function openPromptPage(page, pathname) {
   const response = await page.goto(`${baseUrl}${pathname}`, { waitUntil: "load" });
   assert(response && response.ok(), `${pathname} returned ${response ? response.status() : "no response"}`);
   await page.waitForSelector(".prompt-card");
+  await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(50);
   page.off("console", onConsole);
   page.off("pageerror", onPageError);
