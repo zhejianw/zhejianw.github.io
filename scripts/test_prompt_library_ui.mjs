@@ -138,7 +138,22 @@ async function main() {
     await page.setViewportSize({ width: viewport.width, height: viewport.height });
     await openPromptPage(page, "/ai/prompts/");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
-    assert(overflow <= 1, `${viewport.name}: horizontal page overflow is ${overflow}px`);
+    if (overflow > 1) {
+      const offenders = await page.locator("body *").evaluateAll((nodes) => nodes
+        .map((node) => {
+          const rect = node.getBoundingClientRect();
+          return {
+            tag: node.tagName.toLowerCase(),
+            className: typeof node.className === "string" ? node.className : "",
+            left: Math.round(rect.left),
+            right: Math.round(rect.right),
+            width: Math.round(rect.width),
+          };
+        })
+        .filter((item) => item.right > document.documentElement.clientWidth + 1 || item.left < -1)
+        .slice(0, 8));
+      throw new Error(`${viewport.name}: horizontal page overflow is ${overflow}px; offenders: ${JSON.stringify(offenders)}`);
+    }
     await page.screenshot({
       path: path.join(screenshotDir, `prompt-library-${viewport.name}.png`),
       fullPage: true,
