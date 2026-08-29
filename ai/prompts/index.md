@@ -11,7 +11,7 @@ prompt_layer: manuscript
 prompt_collapse: true
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-28
+last_updated: 2026-08-29
 ---
 
 <style>
@@ -501,6 +501,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 最后给出一个 estimand crosswalk：逐个列出主要 table / figure、上述 estimand elements 及其对应 claim，并标记为 same、intentionally different 或 unintentionally changed。
 
 对于每个重要差异，告诉我应该修改 regression、table / figure 的呈现、解释方式或措辞，还是只需要明确其边界。不要为了表面一致而强迫所有分析估计同一个 estimand。
+~~~
+
+### Estimand Type & Compliance Audit {#prompt-estimand-type-compliance}
+
+<p class="prompt-description">判定研究真正识别的 estimand，并核对处理定义、依从性与系数解释。</p>
+
+**推荐模式：Extra High；若 noncompliance 或 IV 是核心识别来源，使用 Pro**
+
+~~~text
+重新判断这篇研究真正识别的 estimand 是什么。明确区分 ITT、ATT / ATET、TOT / LATE 及其他可能对象，并检查 treatment definition、comparison group、noncompliance / take-up、sample restriction 和 coefficient interpretation 是否与该 estimand 一致。不要为了术语完整而强行套标签；如果 manuscript 当前把一个 estimand 写成另一个，指出最小修正。
 ~~~
 
 ### Null Results {#prompt-null-results}
