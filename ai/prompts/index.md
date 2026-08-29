@@ -958,6 +958,27 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 
 <p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-heading-audit">Q2 Headings</a> · <a href="#prompt-formatting-audit">Q3 Formatting</a></p>
 
+### Caveats, Limitations & Defensive Writing Audit {#prompt-caveats-defensive-writing-audit}
+
+<p class="prompt-description">按科学重要性裁决全文 caveats、limitations 与 defensive writing 的取舍和位置。</p>
+
+**推荐模式：Extra High；涉及 identification、central claim 或 disclosure 边界的全局裁决时使用 Pro**
+
+~~~text
+重新审核全文 caveats、limitations、qualifications 和 defensive writing，并判断它们是否真的值得进入 paper，以及应该放在哪里。
+
+先按 substantive importance 裁决，而不是因为某个 caveat technically true 就必须写：
+
+- 如果它 materially 影响 identification、estimand、central claim 或 interpretation，即使削弱文章也必须准确披露，并放在读者能够合理理解结论的位置；必要的详细证据放 appendix。
+- 如果它不改变核心结论，但属于 applied microeconomist / referee 很自然会提出的 concern，正文以适当的一句话或短段回应，详细 diagnostic、table 或讨论可放 appendix / footnote。
+- 如果它不会削弱核心结论，而且有助于体现严谨、界定 scope 或帮助经济学家理解结果，可在 Discussion 等合适位置以适当篇幅讨论。
+- 如果它只是 technically correct，但不 materially 改变任何结论、经济学家通常也不会合理关心，而且主要效果只是增加 defensive tone 或削弱叙事，则考虑直接删除；如有记录价值，可仅保留在 appendix，而无需正文主动引用。
+
+同时检查 placement。Abstract 和 Introduction 原则上只保留理解研究和 claim boundary 所必需的 qualification，不提前替 referee 展开 limitations；Results 忠实解释 evidence，但不要在每个 finding 后机械叠甲；真正需要回应的 concerns 优先集中到 Discussion、footnote 或 appendix；Conclusion 可以简洁界定 scope，但不要重新列一遍 limitations。
+
+目标不是隐藏真实问题，而是让 qualification 的显著程度与其 scientific importance 相匹配：重要问题不能藏，次要问题不要抢占主线，低信息量的“AI 式谨慎”应删除。
+~~~
+
 ### Review Comment Adjudication {#prompt-review-comment-adjudication}
 
 <p class="prompt-description">识别外部审阅意见背后的真实 concern，并选择副作用最小的有效回应。</p>

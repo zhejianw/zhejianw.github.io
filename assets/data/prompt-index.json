@@ -400,6 +400,13 @@
   },
   {
     "layer": "Manuscript",
+    "title": "Caveats, Limitations & Defensive Writing Audit",
+    "description": "按科学重要性裁决全文 caveats、limitations 与 defensive writing 的取舍和位置。",
+    "id": "prompt-caveats-defensive-writing-audit",
+    "url": "/ai/prompts/#prompt-caveats-defensive-writing-audit"
+  },
+  {
+    "layer": "Manuscript",
     "title": "Review Comment Adjudication",
     "description": "识别外部审阅意见背后的真实 concern，并选择副作用最小的有效回应。",
     "id": "prompt-review-comment-adjudication",
