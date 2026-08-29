@@ -14,6 +14,7 @@ const layers = [
   ["Manuscript", "/ai/prompts/"],
   ["Submission", "/ai/prompts/submission/"],
 ];
+let activeBrowser = null;
 
 function assert(condition, message) {
   if (!condition) {
@@ -29,7 +30,7 @@ async function openPromptPage(page, pathname) {
   const onPageError = (error) => errors.push(`page: ${error.message}`);
   page.on("console", onConsole);
   page.on("pageerror", onPageError);
-  const response = await page.goto(`${baseUrl}${pathname}`, { waitUntil: "networkidle" });
+  const response = await page.goto(`${baseUrl}${pathname}`, { waitUntil: "load" });
   assert(response && response.ok(), `${pathname} returned ${response ? response.status() : "no response"}`);
   await page.waitForSelector(".prompt-card");
   await page.waitForTimeout(50);
@@ -50,9 +51,19 @@ async function main() {
   }, {});
 
   const browser = await chromium.launch({ headless: true });
+  activeBrowser = browser;
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  // Jekyll emits canonical absolute asset URLs. Route those requests back to
+  // the just-built local artifact so the test never exercises the live site.
+  await context.route("https://zhejianwang.com/**", async (route) => {
+    const original = new URL(route.request().url());
+    const localResponse = await context.request.fetch(`${baseUrl}${original.pathname}${original.search}`);
+    await route.fulfill({ response: localResponse });
+  });
   await context.grantPermissions(["clipboard-read", "clipboard-write"], { origin: baseUrl });
   const page = await context.newPage();
+  page.setDefaultTimeout(10000);
+  page.setDefaultNavigationTimeout(15000);
 
   for (const [layer, pathname] of layers) {
     await openPromptPage(page, pathname);
@@ -88,7 +99,7 @@ async function main() {
 
   await openPromptPage(page, "/ai/prompts/");
   await page.evaluate(() => localStorage.setItem("zhejian-prompt-recently-copied", JSON.stringify(["prompt-conclusion-audit"])));
-  await page.reload({ waitUntil: "networkidle" });
+  await page.reload({ waitUntil: "load" });
   await page.waitForSelector(".prompt-layer-find");
   await page.locator(".prompt-layer-find").click();
   assert((await page.locator(".prompt-command-result__title").first().textContent()).includes("Conclusion"), "Recent copy was not promoted to the top");
@@ -109,7 +120,7 @@ async function main() {
   await page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 1 · Workspace Bootstrap" }).waitFor();
 
   await page.keyboard.press("Escape");
-  await page.goto(`${baseUrl}/ai/prompts/#prompt-conclusion-audit`, { waitUntil: "networkidle" });
+  await page.goto(`${baseUrl}/ai/prompts/#prompt-conclusion-audit`, { waitUntil: "load" });
   const deepLinkCard = page.locator('[data-prompt-id="prompt-conclusion-audit"]');
   await deepLinkCard.waitFor();
   assert(await deepLinkCard.locator("[data-prompt-body]").isVisible(), "Deep link did not reveal the prompt body");
@@ -133,10 +144,15 @@ async function main() {
   }
 
   await browser.close();
+  activeBrowser = null;
   console.log(`Prompt Library UI regression passed (${promptIndex.length} prompts, 3 viewports).`);
 }
 
-main().catch((error) => {
+main().catch(async (error) => {
+  if (activeBrowser) {
+    await activeBrowser.close().catch(() => undefined);
+    activeBrowser = null;
+  }
   console.error(error.stack || error.message || error);
   process.exitCode = 1;
 });
