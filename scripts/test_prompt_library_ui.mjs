@@ -119,7 +119,8 @@ async function main() {
   await search.fill("Workspace Bootstrap");
   await page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 1 · Workspace Bootstrap" }).waitFor();
 
-  await page.keyboard.press("Escape");
+  await page.locator(".prompt-command-close").click();
+  await page.locator(".prompt-command-dialog").waitFor({ state: "hidden" });
   await page.goto(`${baseUrl}/ai/prompts/#prompt-conclusion-audit`, { waitUntil: "load" });
   const deepLinkCard = page.locator('[data-prompt-id="prompt-conclusion-audit"]');
   await deepLinkCard.waitFor();
