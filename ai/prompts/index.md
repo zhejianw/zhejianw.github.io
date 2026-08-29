@@ -458,6 +458,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 不要因为已经做了分析，就默认它必须留在文章里。
 ~~~
 
+### Economic Mechanism Interpretation Audit {#prompt-economic-mechanism-interpretation-audit}
+
+<p class="prompt-description">从整体证据反推可辩护的经济机制，并界定可观察环节与替代解释。</p>
+
+**推荐模式：Extra High；mechanism 承担核心 contribution 时使用 Pro**
+
+~~~text
+重新思考这篇文章背后真正可能运行的 economic mechanism。不要把某个显著、不显著或特定幅度的 coefficient 本身当作 mechanism 的证明；判断目前整体 evidence pattern 最自然地与什么机制一致，我们实际观察到了这条机制的哪一部分、哪些关键环节本质上不可直接检验，以及 Discussion 应如何在不过度声称的前提下把 empirical evidence 与这个 underlying process 连接起来。若存在同样能解释现有证据的重要替代机制，也应明确区分。
+~~~
+
 <p class="prompt-related-quick"><strong>Related Quick Pass:</strong> <a href="#prompt-discussion-audit">Q5 Discussion</a></p>
 
 ### Conclusion {#prompt-conclusion-audit}
