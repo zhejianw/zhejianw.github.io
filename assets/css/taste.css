@@ -747,7 +747,7 @@ body.taste-site {
   overflow-x: hidden;
 }
 
-.is-prompt-library .taste-main { overflow-x: clip; }
+.is-prompt-library .taste-main { overflow-x: visible; }
 
 .taste-page {
   width: 100%;
@@ -1371,6 +1371,10 @@ body.taste-site {
   padding: 0;
 }
 
+.is-prompt-library #main {
+  animation: none;
+}
+
 .taste-site .page__meta:empty {
   display: none;
 }
@@ -1582,9 +1586,14 @@ body.taste-site {
   .taste-section { padding-block: 96px; }
 
   .taste-agenda__intro h2,
-  .taste-section-heading h2,
-  .taste-contact h2 {
+  .taste-section-heading h2 {
     font-size: clamp(3.1rem, 15vw, 5rem);
+  }
+
+  .taste-contact h2 {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 11vw, 4.9rem);
+    overflow-wrap: anywhere;
   }
 
   .taste-bento-card {

@@ -1,9 +1,9 @@
 {
-  "name": "Zhejian Wang — Applied Microeconomist",
-  "short_name": "Zhejian Wang",
-  "start_url": "/",
-  "scope": "/",
-  "display": "browser",
+  "name": "Zhejian Wang Prompt Library",
+  "short_name": "Prompt Library",
+  "start_url": "/ai/prompts/",
+  "scope": "/ai/prompts/",
+  "display": "standalone",
   "background_color": "#f4f1e9",
   "theme_color": "#f4f1e9",
   "icons": [

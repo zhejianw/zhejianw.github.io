@@ -1,37 +1,13 @@
 ---
-layout: single
 title: "Prompt 库 · Brief Layer"
 permalink: /ai/prompts/brief/
-author_profile: false
-lang: zh-CN
-sitemap: false
-noindex: true
-prompt_library: true
 prompt_layer: brief
+noindex: true
+sitemap: false
 visibility: unlisted-public
 status: current
 last_updated: 2026-08-27
 ---
-
-<style>
-.page__content .highlighter-rouge,
-.page__content .highlight,
-.page__content pre {
-  max-width: 100%;
-}
-
-.page__content pre,
-.page__content pre code {
-  white-space: pre-wrap !important;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.page__content .highlight,
-.page__content pre {
-  overflow-x: visible !important;
-}
-</style>
 
 {% include prompt-layer-tabs.html %}
 
