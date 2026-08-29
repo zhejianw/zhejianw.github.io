@@ -1271,6 +1271,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 4. 哪些部分已经足够好，不应该继续折腾。
 ~~~
 
+### Technical Artifact Audit {#prompt-technical-artifact-audit}
+
+<p class="prompt-description">只检查 LaTeX、最终 PDF 与正式文档中的技术和呈现缺陷。</p>
+
+**推荐模式：High；必须提供完整 LaTeX project、最终 PDF 与正式 documentation**
+
+~~~text
+做一次纯技术性 artifact audit。检查 LaTeX 是否可完整编译，是否存在 error、warning、broken reference / citation、overfull / underfull、浮动体或分页异常；同时直接检查最终 PDF 是否出现碎片文字、残留 Markdown、占位符、重复/截断内容、异常符号或其他编译后才可见的问题。再检查项目中的正式 `.md` / documentation 是否遵守既定语言规则和格式。只修技术与呈现问题，不改 substantive content。
+~~~
+
 ### Final Manuscript Audit {#prompt-final-manuscript-audit}
 
 <p class="prompt-description">对今天即将上传的最终 manuscript PDF 做技术、合规与一致性验收。</p>
