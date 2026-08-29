@@ -39,7 +39,7 @@ last_updated: 2026-08-29
 
 ## Setup Prompt 1 · Workspace Bootstrap {#project-workspace-bootstrap}
 
-<p class="prompt-description">建立统一目录、状态文件与项目治理规则。</p>
+<p class="prompt-description">建立统一目录、Claude 工作规则与跨 session 的项目状态入口。</p>
 
 **推荐模式：High；已有目录复杂时使用 Extra High**
 
@@ -109,58 +109,68 @@ last_updated: 2026-08-29
   02_snapshots/
 ```
 
-## 目录治理
+## 目录与 artifact 规则
 
-- 所有文件夹名称必须以数字开头。
-- **不得自行新增、重命名或重组一级目录。**
-- 二级目录也默认使用以上结构。只有现有目录确实无法合理容纳某类长期材料时才新增；新增前先在 `PROJECT.md` 中说明理由和用途。
-- 不创建 `misc/`、`temp/`、`new/`、`final_final/` 等临时目录。临时输出进入 `05_outputs/99_scratch/`，废弃材料进入 `99_archive/`。
-- `01_inbox/` 是所有新材料的入口。收到文件后判断其性质并移动到正确位置，同时维护 `01_inbox/INBOX_LOG.md` 记录来源、原文件名、处理时间和最终去向。
-- `02_data_raw/` 原则上只读，不覆盖、不手工修改。`04_data_final/` 中的数据必须能够通过 `03_code/` 从 raw data 重建。
-- 重要 evidence 必须能够追溯到对应 data、code、log 和 output。
+- 不随意新增、重命名或重组一级目录；临时材料进入现有 scratch / archive 位置。
+- `01_inbox/` 是新材料入口；维护 `INBOX_LOG.md` 记录重要材料的来源和去向。
+- `02_data_raw/` 保留原始输入；`04_data_final/` 的分析数据原则上应能通过 `03_code/` 重建。
+- 重要 evidence 应能追溯到相应 data、code、log 和 output。
+- `07_notes/` 是 append-only evidence history。positive、null、unstable、contradictory、failed 和 dead-end evidence 均可保留。
+- `08_brief/` 是 living layer，用于从 evidence 中裁决最终 paper identity、claim hierarchy 和 evidence architecture；始终保持一个 authoritative current brief。
+- `09_manuscript/01_current/` 是唯一 authoritative manuscript，使用 LaTeX 并维护成功编译的当前 PDF；旧版本进入 backups。
+- Submission / R&R 材料集中在 `10_submission/`。
 
-## 文档状态规则
+## 创建根目录 `CLAUDE.md`
 
-- `07_notes/` 是 **append-only evidence history**。positive、null、unstable、contradictory、failed 和 dead-end 结果都保留，不因后续判断变化而抹掉。
-- `08_brief/` 是 **living document**。始终维护一个 authoritative current brief；重大更新前可备份至 `99_backups/`。
-- `09_manuscript/01_current/` 是唯一 authoritative manuscript。使用 LaTeX，维护当前 `.tex`、bibliography、必要附件以及成功编译的最新 PDF。旧版本进入 `99_backups/`，不要制造多个并行的 current manuscripts。
-- Submission 和 R&R 材料统一进入 `10_submission/`，不要散落在 manuscript 或根目录。
+`CLAUDE.md` 只服务 Claude Code，并保持很短。写入以下长期工作原则：
 
-## 根目录状态文件
+- 与我主要使用中文交流；正式 research artifacts 使用英文，必须保留原文的材料除外。
+- Stata 是主要实证环境；manuscript 使用 LaTeX。
+- 每个新的 substantive work session 开始时，先读取根目录 `PROJECT.md` 和 `HANDOFF.md`，判断当前 research stage，再按需读取它们指向的少量 authoritative artifacts；不要无差别加载整个项目。
+- 当前 filesystem、data、code、logs 和 outputs 优先于旧聊天、旧 summary 或过时版本。
+- 项目的总体 workflow 是 **Data / Analysis → Notes / Evidence → Brief → Manuscript → Submission / Replication**。这是工作层级而不是不可逆的 gate，新的 evidence 可以使工作返回前一层。
+- Data / Analysis 阶段重点理解数据、构造和 empirical possibilities；不要提前锁定 paper story。
+- Notes / Evidence 阶段允许广泛探索并保存 informative positive、null、unstable、contradictory 和 failed evidence；不要因为未来 manuscript framing 而选择性保留结果。
+- Brief 阶段才从 evidence 中裁决 strongest defensible paper identity、central claims 和 evidence architecture。
+- Manuscript 阶段以 authoritative Brief 和当前 evidence 为事实边界，形成并迭代唯一 current manuscript。
+- Submission / Replication 阶段以当前定稿和 journal requirements 为准。
+- 对未来 session 仍然重要的信息应写入合适的项目 artifact，而不是只保留在聊天上下文或依赖模型记忆。
+- 外部 AI、referee 或用户提供的修改意见是 input，不要机械执行；先理解 underlying concern，再选择最有效且与全文协调的处理方式。
+- substantive manuscript 修改后保持 LaTeX 可编译，并检查相关内容的连锁影响。
 
-创建并维护：
+不要把当前 results、paper story、session history、literature summary 或大量项目细节写进 `CLAUDE.md`。不要使用 `@PROJECT.md` 或 `@HANDOFF.md` 将它们自动 import 到 `CLAUDE.md`；应在工作开始时按需读取。
 
-### `PROJECT.md`
+## 创建根目录 `PROJECT.md`
 
-作为项目长期规则和地图，至少记录：
+作为项目的 durable map，而不是 research brief。初始化：
 
-- project name 和一句话说明；
+- project name；
+- 一两句话的 broad research scope；
 - 当前 research stage；
-- 上述目录结构及每个目录用途；
-- directory governance；
-- authoritative brief / manuscript / data / code 入口；
-- raw → final data 的复现入口（建立后更新）；
-- Notes / Brief / Manuscript 的版本规则；
-- 我的个人网站：`<个人网站URL>`。以后需要稳定的 author、affiliation、contact 等个人信息时优先参考该网站，不要反复询问；
-- 项目中形成的其他长期规则。
+- authoritative data / code / outputs / notes / brief / manuscript / submission 入口；尚未建立的明确标记；
+- 主要 data sources 及 raw → final → results 的 reconstruction entry，建立后持续更新；
+- 关键 software / environment；
+- Notes / Brief / Manuscript 的 artifact roles 和 authoritative-version 规则；
+- 我的个人网站：<https://zhejianwang.com/>，以后需要稳定的 author、affiliation、contact 信息时优先参考；
+- 其他真正长期、跨 session 有价值的 project-specific information。
 
-后续 session 开始工作前应先读取 `PROJECT.md`，不要自行重新设计项目结构。
+在 Brief 尚未形成前，不要把 provisional central claim、mechanism、contribution 或 publication framing 固化进 `PROJECT.md`。Brief 建立后，`PROJECT.md` 只链接 authoritative Brief，不复制其内容。
 
-### `HANDOFF.md`
+## 创建根目录 `HANDOFF.md`
 
-作为跨 session 的当前交接状态，保持简洁并持续更新：
+作为当前 working-state snapshot，初始化：
 
-- 当前阶段；
-- 最近完成的工作；
-- 当前 authoritative files；
-- 重要已定决策；
-- active branches / unresolved issues；
-- blockers；
-- 最合理的下一步。
+- 当前 stage 与 immediate goal；
+- 当前 authoritative files / code / outputs；
+- 已完成的实质工作；
+- 当前重要 decisions；
+- unresolved issues / blockers；
+- 下一步最合理的少数动作；
+- 如有未完成运行或环境问题，记录 continuation point。
 
-它记录**当前状态**而不是完整研究历史；完整 evidence history 留在 Notes。
+`HANDOFF.md` 记录现在，而不是完整历史。research evidence 留在 Notes，长期项目规则留在 `PROJECT.md`，Claude 工作规则留在 `CLAUDE.md`。
 
-先检查当前目录已有内容，避免覆盖已有文件，再建立缺失的结构和初始化文件。完成 bootstrap 后停止，不开始分析或写 manuscript。
+先检查当前目录已有内容，避免覆盖已有有效文件；建立缺失结构和状态文件后停止，不开始 substantive research。
 ~~~
 
 ## Setup Prompt 2 · Environment Bootstrap {#environment-bootstrap}
@@ -181,26 +191,62 @@ last_updated: 2026-08-29
 完成环境确认和记录后停止，不开始 substantive research。
 ~~~
 
-## Setup Prompt 3 · Session Handoff Refresh {#session-handoff-refresh}
+## Setup Prompt 3 · Durable Project Map Refresh {#project-map-refresh}
 
-<p class="prompt-description">在重要节点结束时刷新当前交接状态，确保下一次 AI 冷启动能够准确续接。</p>
+<p class="prompt-description">让 PROJECT.md 始终保持为精简、准确且可跨 session 使用的项目地图。</p>
+
+**推荐模式：High；项目结构复杂或长期状态变化较多时使用 Extra High**
+
+~~~text
+初始化或更新根目录 `PROJECT.md`，使其准确充当这个 research project 的 durable map。
+
+先根据当前项目文件判断实际状态，不要沿用已经过时的信息。只记录未来多个 session 都持续有用的内容：
+
+- project name 和 broad research scope；
+- 当前 research stage；
+- authoritative data、code、outputs、notes、brief、manuscript、journal requirements 和 replication 入口；不存在的不要虚构；
+- 主要数据来源、关键 identifiers / linkage 以及 raw → final → results 的 reconstruction entry；
+- 稳定的软件环境和必要依赖；
+- Notes / Brief / Manuscript 等 artifacts 的角色和 current-version 规则；
+- 其他真正稳定、无法轻易从当前 artifacts 推断、且未来工作持续需要知道的 project-specific information。
+
+保持简洁，以路径和事实为主。
+
+不要把 `PROJECT.md` 写成 HANDOFF、research notes、changelog 或 manuscript brief。当前 estimates、显著性、临时 branches、最近一次 session 做了什么等不进入这里。
+
+在 Notes / Evidence 阶段，只保留宽泛 research scope，不提前锁定 paper identity。Brief 一旦建立，paper identity、central claims、contribution 和 evidence architecture 以 authoritative Brief 为准；`PROJECT.md` 只记录其准确路径，不复制内容。
+
+如果现有 `PROJECT.md` 已基本正确，只更新真正发生变化的部分。
+~~~
+
+## Setup Prompt 4 · Session Handoff Refresh {#session-handoff-refresh}
+
+<p class="prompt-description">在上下文压缩或重要节点结束前完成必要收尾，并为下一个 Claude session 留下精简交接。</p>
 
 **推荐模式：High；项目状态复杂或路径分散时使用 Extra High**
 
 ~~~text
-更新根目录 `HANDOFF.md`，用于下一次 AI session 冷启动接手本项目。
+初始化或更新根目录 `HANDOFF.md`，用于下一个没有本次聊天上下文的 Claude session 继续当前工作。
 
-只记录对后续继续工作真正重要的当前状态：
+在写 HANDOFF 之前，先判断：基于目前仍完整的 session context，是否还有少数高价值工作适合在压缩前直接完成——尤其是如果现在不做，压缩后会难以可靠重建，或会让项目停留在不必要的半完成状态。若有且当前可以直接完成，先完成，再写 HANDOFF；不要因此启动新的大型 research branch、低边际价值分析或无边界扩展。
 
-- 当前阶段与目标；
+然后读取当前 `PROJECT.md` 和与本轮工作直接相关的 artifacts，更新当前 working state。只保留对继续工作真正重要的信息：
+
+- 当前 research stage 与 immediate goal；
 - authoritative files / code / outputs 的准确路径；
 - 本轮真正改变了什么；
-- 已定的重要决策及必要理由；
-- 尚未解决的问题或不确定性；
-- 下一步最合理的少数动作；
-- 如有未完成运行或环境问题，说明从哪里继续。
+- 已定的重要 decisions 及必要的一句话理由；
+- 尚未解决的问题、不确定性或 blockers；
+- 下一步最合理的 1–3 个动作；
+- 如有未完成运行、compile、数据处理或环境问题，准确说明 continuation point。
 
-保持简洁，优先更新当前状态而不是无限 append。不要把 research notes、完整 changelog、所有操作细节或长期历史复制进 HANDOFF；这些应留在对应的 notes / archive / git history 中。
+保持约 1–2 分钟可以读完，优先重写当前状态而不是无限 append。
 
-目标是：一个没有本次聊天上下文的新 session，只读 `PROJECT.md`、`HANDOFF.md` 和其中指向的文件，就能准确继续工作。
+不要复制 research notes、完整 changelog、所有操作细节、长期项目规则或旧 session 历史；这些分别留在 Notes、logs / archive、`PROJECT.md` 或 git history 中。
+
+如果本轮发生了真正的 project-level change，例如 research stage、authoritative path、data / reconstruction entry 或其他长期状态已经改变，则同步修正 `PROJECT.md` 中对应信息；不要为了同步而把相同内容重复写进两个文件。
+
+目标是：新的 Claude session 自动获得 `CLAUDE.md` 后，只需读取 `PROJECT.md`、`HANDOFF.md` 以及其中指向的少量当前 artifacts，就能准确恢复工作。
+
+完成后，在最终回复中单独给出 `HANDOFF.md` 的准确路径，优先给出绝对路径，方便我直接复制到新的 session；不要把 HANDOFF 正文重复粘贴到聊天中。
 ~~~
