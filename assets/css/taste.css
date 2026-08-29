@@ -1371,6 +1371,10 @@ body.taste-site {
   padding: 0;
 }
 
+.is-prompt-library #main {
+  animation: none;
+}
+
 .taste-site .page__meta:empty {
   display: none;
 }
