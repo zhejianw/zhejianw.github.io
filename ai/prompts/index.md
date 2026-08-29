@@ -1234,6 +1234,19 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 **technically correct but narratively misplaced** 的段落。
 ~~~
 
+### Prose Quality & Readability Audit {#prompt-prose-quality-readability-audit}
+
+<p class="prompt-description">审核全文是否具备成熟 applied economics manuscript 的自然、清晰与专业表达。</p>
+
+**推荐模式：Extra High**
+
+~~~text
+专门审核全文的 prose quality 和 readability，不重新讨论 substantive content。
+判断文字是否像成熟 applied economics manuscript：清楚、准确、自然、简洁，读者能顺畅理解，而不是需要反复解码。
+特别寻找多轮 AI 写作容易留下的文字问题：重复的句式和过渡方式、过度 signposting、抽象或膨胀的措辞、机械对称的列举、重复解释已经清楚的内容、模板化的 qualification / contrast、句子节奏过于单一，以及 technically correct 但不像经济学家自然会写出来的表达。
+不要为了“去 AI 味”刻意口语化、制造不规则表达或替换领域内正常的标准写法。只修改真正影响 clarity、precision、flow 或 professional tone 的地方，并保护原有 substantive meaning。
+~~~
+
 ### Pre-Submission Robustness Adjudication {#prompt-pre-submission-robustness}
 
 <p class="prompt-description">投稿前裁决必补、可选与应停止的检验。</p>
