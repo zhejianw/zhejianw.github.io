@@ -921,6 +921,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 核对 manuscript 及 Highlights 等 submission materials 中所有重复出现的关键数字。确保 Title、Abstract、Introduction、Results、Conclusion 以及其他位置对同一 finding 的样本、estimand、单位、基准、绝对/相对幅度和 rounding 完全一致；即使采用不同表达方式，也不能让读者得到不同的数量级理解。以 authoritative results / outputs 为准。
 ~~~
 
+### Precision & Rounding Audit {#prompt-precision-rounding-audit}
+
+<p class="prompt-description">统一全文和投稿材料的数字精度规则，并排查 rounding 导致的表观矛盾。</p>
+
+**推荐模式：High**
+
+~~~text
+检查全文数字精度和 rounding 是否一致、合理。相同类型的 estimates、standard errors、means、p-values 和 percentages 在正文、tables / figures、appendix 与 submission materials 中应遵循稳定的 precision convention；必要时可以因量纲、数值大小或识别需求使用不同小数位，但这种差异应有清晰理由，不能显得随意。特别排查同一结果因不同 rounding 而在不同位置看起来不一致。
+~~~
+
 ### Terminology & Notation Audit {#prompt-terminology-notation}
 
 <p class="prompt-description">统一术语、缩写和数学符号的定义与使用。</p>
