@@ -162,9 +162,11 @@ async function main() {
         .slice(0, 8));
       throw new Error(`${viewport.name}: horizontal page overflow is ${overflow}px; offenders: ${JSON.stringify(offenders)}`);
     }
-    await page.screenshot({
-      path: path.join(screenshotDir, `prompt-library-${viewport.name}.png`),
-      fullPage: false,
+    await page.locator(".taste-page-hero").screenshot({
+      path: path.join(screenshotDir, `prompt-library-${viewport.name}-hero.png`),
+    });
+    await page.locator(".prompt-card").first().screenshot({
+      path: path.join(screenshotDir, `prompt-library-${viewport.name}-first-card.png`),
     });
   }
 
