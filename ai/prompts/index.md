@@ -73,7 +73,7 @@ last_updated: 2026-08-28
 
 短、开放，适合快速扫描。需要系统裁决时，使用后面的 Deep Audits。
 
-### Q1 · Figure / Table {#prompt-table-figure-general-audit}
+### Q1A · Figure / Table {#prompt-table-figure-general-audit}
 
 <p class="prompt-description">全面优化单个图表的正确性、排版与可读性。</p>
 
@@ -81,6 +81,16 @@ last_updated: 2026-08-28
 
 ~~~text
 考虑到读者受众是《期刊名》，从正确性、美观、排版、简洁、无异议、自洽、方便读者理解、最优叙事等角度，包括标题、notes、里面的数学符号、缩写符号等等。
+~~~
+
+### Q1B · Interpretable Magnitudes {#prompt-interpretable-magnitudes}
+
+<p class="prompt-description">选择读者可直接解释、且不改变 estimand 的主文结果尺度。</p>
+
+**推荐模式：High；涉及非线性模型或 estimand 判断时使用 Extra High**
+
+~~~text
+主文 tables / figures 优先用读者可以直接解释的经济量级呈现结果。原始系数已有自然含义时直接展示；否则在不改变 estimand 的前提下，优先转换为有意义的绝对变化、百分点 / 百分比，或相对于清晰基准均值的幅度。技术性尺度可以保留在必要处或 appendix，不要为了统一格式牺牲可解释性。
 ~~~
 
 ### Q2 · Headings {#prompt-heading-audit}
