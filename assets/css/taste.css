@@ -747,7 +747,7 @@ body.taste-site {
   overflow-x: hidden;
 }
 
-.is-prompt-library .taste-main { overflow-x: clip; }
+.is-prompt-library .taste-main { overflow-x: visible; }
 
 .taste-page {
   width: 100%;
