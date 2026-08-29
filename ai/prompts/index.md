@@ -370,6 +370,16 @@ discussion可能也需要适当地与最接近的文献互动，讨论与其关�
 **为什么这个 design 能回答 research question。**
 ~~~
 
+### Identification Assumptions & Evidence Audit {#prompt-identification-assumptions-evidence}
+
+<p class="prompt-description">把核心识别假设映射到经济学家会期待的检验、诊断与支持证据。</p>
+
+**推荐模式：Extra High；用于最终识别裁决时使用 Pro**
+
+~~~text
+这篇研究的 identification 依赖什么关键假设？按照 applied microeconomics 的常规标准，经济学家通常会期待看到哪些对应检验、诊断或证据？我们目前是否已经做了，是否做对了，是否还有真正重要的缺口。
+~~~
+
 ### Results Narrative {#prompt-results-narrative}
 
 <p class="prompt-description">以研究问题为主线重组结果章节叙事。</p>
