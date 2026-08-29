@@ -10,7 +10,7 @@ prompt_library: true
 prompt_layer: setup
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-28
+last_updated: 2026-08-29
 ---
 
 <style>
@@ -34,6 +34,32 @@ last_updated: 2026-08-28
 </style>
 
 {% include prompt-layer-tabs.html %}
+
+## Setup Prompt 0 · Idea Feasibility Gate {#idea-feasibility-gate}
+
+<p class="prompt-description">把初步研究想法发展为可核验的 proposal，并作出是否立项的明确裁决。</p>
+
+**推荐模式：Pro**
+
+~~~text
+下面只有一个初步 research idea。请把它发展成一份足以判断“值不值得真正开项目”的 applied micro research proposal。
+
+**Idea：<一句话 research idea>**
+
+请实际检索并核实相关政策、institutional setting、closest literature 和数据来源，不要凭印象补事实、文献或数据可得性。
+
+重点回答：
+
+1. 最强的 research question 是什么，为什么经济学上值得研究；
+2. closest literature 做到了哪里，本文最可能的 substantive contribution 是什么，能与哪些重要或经典文献对话；
+3. 最可信的 identification strategy 是什么，核心 identifying assumptions 和主要 threats 是什么；
+4. 为实现最强设计，理想数据是什么；现实中目前能获得什么。逐项说明数据来源、时间/空间粒度、可链接性、公开程度、获取方式、价格和申请难度，并区分 **必须存在 / 重要增强 / nice-to-have**；
+5. 在现有数据条件下，最强可执行版本是什么；如果关键数据不存在，是否有可信的下位替代，还是应该直接停止；
+6. 预期可能出现哪些 substantively different findings，以及不同 findings 会怎样改变 contribution 和 publication ceiling；
+7. 综合 idea、identification、data feasibility 和 literature，判断 **maximum plausible ceiling、合理投稿目标和最优投稿路径**。
+
+不要为了把 idea 做成论文而强行乐观。明确区分 **已核实事实、合理推断和目前未知**。最后给出一个明确裁决：**值得立即推进 / 先验证关键数据后再决定 / 暂不值得做**，并指出下一步最有信息价值的少数行动。
+~~~
 
 ## Setup Prompt 1 · Workspace Bootstrap {#project-workspace-bootstrap}
 
