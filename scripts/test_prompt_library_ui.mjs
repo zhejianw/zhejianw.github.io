@@ -60,7 +60,10 @@ async function main() {
 
   const browser = await chromium.launch({ headless: true });
   activeBrowser = browser;
-  const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 1000 },
+    reducedMotion: "reduce",
+  });
   // Jekyll emits canonical absolute asset URLs. Route those requests back to
   // the just-built local artifact so the test never exercises the live site.
   await context.route("https://zhejianwang.com/**", async (route) => {
