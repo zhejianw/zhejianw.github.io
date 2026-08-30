@@ -19,6 +19,7 @@ OUTPUT = ROOT / "assets" / "data" / "prompt-index.json"
 LAYERS = (
     ("Setup", ROOT / "ai" / "prompts" / "setup" / "index.md", "/ai/prompts/setup/"),
     ("Notes", ROOT / "ai" / "prompts" / "notes" / "index.md", "/ai/prompts/notes/"),
+    ("Routing", ROOT / "ai" / "prompts" / "routing" / "index.md", "/ai/prompts/routing/"),
     ("Brief", ROOT / "ai" / "prompts" / "brief" / "index.md", "/ai/prompts/brief/"),
     ("Manuscript", ROOT / "ai" / "prompts" / "index.md", "/ai/prompts/"),
     ("Submission", ROOT / "ai" / "prompts" / "submission" / "index.md", "/ai/prompts/submission/"),

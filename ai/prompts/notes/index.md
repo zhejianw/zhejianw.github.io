@@ -321,3 +321,9 @@ last_updated: 2026-08-30
 
 > 对所有高价值 research branches，继续探索已经很难显著改变我们对研究问题的判断。
 ~~~
+
+<nav class="prompt-workflow" aria-label="Continue from Notes">
+  <strong>Next</strong>
+  <a href="/ai/prompts/routing/">Literature-informed Routing</a><span class="workflow-arrow">→</span>
+  <a href="/ai/prompts/brief/">Brief Layer</a>
+</nav>

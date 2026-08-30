@@ -133,6 +133,90 @@
     "url": "/ai/prompts/notes/#notes-cycle"
   },
   {
+    "layer": "Routing",
+    "title": "Routing Prompt 0 · Literature Triage",
+    "description": "先给文献分配阅读预算，只保留可能改变最终 Brief 的高价值论文。",
+    "id": "routing-literature-triage",
+    "url": "/ai/prompts/routing/#routing-literature-triage"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 1 · Close Reading",
+    "description": "逐篇精读真正重要的论文，并把 binding implications 落盘。",
+    "id": "routing-close-reading",
+    "url": "/ai/prompts/routing/#routing-close-reading"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 2 · Literature Synthesis → Brief Input Pack",
+    "description": "把完整 evidence、design 与 closest literature 压缩成供 Pro 裁决的输入包。",
+    "id": "routing-brief-input-pack",
+    "url": "/ai/prompts/routing/#routing-brief-input-pack"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 3 · Evidence / Brief Router",
+    "description": "核心裁决器：决定哪些问题已足够、哪些值得回到 evidence、哪些应收窄或停止。",
+    "id": "routing-evidence-brief-router",
+    "url": "/ai/prompts/routing/#routing-evidence-brief-router"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 4A · Existing Data → Targeted Notes",
+    "description": "只用现有数据解决会改变 Brief 的少数 uncertainty，不重开全部 specification space。",
+    "id": "routing-existing-data-targeted-notes",
+    "url": "/ai/prompts/routing/#routing-existing-data-targeted-notes"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 4B · New Data → Feasibility",
+    "description": "新增数据前先做 value-of-information 与现实可行性判断。",
+    "id": "routing-new-data-feasibility",
+    "url": "/ai/prompts/routing/#routing-new-data-feasibility"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 4C · New Data → Acquisition / Integration",
+    "description": "按已裁决的最小方案获取并接入数据，再回到 Notes 回答原始问题。",
+    "id": "routing-new-data-acquisition",
+    "url": "/ai/prompts/routing/#routing-new-data-acquisition"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 5 · Evidence Return → Pro",
+    "description": "把本轮针对性证据压缩成可重新交给 Router 的裁决材料。",
+    "id": "routing-evidence-return",
+    "url": "/ai/prompts/routing/#routing-evidence-return"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 6 · Candidate Brief",
+    "description": "在 paper-level evidence 足够后，比较 competing identities 并设计最强可辩护论文。",
+    "id": "routing-candidate-brief",
+    "url": "/ai/prompts/routing/#routing-candidate-brief"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 7 · Reverse Audit of Candidate Brief",
+    "description": "用完整本地 evidence 与 literature 反查 Pro 压缩世界中的遗漏、误读与过度 claim。",
+    "id": "routing-candidate-brief-reverse-audit",
+    "url": "/ai/prompts/routing/#routing-candidate-brief-reverse-audit"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 8 · Final Brief Lock",
+    "description": "解决候选 Brief 与本地反审计的冲突，锁定最终 authoritative research brief。",
+    "id": "routing-final-brief-lock",
+    "url": "/ai/prompts/routing/#routing-final-brief-lock"
+  },
+  {
+    "layer": "Routing",
+    "title": "Routing Prompt 9 · Materialize Final Brief",
+    "description": "把最终裁决落到唯一 current Brief，并同步项目阶段与跨 session 状态。",
+    "id": "routing-materialize-final-brief",
+    "url": "/ai/prompts/routing/#routing-materialize-final-brief"
+  },
+  {
     "layer": "Brief",
     "title": "Brief Prompt 1 · Paper Ceiling",
     "description": "从证据反推最强论文身份与合理发表上限。",

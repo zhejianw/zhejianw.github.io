@@ -92,21 +92,30 @@
       }
     }
 
-    if (firstPart.indexOf("Extra High") !== -1) {
+    var brandedModes = content.match(/(?:Fable|Opus)\s+(?:High\/Max|High|Max)/g) || [];
+    var hasBrandedMode = brandedModes.length > 0;
+
+    brandedModes.forEach(function (mode) {
+      addMode(mode.toLowerCase().replace(/[^a-z0-9]+/g, "-"), mode);
+    });
+
+    if (content.indexOf("GPT Pro") !== -1) {
+      addMode("gpt-pro", "GPT Pro");
+    } else if (!hasBrandedMode && firstPart.indexOf("Extra High") !== -1) {
       addMode("extra-high", "Extra High");
-    } else if (firstPart.indexOf("Pro") !== -1) {
+    } else if (!hasBrandedMode && firstPart.indexOf("Pro") !== -1) {
       addMode("pro", "Pro");
-    } else if (firstPart.indexOf("High") !== -1) {
+    } else if (!hasBrandedMode && firstPart.indexOf("High") !== -1) {
       addMode("high", "High");
     }
 
-    if (content.indexOf("Extra High") !== -1) {
+    if (!hasBrandedMode && content.indexOf("Extra High") !== -1) {
       addMode("extra-high", "Extra High");
     }
-    if (content.indexOf("Pro") !== -1) {
+    if (!hasBrandedMode && content.indexOf("Pro") !== -1) {
       addMode("pro", "Pro");
     }
-    if (content.replace(/Extra High/g, "").indexOf("High") !== -1) {
+    if (!hasBrandedMode && content.replace(/Extra High/g, "").indexOf("High") !== -1) {
       addMode("high", "High");
     }
     if (/联网|在线搜索|搜索并核实|检索并核实/.test(content)) {

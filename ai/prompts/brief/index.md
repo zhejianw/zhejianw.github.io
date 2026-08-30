@@ -6,7 +6,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-27
+last_updated: 2026-08-30
 ---
 
 {% include prompt-layer-tabs.html %}
@@ -14,6 +14,7 @@ last_updated: 2026-08-27
 <nav class="prompt-workflow" aria-label="Brief workflow">
   <strong>Workflow</strong>
   <a href="/ai/prompts/notes/">Evidence</a><span class="workflow-arrow">→</span>
+  <a href="/ai/prompts/routing/">Routing / Brief Lock</a><span class="workflow-arrow">→</span>
   <a href="#paper-ceiling">Ceiling</a><span class="workflow-arrow">→</span>
   <a href="#journal-mapping">Journal</a><span class="workflow-arrow">→</span>
   <a href="#journal-requirements">Requirements</a><span class="workflow-arrow">→</span>

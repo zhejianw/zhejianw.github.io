@@ -10,6 +10,7 @@ const screenshotDir = process.env.PROMPT_LIBRARY_SCREENSHOT_DIR || "tmp/prompt-l
 const layers = [
   ["Setup", "/ai/prompts/setup/"],
   ["Notes", "/ai/prompts/notes/"],
+  ["Routing", "/ai/prompts/routing/"],
   ["Brief", "/ai/prompts/brief/"],
   ["Manuscript", "/ai/prompts/"],
   ["Submission", "/ai/prompts/submission/"],
@@ -80,7 +81,7 @@ async function main() {
     await openPromptPage(page, pathname);
     const cardCount = await page.locator(".prompt-card").count();
     assert(cardCount === expectedCounts[layer], `${layer}: expected ${expectedCounts[layer]} cards, found ${cardCount}`);
-    assert(await page.locator(".prompt-layer-nav a, .prompt-layer-nav .is-current").count() === 5, `${layer}: layer nav must contain five layers`);
+    assert(await page.locator(".prompt-layer-nav a, .prompt-layer-nav .is-current").count() === 6, `${layer}: layer nav must contain six layers`);
     assert(await page.locator(".prompt-layer-find").count() === 1, `${layer}: sticky Find trigger missing`);
     assert(await page.locator(".prompt-card .prompt-copy-button").count() === cardCount, `${layer}: each card needs one Copy Prompt button`);
     assert(await page.locator(".prompt-card .prompt-link-button").count() === cardCount, `${layer}: each card needs one Copy Link button`);
