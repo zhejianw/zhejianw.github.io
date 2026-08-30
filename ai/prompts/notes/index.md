@@ -6,10 +6,66 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-27
+last_updated: 2026-08-29
 ---
 
 {% include prompt-layer-tabs.html %}
+
+## Notes Prompt 0A · Initial Empirical Design Map {#initial-empirical-design-map}
+
+<p class="prompt-description">大规模探索前，从本地材料建立数据、设定、识别与实施决策地图。</p>
+
+**推荐模式：Extra High；Questions for GPT Pro 应再交由 Pro 单独裁决**
+
+~~~text
+在大规模展开 Notes / Evidence exploration 之前，先基于当前 data、code 和 documentation 快速建立一份 empirical design map。实际检查本地文件，不要凭印象总结，也暂时不要为了“探索完整”大量跑 regressions。
+
+重点弄清楚：
+
+1. **Data / variables**
+   - 目前有哪些数据源，各自位于哪里；
+   - 有哪些重要 variables，它们来自哪个数据库；
+   - observation 的最小单位、可聚合层级、时间范围、主要 identifiers 和可链接关系是什么；
+   - 哪些变量存在 coverage、missingness、时间或样本限制。
+2. **Specification space**
+   - 最小、最透明的 regression / descriptive relationship 是什么；
+   - 合理的 FE、controls、weights / inference choices 大致有哪些；
+   - 哪些 controls 比较干净，哪些可能是 endogenous / bad controls 但在特定问题下仍值得考虑；
+   - 每个重要 FE / control 实际可能处理什么 concern，以及它本身可能带来什么问题，包括改变 identifying variation、estimand 或因为 missingness 改变 sample。
+3. **Identification**
+   - 基于现有 institutional setting 和 data，最自然的 candidate identification strategies / estimands 是什么；
+   - 哪些结果最多只能 descriptive，哪些在额外 assumptions 下可能支持 causal interpretation；
+   - 目前真正需要 methodological judgment、而不是靠继续查看本地文件就能解决的问题是什么。
+4. **Implementation decisions**
+   - 当前 code / data construction 中有哪些 coding、merge、timing、sample、variable construction 或 aggregation decisions 会实质影响 specification、estimand 或 interpretation；
+   - 标出相关代码和文件位置，以及尚未确定的选择。
+
+最后单独形成一个 **Questions for GPT Pro** 部分：只提出真正需要高级经济学判断、且答案可能改变后续 Notes exploration 的少数问题。每个问题都附上足够的本地事实，使一个没有本次 Claude 对话上下文的 GPT Pro 可以直接判断。不要把普通 coding/debugging 问题塞进去。
+
+目标不是提前形成 paper story，而是让我们在开始大规模探索前清楚知道：**手里到底有什么、合理的 empirical space 有多大、哪些选择只是工程问题、哪些真正需要经济学裁决的问题。**
+~~~
+
+## Notes Prompt 0B · Empirical Design Map Update {#update-empirical-design-map}
+
+<p class="prompt-description">根据最新数据、代码与输出刷新设计地图，只保留当前有效判断。</p>
+
+**推荐模式：Extra High；涉及关键识别或 estimand 重判时可使用 Pro**
+
+~~~text
+更新现有 `empirical_design_map.md`。先重新检查当前 data、code、documentation 和主要 outputs，不要默认旧 map 仍然正确。
+
+重点判断：
+
+- 数据源、variables、granularity、time coverage、identifiers、linkage 或 missingness 是否发生变化；
+- 当前 specification space 是否因为新的 data construction、sample、FE、controls、weights、inference 或 coding decisions 而改变；
+- 旧 map 中关于 identifying variation、candidate estimands、causal / descriptive interpretation 或 implementation constraints 的判断，哪些仍成立，哪些需要修正、降级或删除；
+- 是否出现新的会实质影响 specification、estimand 或 interpretation 的 coding / merge / timing / aggregation decisions；
+- 原有 `Questions for GPT Pro` 中哪些已经解决、哪些已经失效、哪些新的问题现在值得升级。
+
+只更新真正改变的内容，不要把文件无限扩张成 changelog。保留当前最准确的 design map，并在必要时简短注明重要判断为何改变。
+
+目标是让当前 map 始终准确反映：**现在手里有什么、合理 empirical space 是什么、哪些事实已经确定、哪些经济学判断仍需要裁决。**
+~~~
 
 ## Notes Prompt 1 · Single-Prompt Exploration {#case-specific-notes-exploration}
 

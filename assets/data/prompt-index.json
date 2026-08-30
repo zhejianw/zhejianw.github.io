@@ -36,6 +36,20 @@
   },
   {
     "layer": "Notes",
+    "title": "Notes Prompt 0A · Initial Empirical Design Map",
+    "description": "大规模探索前，从本地材料建立数据、设定、识别与实施决策地图。",
+    "id": "initial-empirical-design-map",
+    "url": "/ai/prompts/notes/#initial-empirical-design-map"
+  },
+  {
+    "layer": "Notes",
+    "title": "Notes Prompt 0B · Empirical Design Map Update",
+    "description": "根据最新数据、代码与输出刷新设计地图，只保留当前有效判断。",
+    "id": "update-empirical-design-map",
+    "url": "/ai/prompts/notes/#update-empirical-design-map"
+  },
+  {
+    "layer": "Notes",
     "title": "Notes Prompt 1 · Single-Prompt Exploration",
     "description": "围绕具体研究问题扩展可复用证据层。",
     "id": "case-specific-notes-exploration",
