@@ -253,10 +253,26 @@ async function main() {
     visualPage.setDefaultTimeout(10000);
     await visualPage.setViewportSize({ width: 1440, height: 1000 });
     try {
-      await openPromptPage(visualPage, deepLink.pathname);
+      const response = await visualPage.goto(`${baseUrl}${deepLink.pathname}`, { waitUntil: "load" });
+      assert(response && response.ok(), `${deepLink.lang}: deep link returned ${response ? response.status() : "no response"}`);
       const target = visualPage.locator('[data-prompt-id="prompt-results-narrative"]');
-      await target.scrollIntoViewIfNeeded();
-      await target.screenshot({ path: path.join(screenshotDir, `prompt-library-${deepLink.lang}-deep-link.png`) });
+      await target.waitFor();
+      assert(await target.locator("[data-prompt-body]").isVisible(), `${deepLink.lang}: direct deep link did not reveal its prompt body`);
+      await visualPage.waitForTimeout(100);
+      const deepLinkPosition = await visualPage.evaluate(() => {
+        const heading = document.getElementById("prompt-results-narrative");
+        const masthead = document.querySelector(".masthead");
+        const layerNav = document.querySelector(".prompt-layer-nav");
+        return {
+          headingTop: heading ? heading.getBoundingClientRect().top : -1,
+          coveringBottom: Math.max(
+            masthead ? masthead.getBoundingClientRect().bottom : 0,
+            layerNav ? layerNav.getBoundingClientRect().bottom : 0,
+          ),
+        };
+      });
+      assert(deepLinkPosition.headingTop >= deepLinkPosition.coveringBottom - 1, `${deepLink.lang}: sticky navigation obscures the deep-linked heading (${JSON.stringify(deepLinkPosition)})`);
+      await visualPage.screenshot({ path: path.join(screenshotDir, `prompt-library-${deepLink.lang}-deep-link.png`) });
     } finally {
       await visualPage.close();
     }
