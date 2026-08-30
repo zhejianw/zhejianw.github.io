@@ -129,6 +129,21 @@ defaults:
       layout: single
       author_profile: false
       lang: zh-CN
+      prompt_lang: zh
+      prompt_library: true
+      prompt_collapse: true
+      noindex: true
+      sitemap: false
+      visibility: unlisted-public
+      status: current
+      analytics: false
+  - scope:
+      path: "ai/prompts/en"
+    values:
+      layout: single
+      author_profile: false
+      lang: en
+      prompt_lang: en
       prompt_library: true
       prompt_collapse: true
       noindex: true

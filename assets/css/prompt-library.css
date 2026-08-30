@@ -1,3 +1,51 @@
+html[lang^="zh"] { --prompt-description-label: "定位"; }
+html[lang^="en"] { --prompt-description-label: "Purpose"; }
+
+.prompt-language-switch {
+  display: flex;
+  width: fit-content;
+  margin: 0 0 0.7rem auto;
+  align-items: center;
+  gap: 0.55rem;
+  color: #565d6c;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.prompt-language-switch a,
+.prompt-language-switch .is-current {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+.prompt-language-switch a {
+  color: #67578f;
+  text-underline-offset: 0.2em;
+}
+
+.prompt-language-switch a:hover,
+.prompt-language-switch a:focus-visible {
+  color: #423762;
+  text-decoration-thickness: 2px;
+}
+
+.prompt-language-switch .is-current {
+  color: #282432;
+}
+
+.prompt-language-separator {
+  color: #c5c0cd;
+}
+
+.prompt-route-fallback {
+  margin-left: 0.3em;
+  font-size: 0.62em;
+  opacity: 0.72;
+}
+
 .prompt-layer-nav {
   position: sticky;
   top: 70px;
@@ -251,7 +299,7 @@
 }
 
 .prompt-description::before {
-  content: "定位";
+  content: var(--prompt-description-label, "Purpose");
   display: inline-block;
   margin-right: 0.55em;
   padding: 0.1em 0.48em;
@@ -512,6 +560,28 @@
 .is-prompt-library {
   --taste-body: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   --taste-display: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+.is-prompt-library .prompt-language-switch {
+  color: var(--taste-ink-soft, #46525b);
+  font-family: var(--taste-body, "Segoe UI", sans-serif);
+}
+
+.is-prompt-library .prompt-language-switch a {
+  color: var(--taste-red-dark, #7d281f);
+}
+
+.is-prompt-library .prompt-language-switch a:hover,
+.is-prompt-library .prompt-language-switch a:focus-visible {
+  color: var(--taste-blue, #153d59);
+}
+
+.is-prompt-library .prompt-language-switch .is-current {
+  color: var(--taste-ink, #10161b);
+}
+
+.is-prompt-library .prompt-language-separator {
+  color: var(--taste-line, rgba(16, 22, 27, 0.18));
 }
 
 .is-prompt-library .prompt-layer-nav,
@@ -1133,12 +1203,21 @@
 }
 
 @media (max-width: 600px) {
+  .prompt-language-switch {
+    margin-right: 0;
+    margin-bottom: 0.45rem;
+  }
+
   .prompt-command-help { display: none; }
   .prompt-command-panel { padding: 18px; }
   .prompt-command-dialog { max-height: calc(100dvh - 24px); }
 }
 
 @media print {
+  .prompt-language-switch {
+    display: none !important;
+  }
+
   .prompt-command-trigger,
   .prompt-layer-find,
   .prompt-command-dialog {

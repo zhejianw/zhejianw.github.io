@@ -31,6 +31,7 @@ jobs:
           python scripts/render_public_ai.py --check
           python scripts/build_prompt_index.py --check
           python scripts/public_repo_guard.py
+          python scripts/check_prompt_translation_parity.py
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5

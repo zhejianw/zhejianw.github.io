@@ -28,4 +28,5 @@ jobs:
         run: |
           python3 scripts/build_prompt_index.py --check
           python3 scripts/public_repo_guard.py
+          python3 scripts/check_prompt_translation_parity.py
 

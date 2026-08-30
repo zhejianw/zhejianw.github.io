@@ -1,0 +1,31 @@
+# Canonical route registry for the bilingual Prompt Library.
+# Order is intentional and drives both language variants of the layer tabs.
+- key: setup
+  label: Setup
+  zh: /ai/prompts/setup/
+  en: /ai/prompts/en/setup/
+
+- key: notes
+  label: Notes
+  zh: /ai/prompts/notes/
+  en: /ai/prompts/en/notes/
+
+- key: routing
+  label: Routing
+  zh: /ai/prompts/routing/
+  en: /ai/prompts/en/routing/
+
+- key: brief
+  label: Brief
+  zh: /ai/prompts/brief/
+  en: /ai/prompts/en/brief/
+
+- key: manuscript
+  label: Manuscript
+  zh: /ai/prompts/
+  en: /ai/prompts/en/
+
+- key: submission
+  label: Submission
+  zh: /ai/prompts/submission/
+  en: /ai/prompts/en/submission/

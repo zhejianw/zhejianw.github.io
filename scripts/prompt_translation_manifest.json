@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "canonical_language": "zh-CN",
+  "translation_language": "en",
+  "canonical_authoring_direction": "Chinese-first",
+  "layers": [
+    {
+      "key": "setup",
+      "source": "ai/prompts/setup/index.md",
+      "translation": "ai/prompts/en/setup/index.md",
+      "source_route": "/ai/prompts/setup/",
+      "translation_route": "/ai/prompts/en/setup/",
+      "reviewed_source_blob_sha": "be3ccfa1d7d7dd6501c8e52b16de0b5bbc67a6f6",
+      "prompt_blocks": 5,
+      "explicit_anchors": 5
+    },
+    {
+      "key": "notes",
+      "source": "ai/prompts/notes/index.md",
+      "translation": "ai/prompts/en/notes/index.md",
+      "source_route": "/ai/prompts/notes/",
+      "translation_route": "/ai/prompts/en/notes/",
+      "reviewed_source_blob_sha": "62a61dd928bc43b33d60b9638dbdf94c2793869f",
+      "prompt_blocks": 14,
+      "explicit_anchors": 15
+    },
+    {
+      "key": "routing",
+      "source": "ai/prompts/routing/index.md",
+      "translation": "ai/prompts/en/routing/index.md",
+      "source_route": "/ai/prompts/routing/",
+      "translation_route": "/ai/prompts/en/routing/",
+      "reviewed_source_blob_sha": "d3410b57ebfe379adb9921b47ce3c9bb7840d21a",
+      "prompt_blocks": 12,
+      "explicit_anchors": 12
+    },
+    {
+      "key": "brief",
+      "source": "ai/prompts/brief/index.md",
+      "translation": "ai/prompts/en/brief/index.md",
+      "source_route": "/ai/prompts/brief/",
+      "translation_route": "/ai/prompts/en/brief/",
+      "reviewed_source_blob_sha": "45f156db1b8c0265293f6448e80292cff7d3ff81",
+      "prompt_blocks": 6,
+      "explicit_anchors": 6
+    },
+    {
+      "key": "manuscript",
+      "source": "ai/prompts/index.md",
+      "translation": "ai/prompts/en/index.md",
+      "source_route": "/ai/prompts/",
+      "translation_route": "/ai/prompts/en/",
+      "reviewed_source_blob_sha": "760240e266a49475d2bbc3af065fc183c8e22743",
+      "prompt_blocks": 51,
+      "explicit_anchors": 60
+    },
+    {
+      "key": "submission",
+      "source": "ai/prompts/submission/index.md",
+      "translation": "ai/prompts/en/submission/index.md",
+      "source_route": "/ai/prompts/submission/",
+      "translation_route": "/ai/prompts/en/submission/",
+      "reviewed_source_blob_sha": "3e44eb736412fb933b94cb5189be1640fe12de2e",
+      "prompt_blocks": 3,
+      "explicit_anchors": 3
+    }
+  ]
+}

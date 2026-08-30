@@ -20,7 +20,7 @@ layout: default
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
         {% if page_modified %}<p class="taste-page-hero__reviewed">Last reviewed: <time datetime="{{ page_modified | date: '%Y-%m-%d' }}">{{ page_modified | date: "%B %d, %Y" }}</time></p>{% endif %}
-        {% if page.visibility == 'unlisted-public' %}<p class="taste-page-hero__reviewed">公开直链、未列入导航；noindex 不等于访问控制。</p>{% endif %}
+        {% if page.visibility == 'unlisted-public' %}<p class="taste-page-hero__reviewed">{% if page.prompt_lang == 'en' %}Public by direct URL and omitted from navigation; noindex is not access control.{% else %}公开直链、未列入导航；noindex 不等于访问控制。{% endif %}</p>{% endif %}
         
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
@@ -34,6 +34,7 @@ layout: default
 
     <div class="page__inner-wrap taste-shell taste-content-shell">
       <section class="page__content" itemprop="text">
+        {% if page.prompt_library and page.prompt_lang != 'en' %}{% include prompt-language-switch.html %}{% endif %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}

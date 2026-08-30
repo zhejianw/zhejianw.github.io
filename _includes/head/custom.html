@@ -19,6 +19,7 @@
 {% if page.prompt_library %}
 <!-- Do not disclose unlisted Prompt Library paths to outbound sites. -->
 <meta name="referrer" content="no-referrer">
+{% include prompt-alternate-links.html %}
 {% endif %}
 
 <!-- Editorial typography -->
@@ -45,6 +46,7 @@
 window.promptLibraryConfig = {
   collapsePrompts: {% if page.prompt_collapse %}true{% else %}false{% endif %},
   currentLayer: {{ page.prompt_layer | jsonify }},
+  currentLang: {{ page.prompt_lang | default: 'zh' | jsonify }},
   crossLayerIndexUrl: {{ '/assets/data/prompt-index.json' | relative_url | jsonify }}
 };
 </script>

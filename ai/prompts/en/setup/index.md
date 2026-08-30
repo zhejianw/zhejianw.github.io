@@ -1,0 +1,266 @@
+---
+layout: single
+title: "Prompt Library · Project Setup Layer"
+permalink: /ai/prompts/en/setup/
+lang: en
+prompt_lang: en
+prompt_layer: setup
+translation_key: setup
+translation_of: /ai/prompts/setup/
+source_path: ai/prompts/setup/index.md
+source_blob_sha: be3ccfa1d7d7dd6501c8e52b16de0b5bbc67a6f6
+translation_status: synced
+author_profile: false
+prompt_library: true
+prompt_collapse: true
+analytics: false
+noindex: true
+sitemap: false
+visibility: unlisted-public
+status: current
+last_updated: 2026-08-30
+---
+
+{% include prompt-language-switch.html %}
+{% include prompt-layer-tabs.html %}
+
+## Setup Prompt 0 · Idea Feasibility Gate {#idea-feasibility-gate}
+
+<p class="prompt-description">Develop a preliminary research idea into a verifiable proposal and make a clear go / wait / stop decision.</p>
+
+**Recommended mode: Pro**
+
+~~~text
+Below is only a preliminary research idea. Develop it into an applied micro research proposal that is detailed enough to determine whether the project is genuinely worth opening.
+
+**Idea: <one-sentence research idea>**
+
+Actually search for and verify the relevant policy, institutional setting, closest literature, and data sources. Do not fill gaps about facts, papers, or data availability from memory.
+
+Focus on:
+
+1. What is the strongest research question, and why does it matter economically?
+2. How far has the closest literature already gone? What is the paper’s most plausible substantive contribution, and which important or classic literatures could it speak to?
+3. What is the most credible identification strategy? What are the central identifying assumptions and main threats?
+4. What would the ideal data look like for the strongest design, and what can realistically be obtained now? For each source, describe its origin, temporal and spatial granularity, linkability, public-access status, acquisition route, price, and application difficulty, and classify it as **required / important enhancement / nice-to-have**.
+5. Given currently available data, what is the strongest executable version? If a key dataset does not exist, is there a credible lower-quality substitute, or should the project stop?
+6. What substantively different findings could emerge, and how would each alter the contribution and publication ceiling?
+7. Taking the idea, identification, data feasibility, and literature together, assess the **maximum plausible ceiling, realistic target journals, and optimal submission path**.
+
+Do not force an optimistic conclusion merely to turn the idea into a paper. Clearly distinguish **verified facts, reasonable inferences, and what remains unknown**. End with a direct decision: **advance immediately / verify a key data condition before deciding / not currently worth pursuing**, and identify the small number of next actions with the greatest information value.
+~~~
+
+## Setup Prompt 1 · Workspace Bootstrap {#project-workspace-bootstrap}
+
+<p class="prompt-description">Create the standard directory structure, Claude operating rules, and cross-session project-state entry points.</p>
+
+**Recommended mode: High; use Extra High when an existing directory is complex**
+
+~~~text
+You are now in the root directory of a new research project. First establish and initialize the project workspace. Do not begin substantive research yet.
+
+## Fixed directory structure
+
+Create the following directories. This is the project’s authoritative directory structure:
+
+```text
+01_inbox/
+
+02_data_raw/
+  01_original/
+  02_external/
+  03_documentation/
+
+03_code/
+  01_setup/
+  02_cleaning/
+  03_analysis/
+  04_validation/
+  05_exhibits/
+  99_legacy/
+
+04_data_final/
+  01_analysis/
+  02_auxiliary/
+  03_dictionary/
+
+05_outputs/
+  01_logs/
+  02_tables/
+  03_figures/
+  04_diagnostics/
+  99_scratch/
+
+06_literature/
+  01_papers/
+  02_bibliography/
+  03_notes/
+  04_search_records/
+
+07_notes/
+  01_evidence/
+  02_branches/
+  03_audits/
+  04_dead_ends/
+  05_releases/
+
+08_brief/
+  99_backups/
+
+09_manuscript/
+  01_current/
+  99_backups/
+
+10_submission/
+  01_journal_requirements/
+  02_current_package/
+  03_correspondence/
+  04_reviews_rr/
+  99_previous_submissions/
+
+99_archive/
+  01_retired/
+  02_snapshots/
+```
+
+## Directory and artifact rules
+
+- Do not casually add, rename, or reorganize top-level directories. Temporary materials belong in the existing scratch / archive locations.
+- `01_inbox/` is the entry point for new materials. Maintain `INBOX_LOG.md` to record the source and destination of important incoming files.
+- Preserve original inputs in `02_data_raw/`. In principle, the analysis data in `04_data_final/` should be reproducible through code in `03_code/`.
+- Important evidence should be traceable to the corresponding data, code, log, and output.
+- `07_notes/` is an append-only evidence history. Informative positive, null, unstable, contradictory, failed, and dead-end evidence may all be retained.
+- `08_brief/` is a living layer in which the evidence is adjudicated into the final paper identity, claim hierarchy, and evidence architecture. Maintain one authoritative current brief.
+- `09_manuscript/01_current/` contains the single authoritative manuscript. Use LaTeX and maintain a successfully compiled current PDF. Older versions belong in backups.
+- Keep submission and R&R materials together in `10_submission/`.
+
+## Create a root-level `CLAUDE.md`
+
+`CLAUDE.md` is only for Claude Code and must remain short. Record the following durable working principles:
+
+- Communicate with me primarily in Chinese. Formal research artifacts should be in English unless the original language must be preserved.
+- Stata is the primary empirical environment; the manuscript is written in LaTeX.
+- At the beginning of each new substantive work session, first read the root-level `PROJECT.md` and `HANDOFF.md`, identify the current research stage, and then read only the small number of authoritative artifacts to which they point. Do not indiscriminately load the whole project.
+- The current filesystem, data, code, logs, and outputs take precedence over old conversations, old summaries, or superseded versions.
+- The project’s overall workflow is **Data / Analysis → Notes / Evidence → Brief → Manuscript → Submission / Replication**. These are working layers, not irreversible gates; new evidence may require returning to an earlier layer.
+- During Data / Analysis, focus on understanding the data, construction, and empirical possibilities. Do not lock in a paper story prematurely.
+- During Notes / Evidence, explore broadly and preserve informative positive, null, unstable, contradictory, and failed evidence. Do not selectively preserve results in anticipation of a future manuscript framing.
+- The Brief layer is where the strongest defensible paper identity, central claims, and evidence architecture are adjudicated from the evidence.
+- During the Manuscript layer, treat the authoritative Brief as the paper-level guide and the current evidence as the factual boundary. Maintain one current manuscript.
+- During Submission / Replication, use the current final manuscript and journal requirements as the governing references.
+- Information that will matter to future sessions should be written into the appropriate project artifact rather than left only in conversation context or model memory.
+- Comments from an external AI, a referee, or the user are inputs, not a mechanical execution list. First identify the underlying concern, then choose the most effective response that remains coherent with the paper as a whole.
+- After substantive manuscript revisions, keep the LaTeX project compilable and check the affected material for ripple effects.
+
+Do not put current results, the current paper story, session history, a literature summary, or extensive project detail into `CLAUDE.md`. Do not use `@PROJECT.md` or `@HANDOFF.md` to auto-import those files into `CLAUDE.md`; read them deliberately at the start of the work session instead.
+
+## Create a root-level `PROJECT.md`
+
+Use it as the project’s durable map, not as a research brief. Initialize:
+
+- project name;
+- one or two sentences describing the broad research scope;
+- current research stage;
+- authoritative entry points for data / code / outputs / notes / brief / manuscript / submission, clearly marking anything not yet established;
+- primary data sources and the raw → final → results reconstruction entry point, to be updated once established;
+- key software / environment information;
+- the roles of Notes / Brief / Manuscript and their authoritative-version rules;
+- my personal website: <https://zhejianwang.com/>, which should be consulted first for stable author, affiliation, and contact information;
+- any other genuinely durable, cross-session, project-specific information.
+
+Before a Brief has been established, do not hard-code a provisional central claim, mechanism, contribution, or publication framing into `PROJECT.md`. Once the Brief exists, `PROJECT.md` should link to the authoritative Brief rather than duplicate its contents.
+
+## Create a root-level `HANDOFF.md`
+
+Use it as the current working-state snapshot. Initialize:
+
+- current stage and immediate goal;
+- current authoritative files / code / outputs;
+- substantive work already completed;
+- current important decisions;
+- unresolved issues / blockers;
+- the small number of most sensible next actions;
+- the continuation point for any unfinished run or environment issue.
+
+`HANDOFF.md` records the present state, not the full history. Research evidence belongs in Notes, durable project rules in `PROJECT.md`, and Claude working rules in `CLAUDE.md`.
+
+First inspect the current directory so that existing valid files are not overwritten. After creating the missing structure and state files, stop. Do not begin substantive research.
+~~~
+
+## Setup Prompt 2 · Environment Bootstrap {#environment-bootstrap}
+
+<p class="prompt-description">Verify the empirical and writing environments and preserve the durable configuration.</p>
+
+**Recommended mode: High; use Extra High when environment invocation is failing**
+
+~~~text
+Initialize and record the project’s basic working environment and durable conventions:
+
+- **Stata** is the project’s primary empirical environment. Confirm that Stata can be invoked reliably from the current working directory. If it cannot, diagnose and resolve the executable, PATH, license, or required-package problem, and verify that a `.do` file can actually run.
+- Confirm that the **LaTeX** toolchain is available and actually compile a minimal `.tex` file into a PDF. Subsequent manuscripts must maintain compilable LaTeX source and a current PDF.
+- Record durable environment information and necessary dependencies concisely in `PROJECT.md`. Do not build a complex management system for this purpose.
+- Communicate with me primarily in Chinese, retaining English technical terms where useful. Formal project artifacts should be in English unless source-language material must be preserved.
+- Any state or decision that will matter to later sessions should be written into the appropriate existing project file rather than left only in the conversation.
+
+After verifying and recording the environment, stop. Do not begin substantive research.
+~~~
+
+## Setup Prompt 3 · Durable Project Map Refresh {#project-map-refresh}
+
+<p class="prompt-description">Keep `PROJECT.md` concise, accurate, and useful across sessions.</p>
+
+**Recommended mode: High; use Extra High when the project structure or durable state has changed substantially**
+
+~~~text
+Initialize or update the root-level `PROJECT.md` so that it accurately serves as the durable map of this research project.
+
+First infer the actual current state from the project files. Do not carry forward information that has become outdated. Record only information that will remain useful across multiple future sessions:
+
+- project name and broad research scope;
+- current research stage;
+- authoritative entry points for data, code, outputs, notes, brief, manuscript, journal requirements, and replication; do not invent entries that do not yet exist;
+- primary data sources, key identifiers / linkages, and the raw → final → results reconstruction entry point;
+- stable software environment and necessary dependencies;
+- the roles of Notes / Brief / Manuscript and their current-version rules;
+- any other genuinely stable, project-specific information that cannot be inferred easily from the current artifacts and will continue to matter.
+
+Keep it concise and centered on paths and facts.
+
+Do not turn `PROJECT.md` into a HANDOFF, research notes, a changelog, or a manuscript brief. Current estimates, significance, temporary branches, and what happened in the latest session do not belong here.
+
+During Notes / Evidence, retain only the broad research scope and do not lock in a paper identity prematurely. Once the Brief exists, the paper identity, central claims, contribution, and evidence architecture are governed by the authoritative Brief; `PROJECT.md` should record its exact path rather than duplicate it.
+
+If the existing `PROJECT.md` is already substantially correct, update only what has genuinely changed.
+~~~
+
+## Setup Prompt 4 · Session Handoff Refresh {#session-handoff-refresh}
+
+<p class="prompt-description">Complete context-dependent closing work before compression or a major stopping point, then leave a concise handoff for the next Claude session.</p>
+
+**Recommended mode: High; use Extra High when project state is complex or paths are dispersed**
+
+~~~text
+Initialize or update the root-level `HANDOFF.md` for the next Claude session, which will not have access to the present conversation context.
+
+Before writing the HANDOFF, first ask whether there is a small amount of high-value work that should be completed while the current session context is still intact—especially work that would be difficult to reconstruct reliably after compression or that would otherwise leave the project in an unnecessarily half-finished state. If such work exists and can be completed now, complete it first and then write the HANDOFF. Do not use this as a reason to open a new large research branch, run low-value analysis, or expand without a clear boundary.
+
+Then read the current `PROJECT.md` and the artifacts directly relevant to this round of work, and update the current working state. Retain only information that genuinely matters for continuation:
+
+- current research stage and immediate goal;
+- exact paths to authoritative files / code / outputs;
+- what materially changed in this round;
+- important decisions already made and, where needed, a one-sentence rationale;
+- unresolved questions, uncertainty, or blockers;
+- the 1–3 most sensible next actions;
+- the exact continuation point for any unfinished run, compilation, data processing, or environment problem.
+
+Keep the file readable in roughly one or two minutes. Rewrite the current state rather than appending an unlimited history.
+
+Do not copy research notes, a full changelog, every operational detail, durable project rules, or old session history into the HANDOFF. Those belong in Notes, logs / archive, `PROJECT.md`, or git history, respectively.
+
+If this round produced a genuine project-level change—such as a change in research stage, an authoritative path, a data / reconstruction entry point, or another durable state—update the corresponding information in `PROJECT.md` as well. Do not duplicate the same content in both files merely for synchronization.
+
+The objective is that a new Claude session, after automatically receiving `CLAUDE.md`, can recover the work accurately by reading only `PROJECT.md`, `HANDOFF.md`, and the small number of current artifacts to which they point.
+
+When finished, report the exact path to `HANDOFF.md` separately in the final response, preferably as an absolute path, so that I can copy it directly into the new session. Do not paste the HANDOFF body into the conversation again.
+~~~

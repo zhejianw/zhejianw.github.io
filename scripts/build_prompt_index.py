@@ -17,12 +17,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "assets" / "data" / "prompt-index.json"
 LAYERS = (
-    ("Setup", ROOT / "ai" / "prompts" / "setup" / "index.md", "/ai/prompts/setup/"),
-    ("Notes", ROOT / "ai" / "prompts" / "notes" / "index.md", "/ai/prompts/notes/"),
-    ("Routing", ROOT / "ai" / "prompts" / "routing" / "index.md", "/ai/prompts/routing/"),
-    ("Brief", ROOT / "ai" / "prompts" / "brief" / "index.md", "/ai/prompts/brief/"),
-    ("Manuscript", ROOT / "ai" / "prompts" / "index.md", "/ai/prompts/"),
-    ("Submission", ROOT / "ai" / "prompts" / "submission" / "index.md", "/ai/prompts/submission/"),
+    ("zh", "Setup", ROOT / "ai" / "prompts" / "setup" / "index.md", "/ai/prompts/setup/"),
+    ("zh", "Notes", ROOT / "ai" / "prompts" / "notes" / "index.md", "/ai/prompts/notes/"),
+    ("zh", "Routing", ROOT / "ai" / "prompts" / "routing" / "index.md", "/ai/prompts/routing/"),
+    ("zh", "Brief", ROOT / "ai" / "prompts" / "brief" / "index.md", "/ai/prompts/brief/"),
+    ("zh", "Manuscript", ROOT / "ai" / "prompts" / "index.md", "/ai/prompts/"),
+    ("zh", "Submission", ROOT / "ai" / "prompts" / "submission" / "index.md", "/ai/prompts/submission/"),
+    ("en", "Setup", ROOT / "ai" / "prompts" / "en" / "setup" / "index.md", "/ai/prompts/en/setup/"),
+    ("en", "Notes", ROOT / "ai" / "prompts" / "en" / "notes" / "index.md", "/ai/prompts/en/notes/"),
+    ("en", "Routing", ROOT / "ai" / "prompts" / "en" / "routing" / "index.md", "/ai/prompts/en/routing/"),
+    ("en", "Brief", ROOT / "ai" / "prompts" / "en" / "brief" / "index.md", "/ai/prompts/en/brief/"),
+    ("en", "Manuscript", ROOT / "ai" / "prompts" / "en" / "index.md", "/ai/prompts/en/"),
+    ("en", "Submission", ROOT / "ai" / "prompts" / "en" / "submission" / "index.md", "/ai/prompts/en/submission/"),
 )
 
 HEADING_RE = re.compile(r"^#{2,3}\s+(.+?)\s+\{#([^}]+)\}\s*$")
@@ -39,7 +45,7 @@ def clean_text(value: str) -> str:
 def build_index() -> list[dict[str, str]]:
     records: list[dict[str, str]] = []
 
-    for layer, source, page_url in LAYERS:
+    for lang, layer, source, page_url in LAYERS:
         lines = source.read_text(encoding="utf-8").splitlines()
         for index, line in enumerate(lines):
             heading = HEADING_RE.match(line)
@@ -67,6 +73,7 @@ def build_index() -> list[dict[str, str]]:
             title, prompt_id = heading.groups()
             records.append(
                 {
+                    "lang": lang,
                     "layer": layer,
                     "title": clean_text(title),
                     "description": description,

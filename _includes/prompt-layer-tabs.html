@@ -1,8 +1,13 @@
+{% assign prompt_lang = page.prompt_lang | default: "zh" %}
 <nav class="prompt-layer-nav" aria-label="Prompt layers">
-  {% if page.prompt_layer == "setup" %}<span class="is-current" aria-current="page">Setup</span>{% else %}<a href="{{ '/ai/prompts/setup/' | relative_url }}">Setup</a>{% endif %}
-  {% if page.prompt_layer == "notes" %}<span class="is-current" aria-current="page">Notes</span>{% else %}<a href="{{ '/ai/prompts/notes/' | relative_url }}">Notes</a>{% endif %}
-  {% if page.prompt_layer == "routing" %}<span class="is-current" aria-current="page">Routing</span>{% else %}<a href="{{ '/ai/prompts/routing/' | relative_url }}">Routing</a>{% endif %}
-  {% if page.prompt_layer == "brief" %}<span class="is-current" aria-current="page">Brief</span>{% else %}<a href="{{ '/ai/prompts/brief/' | relative_url }}">Brief</a>{% endif %}
-  {% if page.prompt_layer == "manuscript" %}<span class="is-current" aria-current="page">Manuscript</span>{% else %}<a href="{{ '/ai/prompts/' | relative_url }}">Manuscript</a>{% endif %}
-  {% if page.prompt_layer == "submission" %}<span class="is-current" aria-current="page">Submission</span>{% else %}<a href="{{ '/ai/prompts/submission/' | relative_url }}">Submission</a>{% endif %}
+  {% for item in site.data.prompt_routes %}
+    {% assign target = item[prompt_lang] | default: item.zh %}
+    {% assign fallback = false %}
+    {% if item[prompt_lang] == nil or item[prompt_lang] == "" %}{% assign fallback = true %}{% endif %}
+    {% if page.prompt_layer == item.key %}
+      <span class="is-current" aria-current="page">{{ item.label }}</span>
+    {% else %}
+      <a href="{{ target | relative_url }}"{% if fallback %} lang="zh-CN" hreflang="zh-CN" title="Chinese version; English translation not yet available"{% else %} hreflang="{% if prompt_lang == 'en' %}en{% else %}zh-CN{% endif %}"{% endif %}>{{ item.label }}{% if fallback and prompt_lang == 'en' %} <span class="prompt-route-fallback" aria-hidden="true">ZH</span>{% endif %}</a>
+    {% endif %}
+  {% endfor %}
 </nav>

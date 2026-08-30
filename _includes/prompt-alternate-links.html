@@ -1,0 +1,11 @@
+{% if page.prompt_library %}
+  {% assign route_pair = nil %}
+  {% for item in site.data.prompt_routes %}
+    {% if item.key == page.prompt_layer %}{% assign route_pair = item %}{% endif %}
+  {% endfor %}
+  {% if route_pair %}
+<link rel="alternate" hreflang="zh-CN" href="{{ route_pair.zh | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ route_pair.en | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ route_pair.zh | absolute_url }}">
+  {% endif %}
+{% endif %}

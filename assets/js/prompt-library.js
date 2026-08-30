@@ -3,6 +3,10 @@
 
   var config = window.promptLibraryConfig || {};
   var recentStorageKey = "zhejian-prompt-recently-copied";
+  var modePrefixPattern = /^(?:推荐模式|Recommended mode)[：:]\s*/i;
+  var webModePattern = /联网|在线搜索|搜索并核实|检索并核实|requires? (?:live )?(?:web|online) search|search and verification|verify (?:them )?online|live literature search/i;
+  var sequenceModePattern = /流程控制|逐个喂|不能一起喂|must be used separately|do not combine|workflow(?:-control)? (?:guidance|instruction)|feed separately/i;
+  var useWithTaskPattern = /不单独运行|do not run separately|do not run on its own/i;
 
   function getRecentlyCopied() {
     try {
@@ -76,14 +80,16 @@
     }
 
     var original = paragraph.textContent.trim();
-    var content = original.replace(/^推荐模式[：:]\s*/, "");
-    var firstPart = content.split("；")[0];
+    var content = original.replace(modePrefixPattern, "");
+    var parts = content.split(/[；;]/);
+    var firstPart = parts[0];
     var added = {};
+    var modeLabel = config.currentLang === "en" ? "Recommended mode: " : "推荐模式：";
 
     paragraph.textContent = "";
     paragraph.classList.add("prompt-mode");
-    paragraph.setAttribute("aria-label", "推荐模式：" + content);
-    paragraph.setAttribute("title", "推荐模式：" + content);
+    paragraph.setAttribute("aria-label", modeLabel + content);
+    paragraph.setAttribute("title", modeLabel + content);
 
     function addMode(key, label) {
       if (!added[key]) {
@@ -92,45 +98,51 @@
       }
     }
 
-    var brandedModes = content.match(/(?:Fable|Opus)\s+(?:High\/Max|High|Max)/g) || [];
+    var brandedModes = content.match(/(?:Fable|Opus)\s+(?:High\s*\/\s*Max|High|Max)/g) || [];
     var hasBrandedMode = brandedModes.length > 0;
-    var hasGptPro = content.indexOf("GPT Pro") !== -1;
+    var hasGptPro = /\bGPT\s+Pro\b/.test(content);
+    var hasExtraHigh = /\bExtra\s+High\b/.test(content);
+    var hasStandalonePro = /\bPro\b/.test(content.replace(/\bGPT\s+Pro\b/g, ""));
+    var contentWithoutCompoundHigh = content
+      .replace(/\bExtra\s+High\b/g, "")
+      .replace(/(?:Fable|Opus)\s+(?:High\s*\/\s*Max|High|Max)/g, "");
+    var hasStandaloneHigh = /\bHigh\b/.test(contentWithoutCompoundHigh);
 
     brandedModes.forEach(function (mode) {
-      addMode(mode.toLowerCase().replace(/[^a-z0-9]+/g, "-"), mode);
+      var normalizedMode = mode.replace(/\s*\/\s*/g, "/");
+      addMode(normalizedMode.toLowerCase().replace(/[^a-z0-9]+/g, "-"), normalizedMode);
     });
 
     if (hasGptPro) {
       addMode("gpt-pro", "GPT Pro");
-    } else if (!hasBrandedMode && firstPart.indexOf("Extra High") !== -1) {
+    } else if (!hasBrandedMode && /\bExtra\s+High\b/.test(firstPart)) {
       addMode("extra-high", "Extra High");
-    } else if (!hasBrandedMode && firstPart.indexOf("Pro") !== -1) {
+    } else if (!hasBrandedMode && /\bPro\b/.test(firstPart)) {
       addMode("pro", "Pro");
-    } else if (!hasBrandedMode && firstPart.indexOf("High") !== -1) {
+    } else if (!hasBrandedMode && /\bHigh\b/.test(firstPart.replace(/\bExtra\s+High\b/g, ""))) {
       addMode("high", "High");
     }
 
-    if (!hasBrandedMode && content.indexOf("Extra High") !== -1) {
+    if (!hasBrandedMode && hasExtraHigh) {
       addMode("extra-high", "Extra High");
     }
-    if (!hasBrandedMode && !hasGptPro && content.indexOf("Pro") !== -1) {
+    if (!hasBrandedMode && !hasGptPro && hasStandalonePro) {
       addMode("pro", "Pro");
     }
-    if (!hasBrandedMode && content.replace(/Extra High/g, "").indexOf("High") !== -1) {
+    if (!hasBrandedMode && hasStandaloneHigh) {
       addMode("high", "High");
     }
-    if (/联网|在线搜索|搜索并核实|检索并核实/.test(content)) {
+    if (webModePattern.test(content)) {
       addModeBadge(paragraph, "Web required", "is-web");
     }
-    if (/流程控制|逐个喂|不能一起喂/.test(content)) {
+    if (sequenceModePattern.test(content)) {
       addModeBadge(paragraph, "Sequence", "is-sequence");
     }
-    if (/不单独运行/.test(content)) {
+    if (useWithTaskPattern.test(content)) {
       addModeBadge(paragraph, "Use with task", "is-sequence");
     }
 
-    var parts = content.split("；");
-    var note = parts.length > 1 ? parts.slice(1).join("；") : "";
+    var note = parts.length > 1 ? parts.slice(1).join(config.currentLang === "en" ? "; " : "；") : "";
 
     if (!paragraph.children.length && firstPart) {
       addModeBadge(paragraph, firstPart, "is-sequence");
@@ -287,7 +299,7 @@
     while (current && current !== shell) {
       if (current.classList && current.classList.contains("prompt-description")) {
         description = current;
-      } else if (/^推荐模式[：:]/.test(current.textContent.trim())) {
+      } else if (modePrefixPattern.test(current.textContent.trim())) {
         mode = current;
       }
       current = current.nextElementSibling;
@@ -784,7 +796,9 @@
         if (!Array.isArray(data)) {
           throw new Error("Prompt index is invalid");
         }
-        crossLayerRecords = data.map(function (record) {
+        crossLayerRecords = data.filter(function (record) {
+          return (record.lang || "zh") === (config.currentLang || "zh");
+        }).map(function (record) {
           return {
             id: record.id || record.url,
             title: record.title || "Untitled prompt",
@@ -930,6 +944,19 @@
     }, 0);
   }
 
+  function initPromptLanguageSwitch() {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-prompt-language-link]"), function (link) {
+      link.addEventListener("click", function () {
+        if (!window.location.hash) {
+          return;
+        }
+        var url = new URL(link.href, window.location.href);
+        url.hash = window.location.hash;
+        link.href = url.toString();
+      });
+    });
+  }
+
   function initPromptLibrary() {
     var content = document.querySelector(".page__content");
 
@@ -941,6 +968,7 @@
     addViewControls(content);
     createCommandPalette(content);
     initLayerNav();
+    initPromptLanguageSwitch();
     revealHashTarget();
     window.addEventListener("hashchange", revealHashTarget);
   }

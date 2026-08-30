@@ -1,5 +1,6 @@
 [
   {
+    "lang": "zh",
     "layer": "Setup",
     "title": "Setup Prompt 0 · Idea Feasibility Gate",
     "description": "把初步研究想法发展为可核验的 proposal，并作出是否立项的明确裁决。",
@@ -7,6 +8,7 @@
     "url": "/ai/prompts/setup/#idea-feasibility-gate"
   },
   {
+    "lang": "zh",
     "layer": "Setup",
     "title": "Setup Prompt 1 · Workspace Bootstrap",
     "description": "建立统一目录、Claude 工作规则与跨 session 的项目状态入口。",
@@ -14,6 +16,7 @@
     "url": "/ai/prompts/setup/#project-workspace-bootstrap"
   },
   {
+    "lang": "zh",
     "layer": "Setup",
     "title": "Setup Prompt 2 · Environment Bootstrap",
     "description": "验证实证与写作环境并记录长期配置。",
@@ -21,6 +24,7 @@
     "url": "/ai/prompts/setup/#environment-bootstrap"
   },
   {
+    "lang": "zh",
     "layer": "Setup",
     "title": "Setup Prompt 3 · Durable Project Map Refresh",
     "description": "让 PROJECT.md 始终保持为精简、准确且可跨 session 使用的项目地图。",
@@ -28,6 +32,7 @@
     "url": "/ai/prompts/setup/#project-map-refresh"
   },
   {
+    "lang": "zh",
     "layer": "Setup",
     "title": "Setup Prompt 4 · Session Handoff Refresh",
     "description": "在上下文压缩或重要节点结束前完成必要收尾，并为下一个 Claude session 留下精简交接。",
@@ -35,6 +40,7 @@
     "url": "/ai/prompts/setup/#session-handoff-refresh"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "Notes Prompt 0A · Initial Empirical Design Map",
     "description": "大规模探索前，从本地材料建立数据、设定、识别与实施决策地图。",
@@ -42,6 +48,7 @@
     "url": "/ai/prompts/notes/#initial-empirical-design-map"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "Notes Prompt 0B · Empirical Design Map Update",
     "description": "根据最新数据、代码与输出刷新设计地图，只保留当前有效判断。",
@@ -49,6 +56,7 @@
     "url": "/ai/prompts/notes/#update-empirical-design-map"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "Notes Prompt 0C · Implement GPT Pro Review",
     "description": "以本地事实核验 Pro 意见，完成高价值检查并更新权威证据。",
@@ -56,6 +64,7 @@
     "url": "/ai/prompts/notes/#implement-gpt-pro-review"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "Notes Prompt 0D · GPT Pro Re-adjudication",
     "description": "依据新核查证据重新裁决识别、设定与解释是否已经站得住。",
@@ -63,6 +72,7 @@
     "url": "/ai/prompts/notes/#gpt-pro-re-adjudication"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "Notes Prompt 1 · Single-Prompt Exploration",
     "description": "围绕具体研究问题扩展可复用证据层。",
@@ -70,6 +80,7 @@
     "url": "/ai/prompts/notes/#case-specific-notes-exploration"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "0. 总控",
     "description": "限定证据层目标、保存范围与基本纪律。",
@@ -77,6 +88,7 @@
     "url": "/ai/prompts/notes/#notes-control"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "H1. 横向：Research-space expansion",
     "description": "横向发现具有实质价值的新研究分支。",
@@ -84,6 +96,7 @@
     "url": "/ai/prompts/notes/#research-space-expansion"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "H2. 横向：Empirical-space expansion",
     "description": "围绕明确问题扩展可辩护的实证选择。",
@@ -91,6 +104,7 @@
     "url": "/ai/prompts/notes/#empirical-space-expansion"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "V1. 纵向：Deep investigation",
     "description": "深挖关键分支并裁定其证据状态。",
@@ -98,6 +112,7 @@
     "url": "/ai/prompts/notes/#deep-investigation"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "V2. 纵向：Adversarial audit",
     "description": "以真实失效机制对核心发现进行压力测试。",
@@ -105,6 +120,7 @@
     "url": "/ai/prompts/notes/#adversarial-audit"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "H3. 再横向：Evidence-conditioned discovery",
     "description": "从既有异常与矛盾中发现新研究方向。",
@@ -112,6 +128,7 @@
     "url": "/ai/prompts/notes/#evidence-conditioned-discovery"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "C1. 收敛：Branch adjudication",
     "description": "汇总证据、裁决分支并安排后续资源。",
@@ -119,6 +136,7 @@
     "url": "/ai/prompts/notes/#branch-adjudication"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "X1. 按需：Contradiction resolution",
     "description": "解释冲突证据并设计可区分的新检验。",
@@ -126,6 +144,7 @@
     "url": "/ai/prompts/notes/#contradiction-resolution"
   },
   {
+    "lang": "zh",
     "layer": "Notes",
     "title": "循环",
     "description": "规定探索循环、插入条件与停止标准。",
@@ -133,6 +152,7 @@
     "url": "/ai/prompts/notes/#notes-cycle"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 0 · Literature Triage",
     "description": "先给文献分配阅读预算，只保留可能改变最终 Brief 的高价值论文。",
@@ -140,6 +160,7 @@
     "url": "/ai/prompts/routing/#routing-literature-triage"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 1 · Close Reading",
     "description": "逐篇精读真正重要的论文，并把 binding implications 落盘。",
@@ -147,6 +168,7 @@
     "url": "/ai/prompts/routing/#routing-close-reading"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 2 · Literature Synthesis → Brief Input Pack",
     "description": "把完整 evidence、design 与 closest literature 压缩成供 Pro 裁决的输入包。",
@@ -154,6 +176,7 @@
     "url": "/ai/prompts/routing/#routing-brief-input-pack"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 3 · Evidence / Brief Router",
     "description": "核心裁决器：决定哪些问题已足够、哪些值得回到 evidence、哪些应收窄或停止。",
@@ -161,6 +184,7 @@
     "url": "/ai/prompts/routing/#routing-evidence-brief-router"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 4A · Existing Data → Targeted Notes",
     "description": "只用现有数据解决会改变 Brief 的少数 uncertainty，不重开全部 specification space。",
@@ -168,6 +192,7 @@
     "url": "/ai/prompts/routing/#routing-existing-data-targeted-notes"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 4B · New Data → Feasibility",
     "description": "新增数据前先做 value-of-information 与现实可行性判断。",
@@ -175,6 +200,7 @@
     "url": "/ai/prompts/routing/#routing-new-data-feasibility"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 4C · New Data → Acquisition / Integration",
     "description": "按已裁决的最小方案获取并接入数据，再回到 Notes 回答原始问题。",
@@ -182,6 +208,7 @@
     "url": "/ai/prompts/routing/#routing-new-data-acquisition"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 5 · Evidence Return → Pro",
     "description": "把本轮针对性证据压缩成可重新交给 Router 的裁决材料。",
@@ -189,6 +216,7 @@
     "url": "/ai/prompts/routing/#routing-evidence-return"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 6 · Candidate Brief",
     "description": "在 paper-level evidence 足够后，比较 competing identities 并设计最强可辩护论文。",
@@ -196,6 +224,7 @@
     "url": "/ai/prompts/routing/#routing-candidate-brief"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 7 · Reverse Audit of Candidate Brief",
     "description": "用完整本地 evidence 与 literature 反查 Pro 压缩世界中的遗漏、误读与过度 claim。",
@@ -203,6 +232,7 @@
     "url": "/ai/prompts/routing/#routing-candidate-brief-reverse-audit"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 8 · Final Brief Lock",
     "description": "解决候选 Brief 与本地反审计的冲突，锁定最终 authoritative research brief。",
@@ -210,6 +240,7 @@
     "url": "/ai/prompts/routing/#routing-final-brief-lock"
   },
   {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 9 · Materialize Final Brief",
     "description": "把最终裁决落到唯一 current Brief，并同步项目阶段与跨 session 状态。",
@@ -217,6 +248,7 @@
     "url": "/ai/prompts/routing/#routing-materialize-final-brief"
   },
   {
+    "lang": "zh",
     "layer": "Brief",
     "title": "Brief Prompt 1 · Paper Ceiling",
     "description": "从证据反推最强论文身份与合理发表上限。",
@@ -224,6 +256,7 @@
     "url": "/ai/prompts/brief/#paper-ceiling"
   },
   {
+    "lang": "zh",
     "layer": "Brief",
     "title": "Brief Prompt 2 · Journal Mapping",
     "description": "核实期刊信息并设计风险收益最优的投稿路径。",
@@ -231,6 +264,7 @@
     "url": "/ai/prompts/brief/#journal-mapping"
   },
   {
+    "lang": "zh",
     "layer": "Brief",
     "title": "Brief Prompt 3 · Journal Requirements",
     "description": "提炼并保存目标期刊的官方投稿约束。",
@@ -238,6 +272,7 @@
     "url": "/ai/prompts/brief/#journal-requirements"
   },
   {
+    "lang": "zh",
     "layer": "Brief",
     "title": "Brief Prompt 4 · Literature Map",
     "description": "分级核实核心文献并识别定位与新颖性风险。",
@@ -245,6 +280,7 @@
     "url": "/ai/prompts/brief/#literature-map"
   },
   {
+    "lang": "zh",
     "layer": "Brief",
     "title": "Brief Prompt 5 · Lock Manuscript Brief",
     "description": "锁定面向目标期刊的论文主线、主张边界与证据结构。",
@@ -252,6 +288,7 @@
     "url": "/ai/prompts/brief/#journal-brief"
   },
   {
+    "lang": "zh",
     "layer": "Brief",
     "title": "Build Manuscript",
     "description": "将已锁定的 Brief 转化为唯一可编译论文工程。",
@@ -259,6 +296,7 @@
     "url": "/ai/prompts/brief/#build-manuscript"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "General instruction — optional",
     "description": "可按需附在具体审阅 Prompt 前；无需每次单独运行。",
@@ -266,6 +304,7 @@
     "url": "/ai/prompts/#prompt-meta-review-principles"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q1A · Figure / Table",
     "description": "全面优化单个图表的正确性、排版与可读性。",
@@ -273,6 +312,7 @@
     "url": "/ai/prompts/#prompt-table-figure-general-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q1B · Interpretable Magnitudes",
     "description": "选择读者可直接解释、且不改变 estimand 的主文结果尺度。",
@@ -280,6 +320,7 @@
     "url": "/ai/prompts/#prompt-interpretable-magnitudes"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q2 · Headings",
     "description": "优化正文与附录标题的准确性和叙事性。",
@@ -287,6 +328,7 @@
     "url": "/ai/prompts/#prompt-heading-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q3 · Formatting",
     "description": "排查粗体、斜体与段首格式的滥用。",
@@ -294,6 +336,7 @@
     "url": "/ai/prompts/#prompt-formatting-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q4 · Introduction",
     "description": "按经典投稿规范审核引言结构、钩子与贡献。",
@@ -301,6 +344,7 @@
     "url": "/ai/prompts/#prompt-introduction-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q5 · Discussion",
     "description": "控制讨论范围并妥善回应外推与潜在缺陷。",
@@ -308,6 +352,7 @@
     "url": "/ai/prompts/#prompt-discussion-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Q6 · Exhibit Order",
     "description": "重排正文与附录图表以改善叙事流和归属。",
@@ -315,6 +360,7 @@
     "url": "/ai/prompts/#prompt-exhibit-ordering"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Paper Identity",
     "description": "锁定论文身份、核心贡献与唯一中心信息。",
@@ -322,6 +368,7 @@
     "url": "/ai/prompts/#prompt-paper-identity"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Claim Hierarchy",
     "description": "按证据强度重排全文主张及叙事权重。",
@@ -329,6 +376,7 @@
     "url": "/ai/prompts/#prompt-claim-hierarchy"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Abstract",
     "description": "按目标期刊标准诊断摘要的信息结构。",
@@ -336,6 +384,7 @@
     "url": "/ai/prompts/#prompt-abstract-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Background / Institutional Context",
     "description": "判断制度背景是否为研究问题与识别提供了足够、准确且克制的支撑。",
@@ -343,6 +392,7 @@
     "url": "/ai/prompts/#prompt-background-institutional-context"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Data & Measures",
     "description": "审核样本、时点、变量测量与呈现可信度。",
@@ -350,6 +400,7 @@
     "url": "/ai/prompts/#prompt-data-measures"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Analytic Strategy / Identification",
     "description": "明确识别变异、估计对象与因果主张边界。",
@@ -357,6 +408,7 @@
     "url": "/ai/prompts/#prompt-identification-strategy"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Identification Assumptions & Evidence Audit",
     "description": "把核心识别假设映射到经济学家会期待的检验、诊断与支持证据。",
@@ -364,6 +416,7 @@
     "url": "/ai/prompts/#prompt-identification-assumptions-evidence"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Empirical Specification Audit",
     "description": "检查实证设定是否准确承载 identification、estimand 与系数解释。",
@@ -371,6 +424,7 @@
     "url": "/ai/prompts/#prompt-empirical-specification-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Results Narrative",
     "description": "以研究问题为主线重组结果章节叙事。",
@@ -378,6 +432,7 @@
     "url": "/ai/prompts/#prompt-results-narrative"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Heterogeneity & Mechanisms",
     "description": "区分异质性、机制与探索性证据的价值。",
@@ -385,6 +440,7 @@
     "url": "/ai/prompts/#prompt-heterogeneity-mechanisms"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Economic Mechanism Interpretation Audit",
     "description": "从整体证据反推可辩护的经济机制，并界定可观察环节与替代解释。",
@@ -392,6 +448,7 @@
     "url": "/ai/prompts/#prompt-economic-mechanism-interpretation-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Conclusion",
     "description": "检查结论是否准确收束发现、边界与意义。",
@@ -399,6 +456,7 @@
     "url": "/ai/prompts/#prompt-conclusion-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Estimand Audit",
     "description": "核对各结果的估计对象、可比性与主张匹配。",
@@ -406,6 +464,7 @@
     "url": "/ai/prompts/#prompt-estimand-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Estimand Type & Compliance Audit",
     "description": "判定研究真正识别的 estimand，并核对处理定义、依从性与系数解释。",
@@ -413,6 +472,7 @@
     "url": "/ai/prompts/#prompt-estimand-type-compliance"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Null Results",
     "description": "校准空结果的统计表述、精度与经济含义。",
@@ -420,6 +480,7 @@
     "url": "/ai/prompts/#prompt-null-results"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Robustness Architecture",
     "description": "让每项稳健性检验对应一个明确威胁。",
@@ -427,6 +488,7 @@
     "url": "/ai/prompts/#prompt-robustness-architecture"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Literature Positioning",
     "description": "核实最近文献并建立可辩护的贡献定位。",
@@ -434,6 +496,7 @@
     "url": "/ai/prompts/#prompt-literature-positioning"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Single-Paper Deep Review",
     "description": "深读单篇文献并判断其对本项目的意义。",
@@ -441,6 +504,7 @@
     "url": "/ai/prompts/#prompt-single-paper-review"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Citation Audit",
     "description": "核查引文支持、完整性与参考文献一致性。",
@@ -448,6 +512,7 @@
     "url": "/ai/prompts/#prompt-citation-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Incremental Literature Discovery & Reading Triage",
     "description": "向现有文献边界外扩展，并按阅读、下载和新颖性风险筛选增量文献。",
@@ -455,6 +520,7 @@
     "url": "/ai/prompts/#prompt-incremental-literature-discovery"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Standalone Table / Figure Audit",
     "description": "检验图表脱离正文后能否被准确理解。",
@@ -462,6 +528,7 @@
     "url": "/ai/prompts/#prompt-standalone-exhibit-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Footnote Audit",
     "description": "判定脚注去留、位置及其对正文的影响。",
@@ -469,6 +536,7 @@
     "url": "/ai/prompts/#prompt-footnote-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Appendix as Evidence Architecture",
     "description": "按功能重建附录的支持性证据架构。",
@@ -476,6 +544,7 @@
     "url": "/ai/prompts/#prompt-appendix-architecture"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Full-Manuscript Consistency Audit",
     "description": "查找正文、图表与附录中的内部不一致。",
@@ -483,6 +552,7 @@
     "url": "/ai/prompts/#prompt-manuscript-consistency"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Key Number Cross-Check",
     "description": "以权威结果为准，对账 manuscript 与投稿材料中重复出现的关键数字。",
@@ -490,6 +560,7 @@
     "url": "/ai/prompts/#prompt-key-number-cross-check"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Precision & Rounding Audit",
     "description": "统一全文和投稿材料的数字精度规则，并排查 rounding 导致的表观矛盾。",
@@ -497,6 +568,7 @@
     "url": "/ai/prompts/#prompt-precision-rounding-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Numbering & Reference Order Audit",
     "description": "核对全文结构、图表、公式和附录编号及其引用顺序。",
@@ -504,6 +576,7 @@
     "url": "/ai/prompts/#prompt-numbering-reference-order-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Terminology & Notation Audit",
     "description": "统一术语、缩写和数学符号的定义与使用。",
@@ -511,6 +584,7 @@
     "url": "/ai/prompts/#prompt-terminology-notation"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Caveats, Limitations & Defensive Writing Audit",
     "description": "按科学重要性裁决全文 caveats、limitations 与 defensive writing 的取舍和位置。",
@@ -518,6 +592,7 @@
     "url": "/ai/prompts/#prompt-caveats-defensive-writing-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Review Comment Adjudication",
     "description": "识别外部审阅意见背后的真实 concern，并选择副作用最小的有效回应。",
@@ -525,6 +600,7 @@
     "url": "/ai/prompts/#prompt-review-comment-adjudication"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Revision Ripple-Effect Audit",
     "description": "核验修改要求并追踪改动的连锁影响。",
@@ -532,6 +608,7 @@
     "url": "/ai/prompts/#prompt-revision-ripple-effect"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Revision Residue Audit",
     "description": "清除多轮讨论、纠错和旧方案在最终成品中的无价值残留。",
@@ -539,6 +616,7 @@
     "url": "/ai/prompts/#prompt-revision-residue-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Five-Minute Editor Read",
     "description": "模拟编辑快速初筛并识别桌拒风险。",
@@ -546,6 +624,7 @@
     "url": "/ai/prompts/#prompt-editor-five-minute-read"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Hostile Referee Simulation",
     "description": "模拟严苛审稿人寻找最强拒稿理由。",
@@ -553,6 +632,7 @@
     "url": "/ai/prompts/#prompt-hostile-referee"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Friendly Senior Coauthor",
     "description": "在少增新工作的前提下寻找论文提档机会。",
@@ -560,6 +640,7 @@
     "url": "/ai/prompts/#prompt-senior-coauthor"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "What Am I Not Seeing?",
     "description": "跳出清单识别作者最可能忽视的关键问题。",
@@ -567,6 +648,7 @@
     "url": "/ai/prompts/#prompt-unseen-risks"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Compression Pass",
     "description": "在不损失实质内容下压缩论文篇幅。",
@@ -574,6 +656,7 @@
     "url": "/ai/prompts/#prompt-compression-pass"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Paragraph-Level Narrative Audit",
     "description": "按段诊断任务、主题句、衔接与删改价值。",
@@ -581,6 +664,7 @@
     "url": "/ai/prompts/#prompt-paragraph-narrative"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Prose Quality & Readability Audit",
     "description": "审核全文是否具备成熟 applied economics manuscript 的自然、清晰与专业表达。",
@@ -588,6 +672,7 @@
     "url": "/ai/prompts/#prompt-prose-quality-readability-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Pre-Submission Robustness Adjudication",
     "description": "投稿前裁决必补、可选与应停止的检验。",
@@ -595,6 +680,7 @@
     "url": "/ai/prompts/#prompt-pre-submission-robustness"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Manuscript Integration Audit",
     "description": "验收多轮修改后的逻辑闭环与全文统一性。",
@@ -602,6 +688,7 @@
     "url": "/ai/prompts/#prompt-integration-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Technical Artifact Audit",
     "description": "只检查 LaTeX、最终 PDF 与正式文档中的技术和呈现缺陷。",
@@ -609,6 +696,7 @@
     "url": "/ai/prompts/#prompt-technical-artifact-audit"
   },
   {
+    "lang": "zh",
     "layer": "Manuscript",
     "title": "Final Manuscript Audit",
     "description": "对今天即将上传的最终 manuscript PDF 做技术、合规与一致性验收。",
@@ -616,6 +704,7 @@
     "url": "/ai/prompts/#prompt-final-manuscript-audit"
   },
   {
+    "lang": "zh",
     "layer": "Submission",
     "title": "Actual Submission Package",
     "description": "组装并交叉核验今天实际上传的投稿文件与系统元数据。",
@@ -623,6 +712,7 @@
     "url": "/ai/prompts/submission/#actual-submission-package"
   },
   {
+    "lang": "zh",
     "layer": "Submission",
     "title": "Clean-Room Replication Package",
     "description": "构建与定稿论文严格匹配的可复现交付包。",
@@ -630,10 +720,739 @@
     "url": "/ai/prompts/submission/#clean-room-replication"
   },
   {
+    "lang": "zh",
     "layer": "Submission",
     "title": "Frozen Project Snapshot",
     "description": "冻结足以完整重启项目的重要节点快照。",
     "id": "frozen-project-snapshot",
     "url": "/ai/prompts/submission/#frozen-project-snapshot"
+  },
+  {
+    "lang": "en",
+    "layer": "Setup",
+    "title": "Setup Prompt 0 · Idea Feasibility Gate",
+    "description": "Develop a preliminary research idea into a verifiable proposal and make a clear go / wait / stop decision.",
+    "id": "idea-feasibility-gate",
+    "url": "/ai/prompts/en/setup/#idea-feasibility-gate"
+  },
+  {
+    "lang": "en",
+    "layer": "Setup",
+    "title": "Setup Prompt 1 · Workspace Bootstrap",
+    "description": "Create the standard directory structure, Claude operating rules, and cross-session project-state entry points.",
+    "id": "project-workspace-bootstrap",
+    "url": "/ai/prompts/en/setup/#project-workspace-bootstrap"
+  },
+  {
+    "lang": "en",
+    "layer": "Setup",
+    "title": "Setup Prompt 2 · Environment Bootstrap",
+    "description": "Verify the empirical and writing environments and preserve the durable configuration.",
+    "id": "environment-bootstrap",
+    "url": "/ai/prompts/en/setup/#environment-bootstrap"
+  },
+  {
+    "lang": "en",
+    "layer": "Setup",
+    "title": "Setup Prompt 3 · Durable Project Map Refresh",
+    "description": "Keep PROJECT.md concise, accurate, and useful across sessions.",
+    "id": "project-map-refresh",
+    "url": "/ai/prompts/en/setup/#project-map-refresh"
+  },
+  {
+    "lang": "en",
+    "layer": "Setup",
+    "title": "Setup Prompt 4 · Session Handoff Refresh",
+    "description": "Complete context-dependent closing work before compression or a major stopping point, then leave a concise handoff for the next Claude session.",
+    "id": "session-handoff-refresh",
+    "url": "/ai/prompts/en/setup/#session-handoff-refresh"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Notes Prompt 0A · Initial Empirical Design Map",
+    "description": "Before large-scale exploration, build a local map of the data, specification space, identification possibilities, and implementation decisions.",
+    "id": "initial-empirical-design-map",
+    "url": "/ai/prompts/en/notes/#initial-empirical-design-map"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Notes Prompt 0B · Empirical Design Map Update",
+    "description": "Refresh the design map from the current data, code, documentation, and outputs, retaining only judgments that remain valid.",
+    "id": "update-empirical-design-map",
+    "url": "/ai/prompts/en/notes/#update-empirical-design-map"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Notes Prompt 0C · Implement GPT Pro Review",
+    "description": "Check Pro’s review against local facts, carry out high-value diagnostics, and update the authoritative evidence.",
+    "id": "implement-gpt-pro-review",
+    "url": "/ai/prompts/en/notes/#implement-gpt-pro-review"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Notes Prompt 0D · GPT Pro Re-adjudication",
+    "description": "Re-adjudicate whether the identification, specification, and interpretation are defensible in light of the newly verified evidence.",
+    "id": "gpt-pro-re-adjudication",
+    "url": "/ai/prompts/en/notes/#gpt-pro-re-adjudication"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Notes Prompt 1 · Single-Prompt Exploration",
+    "description": "Expand a reusable evidence layer around a specific research question.",
+    "id": "case-specific-notes-exploration",
+    "url": "/ai/prompts/en/notes/#case-specific-notes-exploration"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "0. Control",
+    "description": "Define the objective, preservation scope, and basic discipline of the evidence layer.",
+    "id": "notes-control",
+    "url": "/ai/prompts/en/notes/#notes-control"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "H1. Horizontal: Research-Space Expansion",
+    "description": "Identify substantively valuable new research branches.",
+    "id": "research-space-expansion",
+    "url": "/ai/prompts/en/notes/#research-space-expansion"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "H2. Horizontal: Empirical-Space Expansion",
+    "description": "Expand defensible empirical choices around clearly defined questions.",
+    "id": "empirical-space-expansion",
+    "url": "/ai/prompts/en/notes/#empirical-space-expansion"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "V1. Vertical: Deep Investigation",
+    "description": "Investigate a key branch deeply enough to adjudicate its evidence status.",
+    "id": "deep-investigation",
+    "url": "/ai/prompts/en/notes/#deep-investigation"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "V2. Vertical: Adversarial Audit",
+    "description": "Stress-test the core finding against plausible ways it could fail.",
+    "id": "adversarial-audit",
+    "url": "/ai/prompts/en/notes/#adversarial-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "H3. Horizontal Again: Evidence-Conditioned Discovery",
+    "description": "Use existing anomalies and contradictions to discover new research directions.",
+    "id": "evidence-conditioned-discovery",
+    "url": "/ai/prompts/en/notes/#evidence-conditioned-discovery"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "C1. Convergence: Branch Adjudication",
+    "description": "Synthesize the evidence, adjudicate branches, and allocate the next round of effort.",
+    "id": "branch-adjudication",
+    "url": "/ai/prompts/en/notes/#branch-adjudication"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "X1. As Needed: Contradiction Resolution",
+    "description": "Explain conflicting evidence and design evidence capable of distinguishing competing accounts.",
+    "id": "contradiction-resolution",
+    "url": "/ai/prompts/en/notes/#contradiction-resolution"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Cycle",
+    "description": "Specify the exploration cycle, when to insert contradiction resolution, and when to stop.",
+    "id": "notes-cycle",
+    "url": "/ai/prompts/en/notes/#notes-cycle"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 0 · Literature Triage",
+    "description": "Allocate the reading budget before close reading, retaining only papers that could change the final Brief.",
+    "id": "routing-literature-triage",
+    "url": "/ai/prompts/en/routing/#routing-literature-triage"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 1 · Close Reading",
+    "description": "Closely read the genuinely important papers and preserve their binding implications in project artifacts.",
+    "id": "routing-close-reading",
+    "url": "/ai/prompts/en/routing/#routing-close-reading"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 2 · Literature Synthesis → Brief Input Pack",
+    "description": "Compress the evidence, design, and closest literature into an input pack for Pro adjudication.",
+    "id": "routing-brief-input-pack",
+    "url": "/ai/prompts/en/routing/#routing-brief-input-pack"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 3 · Evidence / Brief Router",
+    "description": "The central adjudicator: decide what is already sufficient, what justifies reopening evidence, and what should instead be narrowed or stopped.",
+    "id": "routing-evidence-brief-router",
+    "url": "/ai/prompts/en/routing/#routing-evidence-brief-router"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 4A · Existing Data → Targeted Notes",
+    "description": "Use existing data only to resolve the small number of uncertainties that could change the Brief; do not reopen the entire specification space.",
+    "id": "routing-existing-data-targeted-notes",
+    "url": "/ai/prompts/en/routing/#routing-existing-data-targeted-notes"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 4B · New Data → Feasibility",
+    "description": "Before acquiring new data, assess value of information and practical feasibility.",
+    "id": "routing-new-data-feasibility",
+    "url": "/ai/prompts/en/routing/#routing-new-data-feasibility"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 4C · New Data → Acquisition / Integration",
+    "description": "Acquire and integrate only the data in the adjudicated minimum plan, then return to Notes to answer the original question.",
+    "id": "routing-new-data-acquisition",
+    "url": "/ai/prompts/en/routing/#routing-new-data-acquisition"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 5 · Evidence Return → Pro",
+    "description": "Compress the targeted evidence work into material that can be returned to the Router for re-adjudication.",
+    "id": "routing-evidence-return",
+    "url": "/ai/prompts/en/routing/#routing-evidence-return"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 6 · Candidate Brief",
+    "description": "Once paper-level evidence is sufficient, compare competing identities and design the strongest defensible paper.",
+    "id": "routing-candidate-brief",
+    "url": "/ai/prompts/en/routing/#routing-candidate-brief"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 7 · Reverse Audit of Candidate Brief",
+    "description": "Check Pro’s compressed world against the full local evidence and literature for omissions, misreadings, and overclaims.",
+    "id": "routing-candidate-brief-reverse-audit",
+    "url": "/ai/prompts/en/routing/#routing-candidate-brief-reverse-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 8 · Final Brief Lock",
+    "description": "Resolve conflicts between the Candidate Brief and the local reverse audit, then lock the authoritative research brief.",
+    "id": "routing-final-brief-lock",
+    "url": "/ai/prompts/en/routing/#routing-final-brief-lock"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 9 · Materialize Final Brief",
+    "description": "Write the final adjudication into the single current Brief and synchronize the project stage and cross-session state.",
+    "id": "routing-materialize-final-brief",
+    "url": "/ai/prompts/en/routing/#routing-materialize-final-brief"
+  },
+  {
+    "lang": "en",
+    "layer": "Brief",
+    "title": "Brief Prompt 1 · Paper Ceiling",
+    "description": "Work backward from the evidence to identify the strongest paper identity and a realistic publication ceiling.",
+    "id": "paper-ceiling",
+    "url": "/ai/prompts/en/brief/#paper-ceiling"
+  },
+  {
+    "lang": "en",
+    "layer": "Brief",
+    "title": "Brief Prompt 2 · Journal Mapping",
+    "description": "Verify current journal information and design the submission path with the best risk–return profile.",
+    "id": "journal-mapping",
+    "url": "/ai/prompts/en/brief/#journal-mapping"
+  },
+  {
+    "lang": "en",
+    "layer": "Brief",
+    "title": "Brief Prompt 3 · Journal Requirements",
+    "description": "Extract and preserve the target journal’s official submission requirements.",
+    "id": "journal-requirements",
+    "url": "/ai/prompts/en/brief/#journal-requirements"
+  },
+  {
+    "lang": "en",
+    "layer": "Brief",
+    "title": "Brief Prompt 4 · Literature Map",
+    "description": "Verify and prioritize the core literature, while identifying positioning and novelty risks.",
+    "id": "literature-map",
+    "url": "/ai/prompts/en/brief/#literature-map"
+  },
+  {
+    "lang": "en",
+    "layer": "Brief",
+    "title": "Brief Prompt 5 · Lock Manuscript Brief",
+    "description": "Lock the paper’s journal-specific central argument, claim boundary, and evidence architecture.",
+    "id": "journal-brief",
+    "url": "/ai/prompts/en/brief/#journal-brief"
+  },
+  {
+    "lang": "en",
+    "layer": "Brief",
+    "title": "Build Manuscript",
+    "description": "Turn the locked Brief into the single authoritative, compilable manuscript project.",
+    "id": "build-manuscript",
+    "url": "/ai/prompts/en/brief/#build-manuscript"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "General Instruction — Optional",
+    "description": "May be prefixed to a specific review prompt when useful; it need not be run separately each time.",
+    "id": "prompt-meta-review-principles",
+    "url": "/ai/prompts/en/#prompt-meta-review-principles"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q1A · Figure / Table",
+    "description": "Review and improve a single figure or table for correctness, layout, and readability.",
+    "id": "prompt-table-figure-general-audit",
+    "url": "/ai/prompts/en/#prompt-table-figure-general-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q1B · Interpretable Magnitudes",
+    "description": "Present main-text results on a scale readers can interpret directly without changing the estimand.",
+    "id": "prompt-interpretable-magnitudes",
+    "url": "/ai/prompts/en/#prompt-interpretable-magnitudes"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q2 · Headings",
+    "description": "Improve the accuracy, clarity, and narrative function of headings in the manuscript and appendix.",
+    "id": "prompt-heading-audit",
+    "url": "/ai/prompts/en/#prompt-heading-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q3 · Formatting",
+    "description": "Identify overuse of bold, italics, and special formatting at paragraph openings.",
+    "id": "prompt-formatting-audit",
+    "url": "/ai/prompts/en/#prompt-formatting-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q4 · Introduction",
+    "description": "Review the Introduction against classic submission standards for structure, hook, and contribution.",
+    "id": "prompt-introduction-audit",
+    "url": "/ai/prompts/en/#prompt-introduction-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q5 · Discussion",
+    "description": "Control the scope of the Discussion and respond appropriately to external-validity and limitation concerns.",
+    "id": "prompt-discussion-audit",
+    "url": "/ai/prompts/en/#prompt-discussion-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Q6 · Exhibit Order",
+    "description": "Reorder main-text and appendix exhibits to improve narrative flow and placement.",
+    "id": "prompt-exhibit-ordering",
+    "url": "/ai/prompts/en/#prompt-exhibit-ordering"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Paper Identity",
+    "description": "Identify the paper’s core identity, contribution, and single central message.",
+    "id": "prompt-paper-identity",
+    "url": "/ai/prompts/en/#prompt-paper-identity"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Claim Hierarchy",
+    "description": "Reorder the manuscript’s claims and narrative weight according to the strength of the evidence.",
+    "id": "prompt-claim-hierarchy",
+    "url": "/ai/prompts/en/#prompt-claim-hierarchy"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Abstract",
+    "description": "Diagnose the Abstract’s information structure using the target journal’s reading conventions.",
+    "id": "prompt-abstract-audit",
+    "url": "/ai/prompts/en/#prompt-abstract-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Background / Institutional Context",
+    "description": "Assess whether the institutional background supports the research question and identification accurately, sufficiently, and without excess.",
+    "id": "prompt-background-institutional-context",
+    "url": "/ai/prompts/en/#prompt-background-institutional-context"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Data & Measures",
+    "description": "Review the sample, timing, measurement, and credibility of data presentation.",
+    "id": "prompt-data-measures",
+    "url": "/ai/prompts/en/#prompt-data-measures"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Analytic Strategy / Identification",
+    "description": "Clarify the identifying variation, estimand, and boundary of causal claims.",
+    "id": "prompt-identification-strategy",
+    "url": "/ai/prompts/en/#prompt-identification-strategy"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Identification Assumptions & Evidence Audit",
+    "description": "Map the central identifying assumptions to the tests, diagnostics, and supporting evidence an economist would normally expect.",
+    "id": "prompt-identification-assumptions-evidence",
+    "url": "/ai/prompts/en/#prompt-identification-assumptions-evidence"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Empirical Specification Audit",
+    "description": "Check whether the empirical specification accurately carries the identification, estimand, and coefficient interpretation.",
+    "id": "prompt-empirical-specification-audit",
+    "url": "/ai/prompts/en/#prompt-empirical-specification-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Results Narrative",
+    "description": "Reorganize the Results around substantive questions rather than regression output.",
+    "id": "prompt-results-narrative",
+    "url": "/ai/prompts/en/#prompt-results-narrative"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Heterogeneity & Mechanisms",
+    "description": "Distinguish useful heterogeneity and mechanism evidence from descriptive or exploratory subgroup results.",
+    "id": "prompt-heterogeneity-mechanisms",
+    "url": "/ai/prompts/en/#prompt-heterogeneity-mechanisms"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Economic Mechanism Interpretation Audit",
+    "description": "Infer a defensible economic mechanism from the overall evidence while distinguishing observed links from untestable steps and alternative explanations.",
+    "id": "prompt-economic-mechanism-interpretation-audit",
+    "url": "/ai/prompts/en/#prompt-economic-mechanism-interpretation-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Conclusion",
+    "description": "Check whether the Conclusion closes the paper accurately around the findings, boundaries, and significance.",
+    "id": "prompt-conclusion-audit",
+    "url": "/ai/prompts/en/#prompt-conclusion-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Estimand Audit",
+    "description": "Check what each result estimates, whether the results are comparable, and whether each estimand matches the corresponding claim.",
+    "id": "prompt-estimand-audit",
+    "url": "/ai/prompts/en/#prompt-estimand-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Estimand Type & Compliance Audit",
+    "description": "Identify the estimand the study actually recovers and align treatment, compliance, sample, and coefficient interpretation with it.",
+    "id": "prompt-estimand-type-compliance",
+    "url": "/ai/prompts/en/#prompt-estimand-type-compliance"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Null Results",
+    "description": "Calibrate the statistical language, precision, and economic meaning of null or imprecise results.",
+    "id": "prompt-null-results",
+    "url": "/ai/prompts/en/#prompt-null-results"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Robustness Architecture",
+    "description": "Require each robustness exercise to answer a specific threat rather than accumulating specifications.",
+    "id": "prompt-robustness-architecture",
+    "url": "/ai/prompts/en/#prompt-robustness-architecture"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Literature Positioning",
+    "description": "Verify the closest literature and build a defensible intellectual position for the paper.",
+    "id": "prompt-literature-positioning",
+    "url": "/ai/prompts/en/#prompt-literature-positioning"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Single-Paper Deep Review",
+    "description": "Read one paper deeply and determine exactly what it means for this project.",
+    "id": "prompt-single-paper-review",
+    "url": "/ai/prompts/en/#prompt-single-paper-review"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Citation Audit",
+    "description": "Check whether citations truly support the text and whether in-text citations and references are complete and consistent.",
+    "id": "prompt-citation-audit",
+    "url": "/ai/prompts/en/#prompt-citation-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Incremental Literature Discovery & Reading Triage",
+    "description": "Search beyond the current literature boundary and triage additional papers by reading value, download value, and novelty risk.",
+    "id": "prompt-incremental-literature-discovery",
+    "url": "/ai/prompts/en/#prompt-incremental-literature-discovery"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Standalone Table / Figure Audit",
+    "description": "Test whether a table or figure can be interpreted accurately without relying on the main text.",
+    "id": "prompt-standalone-exhibit-audit",
+    "url": "/ai/prompts/en/#prompt-standalone-exhibit-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Footnote Audit",
+    "description": "Determine whether each footnote should remain, move, or be deleted, and whether the surrounding main text remains accurate without it.",
+    "id": "prompt-footnote-audit",
+    "url": "/ai/prompts/en/#prompt-footnote-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Appendix as Evidence Architecture",
+    "description": "Rebuild the appendix as a functional supporting-evidence architecture rather than a repository of overflow material.",
+    "id": "prompt-appendix-architecture",
+    "url": "/ai/prompts/en/#prompt-appendix-architecture"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Full-Manuscript Consistency Audit",
+    "description": "Identify internal inconsistencies across the main text, exhibits, notes, and appendix.",
+    "id": "prompt-manuscript-consistency",
+    "url": "/ai/prompts/en/#prompt-manuscript-consistency"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Key Number Cross-Check",
+    "description": "Reconcile repeated key numbers across the manuscript and submission materials against the authoritative results.",
+    "id": "prompt-key-number-cross-check",
+    "url": "/ai/prompts/en/#prompt-key-number-cross-check"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Precision & Rounding Audit",
+    "description": "Establish a stable precision convention across the manuscript and submission materials and identify apparent contradictions created by rounding.",
+    "id": "prompt-precision-rounding-audit",
+    "url": "/ai/prompts/en/#prompt-precision-rounding-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Numbering & Reference Order Audit",
+    "description": "Check the numbering and citation order of sections, equations, exhibits, and appendices.",
+    "id": "prompt-numbering-reference-order-audit",
+    "url": "/ai/prompts/en/#prompt-numbering-reference-order-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Terminology & Notation Audit",
+    "description": "Unify definitions and usage of terms, abbreviations, and mathematical notation.",
+    "id": "prompt-terminology-notation",
+    "url": "/ai/prompts/en/#prompt-terminology-notation"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Caveats, Limitations & Defensive Writing Audit",
+    "description": "Adjudicate whether caveats and limitations belong in the paper, how prominently they should appear, and where they should be placed.",
+    "id": "prompt-caveats-defensive-writing-audit",
+    "url": "/ai/prompts/en/#prompt-caveats-defensive-writing-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Review Comment Adjudication",
+    "description": "Identify the real concern behind external review comments and choose an effective response with minimal collateral damage.",
+    "id": "prompt-review-comment-adjudication",
+    "url": "/ai/prompts/en/#prompt-review-comment-adjudication"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Revision Ripple-Effect Audit",
+    "description": "Verify that requested revisions were completed and trace any new problems created by the changes.",
+    "id": "prompt-revision-ripple-effect",
+    "url": "/ai/prompts/en/#prompt-revision-ripple-effect"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Revision Residue Audit",
+    "description": "Remove obsolete traces of prior discussion, correction, and rejected alternatives from the final artifact.",
+    "id": "prompt-revision-residue-audit",
+    "url": "/ai/prompts/en/#prompt-revision-residue-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Five-Minute Editor Read",
+    "description": "Simulate an editor’s rapid initial screen and identify the most likely desk-rejection risk.",
+    "id": "prompt-editor-five-minute-read",
+    "url": "/ai/prompts/en/#prompt-editor-five-minute-read"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Hostile Referee Simulation",
+    "description": "Simulate a demanding referee and identify the strongest defensible reasons for rejection.",
+    "id": "prompt-hostile-referee",
+    "url": "/ai/prompts/en/#prompt-hostile-referee"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Friendly Senior Coauthor",
+    "description": "Look for ways to raise the paper’s level without creating a large amount of new work.",
+    "id": "prompt-senior-coauthor",
+    "url": "/ai/prompts/en/#prompt-senior-coauthor"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "What Am I Not Seeing?",
+    "description": "Step outside fixed checklists and identify the most important issue the author is likely overlooking.",
+    "id": "prompt-unseen-risks",
+    "url": "/ai/prompts/en/#prompt-unseen-risks"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Compression Pass",
+    "description": "Shorten the paper without losing substantive content.",
+    "id": "prompt-compression-pass",
+    "url": "/ai/prompts/en/#prompt-compression-pass"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Paragraph-Level Narrative Audit",
+    "description": "Diagnose the function, topic sentence, transitions, and deletion value of each paragraph.",
+    "id": "prompt-paragraph-narrative",
+    "url": "/ai/prompts/en/#prompt-paragraph-narrative"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Prose Quality & Readability Audit",
+    "description": "Assess whether the prose is natural, clear, and professional at the level of a mature applied economics manuscript.",
+    "id": "prompt-prose-quality-readability-audit",
+    "url": "/ai/prompts/en/#prompt-prose-quality-readability-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Pre-Submission Robustness Adjudication",
+    "description": "Before submission, distinguish required, optional, and no-longer-worthwhile robustness work.",
+    "id": "prompt-pre-submission-robustness",
+    "url": "/ai/prompts/en/#prompt-pre-submission-robustness"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Manuscript Integration Audit",
+    "description": "Test whether many local revisions have converged into one coherent and closed manuscript-level argument.",
+    "id": "prompt-integration-audit",
+    "url": "/ai/prompts/en/#prompt-integration-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Technical Artifact Audit",
+    "description": "Review only technical and presentation defects in the LaTeX project, final PDF, and formal documentation.",
+    "id": "prompt-technical-artifact-audit",
+    "url": "/ai/prompts/en/#prompt-technical-artifact-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Manuscript",
+    "title": "Final Manuscript Audit",
+    "description": "Conduct the final technical, compliance, and consistency review of the manuscript PDF that is about to be uploaded.",
+    "id": "prompt-final-manuscript-audit",
+    "url": "/ai/prompts/en/#prompt-final-manuscript-audit"
+  },
+  {
+    "lang": "en",
+    "layer": "Submission",
+    "title": "Actual Submission Package",
+    "description": "Assemble and cross-check the exact files and system metadata that will be uploaded today.",
+    "id": "actual-submission-package",
+    "url": "/ai/prompts/en/submission/#actual-submission-package"
+  },
+  {
+    "lang": "en",
+    "layer": "Submission",
+    "title": "Clean-Room Replication Package",
+    "description": "Build a third-party replication package that matches the final paper exactly.",
+    "id": "clean-room-replication",
+    "url": "/ai/prompts/en/submission/#clean-room-replication"
+  },
+  {
+    "lang": "en",
+    "layer": "Submission",
+    "title": "Frozen Project Snapshot",
+    "description": "Freeze a minimal but sufficient milestone snapshot from which the project can be restarted fully.",
+    "id": "frozen-project-snapshot",
+    "url": "/ai/prompts/en/submission/#frozen-project-snapshot"
   }
 ]
