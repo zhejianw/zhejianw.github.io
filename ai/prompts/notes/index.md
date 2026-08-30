@@ -6,7 +6,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-29
+last_updated: 2026-08-30
 ---
 
 {% include prompt-layer-tabs.html %}
@@ -65,6 +65,47 @@ last_updated: 2026-08-29
 只更新真正改变的内容，不要把文件无限扩张成 changelog。保留当前最准确的 design map，并在必要时简短注明重要判断为何改变。
 
 目标是让当前 map 始终准确反映：**现在手里有什么、合理 empirical space 是什么、哪些事实已经确定、哪些经济学判断仍需要裁决。**
+~~~
+
+## Notes Prompt 0C · Implement GPT Pro Review {#implement-gpt-pro-review}
+
+<p class="prompt-description">以本地事实核验 Pro 意见，完成高价值检查并更新权威证据。</p>
+
+**推荐模式：Extra High；涉及较多文件、代码和诊断时使用可持续工作的 agent 模式**
+
+~~~text
+下面是 GPT Pro 基于当前材料给出的 methodological / substantive review。把它视为高级分析和需要验证的判断，不是机械执行清单。
+
+先结合当前 data、code、outputs 和 `empirical_design_map.md` 判断每条意见依赖的事实是否成立，再决定最合适的处理方式。区分：
+
+- 已被本地 evidence 支持、可以直接采纳的判断；
+- 需要额外 diagnostic / regression / data check 才能判断的问题；
+- 基于错误或过时事实、需要修正的意见；
+- 有道理但不值得实施或会改变 estimand / research question 的建议；
+- 仍然需要 GPT Pro 再裁决的问题。
+
+完成真正有价值的检查、分析和必要修改，并相应更新 Notes / `empirical_design_map.md` 等 authoritative artifacts。不要为了回应 Pro 而无限扩展 specification space。
+
+最后给我两份输出：
+
+1. **Return to GPT Pro**：简洁说明哪些意见被确认、修改或拒绝；新做了什么；得到什么新 evidence；目前还剩哪些真正需要 Pro 判断的问题。写到一个独立 markdown 文件，并给出准确路径，方便我直接丢给 GPT Pro。
+2. **给我的中文综述**：不用方法论黑话堆砌，清楚讲明白目前最可信的 research story、identification / comparison logic、主要 evidence、最重要的 caveat，以及经过这一轮后我们的理解发生了什么变化。
+
+如果本轮结果使之前的 design understanding 实质改变，更新 `empirical_design_map.md`；不要把完整过程写成 changelog。
+~~~
+
+## Notes Prompt 0D · GPT Pro Re-adjudication {#gpt-pro-re-adjudication}
+
+<p class="prompt-description">依据新核查证据重新裁决识别、设定与解释是否已经站得住。</p>
+
+**推荐模式：Pro**
+
+~~~text
+这是 Claude Code 根据你上一轮意见重新核查本地 data、code 和 evidence 后的汇报。
+
+请重新裁决：哪些原有 concerns 已经被充分解决，哪些仍然成立，哪些因为新 evidence 应该修改判断；目前 identification、specification 和 interpretation 是否已经足够 defensible，以及还有没有少数真正值得在进入下一阶段前处理的问题。
+
+不要因为上一轮已经提出过某个 concern 就坚持它；以这轮新 evidence 为准。也不要为了完整继续增加低边际价值的 robustness。
 ~~~
 
 ## Notes Prompt 1 · Single-Prompt Exploration {#case-specific-notes-exploration}

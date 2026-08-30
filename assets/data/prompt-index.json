@@ -50,6 +50,20 @@
   },
   {
     "layer": "Notes",
+    "title": "Notes Prompt 0C · Implement GPT Pro Review",
+    "description": "以本地事实核验 Pro 意见，完成高价值检查并更新权威证据。",
+    "id": "implement-gpt-pro-review",
+    "url": "/ai/prompts/notes/#implement-gpt-pro-review"
+  },
+  {
+    "layer": "Notes",
+    "title": "Notes Prompt 0D · GPT Pro Re-adjudication",
+    "description": "依据新核查证据重新裁决识别、设定与解释是否已经站得住。",
+    "id": "gpt-pro-re-adjudication",
+    "url": "/ai/prompts/notes/#gpt-pro-re-adjudication"
+  },
+  {
+    "layer": "Notes",
     "title": "Notes Prompt 1 · Single-Prompt Exploration",
     "description": "围绕具体研究问题扩展可复用证据层。",
     "id": "case-specific-notes-exploration",
