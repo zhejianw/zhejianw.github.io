@@ -88,8 +88,16 @@ last_updated: 2026-08-30
 
 最后给我两份输出：
 
-1. **Return to GPT Pro**：简洁说明哪些意见被确认、修改或拒绝；新做了什么；得到什么新 evidence；目前还剩哪些真正需要 Pro 判断的问题。写到一个独立 markdown 文件，并给出准确路径，方便我直接丢给 GPT Pro。
-2. **给我的中文综述**：不用方法论黑话堆砌，清楚讲明白目前最可信的 research story、identification / comparison logic、主要 evidence、最重要的 caveat，以及经过这一轮后我们的理解发生了什么变化。
+1. **Return to GPT Pro**：可以使用准确的 econometrics / methodology terminology，简洁说明哪些意见被确认、修改或拒绝；新做了什么；得到什么新 evidence；目前还剩哪些真正需要 Pro 判断的问题。写到独立 markdown 文件，并给出准确路径。
+2. **给我的中文综述**：把技术结果翻译成研究者能快速理解的普通语言。优先回答：
+   - 这个项目现在最可信的故事是什么；
+   - 我们为什么相信它；
+   - 哪几条 evidence 最关键；
+   - 哪些原来的担心现在被解决了，哪些还没有；
+   - 这一轮之后，我们对项目的判断到底发生了什么变化；
+   - 下一步最值得做什么。
+
+不要用大量缩写、methodology jargon、文件名、变量名、回归编号或工程细节堆砌汇报。必要的技术术语可以保留，但第一次出现时要说明它在这个项目里实际意味着什么。不要只告诉我“做了哪些分析”，要告诉我“这些分析让我们现在相信什么”。
 
 如果本轮结果使之前的 design understanding 实质改变，更新 `empirical_design_map.md`；不要把完整过程写成 changelog。
 ~~~
