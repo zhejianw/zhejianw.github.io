@@ -94,12 +94,13 @@
 
     var brandedModes = content.match(/(?:Fable|Opus)\s+(?:High\/Max|High|Max)/g) || [];
     var hasBrandedMode = brandedModes.length > 0;
+    var hasGptPro = content.indexOf("GPT Pro") !== -1;
 
     brandedModes.forEach(function (mode) {
       addMode(mode.toLowerCase().replace(/[^a-z0-9]+/g, "-"), mode);
     });
 
-    if (content.indexOf("GPT Pro") !== -1) {
+    if (hasGptPro) {
       addMode("gpt-pro", "GPT Pro");
     } else if (!hasBrandedMode && firstPart.indexOf("Extra High") !== -1) {
       addMode("extra-high", "Extra High");
@@ -112,7 +113,7 @@
     if (!hasBrandedMode && content.indexOf("Extra High") !== -1) {
       addMode("extra-high", "Extra High");
     }
-    if (!hasBrandedMode && content.indexOf("Pro") !== -1) {
+    if (!hasBrandedMode && !hasGptPro && content.indexOf("Pro") !== -1) {
       addMode("pro", "Pro");
     }
     if (!hasBrandedMode && content.replace(/Extra High/g, "").indexOf("High") !== -1) {

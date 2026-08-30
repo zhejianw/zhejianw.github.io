@@ -96,6 +96,11 @@ async function main() {
     assert(new Set(ids).size === ids.length, `${layer}: prompt anchor ids are not unique`);
     const emptyBodies = await page.locator(".prompt-card").evaluateAll((cards) => cards.filter((card) => !card.querySelector("pre")?.textContent.trim()).length);
     assert(emptyBodies === 0, `${layer}: found an empty copyable prompt`);
+    const duplicateModeBadges = await page.locator(".prompt-card").evaluateAll((cards) => cards.filter((card) => {
+      const labels = [...card.querySelectorAll(".prompt-mode-badge")].map((badge) => badge.textContent.trim());
+      return new Set(labels).size !== labels.length;
+    }).length);
+    assert(duplicateModeBadges === 0, `${layer}: found duplicate mode badges within a prompt card`);
     const promptTypography = await page.locator(".prompt-card pre code").first().evaluate((node) => {
       const style = getComputedStyle(node);
       return { family: style.fontFamily.toLowerCase(), size: parseFloat(style.fontSize), lineHeight: parseFloat(style.lineHeight) };
