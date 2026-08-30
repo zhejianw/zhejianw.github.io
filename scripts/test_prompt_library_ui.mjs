@@ -182,8 +182,8 @@ async function main() {
   await englishSetupResult.click();
   await page.waitForURL(/\/ai\/prompts\/en\/setup\/#project-workspace-bootstrap$/);
 
-  await openPromptPage(page, "/ai/prompts/en/notes/#modular-evidence-workflow");
-  assert(await page.locator('[data-prompt-id="modular-evidence-workflow"] .prompt-mode-badge', { hasText: "Sequence" }).count() > 0, "English Sequence badge was not detected");
+  await openPromptPage(page, "/ai/prompts/en/notes/#notes-cycle");
+  assert(await page.locator('[data-prompt-id="notes-cycle"] .prompt-mode-badge', { hasText: "Sequence" }).count() > 0, "English Sequence badge was not detected");
   await openPromptPage(page, "/ai/prompts/en/routing/");
   assert(await page.locator(".prompt-mode-badge", { hasText: "Fable High/Max" }).count() > 0, "Spaced Fable High / Max mode was not normalized");
   assert(await page.locator(".prompt-mode-badge", { hasText: "Opus High/Max" }).count() > 0, "Spaced Opus High / Max mode was not normalized");
