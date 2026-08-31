@@ -18,12 +18,14 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "assets" / "data" / "prompt-index.json"
 LAYERS = (
     ("zh", "Setup", ROOT / "ai" / "prompts" / "setup" / "index.md", "/ai/prompts/setup/"),
+    ("zh", "Acquisition", ROOT / "ai" / "prompts" / "acquisition" / "index.md", "/ai/prompts/acquisition/"),
     ("zh", "Notes", ROOT / "ai" / "prompts" / "notes" / "index.md", "/ai/prompts/notes/"),
     ("zh", "Routing", ROOT / "ai" / "prompts" / "routing" / "index.md", "/ai/prompts/routing/"),
     ("zh", "Brief", ROOT / "ai" / "prompts" / "brief" / "index.md", "/ai/prompts/brief/"),
     ("zh", "Manuscript", ROOT / "ai" / "prompts" / "index.md", "/ai/prompts/"),
     ("zh", "Submission", ROOT / "ai" / "prompts" / "submission" / "index.md", "/ai/prompts/submission/"),
     ("en", "Setup", ROOT / "ai" / "prompts" / "en" / "setup" / "index.md", "/ai/prompts/en/setup/"),
+    ("en", "Acquisition", ROOT / "ai" / "prompts" / "en" / "acquisition" / "index.md", "/ai/prompts/en/acquisition/"),
     ("en", "Notes", ROOT / "ai" / "prompts" / "en" / "notes" / "index.md", "/ai/prompts/en/notes/"),
     ("en", "Routing", ROOT / "ai" / "prompts" / "en" / "routing" / "index.md", "/ai/prompts/en/routing/"),
     ("en", "Brief", ROOT / "ai" / "prompts" / "en" / "brief" / "index.md", "/ai/prompts/en/brief/"),

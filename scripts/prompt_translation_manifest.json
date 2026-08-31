@@ -15,6 +15,16 @@
       "explicit_anchors": 5
     },
     {
+      "key": "acquisition",
+      "source": "ai/prompts/acquisition/index.md",
+      "translation": "ai/prompts/en/acquisition/index.md",
+      "source_route": "/ai/prompts/acquisition/",
+      "translation_route": "/ai/prompts/en/acquisition/",
+      "reviewed_source_blob_sha": "ac51f1be1db70e4e22958c010e51b5dbe0aa00d1",
+      "prompt_blocks": 1,
+      "explicit_anchors": 1
+    },
+    {
       "key": "notes",
       "source": "ai/prompts/notes/index.md",
       "translation": "ai/prompts/en/notes/index.md",

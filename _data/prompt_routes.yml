@@ -5,6 +5,11 @@
   zh: /ai/prompts/setup/
   en: /ai/prompts/en/setup/
 
+- key: acquisition
+  label: Acquisition
+  zh: /ai/prompts/acquisition/
+  en: /ai/prompts/en/acquisition/
+
 - key: notes
   label: Notes
   zh: /ai/prompts/notes/

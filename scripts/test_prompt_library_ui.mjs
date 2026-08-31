@@ -9,12 +9,14 @@ const baseUrl = process.env.PROMPT_LIBRARY_BASE_URL || "http://127.0.0.1:4173";
 const screenshotDir = process.env.PROMPT_LIBRARY_SCREENSHOT_DIR || "tmp/prompt-library-ui";
 const promptPages = [
   ["zh", "Setup", "/ai/prompts/setup/"],
+  ["zh", "Acquisition", "/ai/prompts/acquisition/"],
   ["zh", "Notes", "/ai/prompts/notes/"],
   ["zh", "Routing", "/ai/prompts/routing/"],
   ["zh", "Brief", "/ai/prompts/brief/"],
   ["zh", "Manuscript", "/ai/prompts/"],
   ["zh", "Submission", "/ai/prompts/submission/"],
   ["en", "Setup", "/ai/prompts/en/setup/"],
+  ["en", "Acquisition", "/ai/prompts/en/acquisition/"],
   ["en", "Notes", "/ai/prompts/en/notes/"],
   ["en", "Routing", "/ai/prompts/en/routing/"],
   ["en", "Brief", "/ai/prompts/en/brief/"],
@@ -66,8 +68,8 @@ async function main() {
     assert(!Object.prototype.hasOwnProperty.call(record, "code"), "Cross-layer index must not contain prompt bodies");
     return counts;
   }, {});
-  assert(promptIndex.filter((record) => record.lang === "zh").length === 91, "Chinese metadata index must contain 91 prompts");
-  assert(promptIndex.filter((record) => record.lang === "en").length === 91, "English metadata index must contain 91 prompts");
+  assert(promptIndex.filter((record) => record.lang === "zh").length === 92, "Chinese metadata index must contain 92 prompts");
+  assert(promptIndex.filter((record) => record.lang === "en").length === 92, "English metadata index must contain 92 prompts");
 
   const browser = await chromium.launch({ headless: true });
   activeBrowser = browser;
@@ -92,7 +94,7 @@ async function main() {
     const cardCount = await page.locator(".prompt-card").count();
     const pageLabel = `${lang}:${layer}`;
     assert(cardCount === expectedCounts[pageLabel], `${pageLabel}: expected ${expectedCounts[pageLabel]} cards, found ${cardCount}`);
-    assert(await page.locator(".prompt-layer-nav a, .prompt-layer-nav .is-current").count() === 6, `${pageLabel}: layer nav must contain six layers`);
+    assert(await page.locator(".prompt-layer-nav a, .prompt-layer-nav .is-current").count() === 7, `${pageLabel}: layer nav must contain seven layers`);
     assert(await page.locator(".prompt-language-switch a, .prompt-language-switch .is-current").count() === 2, `${pageLabel}: bilingual switch must contain two languages`);
     assert(await page.locator(".prompt-language-switch .is-current").count() === 1, `${pageLabel}: language switch needs one current language`);
     assert((await page.locator(".prompt-language-switch .is-current").textContent()).trim() === (lang === "en" ? "English" : "中文"), `${pageLabel}: wrong current language`);
@@ -204,6 +206,8 @@ async function main() {
   const visualRoutes = [
     { lang: "zh", name: "manuscript", pathname: "/ai/prompts/" },
     { lang: "en", name: "manuscript", pathname: "/ai/prompts/en/" },
+    { lang: "zh", name: "acquisition", pathname: "/ai/prompts/acquisition/" },
+    { lang: "en", name: "acquisition", pathname: "/ai/prompts/en/acquisition/" },
     { lang: "zh", name: "routing", pathname: "/ai/prompts/routing/" },
     { lang: "en", name: "routing", pathname: "/ai/prompts/en/routing/" },
   ];
@@ -280,7 +284,7 @@ async function main() {
 
   await browser.close();
   activeBrowser = null;
-  console.log(`Prompt Library UI regression passed (${promptIndex.length} prompts, 12 pages, 3 viewports).`);
+  console.log(`Prompt Library UI regression passed (${promptIndex.length} prompts, 14 pages, 3 viewports).`);
 }
 
 main().catch(async (error) => {

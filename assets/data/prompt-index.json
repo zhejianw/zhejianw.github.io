@@ -41,6 +41,14 @@
   },
   {
     "lang": "zh",
+    "layer": "Acquisition",
+    "title": "Acquisition Prompt 1 · Chinese Government Web Harvesting Playbook",
+    "description": "为中文政府网站数据采集建立可审计、可恢复、可跨 session 延续的完整工作规范。",
+    "id": "government-web-harvesting-playbook",
+    "url": "/ai/prompts/acquisition/#government-web-harvesting-playbook"
+  },
+  {
+    "lang": "zh",
     "layer": "Notes",
     "title": "Notes Prompt 0A · Initial Empirical Design Map",
     "description": "大规模探索前，从本地材料建立数据、设定、识别与实施决策地图。",
@@ -766,6 +774,14 @@
     "description": "Complete context-dependent closing work before compression or a major stopping point, then leave a concise handoff for the next Claude session.",
     "id": "session-handoff-refresh",
     "url": "/ai/prompts/en/setup/#session-handoff-refresh"
+  },
+  {
+    "lang": "en",
+    "layer": "Acquisition",
+    "title": "Acquisition Prompt 1 · Chinese Government Web Harvesting Playbook",
+    "description": "Establish an auditable, restartable, and cross-session operating standard for harvesting data from Chinese government websites.",
+    "id": "government-web-harvesting-playbook",
+    "url": "/ai/prompts/en/acquisition/#government-web-harvesting-playbook"
   },
   {
     "lang": "en",
