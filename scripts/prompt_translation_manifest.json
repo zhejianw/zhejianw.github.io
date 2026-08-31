@@ -40,9 +40,9 @@
       "translation": "ai/prompts/en/routing/index.md",
       "source_route": "/ai/prompts/routing/",
       "translation_route": "/ai/prompts/en/routing/",
-      "reviewed_source_blob_sha": "d3410b57ebfe379adb9921b47ce3c9bb7840d21a",
-      "prompt_blocks": 12,
-      "explicit_anchors": 12
+      "reviewed_source_blob_sha": "99c79058397a86b2db13651409fefda0b1a83935",
+      "prompt_blocks": 13,
+      "explicit_anchors": 13
     },
     {
       "key": "brief",

@@ -9,7 +9,7 @@ prompt_layer: routing
 translation_key: routing
 translation_of: /ai/prompts/routing/
 source_path: ai/prompts/routing/index.md
-source_blob_sha: d3410b57ebfe379adb9921b47ce3c9bb7840d21a
+source_blob_sha: 99c79058397a86b2db13651409fefda0b1a83935
 translation_status: synced
 author_profile: false
 prompt_library: true
@@ -19,7 +19,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-30
+last_updated: 2026-08-31
 ---
 
 {% include prompt-language-switch.html %}
@@ -31,6 +31,7 @@ last_updated: 2026-08-30
   <strong>Workflow</strong>
   <a href="/ai/prompts/en/notes/">Open Notes</a><span class="workflow-arrow">→</span>
   <a href="#routing-literature-triage">Literature</a><span class="workflow-arrow">→</span>
+  <a href="#routing-ex-ante-hypothesis-outcome-audit">Hypotheses</a><span class="workflow-arrow">→</span>
   <a href="#routing-evidence-brief-router">Router</a><span class="workflow-arrow">↺</span>
   <a href="#routing-existing-data-targeted-notes">Targeted Evidence</a><span class="workflow-arrow">→</span>
   <a href="#routing-candidate-brief">Candidate Brief</a><span class="workflow-arrow">→</span>
@@ -45,7 +46,7 @@ last_updated: 2026-08-30
   </div>
   <ol class="routing-map__rail">
     <li>
-      <a href="#routing-literature-triage"><span>Literature</span><strong>Triage → Read → Synthesize</strong></a>
+      <a href="#routing-literature-triage"><span>Literature</span><strong>Triage → Read → Hypotheses → Synthesize</strong></a>
     </li>
     <li class="is-decision">
       <a href="#routing-evidence-brief-router"><span>Pro Router</span><strong>Enough, reopen, narrow, or stop?</strong></a>
@@ -76,6 +77,7 @@ last_updated: 2026-08-30
   <strong>Prompts</strong>
   <a href="#routing-literature-triage">0 Triage</a><span class="toc-separator">·</span>
   <a href="#routing-close-reading">1 Read</a><span class="toc-separator">·</span>
+  <a href="#routing-ex-ante-hypothesis-outcome-audit">1A Hypotheses</a><span class="toc-separator">·</span>
   <a href="#routing-brief-input-pack">2 Synthesize</a><span class="toc-separator">·</span>
   <a href="#routing-evidence-brief-router">3 Route</a><span class="toc-separator">·</span>
   <a href="#routing-existing-data-targeted-notes">4A Existing data</a><span class="toc-separator">·</span>
@@ -132,6 +134,22 @@ What does this paper imply for our identification, measurement, estimand, interp
 Different papers need not receive equal space. For low-information papers, preserve only enough information to prevent unnecessary rereading later.
 
 After each paper, write the judgment into the project’s literature notes and update the cross-paper literature matrix. Do not depend on the current session context as long-term memory, and do not prematurely combine all papers into a manuscript story.
+~~~
+
+## Routing Prompt 1A · Ex Ante Hypothesis & Outcome Audit {#routing-ex-ante-hypothesis-outcome-audit}
+
+<p class="prompt-description">Fix the ex ante hypothesis hierarchy and corresponding measurements before adjudicating the current evidence and next step against that standard.</p>
+
+**Recommended mode: GPT Pro; preferably after close reading of the closest literature and before the Evidence / Brief Router**
+
+~~~text
+Reassess the current project’s core hypotheses and outcomes. For now, do not begin from the existing estimates, statistical significance, precision, or “which result looks best.” First use theory, the institutional setting, and the closest literature to determine which outcomes we genuinely had ex ante reason to expect to change, in what direction, and which measurements most directly correspond to those hypotheses.
+
+Only after fixing this hypothesis hierarchy should you map the existing evidence back onto it. Determine which hypotheses are supported; which yield credible nulls or precise nulls; which remain underpowered; which rely on inadequate measurement or invalid identification; and which still lack critical data.
+
+Do not revise the hypothesis, outcome, or economic story retrospectively merely because an existing result is attractive. Give a result strong substantive interpretation only when it simultaneously corresponds to a strong ex ante prediction, an appropriate measurement, credible identification, and enough precision to distinguish economically meaningful effects.
+
+Finally, determine which hypotheses are genuinely most worth studying, how far the current evidence can support them, and whether the next highest-information-value step is additional analysis, additional data, a change in framing, or acceptance that this direction currently lacks sufficiently meaningful evidence.
 ~~~
 
 ## Routing Prompt 2 · Literature Synthesis → Brief Input Pack {#routing-brief-input-pack}

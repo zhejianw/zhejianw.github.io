@@ -1,7 +1,7 @@
 # Notes → Brief Routing — Translation Correspondence and Semantic Audit
 
 - Chinese source: `ai/prompts/routing/index.md`
-- Chinese blob SHA: `d3410b57ebfe379adb9921b47ce3c9bb7840d21a`
+- Chinese blob SHA: `99c79058397a86b2db13651409fefda0b1a83935`
 - English candidate: `01_english_sources/routing/index.md`
 - Chinese route: `/ai/prompts/routing/`
 - English route: `/ai/prompts/en/routing/`
@@ -22,6 +22,7 @@ The visual routing map retains the same six stations and five branch outcomes. T
 | --- | --- | --- |
 | `routing-literature-triage` | Allocate reading effort by expected effect on the Brief | Do not rank by journal prestige or keyword similarity; identify reading depth and stop low-value reading. |
 | `routing-close-reading` | Read binding papers fully and produce durable memos | Actual main text / appendix reading; record implications for identification, measurement, estimand, interpretation, contribution, framing, and evidence demand. |
+| `routing-ex-ante-hypothesis-outcome-audit` | Fix the ex ante hypothesis hierarchy before inspecting results | Derive expected outcomes and measurements from theory, institutional setting, and closest literature; then classify support, precise nulls, underpowered tests, measurement failures, identification failures, and missing data. |
 | `routing-brief-input-pack` | Compress the local empirical and literature world for Pro | Do not write the Brief; retain only paper-defining information and exact local paths. |
 | `routing-evidence-brief-router` | Classify every material uncertainty into enough / recheck / existing-data evidence / new data / costly design / untestable / downgrade-stop | New evidence is justified only when different plausible outcomes change paper-level judgment. |
 | `routing-existing-data-targeted-notes` | Return narrowly to existing data | Do not reopen the full specification space; define ex ante what each possible result would imply. |
@@ -58,7 +59,7 @@ All current model labels remain unchanged. Translation does not replace Fable / 
 ## Structural checks
 
 - [ ] Routing map stations and branch outcomes match the Chinese page.
-- [ ] Twelve prompt anchors match exactly.
+- [ ] Thirteen prompt anchors match exactly.
 - [ ] Stage 5 returns to Stage 3 rather than moving directly to Brief.
 - [ ] Reverse audit retains its return path to the Router.
 - [ ] The stopping-rule examples are preserved.

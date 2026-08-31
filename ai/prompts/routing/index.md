@@ -7,7 +7,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-30
+last_updated: 2026-08-31
 ---
 
 {% include prompt-layer-tabs.html %}
@@ -18,6 +18,7 @@ last_updated: 2026-08-30
   <strong>Workflow</strong>
   <a href="/ai/prompts/notes/">Open Notes</a><span class="workflow-arrow">→</span>
   <a href="#routing-literature-triage">Literature</a><span class="workflow-arrow">→</span>
+  <a href="#routing-ex-ante-hypothesis-outcome-audit">Hypotheses</a><span class="workflow-arrow">→</span>
   <a href="#routing-evidence-brief-router">Router</a><span class="workflow-arrow">↺</span>
   <a href="#routing-existing-data-targeted-notes">Targeted Evidence</a><span class="workflow-arrow">→</span>
   <a href="#routing-candidate-brief">Candidate Brief</a><span class="workflow-arrow">→</span>
@@ -32,7 +33,7 @@ last_updated: 2026-08-30
   </div>
   <ol class="routing-map__rail">
     <li>
-      <a href="#routing-literature-triage"><span>Literature</span><strong>Triage → Read → Synthesize</strong></a>
+      <a href="#routing-literature-triage"><span>Literature</span><strong>Triage → Read → Hypotheses → Synthesize</strong></a>
     </li>
     <li class="is-decision">
       <a href="#routing-evidence-brief-router"><span>Pro Router</span><strong>Enough, reopen, narrow, or stop?</strong></a>
@@ -63,6 +64,7 @@ last_updated: 2026-08-30
   <strong>Prompts</strong>
   <a href="#routing-literature-triage">0 Triage</a><span class="toc-separator">·</span>
   <a href="#routing-close-reading">1 Read</a><span class="toc-separator">·</span>
+  <a href="#routing-ex-ante-hypothesis-outcome-audit">1A Hypotheses</a><span class="toc-separator">·</span>
   <a href="#routing-brief-input-pack">2 Synthesize</a><span class="toc-separator">·</span>
   <a href="#routing-evidence-brief-router">3 Route</a><span class="toc-separator">·</span>
   <a href="#routing-existing-data-targeted-notes">4A Existing data</a><span class="toc-separator">·</span>
@@ -119,6 +121,22 @@ last_updated: 2026-08-30
 不同论文不必使用相同篇幅。低信息量文献只留下足以避免未来重复阅读的记录。
 
 每篇完成后将判断写入项目 literature notes，并更新跨文献 literature matrix。不要依靠当前 session context 保存长期记忆，也不要提前把所有文献拼成一个 manuscript story。
+~~~
+
+## Routing Prompt 1A · Ex Ante Hypothesis & Outcome Audit {#routing-ex-ante-hypothesis-outcome-audit}
+
+<p class="prompt-description">先固定事前 hypothesis hierarchy 与对应 measurement，再以同一标准裁决现有 evidence 和下一步。</p>
+
+**推荐模式：GPT Pro；最好在 closest literature 精读完成后、Evidence / Brief Router 之前使用**
+
+~~~text
+重新审视当前项目的核心 hypotheses 和 outcomes。暂时不要从现有 estimates、显著性、precision 或“哪个结果最好看”出发；先基于 theory、institutional setting 和 closest literature，判断我们事前真正有理由预期哪些 outcomes 应该发生什么变化，以及哪些 measurement 最直接对应这些 hypotheses。
+
+在这套 hypothesis hierarchy 固定之后，再把现有 evidence 映射回来：哪些 hypotheses 得到支持，哪些形成可信的 null / precise null，哪些只是 underpowered、measurement 不合格、identification 不成立，哪些还缺关键数据。
+
+不要因为现有结果漂亮而反向修改 hypothesis、outcome 或经济故事。只有当一个结果同时对应强 ex ante prediction、合适 measurement、可信 identification，并且 precision 足以区分经济上有意义的效应时，才赋予它强 substantive interpretation。
+
+最后判断：目前真正最值得研究的 hypotheses 是什么，现有 evidence 能支持到哪里，以及下一步最高 information value 是补分析、补数据、改变 framing，还是接受这个方向没有足够有意义的证据。
 ~~~
 
 ## Routing Prompt 2 · Literature Synthesis → Brief Input Pack {#routing-brief-input-pack}

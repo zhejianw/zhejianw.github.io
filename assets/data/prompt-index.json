@@ -178,6 +178,14 @@
   {
     "lang": "zh",
     "layer": "Routing",
+    "title": "Routing Prompt 1A · Ex Ante Hypothesis & Outcome Audit",
+    "description": "先固定事前 hypothesis hierarchy 与对应 measurement，再以同一标准裁决现有 evidence 和下一步。",
+    "id": "routing-ex-ante-hypothesis-outcome-audit",
+    "url": "/ai/prompts/routing/#routing-ex-ante-hypothesis-outcome-audit"
+  },
+  {
+    "lang": "zh",
+    "layer": "Routing",
     "title": "Routing Prompt 2 · Literature Synthesis → Brief Input Pack",
     "description": "把完整 evidence、design 与 closest literature 压缩成供 Pro 裁决的输入包。",
     "id": "routing-brief-input-pack",
@@ -910,6 +918,14 @@
     "description": "Closely read the genuinely important papers and preserve their binding implications in project artifacts.",
     "id": "routing-close-reading",
     "url": "/ai/prompts/en/routing/#routing-close-reading"
+  },
+  {
+    "lang": "en",
+    "layer": "Routing",
+    "title": "Routing Prompt 1A · Ex Ante Hypothesis & Outcome Audit",
+    "description": "Fix the ex ante hypothesis hierarchy and corresponding measurements before adjudicating the current evidence and next step against that standard.",
+    "id": "routing-ex-ante-hypothesis-outcome-audit",
+    "url": "/ai/prompts/en/routing/#routing-ex-ante-hypothesis-outcome-audit"
   },
   {
     "lang": "en",
