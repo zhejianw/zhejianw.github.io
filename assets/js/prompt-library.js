@@ -523,7 +523,7 @@
   function createCommandPalette(content) {
     var cards = Array.prototype.slice.call(content.querySelectorAll(".prompt-card"));
 
-    if (cards.length < 2 || content.querySelector(".prompt-command-dialog")) {
+    if (cards.length < 1 || content.querySelector(".prompt-command-dialog")) {
       return;
     }
 
