@@ -150,13 +150,13 @@ async function main() {
   const allLayersScope = page.locator(".prompt-command-scope", { hasText: "All layers" });
   await allLayersScope.click();
   await search.fill("Workspace Bootstrap");
-  await page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 1 · Workspace Bootstrap" }).waitFor();
+  await page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 2 · Workspace Bootstrap" }).waitFor();
   await thisLayerScope.click();
   await search.fill("mediator / correlate");
   await page.locator(".prompt-command-result__title", { hasText: "Heterogeneity" }).waitFor();
   await allLayersScope.click();
   await search.fill("Workspace Bootstrap");
-  const chineseSetupResult = page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 1 · Workspace Bootstrap" }).first();
+  const chineseSetupResult = page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 2 · Workspace Bootstrap" }).first();
   await chineseSetupResult.waitFor();
   await chineseSetupResult.click();
   await page.waitForURL(/\/ai\/prompts\/setup\/#project-workspace-bootstrap$/);
@@ -177,7 +177,7 @@ async function main() {
   const englishSearch = page.locator(".prompt-command-input");
   await page.locator(".prompt-command-scope", { hasText: "All layers" }).click();
   await englishSearch.fill("Workspace Bootstrap");
-  const englishSetupResult = page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 1 · Workspace Bootstrap" }).first();
+  const englishSetupResult = page.locator(".prompt-command-result__title", { hasText: "Setup Prompt 2 · Workspace Bootstrap" }).first();
   await englishSetupResult.waitFor();
   const englishSetupDescription = await englishSetupResult.locator("..").locator(".prompt-command-result__description").textContent();
   assert(!/[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/.test(englishSetupDescription || ""), "English cross-layer search exposed a Chinese description");
