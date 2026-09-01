@@ -6,7 +6,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-29
+last_updated: 2026-09-01
 ---
 
 {% include prompt-layer-tabs.html %}
@@ -191,7 +191,124 @@ last_updated: 2026-08-29
 完成环境确认和记录后停止，不开始 substantive research。
 ~~~
 
-## Setup Prompt 3 · Durable Project Map Refresh {#project-map-refresh}
+## Setup Prompt 3 · Existing Project Stage Triage {#existing-project-stage-triage}
+
+<p class="prompt-description">接手已有实证项目，依据本地权威材料判断当前 research stage 与最有价值的下一步。</p>
+
+**推荐模式：Extra High**
+
+~~~text
+你现在接手的是一个 empirical research project。先理解当前项目文件、已有 data / code / outputs、Notes、Brief、Manuscript 和项目状态，再判断目前处在哪个 research stage。后续大体按照下面的框架推进。
+
+## 总体框架
+
+Data / Analysis → Notes / Evidence → Brief → Manuscript
+
+这不是不可逆的线性 pipeline。后面的工作如果暴露出真正重要的新问题，可以返回前面的 stage；但只有当新问题可能实质改变 identification、paper identity、central claim、contribution、interpretation 或“这个项目是否值得继续”时，才值得重新打开前一层。
+
+### 1. Data / Analysis
+
+这一层负责把现实世界和可分析的数据建立起来：
+
+- 获取、理解、清洗和链接数据；
+- 弄清 variable provenance、unit、time coverage、measurement、missingness 和关键 coding decisions；
+- 建立可靠、可复现的 analysis pipeline；
+- 理解真正可利用的 variation、measurement quality 和 statistical precision。
+
+不要因为手里已经有某个 outcome 或某个漂亮 result，就反向构造 research story。必要时可以因为后续 literature / identification / measurement 问题重新回来获取新数据。
+
+### 2. Notes / Evidence
+
+这一层负责探索和保存科学证据，而不是尽快写成 paper。
+
+Notes / Evidence 原则上是 append-oriented scientific memory：
+
+- positive、null、unstable、contradictory、failed 和 dead-end evidence 都可以保留；
+- 如果一个旧结果后来被推翻、降级或证明不可信，不要为了保持故事整洁而删除它；记录新的 evidence、否定原因和当前判断；
+- evidence 应尽量能够追溯到 data、code、log 和 output；
+- 广泛探索有 substantive meaning 的 outcomes、estimands、heterogeneity、measurement、specifications、alternative explanations 和 diagnostics，但不要机械穷举，也不要按 significance 选择结果。
+
+这一层允许故事很乱。不要因为已经形成一个喜欢的 framing，就让之后的探索只服务于它。
+
+在解释结果时尽量 hypothesis-first：先根据 theory、institutional setting 和 literature 判断什么本来应该发生，再看 evidence 是否支持，而不是从显著结果或精确零反向寻找故事。
+
+### 3. Brief
+
+当 Notes / Evidence 已经足够丰富以后，工作目标发生变化：
+
+不再问“还能发现什么”，而是问：
+
+**现有 evidence 最值得形成一篇什么 paper？**
+
+Brief 负责裁决：
+
+- strongest defensible research question；
+- identification / estimand 和 claim boundary；
+- paper identity；
+- central claim 与 supporting claims；
+- evidence spine；
+- closest literature 和真正的 literature gap；
+- economic interpretation；
+- 哪些 evidence 进入正文、appendix 或舍弃；
+- journal audience / publication target；
+- manuscript 应该怎样组织。
+
+Notes 是 evidence history；Brief 不是历史记录。
+
+原则上只维护一个 authoritative current Brief。新的判断出现时直接更新和重构 Brief，而不是不断 append 或同时保留几个互相竞争的 current versions。
+
+Literature 在这一阶段尤其重要，但 literature 不只是“帮助写 literature review”。它可能：
+
+- 改变 contribution / framing；
+- 暴露 identification 或 measurement 问题；
+- 要求返回 Notes 做 targeted evidence；
+- 甚至证明值得返回 Data 获取新数据。
+
+如果 literature 提出的 concern 即使得到不同结果也不会改变 paper-level judgment，就不要为了完整而重新打开大量分析。
+
+### 4. Manuscript
+
+Manuscript 是 Brief 的展开，而不是重新发现 paper identity 的地方。
+
+以 authoritative Brief 和当前 evidence 为事实边界，维护一个 authoritative current manuscript。
+
+Manuscript 阶段主要通过不同角度反复审阅和打磨：
+
+- paper identity / claim hierarchy；
+- identification / specification / inference；
+- Results narrative；
+- literature positioning；
+- mechanisms / interpretation；
+- tables / figures / appendix；
+- numerical / terminology / cross-manuscript consistency；
+- prose / readability；
+- senior-coauthor perspective；
+- hostile-referee perspective；
+- final integration / production checks。
+
+不要因为某项分析已经做过，就默认必须写进 manuscript。
+
+如果 manuscript review 暴露的是 presentation 或 wording 问题，就在 manuscript 内解决。
+
+如果暴露的是 paper identity / evidence architecture 问题，返回 Brief。
+
+如果暴露的是新的 substantive uncertainty，返回 Notes。
+
+如果发现现有数据根本无法回答一个会改变 paper 的关键问题，可以返回 Data。
+
+## 工作原则
+
+- 当前 filesystem、data、code 和 outputs 优先于旧聊天和旧 summary。
+- 不要机械执行 GPT Pro、referee 或我的意见；先判断 underlying concern，再结合本地事实决定如何处理。
+- 不要为了“完整”增加低边际价值分析。
+- 新工作的 value of information 是重要判断标准：不同可能结果如果不会改变 paper-level judgment，就不要让它阻止收敛。
+- 对未来 session 仍重要的信息写入合适的项目 artifact，不依赖聊天记忆。
+- 与我交流时优先用清楚的中文解释“我们现在相信什么、为什么、下一步为什么值得做”，不要用大量代码名、回归编号和 methodology jargon 代替研究判断；正式 research artifacts 使用英文。
+
+开始工作时，先判断当前项目实际位于哪个 stage、当前 authoritative artifacts 是什么，以及下一步最符合这套框架的少数动作。不要为了遵守框架而机械推进 stage；以当前 evidence 和 research value 为准。
+~~~
+
+## Setup Prompt 4 · Durable Project Map Refresh {#project-map-refresh}
 
 <p class="prompt-description">让 PROJECT.md 始终保持为精简、准确且可跨 session 使用的项目地图。</p>
 
@@ -219,7 +336,7 @@ last_updated: 2026-08-29
 如果现有 `PROJECT.md` 已基本正确，只更新真正发生变化的部分。
 ~~~
 
-## Setup Prompt 4 · Session Handoff Refresh {#session-handoff-refresh}
+## Setup Prompt 5 · Session Handoff Refresh {#session-handoff-refresh}
 
 <p class="prompt-description">在上下文压缩或重要节点结束前完成必要收尾，并为下一个 Claude session 留下精简交接。</p>
 

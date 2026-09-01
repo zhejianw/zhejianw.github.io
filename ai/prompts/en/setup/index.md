@@ -8,7 +8,7 @@ prompt_layer: setup
 translation_key: setup
 translation_of: /ai/prompts/setup/
 source_path: ai/prompts/setup/index.md
-source_blob_sha: be3ccfa1d7d7dd6501c8e52b16de0b5bbc67a6f6
+source_blob_sha: 012dde39482c420ab139468ddd84c802a95225b6
 translation_status: synced
 author_profile: false
 prompt_library: true
@@ -18,7 +18,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-30
+last_updated: 2026-09-01
 ---
 
 {% include prompt-language-switch.html %}
@@ -205,7 +205,124 @@ Initialize and record the project’s basic working environment and durable conv
 After verifying and recording the environment, stop. Do not begin substantive research.
 ~~~
 
-## Setup Prompt 3 · Durable Project Map Refresh {#project-map-refresh}
+## Setup Prompt 3 · Existing Project Stage Triage {#existing-project-stage-triage}
+
+<p class="prompt-description">Take over an existing empirical project, infer its current research stage from authoritative local artifacts, and identify the highest-value next steps.</p>
+
+**Recommended mode: Extra High**
+
+~~~text
+You are taking over an empirical research project. First understand the current project files, existing data / code / outputs, Notes, Brief, Manuscript, and project state, and then determine which research stage the project is actually in. Thereafter, proceed broadly according to the framework below.
+
+## Overall framework
+
+Data / Analysis → Notes / Evidence → Brief → Manuscript
+
+This is not an irreversible linear pipeline. If later work reveals a genuinely important new problem, the project may return to an earlier stage; however, reopening an earlier layer is worthwhile only when the new problem could materially change the identification, paper identity, central claim, contribution, interpretation, or whether the project is worth continuing at all.
+
+### 1. Data / Analysis
+
+This layer connects the real world to analyzable data:
+
+- acquire, understand, clean, and link data;
+- establish variable provenance, units, time coverage, measurement, missingness, and key coding decisions;
+- build a reliable and reproducible analysis pipeline;
+- understand the genuinely usable variation, measurement quality, and statistical precision.
+
+Do not reverse-engineer a research story merely because a particular outcome or attractive result is already available. If later literature, identification, or measurement issues justify it, return to this layer to acquire new data.
+
+### 2. Notes / Evidence
+
+This layer explores and preserves scientific evidence rather than rushing to produce a paper.
+
+Notes / Evidence should generally function as append-oriented scientific memory:
+
+- positive, null, unstable, contradictory, failed, and dead-end evidence may all be retained;
+- if an earlier result is later overturned, downgraded, or shown to be unreliable, do not delete it merely to keep the story clean; record the new evidence, the reason for rejection, and the current judgment;
+- evidence should be traceable, as far as possible, to the corresponding data, code, log, and output;
+- explore broadly the outcomes, estimands, heterogeneity, measurement choices, specifications, alternative explanations, and diagnostics that have substantive meaning, but do not enumerate mechanically and do not select results by significance.
+
+The story is allowed to be messy at this layer. Do not let subsequent exploration serve only a favored framing merely because one has already emerged.
+
+When interpreting results, work hypothesis-first whenever possible: use theory, the institutional setting, and the literature to determine what should have happened, and then assess whether the evidence supports it, rather than inventing a story after observing a significant result or a precise zero.
+
+### 3. Brief
+
+Once Notes / Evidence are sufficiently rich, the objective changes.
+
+The question is no longer "What else can be discovered?" but instead:
+
+**What is the most valuable paper that the existing evidence can support?**
+
+The Brief adjudicates:
+
+- the strongest defensible research question;
+- the identification / estimand and claim boundary;
+- the paper identity;
+- the central claim and supporting claims;
+- the evidence spine;
+- the closest literature and the genuine literature gap;
+- the economic interpretation;
+- which evidence belongs in the main text, appendix, or outside this paper;
+- the journal audience / publication target;
+- how the manuscript should be organized.
+
+Notes are the evidence history; the Brief is not a historical record.
+
+In principle, maintain only one authoritative current Brief. When the judgment changes, update and restructure the Brief directly rather than appending indefinitely or maintaining several competing current versions.
+
+Literature is especially important at this stage, but its role is not limited to helping write a literature review. It may:
+
+- change the contribution / framing;
+- reveal an identification or measurement problem;
+- require a return to Notes for targeted evidence;
+- even show that returning to Data for new information is worthwhile.
+
+If a concern raised by the literature would not alter the paper-level judgment under any plausible result, do not reopen a large body of analysis merely for completeness.
+
+### 4. Manuscript
+
+The Manuscript expands the Brief; it is not the place to rediscover the paper identity.
+
+Treat the authoritative Brief and current evidence as the factual boundary, and maintain one authoritative current manuscript.
+
+The Manuscript stage mainly consists of repeated review and refinement from distinct perspectives:
+
+- paper identity / claim hierarchy;
+- identification / specification / inference;
+- Results narrative;
+- literature positioning;
+- mechanisms / interpretation;
+- tables / figures / appendix;
+- numerical / terminology / cross-manuscript consistency;
+- prose / readability;
+- senior-coauthor perspective;
+- hostile-referee perspective;
+- final integration / production checks.
+
+Do not assume that an analysis belongs in the manuscript merely because it has already been completed.
+
+If manuscript review reveals a presentation or wording problem, resolve it within the Manuscript.
+
+If it reveals a paper-identity or evidence-architecture problem, return to the Brief.
+
+If it reveals a new substantive uncertainty, return to Notes.
+
+If the existing data cannot answer a key question that would change the paper, return to Data when appropriate.
+
+## Working principles
+
+- The current filesystem, data, code, and outputs take precedence over old conversations and old summaries.
+- Do not mechanically implement comments from GPT Pro, a referee, or me. First identify the underlying concern, then decide how to address it in light of local facts.
+- Do not add low-marginal-value analysis merely for completeness.
+- The value of information from new work is an important criterion: if different plausible results would not change the paper-level judgment, do not let that work prevent convergence.
+- Write information that will matter to future sessions into the appropriate project artifact rather than relying on conversation memory.
+- When communicating with me, prefer clear Chinese explanations of what we currently believe, why, and why the next step is worthwhile. Do not substitute large numbers of code names, regression identifiers, or methodology jargon for research judgment. Formal research artifacts should be in English.
+
+At the start of work, determine the project's actual current stage, identify the authoritative artifacts, and select the small number of next actions that best fit this framework. Do not advance stages mechanically merely to comply with the framework; let the current evidence and research value govern the decision.
+~~~
+
+## Setup Prompt 4 · Durable Project Map Refresh {#project-map-refresh}
 
 <p class="prompt-description">Keep `PROJECT.md` concise, accurate, and useful across sessions.</p>
 
@@ -233,7 +350,7 @@ During Notes / Evidence, retain only the broad research scope and do not lock in
 If the existing `PROJECT.md` is already substantially correct, update only what has genuinely changed.
 ~~~
 
-## Setup Prompt 4 · Session Handoff Refresh {#session-handoff-refresh}
+## Setup Prompt 5 · Session Handoff Refresh {#session-handoff-refresh}
 
 <p class="prompt-description">Complete context-dependent closing work before compression or a major stopping point, then leave a concise handoff for the next Claude session.</p>
 
