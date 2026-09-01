@@ -6,7 +6,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-30
+last_updated: 2026-09-01
 ---
 
 {% include prompt-layer-tabs.html %}
@@ -320,6 +320,86 @@ last_updated: 2026-08-30
 停止标准不是 specification 饱和，而是：
 
 > 对所有高价值 research branches，继续探索已经很难显著改变我们对研究问题的判断。
+~~~
+
+## Notes Prompt 3 · Literature Corpus Intake & Provenance {#literature-corpus-intake}
+
+<p class="prompt-description">整理本地论文、附录和初步文献地图，建立可核验的书目清单与阅读状态边界。</p>
+
+**推荐模式：Extra High；文件较多时使用可持续工作的 agent 模式**
+
+~~~text
+当前目标文件夹中包含我复制进来的 research papers 的 PDF；部分论文可能另有 appendix / online appendix / supplementary materials。还可能包含一份 GPT Pro 基于初步检索和当前项目状态生成的 literature analysis。
+
+先整理这些材料，不要立即进入大规模 literature synthesis 或 manuscript writing。
+
+### 1. 整理本地 literature corpus
+
+实际检查目标文件夹中的所有相关文件，识别：
+
+- 每篇 paper；
+- 对应的 appendix / supplementary materials；
+- working-paper / published version 等可能重复版本；
+- 无法立即确定身份的文件。
+
+将其合理整理到项目现有 `06_literature/` 结构中。正文 PDF 原则上进入 `06_literature/01_papers/`；appendix / supplement 应与对应 paper 保持清晰关联，不要让主文和附录失去对应关系。
+
+文件命名应稳定、简洁、能够识别作者 / 年份 / paper，不要制造过深目录或很长路径。不要因为整理而删除可能有价值的版本；重复版本如需降级，保留足够 provenance 说明。
+
+### 2. 建立基本 bibliographic inventory
+
+基于实际 PDF 和已有 metadata，记录目前能够可靠确定的：
+
+- authors；
+- title；
+- year；
+- journal / working-paper status；
+- main PDF path；
+- appendix / supplement path；
+- 是否存在多个版本；
+- 当前是否已经实际阅读。
+
+不确定的信息明确标记，不要凭文件名或 GPT Pro 的说法补全事实。
+
+### 3. 保存 GPT Pro 的 literature analysis
+
+把我附带的 GPT Pro literature analysis 作为一份独立的 **preliminary literature map / search record** 保存到合适的 `06_literature/` 位置，并保留原始内容和来源信息。
+
+这份材料的作用是：
+
+- 帮助确定哪些 papers 值得优先阅读；
+- 提供可能的 closest literature、methodology、measurement、novelty threat 和 reading priorities；
+- 记录当前阶段已经想到的 literature questions。
+
+但必须明确标注：
+
+**它不是 authoritative literature review，也不是已经核验过的事实层。**
+
+GPT Pro 生成这份 map 时通常没有完整精读所有论文，因此其中关于 paper findings、methods、overlap、novelty、publication status 或对本项目含义的判断，都应视为需要后续通过实际阅读 paper / appendix 再确认的 preliminary guidance。
+
+不要把其中的判断直接复制成正式 literature notes、Brief 或 manuscript claims。
+
+### 4. 区分 literature map 与 actual reading notes
+
+保持清晰边界：
+
+- **literature map / search record**：告诉我们“可能应该读什么、为什么值得读、当前怀疑什么”；
+- **paper reading memo**：只有实际阅读对应 paper 及必要 appendix 后，才记录“这篇 paper 实际做了什么、发现了什么、对本项目真正意味着什么”。
+
+后续新的 close reading 应逐步验证、修正或否定 preliminary map，而不是围绕 map 寻找支持。
+
+### 5. 完成后汇报
+
+完成整理后，用中文简洁汇报：
+
+- 一共识别了多少篇 papers；
+- 多少篇有 appendix / supplement；
+- 是否存在重复或无法识别的版本；
+- papers、appendices、bibliographic inventory 和 GPT Pro literature map 分别存在哪里；
+- 哪些材料目前只是 preliminary map，哪些已经属于实际阅读后的 evidence；
+- 如果准备开始正式 close reading，最自然的下一步入口是什么。
+
+这一轮以**整理、provenance 和状态区分**为主，不要因为已经看到 GPT Pro 的 literature analysis 就提前形成最终 literature conclusion。
 ~~~
 
 <nav class="prompt-workflow" aria-label="Continue from Notes">

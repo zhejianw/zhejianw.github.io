@@ -8,7 +8,7 @@ prompt_layer: notes
 translation_key: notes
 translation_of: /ai/prompts/notes/
 source_path: ai/prompts/notes/index.md
-source_blob_sha: 62a61dd928bc43b33d60b9638dbdf94c2793869f
+source_blob_sha: 2cb9ad4f96a3fac68739be6cb1cae668cb32f102
 translation_status: synced
 author_profile: false
 prompt_library: true
@@ -18,7 +18,7 @@ noindex: true
 sitemap: false
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-30
+last_updated: 2026-09-01
 ---
 
 {% include prompt-language-switch.html %}
@@ -327,6 +327,86 @@ Not every branch must complete every module in every cycle.
 The stopping rule is not specification saturation. It is:
 
 > Across all high-value research branches, further exploration is unlikely to materially change our judgment about the research question.
+~~~
+
+## Notes Prompt 3 · Literature Corpus Intake & Provenance {#literature-corpus-intake}
+
+<p class="prompt-description">Organize local papers, appendices, and a preliminary literature map while establishing a verifiable bibliography and clear reading-status boundaries.</p>
+
+**Recommended mode: Extra High; use a persistent agent workflow when the corpus is large**
+
+~~~text
+The current target folder contains PDFs of research papers that I copied into it. Some papers may have a separate appendix, online appendix, or supplementary materials. The folder may also contain a literature analysis produced by GPT Pro from a preliminary search and the project’s current state.
+
+Organize these materials first. Do not immediately begin a large-scale literature synthesis or manuscript writing.
+
+### 1. Organize the local literature corpus
+
+Inspect every relevant file in the target folder and identify:
+
+- each paper;
+- its corresponding appendix / supplementary materials;
+- possible duplicate versions, such as working-paper and published versions;
+- files whose identity cannot yet be established.
+
+Organize them appropriately within the project’s existing `06_literature/` structure. Main paper PDFs should ordinarily go into `06_literature/01_papers/`. Keep each appendix / supplement clearly associated with its paper so that the main text and supporting materials do not lose their relationship.
+
+Use stable, concise file names that identify the author / year / paper. Do not create excessive directory depth or long paths. Do not delete potentially valuable versions merely for the sake of organization. If a duplicate version is downgraded, preserve enough provenance to explain what it is and why.
+
+### 2. Build a basic bibliographic inventory
+
+Using the actual PDFs and available metadata, record only what can currently be established reliably:
+
+- authors;
+- title;
+- year;
+- journal / working-paper status;
+- main PDF path;
+- appendix / supplement path;
+- whether multiple versions exist;
+- whether the paper has actually been read.
+
+Mark uncertainty explicitly. Do not complete facts from the file name or from GPT Pro’s statements.
+
+### 3. Preserve GPT Pro’s literature analysis
+
+Save the supplied GPT Pro literature analysis as a separate **preliminary literature map / search record** in the appropriate location within `06_literature/`. Preserve its original content and source information.
+
+Its purposes are to:
+
+- help determine which papers deserve priority reading;
+- suggest possible closest literature, methodology, measurement, novelty threats, and reading priorities;
+- record literature questions already identified at the current stage.
+
+It must, however, be labeled clearly:
+
+**It is not an authoritative literature review or a verified factual layer.**
+
+GPT Pro will usually have generated this map without fully reading every paper. Treat its statements about findings, methods, overlap, novelty, publication status, or implications for this project as preliminary guidance that must later be confirmed by reading the paper and any necessary appendix.
+
+Do not copy its judgments directly into formal literature notes, the Brief, or manuscript claims.
+
+### 4. Distinguish a literature map from actual reading notes
+
+Maintain a clear boundary:
+
+- **literature map / search record**: tells us what may be worth reading, why it may matter, and what we currently suspect;
+- **paper reading memo**: only after the corresponding paper and any necessary appendix have actually been read should it record what the paper does, what it finds, and what it genuinely means for this project.
+
+Subsequent close reading should progressively verify, revise, or reject the preliminary map rather than search for evidence that supports it.
+
+### 5. Report after completion
+
+After organizing the materials, report concisely in Chinese:
+
+- the total number of papers identified;
+- how many have an appendix / supplement;
+- whether duplicate or unidentified versions exist;
+- where the papers, appendices, bibliographic inventory, and GPT Pro literature map are stored;
+- which materials remain only a preliminary map and which qualify as evidence from actual reading;
+- the most natural entry point if formal close reading is to begin next.
+
+This round is about **organization, provenance, and separation of epistemic status**. Do not form a final literature conclusion merely because the GPT Pro literature analysis is already available.
 ~~~
 
 <nav class="prompt-workflow" aria-label="Continue from Notes">

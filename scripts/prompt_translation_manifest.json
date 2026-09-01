@@ -30,9 +30,9 @@
       "translation": "ai/prompts/en/notes/index.md",
       "source_route": "/ai/prompts/notes/",
       "translation_route": "/ai/prompts/en/notes/",
-      "reviewed_source_blob_sha": "62a61dd928bc43b33d60b9638dbdf94c2793869f",
-      "prompt_blocks": 14,
-      "explicit_anchors": 15
+      "reviewed_source_blob_sha": "2cb9ad4f96a3fac68739be6cb1cae668cb32f102",
+      "prompt_blocks": 15,
+      "explicit_anchors": 16
     },
     {
       "key": "routing",

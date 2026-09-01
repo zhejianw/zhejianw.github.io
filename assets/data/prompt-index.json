@@ -169,6 +169,14 @@
   },
   {
     "lang": "zh",
+    "layer": "Notes",
+    "title": "Notes Prompt 3 · Literature Corpus Intake & Provenance",
+    "description": "整理本地论文、附录和初步文献地图，建立可核验的书目清单与阅读状态边界。",
+    "id": "literature-corpus-intake",
+    "url": "/ai/prompts/notes/#literature-corpus-intake"
+  },
+  {
+    "lang": "zh",
     "layer": "Routing",
     "title": "Routing Prompt 0 · Literature Triage",
     "description": "先给文献分配阅读预算，只保留可能改变最终 Brief 的高价值论文。",
@@ -918,6 +926,14 @@
     "description": "Specify the exploration cycle, when to insert contradiction resolution, and when to stop.",
     "id": "notes-cycle",
     "url": "/ai/prompts/en/notes/#notes-cycle"
+  },
+  {
+    "lang": "en",
+    "layer": "Notes",
+    "title": "Notes Prompt 3 · Literature Corpus Intake & Provenance",
+    "description": "Organize local papers, appendices, and a preliminary literature map while establishing a verifiable bibliography and clear reading-status boundaries.",
+    "id": "literature-corpus-intake",
+    "url": "/ai/prompts/en/notes/#literature-corpus-intake"
   },
   {
     "lang": "en",

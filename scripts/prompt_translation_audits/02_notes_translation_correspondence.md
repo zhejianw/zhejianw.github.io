@@ -1,7 +1,7 @@
 # Notes / Evidence Layer — Translation Correspondence and Semantic Audit
 
 - Chinese source: `ai/prompts/notes/index.md`
-- Chinese blob SHA: `62a61dd928bc43b33d60b9638dbdf94c2793869f`
+- Chinese blob SHA: `2cb9ad4f96a3fac68739be6cb1cae668cb32f102`
 - English candidate: `01_english_sources/notes/index.md`
 - Chinese route: `/ai/prompts/notes/`
 - English route: `/ai/prompts/en/notes/`
@@ -25,6 +25,7 @@
 | `branch-adjudication` | Converge by summarizing status, best evidence, best counterevidence, unresolved question, and next action | Close low-value branches without entering the Brief. |
 | `contradiction-resolution` | Explain conflicting evidence and seek discriminating evidence | The objective is not to defend one result. |
 | `notes-cycle` | Preserve the H1 → H2 → V1 → V2 → H3 → C1 cycle and X1 insertion | Modules remain separate; the stop rule is judgment saturation, not specification saturation. |
+| `literature-corpus-intake` | Organize a local paper corpus, preserve a preliminary Pro-generated search map, and establish a verified bibliographic inventory | Main papers remain linked to appendices; uncertain metadata stays uncertain; a search map is not promoted into a reading memo, Brief judgment, or manuscript claim without actual reading. |
 
 ## Delicate translation choices
 
@@ -54,5 +55,6 @@ The final English stopping rule is kept as a block quote and remains based on wh
 - [ ] The specific CGSS example remains specific.
 - [ ] H1, H2, V1, V2, H3, C1, X1, and Cycle appear in the same order.
 - [ ] Every module remains a separate fenced prompt.
+- [ ] Literature Corpus Intake remains a separate post-workflow prompt and preserves the boundary between preliminary maps and actual reading notes.
 - [ ] `Literature-Informed Routing` links to `/ai/prompts/en/routing/`.
 - [ ] No prompt has been converted into a mandatory stage gate.
