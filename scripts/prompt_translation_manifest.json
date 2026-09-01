@@ -10,9 +10,9 @@
       "translation": "ai/prompts/en/setup/index.md",
       "source_route": "/ai/prompts/setup/",
       "translation_route": "/ai/prompts/en/setup/",
-      "reviewed_source_blob_sha": "012dde39482c420ab139468ddd84c802a95225b6",
-      "prompt_blocks": 6,
-      "explicit_anchors": 6
+      "reviewed_source_blob_sha": "79cecd81507547a7d86de11685d6870e9e9524a2",
+      "prompt_blocks": 7,
+      "explicit_anchors": 7
     },
     {
       "key": "acquisition",

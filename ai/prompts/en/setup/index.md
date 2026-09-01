@@ -8,7 +8,7 @@ prompt_layer: setup
 translation_key: setup
 translation_of: /ai/prompts/setup/
 source_path: ai/prompts/setup/index.md
-source_blob_sha: 012dde39482c420ab139468ddd84c802a95225b6
+source_blob_sha: 79cecd81507547a7d86de11685d6870e9e9524a2
 translation_status: synced
 author_profile: false
 prompt_library: true
@@ -50,7 +50,687 @@ Focus on:
 Do not force an optimistic conclusion merely to turn the idea into a paper. Clearly distinguish **verified facts, reasonable inferences, and what remains unknown**. End with a direct decision: **advance immediately / verify a key data condition before deciding / not currently worth pursuing**, and identify the small number of next actions with the greatest information value.
 ~~~
 
-## Setup Prompt 1 · Workspace Bootstrap {#project-workspace-bootstrap}
+## Setup Prompt 1 · Research Proposal Capsule {#research-proposal-capsule}
+
+<p class="prompt-description">Preserve an early-stage idea or paused project as a comparable, restartable proposal capsule for research-portfolio management.</p>
+
+<p class="prompt-usage-note"><strong>When to use:</strong> Create it either from an active research session that is being parked or from a GPT Pro web analysis being converted into a project record. This step creates the proposal record; it does not presume that research should begin.</p>
+
+**Recommended mode: Extra High; use Pro when adjudicating the publication ceiling or whether the project should continue**
+
+~~~text
+# [Project Title]
+
+**Short name:**
+**Status:** INBOX / SCREENING / READY / ACTIVE / PARKED / KILLED / SUBMITTED
+**Last updated:** YYYY-MM-DD
+
+---
+
+## 0. One-sentence idea
+
+> State in one sentence: what shock / variation affects what outcome, in which population / setting?
+
+Example:
+
+> Exploit the staggered introduction of X across Chinese counties to estimate its causal effect on Y using county-level administrative and satellite data.
+
+---
+
+## 1. Research Question
+
+### Main question
+What does this paper genuinely seek to answer?
+
+### Secondary questions
+- Mechanism 1:
+- Mechanism 2:
+- Heterogeneity:
+- Additional outcome:
+
+Do not list too many questions at the outset. In principle, there should be only one main question.
+
+---
+
+## 2. Why Economists Care
+
+### Economic significance
+Why is the question itself important?
+
+### Broader economic theme
+What larger economic issue does it address?
+
+For example:
+- information frictions
+- human capital
+- firm dynamics
+- market integration
+- regulation
+- political economy
+- household behavior
+- technology adoption
+
+### Policy relevance
+If the result holds, what would it change about our understanding of a policy or institution?
+
+---
+
+## 3. Paper Identity
+
+If the paper succeeds, how should others describe it in one sentence?
+
+> “This is a paper about ______ using ______.”
+
+**Primary field:**
+**Secondary field:**
+
+**Likely audience:**
+
+---
+
+## 4. Core Contribution
+
+### Contribution 1 — Question
+Which question has the existing literature not yet answered clearly?
+
+### Contribution 2 — Identification
+What is valuable about our causal variation?
+
+### Contribution 3 — Data
+Do we use new data, granularity, time coverage, or linkage methods?
+
+### Contribution 4 — Finding / mechanism
+If the expected result holds, what would it change about existing understanding?
+
+### Closest existing paper
+- Paper:
+- What it does:
+- What we do differently:
+
+If the contribution is not yet clear, write directly:
+
+> **CURRENT CONCERN: contribution not yet established.**
+
+---
+
+# 5. Institutional Setting / Treatment
+
+## Treatment / shock
+
+**Treatment:**
+**Unit:** individual / firm / county / prefecture / country / etc.
+**Timing:**
+**Geographic scope:**
+
+### Institutional mechanism
+How does the policy / shock actually occur?
+
+### Treatment assignment
+Who receives treatment, and why?
+
+### Important dates
+| Date | Event | Relevance |
+|---|---|---|
+| | | |
+
+### Potential contamination
+- anticipation:
+- retroactivity:
+- concurrent policies:
+- spillovers:
+- treatment misclassification:
+
+---
+
+# 6. Identification
+
+## Baseline design
+
+**Design:**
+DID / event study / RDD / IV / shift-share / synthetic control / natural experiment / etc.
+
+### Treatment group
+
+### Comparison group
+
+### Estimand
+
+### Core identifying assumption
+
+State it in one explicit sentence:
+
+> Identification requires that ______.
+
+### Why might the assumption hold?
+
+### Why might it fail?
+
+---
+
+## 6.1 Threats to identification
+
+Rank by severity:
+
+**Threat 1**
+   - Why it matters:
+   - Possible test:
+   - Possible solution:
+**Threat 2**
+   - ...
+**Threat 3**
+   - ...
+---
+
+## 6.2 Falsification / diagnostics
+
+Which genuinely informative tests are planned?
+
+- pre-trends
+- placebo treatment
+- placebo outcome
+- balance
+- manipulation test
+- alternative timing
+- unaffected population
+- negative controls
+- spillover tests
+
+List only tests capable of changing our belief about identification.
+
+---
+
+# 7. Data Architecture
+
+## 7.1 Unit of observation
+
+For example:
+
+> county × year, 2010–2025
+
+or:
+
+> firm × month
+
+---
+
+## 7.2 Must-have datasets
+
+### Dataset A — [name]
+
+**Purpose:**
+Which core variable does it provide?
+
+**Variables needed:**
+- treatment
+- outcome
+- controls
+- identifiers
+
+**Unit:**
+**Coverage:**
+**Time period:**
+**Access route:** API / download / scraping / application / paid / private
+**Cost:**
+**Current status:**
+
+Choose one:
+
+- NOT CHECKED
+- EXISTS, ACCESS UNVERIFIED
+- ACCESS VERIFIED
+- PARTIALLY ACQUIRED
+- FULLY ACQUIRED
+- CLEANED
+- MERGED
+- ANALYSIS READY
+
+**Current holdings:**
+- Which files are already available?
+- Where are they stored?
+- What do they cover?
+- What is missing?
+
+**Main risks:**
+- missing years
+- inconsistent identifiers
+- no treatment timing
+- aggregation too coarse
+- access instability
+- etc.
+
+---
+
+### Dataset B — [name]
+
+Same fields as above.
+
+---
+
+## 7.3 Nice-to-have datasets
+
+### Dataset C
+**Potential value:**
+**Current status:**
+**Necessary?** NO
+
+---
+
+# 8. Data Acquisition Status
+
+This is a particularly important section for portfolio management.
+
+| Component | Needed for | Status | Current coverage | Missing | Next action |
+|---|---|---|---|---|---|
+| Treatment data | Identification | VERIFIED | 2015–2024 | 2014 | Locate archive |
+| Outcome data | Main result | ACQUIRED | Full | None | Clean IDs |
+| Controls | Baseline | PARTIAL | 80% counties | Tibet etc. | Merge |
+| Mechanism data | Mechanism | NOT CHECKED | — | All | Low priority |
+
+---
+
+## 8.1 Existing assets
+
+Materials already held and directly reusable:
+
+- existing raw data:
+- cleaned panel:
+- crosswalk:
+- API scripts:
+- scraper:
+- shapefiles:
+- policy dates:
+- previous code:
+- related literature library:
+
+This section matters because it determines the project’s true marginal cost.
+
+---
+
+## 8.2 Missing critical components
+
+### Critical missing item 1
+What happens to the project if it cannot be obtained?
+
+### Critical missing item 2
+
+---
+
+# 9. Sample
+
+### Target sample
+
+### Approximate N
+
+### Treatment count
+
+### Pre-period length
+
+### Post-period length
+
+### Geographic coverage
+
+### Known sample-selection issues
+
+If this is not yet known:
+
+> **N currently UNKNOWN. Must be established before promotion to ACTIVE.**
+
+---
+
+# 10. Outcomes
+
+## Primary outcome
+
+### Definition
+### Source
+### Frequency
+### Measurement concerns
+
+---
+
+## Secondary outcomes
+
+1.
+2.
+3.
+
+---
+
+## Mechanism outcomes
+
+1.
+2.
+
+Do not accumulate dozens of outcomes at the proposal stage.
+
+---
+
+# 11. Baseline Empirical Specification
+
+Write only enough to explain the design. Do not complete the entire robustness suite in advance.
+
+For example:
+
+\[
+Y_{it} = \alpha_i + \lambda_t + \beta Treatment_{it} + \epsilon_{it}
+\]
+
+Alternatively, state the event-study / RDD / IV structure.
+
+### Fixed effects
+
+### Standard errors / clustering
+
+### Weighting
+
+### Main estimator
+
+### Important estimator issues
+For example:
+- staggered adoption
+- heterogeneous treatment effects
+- few clusters
+- spatial correlation
+- generated treatment measure
+
+---
+
+# 12. Literature Map
+
+Do not build an exhaustive bibliography. Focus only on the literature that determines whether space for the project exists.
+
+## Closest papers
+
+### Paper 1
+**Question:**
+**Design:**
+**Data:**
+**Main result:**
+**Overlap with us:**
+**Remaining space:**
+
+### Paper 2
+...
+
+---
+
+## Literature verdict
+
+Choose one:
+
+- CLEAR SPACE
+- PROBABLY SPACE
+- CROWDED BUT DIFFERENTIABLE
+- HIGH DUPLICATION RISK
+- ESSENTIALLY DONE
+
+### Main literature risk
+
+---
+
+# 13. Cheapest Decisive Tests
+
+This section has very high priority.
+
+List, in order, the cheapest tests most likely to change the project’s fate.
+
+## Gate 1 — [question]
+
+**Question:**
+For example:
+> Does project-level treatment timing actually exist?
+
+**Cost:** 1–2 hours / 1 day / etc.
+**Success condition:**
+**Failure condition:**
+**If failed:** KILL / PARK / redesign
+
+---
+
+## Gate 2 — [question]
+
+Same fields as above.
+
+---
+
+## Gate 3 — [question]
+
+Same fields as above.
+
+---
+
+# 14. Kill Criteria
+
+State in advance the conditions under which the project should stop.
+
+The project should be KILLED if:
+
+__________________
+__________________
+__________________
+__________________
+For example:
+
+- treatment timing cannot be recovered;
+- effective treated sample < 30;
+- nearest literature already uses same shock + same outcome;
+- pre-treatment outcome trends are structurally incompatible with design;
+- key dataset only exists at an unusably aggregated level.
+
+---
+
+# 15. What Would Make This an A / B / C Paper?
+
+## A-version
+Under the best-case scenario, what would the paper need?
+
+- stronger identification?
+- unique data?
+- major mechanism?
+- broad economic implication?
+
+## B-version
+What is more realistically achievable?
+
+## C-version
+If the core contribution is weaker but the result remains publishable, what is the minimum viable version?
+
+### Is the C-version still worth doing?
+YES / NO / UNCLEAR
+
+This is useful for the stopping rule.
+
+---
+
+# 16. Expected Journal / Field Position
+
+Do not pretend to false precision.
+
+### Optimistic ceiling
+
+### Realistic target range
+
+### Floor
+
+### Relevant fields
+- Development
+- Labor
+- Health
+- IO
+- Public
+- Urban
+- Political economy
+- etc.
+
+---
+
+# 17. Expected Cost and Cycle
+
+## Human attention
+
+LOW / MEDIUM / HIGH
+
+## AI / coding workload
+
+LOW / MEDIUM / HIGH
+
+## Data acquisition
+
+LOW / MEDIUM / HIGH
+
+## Institutional research
+
+LOW / MEDIUM / HIGH
+
+## Coordination cost
+
+SOLO / LOW / MEDIUM / HIGH
+
+## Time to decisive evidence
+
+For example:
+> 2–5 days
+
+## Time to first credible empirical result
+
+For example:
+> 2–4 weeks
+
+## Time to submission if successful
+
+For example:
+> 2–4 months
+
+---
+
+# 18. Authorship / Collaboration
+
+## Current owner / lead
+
+## Potential coauthors
+
+### What unique complementarity would each person provide?
+
+Do not presume collaboration merely because you know someone.
+
+### Is another human coauthor actually necessary?
+YES / NO / UNKNOWN
+
+### Governance risks
+- first-author requirements
+- deadline mismatch
+- journal preference mismatch
+- slow feedback
+- institutional constraints
+- data ownership
+- etc.
+
+---
+
+# 19. Portfolio Fit
+
+### Why now?
+
+Why is the project worth doing **now** rather than six months from now?
+
+### What does it add to the current portfolio?
+
+- publication probability
+- research identity
+- new field
+- new dataset
+- methodological capital
+- collaboration
+- high-upside lottery ticket
+
+### Opportunity cost
+
+If this project starts now, what cannot be done instead?
+
+---
+
+# 20. Current Evidence
+
+## What we currently know
+
+1.
+2.
+3.
+
+## What we currently do NOT know
+
+1.
+2.
+3.
+
+Distinguish strictly among FACT / INFERENCE / SPECULATION.
+
+---
+
+# 21. Current Verdict
+
+**Status:**
+READY / SCREENING / PARKED / KILLED / ACTIVE
+
+**Priority:**
+A / B / C
+
+**Confidence:**
+HIGH / MEDIUM / LOW
+
+### Bottom line
+
+Answer in 3–6 sentences:
+
+- why the project is or is not worth doing;
+- its largest upside;
+- its largest risk;
+- whether it should currently occupy an Active slot.
+
+---
+
+# 22. Next Action
+
+Write only **one** next step.
+
+> NEXT ACTION: __________________
+
+Prefer an action capable of changing the decision, rather than:
+“Continue researching.”
+
+---
+
+# 23. Decision Log
+
+### YYYY-MM-DD
+**New evidence:**
+**Belief update:**
+**Decision:**
+**Reason:**
+
+---
+
+# 24. Sources / Provenance
+
+## Proposal origins
+- GPT conversation:
+- Claude memo:
+- personal idea:
+- collaborator discussion:
+
+## Key sources
+- paper / DOI
+- government document
+- dataset documentation
+- API
+- website
+
+## Local files
+- path/to/file
+- path/to/data
+~~~
+
+## Setup Prompt 2 · Workspace Bootstrap {#project-workspace-bootstrap}
 
 <p class="prompt-description">Create the standard directory structure, Claude operating rules, and cross-session project-state entry points.</p>
 
@@ -187,7 +867,7 @@ Use it as the current working-state snapshot. Initialize:
 First inspect the current directory so that existing valid files are not overwritten. After creating the missing structure and state files, stop. Do not begin substantive research.
 ~~~
 
-## Setup Prompt 2 · Environment Bootstrap {#environment-bootstrap}
+## Setup Prompt 3 · Environment Bootstrap {#environment-bootstrap}
 
 <p class="prompt-description">Verify the empirical and writing environments and preserve the durable configuration.</p>
 
@@ -205,7 +885,7 @@ Initialize and record the project’s basic working environment and durable conv
 After verifying and recording the environment, stop. Do not begin substantive research.
 ~~~
 
-## Setup Prompt 3 · Existing Project Stage Triage {#existing-project-stage-triage}
+## Setup Prompt 4 · Existing Project Stage Triage {#existing-project-stage-triage}
 
 <p class="prompt-description">Take over an existing empirical project, infer its current research stage from authoritative local artifacts, and identify the highest-value next steps.</p>
 
@@ -322,7 +1002,7 @@ If the existing data cannot answer a key question that would change the paper, r
 At the start of work, determine the project's actual current stage, identify the authoritative artifacts, and select the small number of next actions that best fit this framework. Do not advance stages mechanically merely to comply with the framework; let the current evidence and research value govern the decision.
 ~~~
 
-## Setup Prompt 4 · Durable Project Map Refresh {#project-map-refresh}
+## Setup Prompt 5 · Durable Project Map Refresh {#project-map-refresh}
 
 <p class="prompt-description">Keep `PROJECT.md` concise, accurate, and useful across sessions.</p>
 
@@ -350,7 +1030,7 @@ During Notes / Evidence, retain only the broad research scope and do not lock in
 If the existing `PROJECT.md` is already substantially correct, update only what has genuinely changed.
 ~~~
 
-## Setup Prompt 5 · Session Handoff Refresh {#session-handoff-refresh}
+## Setup Prompt 6 · Session Handoff Refresh {#session-handoff-refresh}
 
 <p class="prompt-description">Complete context-dependent closing work before compression or a major stopping point, then leave a concise handoff for the next Claude session.</p>
 

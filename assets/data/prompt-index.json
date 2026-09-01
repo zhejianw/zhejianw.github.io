@@ -10,7 +10,15 @@
   {
     "lang": "zh",
     "layer": "Setup",
-    "title": "Setup Prompt 1 · Workspace Bootstrap",
+    "title": "Setup Prompt 1 · Research Proposal Capsule",
+    "description": "将早期想法或暂缓项目封存为可比较、可重启的 proposal capsule，用于 research portfolio 管理。",
+    "id": "research-proposal-capsule",
+    "url": "/ai/prompts/setup/#research-proposal-capsule"
+  },
+  {
+    "lang": "zh",
+    "layer": "Setup",
+    "title": "Setup Prompt 2 · Workspace Bootstrap",
     "description": "建立统一目录、Claude 工作规则与跨 session 的项目状态入口。",
     "id": "project-workspace-bootstrap",
     "url": "/ai/prompts/setup/#project-workspace-bootstrap"
@@ -18,7 +26,7 @@
   {
     "lang": "zh",
     "layer": "Setup",
-    "title": "Setup Prompt 2 · Environment Bootstrap",
+    "title": "Setup Prompt 3 · Environment Bootstrap",
     "description": "验证实证与写作环境并记录长期配置。",
     "id": "environment-bootstrap",
     "url": "/ai/prompts/setup/#environment-bootstrap"
@@ -26,7 +34,7 @@
   {
     "lang": "zh",
     "layer": "Setup",
-    "title": "Setup Prompt 3 · Existing Project Stage Triage",
+    "title": "Setup Prompt 4 · Existing Project Stage Triage",
     "description": "接手已有实证项目，依据本地权威材料判断当前 research stage 与最有价值的下一步。",
     "id": "existing-project-stage-triage",
     "url": "/ai/prompts/setup/#existing-project-stage-triage"
@@ -34,7 +42,7 @@
   {
     "lang": "zh",
     "layer": "Setup",
-    "title": "Setup Prompt 4 · Durable Project Map Refresh",
+    "title": "Setup Prompt 5 · Durable Project Map Refresh",
     "description": "让 PROJECT.md 始终保持为精简、准确且可跨 session 使用的项目地图。",
     "id": "project-map-refresh",
     "url": "/ai/prompts/setup/#project-map-refresh"
@@ -42,7 +50,7 @@
   {
     "lang": "zh",
     "layer": "Setup",
-    "title": "Setup Prompt 5 · Session Handoff Refresh",
+    "title": "Setup Prompt 6 · Session Handoff Refresh",
     "description": "在上下文压缩或重要节点结束前完成必要收尾，并为下一个 Claude session 留下精简交接。",
     "id": "session-handoff-refresh",
     "url": "/ai/prompts/setup/#session-handoff-refresh"
@@ -770,7 +778,15 @@
   {
     "lang": "en",
     "layer": "Setup",
-    "title": "Setup Prompt 1 · Workspace Bootstrap",
+    "title": "Setup Prompt 1 · Research Proposal Capsule",
+    "description": "Preserve an early-stage idea or paused project as a comparable, restartable proposal capsule for research-portfolio management.",
+    "id": "research-proposal-capsule",
+    "url": "/ai/prompts/en/setup/#research-proposal-capsule"
+  },
+  {
+    "lang": "en",
+    "layer": "Setup",
+    "title": "Setup Prompt 2 · Workspace Bootstrap",
     "description": "Create the standard directory structure, Claude operating rules, and cross-session project-state entry points.",
     "id": "project-workspace-bootstrap",
     "url": "/ai/prompts/en/setup/#project-workspace-bootstrap"
@@ -778,7 +794,7 @@
   {
     "lang": "en",
     "layer": "Setup",
-    "title": "Setup Prompt 2 · Environment Bootstrap",
+    "title": "Setup Prompt 3 · Environment Bootstrap",
     "description": "Verify the empirical and writing environments and preserve the durable configuration.",
     "id": "environment-bootstrap",
     "url": "/ai/prompts/en/setup/#environment-bootstrap"
@@ -786,7 +802,7 @@
   {
     "lang": "en",
     "layer": "Setup",
-    "title": "Setup Prompt 3 · Existing Project Stage Triage",
+    "title": "Setup Prompt 4 · Existing Project Stage Triage",
     "description": "Take over an existing empirical project, infer its current research stage from authoritative local artifacts, and identify the highest-value next steps.",
     "id": "existing-project-stage-triage",
     "url": "/ai/prompts/en/setup/#existing-project-stage-triage"
@@ -794,7 +810,7 @@
   {
     "lang": "en",
     "layer": "Setup",
-    "title": "Setup Prompt 4 · Durable Project Map Refresh",
+    "title": "Setup Prompt 5 · Durable Project Map Refresh",
     "description": "Keep PROJECT.md concise, accurate, and useful across sessions.",
     "id": "project-map-refresh",
     "url": "/ai/prompts/en/setup/#project-map-refresh"
@@ -802,7 +818,7 @@
   {
     "lang": "en",
     "layer": "Setup",
-    "title": "Setup Prompt 5 · Session Handoff Refresh",
+    "title": "Setup Prompt 6 · Session Handoff Refresh",
     "description": "Complete context-dependent closing work before compression or a major stopping point, then leave a concise handoff for the next Claude session.",
     "id": "session-handoff-refresh",
     "url": "/ai/prompts/en/setup/#session-handoff-refresh"

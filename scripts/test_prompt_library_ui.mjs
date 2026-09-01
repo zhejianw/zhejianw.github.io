@@ -68,8 +68,8 @@ async function main() {
     assert(!Object.prototype.hasOwnProperty.call(record, "code"), "Cross-layer index must not contain prompt bodies");
     return counts;
   }, {});
-  assert(promptIndex.filter((record) => record.lang === "zh").length === 95, "Chinese metadata index must contain 95 prompts");
-  assert(promptIndex.filter((record) => record.lang === "en").length === 95, "English metadata index must contain 95 prompts");
+  assert(promptIndex.filter((record) => record.lang === "zh").length === 96, "Chinese metadata index must contain 96 prompts");
+  assert(promptIndex.filter((record) => record.lang === "en").length === 96, "English metadata index must contain 96 prompts");
 
   const browser = await chromium.launch({ headless: true });
   activeBrowser = browser;

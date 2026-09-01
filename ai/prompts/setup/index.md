@@ -37,7 +37,687 @@ last_updated: 2026-09-01
 不要为了把 idea 做成论文而强行乐观。明确区分 **已核实事实、合理推断和目前未知**。最后给出一个明确裁决：**值得立即推进 / 先验证关键数据后再决定 / 暂不值得做**，并指出下一步最有信息价值的少数行动。
 ~~~
 
-## Setup Prompt 1 · Workspace Bootstrap {#project-workspace-bootstrap}
+## Setup Prompt 1 · Research Proposal Capsule {#research-proposal-capsule}
+
+<p class="prompt-description">将早期想法或暂缓项目封存为可比较、可重启的 proposal capsule，用于 research portfolio 管理。</p>
+
+<p class="prompt-usage-note"><strong>适用入口：</strong>可以从正在运行的 research session 封存，也可以把 GPT Pro 网页分析转成项目档案；本轮只形成 proposal record，不默认启动研究。</p>
+
+**推荐模式：Extra High；需要裁决 publication ceiling 或项目去留时使用 Pro**
+
+~~~text
+# [Project Title]
+
+**Short name:**
+**Status:** INBOX / SCREENING / READY / ACTIVE / PARKED / KILLED / SUBMITTED
+**Last updated:** YYYY-MM-DD
+
+---
+
+## 0. One-sentence idea
+
+> 用一句话说清楚：什么 shock / variation，影响什么 outcome，在什么 population / setting 中？
+
+Example:
+
+> Exploit the staggered introduction of X across Chinese counties to estimate its causal effect on Y using county-level administrative and satellite data.
+
+---
+
+## 1. Research Question
+
+### Main question
+这篇 paper 真正要回答什么？
+
+### Secondary questions
+- Mechanism 1:
+- Mechanism 2:
+- Heterogeneity:
+- Additional outcome:
+
+不要一开始列太多。Main question 原则上只能有一个。
+
+---
+
+## 2. Why Economists Care
+
+### Economic significance
+为什么这个问题本身重要？
+
+### Broader economic theme
+它在讨论什么更大的经济学问题？
+
+例如：
+- information frictions
+- human capital
+- firm dynamics
+- market integration
+- regulation
+- political economy
+- household behavior
+- technology adoption
+
+### Policy relevance
+如果结果成立，会改变我们对什么政策或制度的认识？
+
+---
+
+## 3. Paper Identity
+
+如果这篇文章成功，别人应该用一句什么话描述它？
+
+> “This is a paper about ______ using ______.”
+
+**Primary field:**
+**Secondary field:**
+
+**Likely audience:**
+
+---
+
+## 4. Core Contribution
+
+### Contribution 1 — Question
+我们回答了哪个现有文献尚未回答清楚的问题？
+
+### Contribution 2 — Identification
+我们的 causal variation 有什么价值？
+
+### Contribution 3 — Data
+是否使用了新的数据、粒度、时间跨度、链接方式？
+
+### Contribution 4 — Finding / mechanism
+如果预期结果成立，它改变了什么认识？
+
+### Closest existing paper
+- Paper:
+- What it does:
+- What we do differently:
+
+如果目前 contribution 不清楚，直接写：
+
+> **CURRENT CONCERN: contribution not yet established.**
+
+---
+
+# 5. Institutional Setting / Treatment
+
+## Treatment / shock
+
+**Treatment:**
+**Unit:** individual / firm / county / prefecture / country / etc.
+**Timing:**
+**Geographic scope:**
+
+### Institutional mechanism
+政策 / shock 实际是怎么发生的？
+
+### Treatment assignment
+谁被 treatment，为什么？
+
+### Important dates
+| Date | Event | Relevance |
+|---|---|---|
+| | | |
+
+### Potential contamination
+- anticipation:
+- retroactivity:
+- concurrent policies:
+- spillovers:
+- treatment misclassification:
+
+---
+
+# 6. Identification
+
+## Baseline design
+
+**Design:**
+DID / event study / RDD / IV / shift-share / synthetic control / natural experiment / etc.
+
+### Treatment group
+
+### Comparison group
+
+### Estimand
+
+### Core identifying assumption
+
+用一句明确的话写出来：
+
+> Identification requires that ______.
+
+### Why might the assumption hold?
+
+### Why might it fail?
+
+---
+
+## 6.1 Threats to identification
+
+按严重性排序：
+
+**Threat 1**
+   - Why it matters:
+   - Possible test:
+   - Possible solution:
+**Threat 2**
+   - ...
+**Threat 3**
+   - ...
+---
+
+## 6.2 Falsification / diagnostics
+
+计划做哪些真正有信息量的测试？
+
+- pre-trends
+- placebo treatment
+- placebo outcome
+- balance
+- manipulation test
+- alternative timing
+- unaffected population
+- negative controls
+- spillover tests
+
+只列能够改变我们对 identification 信念的测试。
+
+---
+
+# 7. Data Architecture
+
+## 7.1 Unit of observation
+
+例如：
+
+> county × year, 2010–2025
+
+或：
+
+> firm × month
+
+---
+
+## 7.2 Must-have datasets
+
+### Dataset A — [name]
+
+**Purpose:**
+它解决什么核心变量？
+
+**Variables needed:**
+- treatment
+- outcome
+- controls
+- identifiers
+
+**Unit:**
+**Coverage:**
+**Time period:**
+**Access route:** API / download / scraping / application / paid / private
+**Cost:**
+**Current status:**
+
+选择一个：
+
+- NOT CHECKED
+- EXISTS, ACCESS UNVERIFIED
+- ACCESS VERIFIED
+- PARTIALLY ACQUIRED
+- FULLY ACQUIRED
+- CLEANED
+- MERGED
+- ANALYSIS READY
+
+**Current holdings:**
+- 已经有什么文件？
+- 存在哪里？
+- 覆盖到哪里？
+- 缺什么？
+
+**Main risks:**
+- missing years
+- inconsistent identifiers
+- no treatment timing
+- aggregation too coarse
+- access instability
+- etc.
+
+---
+
+### Dataset B — [name]
+
+同上。
+
+---
+
+## 7.3 Nice-to-have datasets
+
+### Dataset C
+**Potential value:**
+**Current status:**
+**Necessary?** NO
+
+---
+
+# 8. Data Acquisition Status
+
+这是 portfolio 管理中非常重要的一栏。
+
+| Component | Needed for | Status | Current coverage | Missing | Next action |
+|---|---|---|---|---|---|
+| Treatment data | Identification | VERIFIED | 2015–2024 | 2014 | Locate archive |
+| Outcome data | Main result | ACQUIRED | Full | None | Clean IDs |
+| Controls | Baseline | PARTIAL | 80% counties | Tibet etc. | Merge |
+| Mechanism data | Mechanism | NOT CHECKED | — | All | Low priority |
+
+---
+
+## 8.1 Existing assets
+
+已经掌握、可以直接复用的东西：
+
+- existing raw data:
+- cleaned panel:
+- crosswalk:
+- API scripts:
+- scraper:
+- shapefiles:
+- policy dates:
+- previous code:
+- related literature library:
+
+这部分很重要，因为它决定项目真实 marginal cost。
+
+---
+
+## 8.2 Missing critical components
+
+### Critical missing item 1
+如果没有它，项目会怎样？
+
+### Critical missing item 2
+
+---
+
+# 9. Sample
+
+### Target sample
+
+### Approximate N
+
+### Treatment count
+
+### Pre-period length
+
+### Post-period length
+
+### Geographic coverage
+
+### Known sample-selection issues
+
+如果还不知道：
+
+> **N currently UNKNOWN. Must be established before promotion to ACTIVE.**
+
+---
+
+# 10. Outcomes
+
+## Primary outcome
+
+### Definition
+### Source
+### Frequency
+### Measurement concerns
+
+---
+
+## Secondary outcomes
+
+1.
+2.
+3.
+
+---
+
+## Mechanism outcomes
+
+1.
+2.
+
+不要在 proposal 阶段堆几十个 outcome。
+
+---
+
+# 11. Baseline Empirical Specification
+
+写到足够说明设计即可，不需要提前完成整套 robustness。
+
+例如：
+
+\[
+Y_{it} = \alpha_i + \lambda_t + \beta Treatment_{it} + \epsilon_{it}
+\]
+
+或者写 event-study / RDD / IV 结构。
+
+### Fixed effects
+
+### Standard errors / clustering
+
+### Weighting
+
+### Main estimator
+
+### Important estimator issues
+例如：
+- staggered adoption
+- heterogeneous treatment effects
+- few clusters
+- spatial correlation
+- generated treatment measure
+
+---
+
+# 12. Literature Map
+
+不要做 exhaustive bibliography，只抓真正决定项目空间的文献。
+
+## Closest papers
+
+### Paper 1
+**Question:**
+**Design:**
+**Data:**
+**Main result:**
+**Overlap with us:**
+**Remaining space:**
+
+### Paper 2
+...
+
+---
+
+## Literature verdict
+
+选择一个：
+
+- CLEAR SPACE
+- PROBABLY SPACE
+- CROWDED BUT DIFFERENTIABLE
+- HIGH DUPLICATION RISK
+- ESSENTIALLY DONE
+
+### Main literature risk
+
+---
+
+# 13. Cheapest Decisive Tests
+
+这一栏优先级极高。
+
+按顺序列出最便宜、最可能改变项目命运的测试。
+
+## Gate 1 — [question]
+
+**Question:**
+例如：
+> Does project-level treatment timing actually exist?
+
+**Cost:** 1–2 hours / 1 day / etc.
+**Success condition:**
+**Failure condition:**
+**If failed:** KILL / PARK / redesign
+
+---
+
+## Gate 2 — [question]
+
+同上。
+
+---
+
+## Gate 3 — [question]
+
+同上。
+
+---
+
+# 14. Kill Criteria
+
+提前写清楚什么情况下应该停止。
+
+项目应该被 KILL，如果：
+
+__________________
+__________________
+__________________
+__________________
+例如：
+
+- treatment timing cannot be recovered;
+- effective treated sample < 30;
+- nearest literature already uses same shock + same outcome;
+- pre-treatment outcome trends are structurally incompatible with design;
+- key dataset only exists at an unusably aggregated level.
+
+---
+
+# 15. What Would Make This an A / B / C Paper?
+
+## A-version
+如果最好的情况成立，这篇文章需要有什么？
+
+- stronger identification?
+- unique data?
+- major mechanism?
+- broad economic implication?
+
+## B-version
+现实中更可能做到什么？
+
+## C-version
+如果核心 contribution 较弱，但结果仍然 publishable，最低版本是什么？
+
+### Is the C-version still worth doing?
+YES / NO / UNCLEAR
+
+这对 stopping rule 很有帮助。
+
+---
+
+# 16. Expected Journal / Field Position
+
+不要假精确。
+
+### Optimistic ceiling
+
+### Realistic target range
+
+### Floor
+
+### Relevant fields
+- Development
+- Labor
+- Health
+- IO
+- Public
+- Urban
+- Political economy
+- etc.
+
+---
+
+# 17. Expected Cost and Cycle
+
+## Human attention
+
+LOW / MEDIUM / HIGH
+
+## AI / coding workload
+
+LOW / MEDIUM / HIGH
+
+## Data acquisition
+
+LOW / MEDIUM / HIGH
+
+## Institutional research
+
+LOW / MEDIUM / HIGH
+
+## Coordination cost
+
+SOLO / LOW / MEDIUM / HIGH
+
+## Time to decisive evidence
+
+例如：
+> 2–5 days
+
+## Time to first credible empirical result
+
+例如：
+> 2–4 weeks
+
+## Time to submission if successful
+
+例如：
+> 2–4 months
+
+---
+
+# 18. Authorship / Collaboration
+
+## Current owner / lead
+
+## Potential coauthors
+
+### What unique complementarity would each person provide?
+
+不要因为“认识这个人”就默认合作。
+
+### Is another human coauthor actually necessary?
+YES / NO / UNKNOWN
+
+### Governance risks
+- first-author requirements
+- deadline mismatch
+- journal preference mismatch
+- slow feedback
+- institutional constraints
+- data ownership
+- etc.
+
+---
+
+# 19. Portfolio Fit
+
+### Why now?
+
+为什么这个项目值得**现在**做，而不是半年后？
+
+### What does it add to the current portfolio?
+
+- publication probability
+- research identity
+- new field
+- new dataset
+- methodological capital
+- collaboration
+- high-upside lottery ticket
+
+### Opportunity cost
+
+如果启动它，现在不能做什么？
+
+---
+
+# 20. Current Evidence
+
+## What we currently know
+
+1.
+2.
+3.
+
+## What we currently do NOT know
+
+1.
+2.
+3.
+
+严格区分 FACT / INFERENCE / SPECULATION。
+
+---
+
+# 21. Current Verdict
+
+**Status:**
+READY / SCREENING / PARKED / KILLED / ACTIVE
+
+**Priority:**
+A / B / C
+
+**Confidence:**
+HIGH / MEDIUM / LOW
+
+### Bottom line
+
+用 3–6 句话回答：
+
+- 为什么值得/不值得做；
+- 最大 upside；
+- 最大 risk；
+- 当前是否应该占用 Active slot。
+
+---
+
+# 22. Next Action
+
+只写**一个**下一步。
+
+> NEXT ACTION: __________________
+
+最好是一个能够改变 decision 的动作，而不是：
+“继续研究。”
+
+---
+
+# 23. Decision Log
+
+### YYYY-MM-DD
+**New evidence:**
+**Belief update:**
+**Decision:**
+**Reason:**
+
+---
+
+# 24. Sources / Provenance
+
+## Proposal origins
+- GPT conversation:
+- Claude memo:
+- personal idea:
+- collaborator discussion:
+
+## Key sources
+- paper / DOI
+- government document
+- dataset documentation
+- API
+- website
+
+## Local files
+- path/to/file
+- path/to/data
+~~~
+
+## Setup Prompt 2 · Workspace Bootstrap {#project-workspace-bootstrap}
 
 <p class="prompt-description">建立统一目录、Claude 工作规则与跨 session 的项目状态入口。</p>
 
@@ -173,7 +853,7 @@ last_updated: 2026-09-01
 先检查当前目录已有内容，避免覆盖已有有效文件；建立缺失结构和状态文件后停止，不开始 substantive research。
 ~~~
 
-## Setup Prompt 2 · Environment Bootstrap {#environment-bootstrap}
+## Setup Prompt 3 · Environment Bootstrap {#environment-bootstrap}
 
 <p class="prompt-description">验证实证与写作环境并记录长期配置。</p>
 
@@ -191,7 +871,7 @@ last_updated: 2026-09-01
 完成环境确认和记录后停止，不开始 substantive research。
 ~~~
 
-## Setup Prompt 3 · Existing Project Stage Triage {#existing-project-stage-triage}
+## Setup Prompt 4 · Existing Project Stage Triage {#existing-project-stage-triage}
 
 <p class="prompt-description">接手已有实证项目，依据本地权威材料判断当前 research stage 与最有价值的下一步。</p>
 
@@ -308,7 +988,7 @@ Manuscript 阶段主要通过不同角度反复审阅和打磨：
 开始工作时，先判断当前项目实际位于哪个 stage、当前 authoritative artifacts 是什么，以及下一步最符合这套框架的少数动作。不要为了遵守框架而机械推进 stage；以当前 evidence 和 research value 为准。
 ~~~
 
-## Setup Prompt 4 · Durable Project Map Refresh {#project-map-refresh}
+## Setup Prompt 5 · Durable Project Map Refresh {#project-map-refresh}
 
 <p class="prompt-description">让 PROJECT.md 始终保持为精简、准确且可跨 session 使用的项目地图。</p>
 
@@ -336,7 +1016,7 @@ Manuscript 阶段主要通过不同角度反复审阅和打磨：
 如果现有 `PROJECT.md` 已基本正确，只更新真正发生变化的部分。
 ~~~
 
-## Setup Prompt 5 · Session Handoff Refresh {#session-handoff-refresh}
+## Setup Prompt 6 · Session Handoff Refresh {#session-handoff-refresh}
 
 <p class="prompt-description">在上下文压缩或重要节点结束前完成必要收尾，并为下一个 Claude session 留下精简交接。</p>
 
