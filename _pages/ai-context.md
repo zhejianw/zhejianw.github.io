@@ -44,7 +44,6 @@ Do not describe {{ person.name }} as having received the Ph.D. until the degree 
 ## Canonical sources
 
 - [Research](/research/)
-- [Current HTML CV](/cv/)
 - [Authoring and collaboration guidelines](/ai/writing-guidance/)
 - [Public submission profile](/ai/submission-profile/)
 - [Machine-readable context](/ai/context.json)

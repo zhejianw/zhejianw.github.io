@@ -41,6 +41,8 @@ The public site has two maintained presentation layers over one factual data lay
 - `/` is the default editorial view.
 - `/classic/` is the lower-motion Academic Pages-style view.
 
-Do not maintain separate copies of research status, degree status, teaching, or contact information for the two views. Update `_data/person.yml`, `_data/research.yml`, and `_data/teaching.yml`; both presentation layers read from those files. `_data/version_routes.yml` is the authoritative map for the paired Home, Research, Teaching, CV, and published-article pages. AI and Prompt Library utility pages intentionally have only the editorial view.
+Do not maintain separate copies of research status, degree status, teaching, or contact information for the two views. Update `_data/person.yml`, `_data/research.yml`, and `_data/teaching.yml`; both presentation layers read from those files. `_data/version_routes.yml` is the authoritative map for the paired Home, Research, Teaching, and published-article pages. AI and Prompt Library utility pages intentionally have only the editorial view.
+
+The public CV pages, resume redirect, PDF copies, and generated CV JSON were withdrawn on 2026-09-09. Public AI outputs no longer link to a CV.
 
 The classic view is a maintained rendering of current information, not the frozen historical site. Commit `48da33e` remains the pre-redesign recovery baseline.

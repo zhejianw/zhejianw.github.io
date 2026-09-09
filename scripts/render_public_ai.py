@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render public AI and CV endpoints from the canonical Jekyll data layer."""
+"""Render public AI endpoints from the canonical Jekyll data layer."""
 
 from __future__ import annotations
 
@@ -84,7 +84,6 @@ def validate_sources(person: dict, research: dict, ai: dict, updated: str) -> No
 
     for page in (
         "_pages/about.md",
-        "_pages/cv.md",
         "_pages/research.md",
         "_pages/restricting-video-games-china.md",
         "_pages/teaching.md",
@@ -156,7 +155,6 @@ def main() -> None:
         "canonical_urls": {
             "home": person["website"],
             "research": "https://zhejianwang.com/research/",
-            "cv": "https://zhejianwang.com/cv/",
             "ai_context": "https://zhejianwang.com/ai/context/",
             "writing_guidance": "https://zhejianwang.com/ai/writing-guidance/",
             "submission_profile": "https://zhejianwang.com/ai/submission-profile/",
@@ -216,7 +214,6 @@ Public email: {person['email']}
 ORCID: {person['orcid_url']}
 Google Scholar: {person['google_scholar']}
 Research: https://zhejianwang.com/research/
-Current HTML CV: https://zhejianwang.com/cv/
 
 Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/
 """
@@ -242,7 +239,6 @@ Use only when a human intentionally supplies this exact resource for an immediat
 - Email: [{person['email']}](mailto:{person['email']})
 - ORCID: [{person['orcid_id']}]({person['orcid_url']})
 - [Research](https://zhejianwang.com/research/)
-- [Current HTML CV](https://zhejianwang.com/cv/)
 - [Canonical JSON](https://zhejianwang.com/ai/context.json)
 
 ## Confirmed peer-reviewed publication
@@ -265,43 +261,12 @@ This public academic website does not provide a crawler-facing content index.
 - Full permissions and boundaries: https://zhejianwang.com/content-use/
 """
 
-    cv_json = {
-        "schema_version": "1.0",
-        "status": "current-public-profile",
-        "last_updated": updated,
-        "canonical_url": "https://zhejianwang.com/cv/",
-        "basics": {
-            "name": person["name"],
-            "label": person["title"],
-            "email": person["email"],
-            "website": person["website"],
-            "summary": person["short_bio"],
-            "location": {"city": "Newark", "region": "Delaware", "countryCode": "US"},
-            "profiles": [
-                {"network": "Google Scholar", "url": person["google_scholar"]},
-                {"network": "ORCID", "url": person["orcid_url"]},
-                {"network": "GitHub", "url": person["github"]},
-            ],
-        },
-        "education": person["education"],
-        "work": person["industry_experience"],
-        "skills": person["skills"],
-        "publications": [context["confirmed_publication"]],
-        "research_programs": research["programs"],
-        "presentations": person["presentations"],
-        "references": [
-            {"name": name, "contact": "Available upon request"}
-            for name in person["academic_references"]
-        ],
-    }
-
     outputs = {
         "ai/context.json": json_text(context),
         "ai/profile.json": json_text(profile),
         "ai/context.txt": context_text,
         "ai/context.md": context_markdown,
         "llms.txt": llms,
-        "_data/cv.json": json_text(cv_json),
     }
 
     for relative_path, content in outputs.items():

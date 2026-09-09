@@ -13,11 +13,6 @@ teaching:
   modern: /teaching/
   classic: /classic/teaching/
 
-cv:
-  label: CV
-  modern: /cv/
-  classic: /classic/cv/
-
 publication-video-games:
   label: Published article
   modern: /research/restricting-video-games-china/

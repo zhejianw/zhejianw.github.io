@@ -14,7 +14,6 @@ excerpt: "A concise directory of the site's public, human-facing pages."
 - [Home]({{ '/' | relative_url }})
 - [Research]({{ '/research/' | relative_url }})
 - [Teaching]({{ '/teaching/' | relative_url }})
-- [Curriculum Vitae]({{ '/cv/' | relative_url }})
 
   </section>
 

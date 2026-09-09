@@ -19,7 +19,6 @@ Zhejian Wang is a Ph.D. Candidate in Economics at the University of Delaware. Di
 - Email: [zhejianw@udel.edu](mailto:zhejianw@udel.edu)
 - ORCID: [0009-0001-0016-0421](https://orcid.org/0009-0001-0016-0421)
 - [Research](https://zhejianwang.com/research/)
-- [Current HTML CV](https://zhejianwang.com/cv/)
 - [Canonical JSON](https://zhejianwang.com/ai/context.json)
 
 ## Confirmed peer-reviewed publication

@@ -15,13 +15,12 @@ excerpt: "Classic academic view of Zhejian Wang's research profile."
 {% assign publication = research.papers[research.featured_publication] %}
 
 <div class="classic-callout">
-  This is the classic academic view. It uses the same current research, CV, and contact data as the <a href="{{ '/' | relative_url }}">new editorial view</a>.
+  This is the classic academic view. It uses the same current research and contact data as the <a href="{{ '/' | relative_url }}">new editorial view</a>.
 </div>
 
 I am a **{{ person.title }}** at the **{{ person.institution }}**. {{ person.degree_status }} I am an **applied microeconomist** working in the economics of education, digital economics, and family and household economics. {{ person.research_statement }}
 
 <div class="classic-actions">
-  <a class="classic-button" href="{{ '/classic/cv/' | relative_url }}">CV</a>
   <a class="classic-button" href="{{ '/classic/research/' | relative_url }}">Research</a>
   <a class="classic-button" href="mailto:{{ person.email }}">Email</a>
 </div>
@@ -49,6 +48,6 @@ I am a **{{ person.title }}** at the **{{ person.institution }}**. {{ person.deg
 
 ## Academic references
 
-{{ person.academic_references | join: '; ' }}. Full contact details are available on the [CV page]({{ '/classic/cv/' | relative_url }}).
+{{ person.academic_references | join: '; ' }}.
 
 Please feel free to contact me at [{{ person.email }}](mailto:{{ person.email }}).
