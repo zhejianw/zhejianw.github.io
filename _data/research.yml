@@ -2,8 +2,6 @@ last_reviewed: 2026-08-28
 featured_publication: restricting-video-games-china
 selected_home:
   - restricting-video-games-china
-  - higher-education-expansion-choice
-  - premarital-property-rights
   - minors-online-gaming
 
 papers:
@@ -135,12 +133,9 @@ programs:
     title: Education and human capital
     summary: Education policy, schooling choice, mobility, and locally salient role models.
     paper_ids:
-      - higher-education-expansion-choice
-      - seats-to-status
       - local-role-models
   - id: household
     title: Household institutions
     summary: Property rights, administrative frictions, marriage, and family decisions.
     paper_ids:
-      - premarital-property-rights
       - registration-frictions-marriage
