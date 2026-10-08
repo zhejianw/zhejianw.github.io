@@ -2,6 +2,7 @@
 layout: classic-single
 title: "About"
 seo_title: "Zhejian Wang"
+og_title: "Zhejian Wang"
 permalink: /classic/
 author_profile: true
 lang: en
