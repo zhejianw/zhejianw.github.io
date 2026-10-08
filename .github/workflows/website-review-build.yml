@@ -58,6 +58,7 @@ jobs:
           done
           curl --fail --silent http://127.0.0.1:4173/ > /dev/null
           node scripts/test_prompt_library_ui.mjs
+          node scripts/test_teaching_ui.mjs
 
       - name: Upload Prompt Library viewport captures
         if: always()

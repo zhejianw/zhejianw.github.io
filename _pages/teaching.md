@@ -20,8 +20,11 @@ excerpt: "Economics instruction across introductory, upper-level, and graduate c
 
 **Undergraduate courses · Department of Economics · {{ teaching.institution }}**
 
-{% for course in teaching.instructor %}- *{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}* — {{ course.term }}
+<ul>
+{% for course in teaching.instructor %}
+  <li><em>{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}</em> — {{ course.term }}</li>
 {% endfor %}
+</ul>
 
 {{ teaching.discussion_summary }}
 
@@ -41,8 +44,11 @@ excerpt: "Economics instruction across introductory, upper-level, and graduate c
 
 **Teaching Assistant**
 
-{% for course in teaching.teaching_assistant.graduate %}- *{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}* — {{ course.term }}
+<ul>
+{% for course in teaching.teaching_assistant.graduate %}
+  <li><em>{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}</em> — {{ course.term }}</li>
 {% endfor %}
+</ul>
 
   </section>
 
@@ -52,8 +58,11 @@ excerpt: "Economics instruction across introductory, upper-level, and graduate c
 
 **Teaching Assistant**
 
-{% for course in teaching.teaching_assistant.undergraduate %}- *{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}* — {{ course.term }}
+<ul>
+{% for course in teaching.teaching_assistant.undergraduate %}
+  <li><em>{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}</em> — {{ course.term }}</li>
 {% endfor %}
+</ul>
 
   </section>
 </div>
