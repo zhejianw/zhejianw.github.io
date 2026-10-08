@@ -29,6 +29,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check -r scripts/requirements-site-tools.txt
           python scripts/render_public_ai.py --check
+          python -B scripts/test_render_public_ai.py
           python scripts/build_prompt_index.py --check
           python scripts/public_repo_guard.py
           python scripts/check_prompt_translation_parity.py
@@ -57,6 +58,7 @@ jobs:
           done
           curl --fail --silent http://127.0.0.1:4173/ > /dev/null
           node scripts/test_prompt_library_ui.mjs
+          node scripts/test_teaching_ui.mjs
 
       - name: Upload Prompt Library viewport captures
         if: always()

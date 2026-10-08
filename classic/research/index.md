@@ -23,6 +23,9 @@ Current research includes the following ongoing areas.
 {% for project in site.data.research.ongoing_research %}
 ### {{ project.title }}
 
+{% if project.collaborators %}With {{ project.collaborators }}.
+
+{% endif %}
 {{ project.summary }}
 
 {% endfor %}

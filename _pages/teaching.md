@@ -16,14 +16,17 @@ excerpt: "Economics instruction across introductory, upper-level, and graduate c
 <div class="taste-card-grid">
   <section class="taste-content-card taste-content-card--seven taste-content-card--blue" markdown="1">
 
-## Instructor
+## {{ teaching.discussion_role }}
 
 **Undergraduate courses · Department of Economics · {{ teaching.institution }}**
 
-{% for course in teaching.instructor %}- *{{ course.course }} ({{ course.code }})* — {{ course.term }}
+<ul>
+{% for course in teaching.instructor %}
+  <li><em>{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}</em> — {{ course.term }}</li>
 {% endfor %}
+</ul>
 
-As an instructor for discussion sections, I independently led weekly sessions for large introductory economics courses. Students registered for my sections separately from the main lecture, and I prepared materials, delivered instruction, graded assignments, and held office hours.
+{{ teaching.discussion_summary }}
 
   </section>
 
@@ -31,7 +34,7 @@ As an instructor for discussion sections, I independently led weekly sessions fo
 
 ## Teaching approach
 
-These courses emphasized applying core economic principles to real-world problems. I integrated short empirical exercises and policy examples to reinforce theory and build students' analytical and quantitative skills.
+{{ teaching.teaching_approach }}
 
   </section>
 
@@ -41,8 +44,11 @@ These courses emphasized applying core economic principles to real-world problem
 
 **Teaching Assistant**
 
-{% for course in teaching.teaching_assistant.graduate %}- *{{ course.course }} ({{ course.code }})* — {{ course.term }}
+<ul>
+{% for course in teaching.teaching_assistant.graduate %}
+  <li><em>{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}</em> — {{ course.term }}</li>
 {% endfor %}
+</ul>
 
   </section>
 
@@ -52,14 +58,17 @@ These courses emphasized applying core economic principles to real-world problem
 
 **Teaching Assistant**
 
-{% for course in teaching.teaching_assistant.undergraduate %}- *{{ course.course }} ({{ course.code }})* — {{ course.term }}
+<ul>
+{% for course in teaching.teaching_assistant.undergraduate %}
+  <li><em>{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}</em> — {{ course.term }}</li>
 {% endfor %}
+</ul>
 
   </section>
 </div>
 
 ## Supporting students
 
-As a Teaching Assistant, I led review sessions, graded assignments and exams, and provided one-on-one support. These roles strengthened my ability to explain complex material clearly and adapt instruction to different levels of quantitative preparation.
+{{ teaching.supporting_students }}
 
-Teaching evaluations are available upon request.
+{% if teaching.evaluations_available %}Teaching evaluations are available upon request.{% endif %}
