@@ -13,8 +13,8 @@
     <button class="btn btn--inverse" type="button">Contact</button>
     <ul class="author__urls social-icons">
       <li class="author__desktop">{{ person.location }}</li>
-      <li class="author__desktop">{{ person.institution }}</li>
       <li><a href="mailto:{{ person.email }}">{{ person.email }}</a></li>
+      <li><a href="mailto:{{ person.secondary_email }}">{{ person.secondary_email }}</a></li>
       <li><a href="{{ person.google_scholar }}">Google Scholar</a></li>
       <li><a href="{{ person.orcid_url }}">ORCID</a></li>
       <li><a href="{{ person.github }}">GitHub</a></li>

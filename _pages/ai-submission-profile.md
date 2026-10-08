@@ -9,7 +9,7 @@ visibility: unlisted-public
 noindex: true
 sitemap: false
 status: current
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 ---
 
 {% assign person = site.data.person %}
@@ -21,10 +21,13 @@ This unlisted page contains public-by-URL, reusable metadata for an assistant th
 
 - **Author name:** {{ person.name }}
 - **Current title:** {{ person.title }}
-- **Institution:** {{ person.institution }}
-- **Public email:** [{{ person.email }}](mailto:{{ person.email }})
+- **Institution:** {{ person.college }}, {{ person.institution }}
+- **PKU email:** [{{ person.email }}](mailto:{{ person.email }})
+- **UDel email:** [{{ person.secondary_email }}](mailto:{{ person.secondary_email }})
 - **ORCID:** [{{ person.orcid_id }}]({{ person.orcid_url }})
 - **Dissertation status:** {{ person.degree_status }}
+
+These are current public contact details, not instructions to change historical manuscript affiliations, corresponding authors, or existing journal-account emails.
 
 ## Research fields
 

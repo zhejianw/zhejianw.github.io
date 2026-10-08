@@ -1,6 +1,6 @@
 # Zhejian Wang — Public Academic Website
 
-This repository publishes [zhejianwang.com](https://zhejianwang.com/). Zhejian Wang is currently a Ph.D. Candidate in Economics at the University of Delaware; his dissertation has been successfully defended and the degree is pending formal conferral.
+This repository publishes [zhejianwang.com](https://zhejianwang.com/). Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Peking University, since September 2026. His Ph.D. in Economics was conferred by the University of Delaware on August 18, 2026.
 
 ## Content and automated-access boundary
 
@@ -43,6 +43,10 @@ The public site has two maintained presentation layers over one factual data lay
 
 Do not maintain separate copies of research status, degree status, teaching, or contact information for the two views. Update `_data/person.yml`, `_data/research.yml`, and `_data/teaching.yml`; both presentation layers read from those files. `_data/version_routes.yml` is the authoritative map for the paired Home, Research, Teaching, and published-article pages. The root home page and `/classic/` share `_includes/classic/home-content.html`. The alternative home page is canonicalized to `/` and omitted from indexing and sitemaps. AI and Prompt Library utility pages intentionally have only the editorial view.
 
-The public CV pages, resume redirect, PDF copies, and generated CV JSON were withdrawn on 2026-09-09. Public AI outputs no longer link to a CV.
+The CV landing pages and current PDF are restored using the preserved September 9 CV work, updated to October 8, 2026. The formal PDF retains the owner's separately approved academic classifications. The HTML landing pages do not render its unpublished-paper list; do not extract those entries into homepage, research, AI, search, or related-paper displays. The excluded legacy root PDF and unused CV JSON remain retired.
+
+Public research pages list two confirmed publications. The three previously displayed ongoing projects are represented as cautious research themes. Working-paper listings and unpublished manuscript downloads are withdrawn from the current publication source; archived copies remain outside this repository. Git history has not been rewritten, so prior public versions may remain accessible elsewhere.
+
+`research.publication_ids` is the explicit list for publication rendering and public AI exports. `research.ongoing_research` holds only the three existing ongoing areas. Do not restore removed manuscript titles under another label or infer a completed experiment from a forward-looking research direction.
 
 The classic view is a maintained rendering of current information, not the frozen historical site. Commit `48da33e` remains the pre-redesign recovery baseline.

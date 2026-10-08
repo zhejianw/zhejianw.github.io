@@ -6,7 +6,7 @@ author_profile: true
 lang: en
 ref: teaching
 canonical_url: /teaching/
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 excerpt: "Economics instruction at the University of Delaware."
 ---
 

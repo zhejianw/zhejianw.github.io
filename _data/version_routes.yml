@@ -2,18 +2,23 @@ home:
   label: Home
   modern: /modern/
   classic: /
-
 research:
   label: Research
   modern: /research/
   classic: /classic/research/
-
 teaching:
   label: Teaching
   modern: /teaching/
   classic: /classic/teaching/
-
 publication-video-games:
   label: Published article
   modern: /research/restricting-video-games-china/
   classic: /classic/research/restricting-video-games-china/
+cv:
+  label: CV
+  modern: /cv/
+  classic: /classic/cv/
+publication-premarital-property:
+  label: Published article
+  modern: /research/premarital-property-rights/
+  classic: /classic/research/premarital-property-rights/

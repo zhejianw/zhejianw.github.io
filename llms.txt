@@ -2,7 +2,7 @@
 
 This public academic website does not provide a crawler-facing content index.
 
-- Last reviewed: 2026-08-28.
+- Last reviewed: 2026-10-08.
 - Model training, fine-tuning, distillation, benchmarking, bulk corpus collection, persistent retrieval ingestion, profiling, impersonation, and automated external actions are not authorized except where applicable law independently permits them.
 - A human may intentionally provide an exact page URL to an AI assistant for that human's immediate task. Do not use that limited retrieval to discover adjacent resources or create a persistent copy.
 - Follow https://zhejianwang.com/robots.txt and the TDM reservation at https://zhejianwang.com/.well-known/tdmrep.json.

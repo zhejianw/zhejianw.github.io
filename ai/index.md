@@ -9,7 +9,7 @@ sitemap: false
 noindex: true
 visibility: unlisted-public
 status: current
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 ---
 
 <p class="taste-lede">This unlisted area provides compact public facts, reusable author metadata, and writing boundaries for a URL that Zhejian Wang intentionally supplies to an AI assistant. It is not a crawler index or authorization for external action.</p>

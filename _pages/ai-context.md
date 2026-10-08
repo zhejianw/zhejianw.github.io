@@ -9,12 +9,11 @@ visibility: unlisted-public
 noindex: true
 sitemap: false
 status: current
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 ---
 
 {% assign person = site.data.person %}
 {% assign research = site.data.research %}
-{% assign publication = research.papers[research.featured_publication] %}
 
 This unlisted page is a human-reviewed, public-by-URL reference for an AI assistant or collaborator that receives this exact link from Zhejian Wang. It contains only information approved for public disclosure and is governed by the [content-use policy](/content-use/).
 
@@ -22,12 +21,13 @@ This unlisted page is a human-reviewed, public-by-URL reference for an AI assist
 
 - **Name:** {{ person.name }}
 - **Pronouns:** {{ person.pronouns }}
-- **Current title:** {{ person.title }}, {{ person.institution }}
+- **Current title:** {{ person.title }}, {{ person.college }}, {{ person.institution }}
 - **Dissertation:** {{ person.degree_status }}
-- **Email:** [{{ person.email }}](mailto:{{ person.email }})
+- **PKU email:** [{{ person.email }}](mailto:{{ person.email }})
+- **UDel email:** [{{ person.secondary_email }}](mailto:{{ person.secondary_email }})
 - **ORCID:** [{{ person.orcid_id }}]({{ person.orcid_url }})
 
-Do not describe {{ person.name }} as having received the Ph.D. until the degree has been formally conferred and this page has been updated.
+The Ph.D. was formally conferred on August 18, 2026. The current PKU appointment began in September 2026.
 
 ## Research profile
 
@@ -37,13 +37,14 @@ Do not describe {{ person.name }} as having received the Ph.D. until the degree 
 - **Primary fields:** {{ person.primary_fields | join: "; " }}
 - **Cross-cutting areas:** {{ person.cross_cutting_areas | join: "; " }}
 
-## Confirmed peer-reviewed publication
+## Publications
 
-{{ publication.authors }}. “{{ publication.full_title }}.” *{{ publication.journal }}* {{ publication.volume }}, {{ publication.article }} ({{ publication.year }}). [DOI]({{ publication.doi }}).
+{% include publication-list.html view="modern" %}
 
 ## Canonical sources
 
 - [Research](/research/)
+- [CV](/cv/)
 - [Authoring and collaboration guidelines](/ai/writing-guidance/)
 - [Public submission profile](/ai/submission-profile/)
 - [Machine-readable context](/ai/context.json)

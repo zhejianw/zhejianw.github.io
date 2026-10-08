@@ -385,6 +385,23 @@ body.taste-site {
 
 .taste-credential p + p { margin-top: 6px; }
 
+.academic-publication-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.academic-publication-list > li {
+  max-width: none;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--taste-line);
+  line-height: 1.55;
+}
+
+.academic-publication-list > li:last-child { border-bottom: 0; }
+.taste-credential h2 { margin: 0 0 6px; font-size: 1.1rem; }
+.taste-credential .academic-publication-list { font-size: 0.85rem; }
+
 .taste-credential .taste-credential__label {
   color: var(--taste-red-dark);
   font-size: 0.67rem;

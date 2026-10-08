@@ -1,17 +1,23 @@
 Zhejian Wang - Public AI Context
-Last updated: 2026-08-28
+Last updated: 2026-10-08
 
-Zhejian Wang is a Ph.D. Candidate in Economics at the University of Delaware. Dissertation successfully defended; degree pending formal conferral.
+Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Peking University. Ph.D. in Economics, University of Delaware, conferred August 18, 2026.
 
 Research identity: Applied Microeconomics.
-Primary fields: Economics of Education; Digital Economics; Family and Household Economics.
+Primary fields: Development Economics; Labor Economics.
 Research summary: I study how digital regulation, education policy, and household institutions shape human capital and behavior. My work uses policy variation and large-scale microdata, with a primary focus on China.
 
-Confirmed publication: Restricting video games in China: Effects on time use, educational achievement, and health. Journal of Development Economics 182, 103812 (2026). https://doi.org/10.1016/j.jdeveco.2026.103812
+Publications
 
-Public email: zhejianw@udel.edu
+Wang, Zhejian. (2026). Restricting video games in China: Effects on time use, educational achievement, and health. Journal of Development Economics, 182, 103812. https://doi.org/10.1016/j.jdeveco.2026.103812
+
+Wang, Zhejian, and Ruoming Zhang. (2026). Premarital property rights and marriage entry: evidence from urban China. Review of Economics of the Household. https://doi.org/10.1007/s11150-026-09890-w
+
+PKU email: zhejianw@pku.edu.cn
+UDel email: zhejianw@udel.edu
 ORCID: https://orcid.org/0009-0001-0016-0421
 Google Scholar: https://scholar.google.com/citations?user=fQDiJ1QAAAAJ
 Research: https://zhejianwang.com/research/
+CV: https://zhejianwang.com/cv/
 
-Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/
+Use only when a human intentionally supplies this exact resource for an immediate task. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/

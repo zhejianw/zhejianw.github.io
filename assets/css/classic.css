@@ -90,12 +90,12 @@ body.classic-site {
 }
 
 .classic-masthead .classic-version-link {
-  padding: 7px 10px;
-  border: 1px solid #555;
-  color: #333;
+  padding: 4px 6px;
+  border: 0;
+  color: #626975;
   font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .classic-site #main {

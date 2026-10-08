@@ -88,6 +88,8 @@
   "@type": "{{ site.social.type | default: 'Person' }}",
   "name": {{ site.social.name | default: site.name | jsonify }},
   "url": {{ seo_url | jsonify }},
+  "jobTitle": {{ site.data.person.title | jsonify }},
+  "worksFor": {"@type": "Organization", "name": {{ site.data.person.college | append: ', ' | append: site.data.person.institution | jsonify }}},
   "sameAs": {{ site.social.links | jsonify }}
 }
 </script>

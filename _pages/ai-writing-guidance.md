@@ -9,7 +9,7 @@ visibility: unlisted-public
 noindex: true
 sitemap: false
 status: current
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 ---
 
 These are unlisted, public-by-URL, project-independent defaults for an assistant that receives this exact link from Zhejian Wang. A manuscript's explicit instructions and source text take precedence. Use is governed by the [content-use policy](/content-use/).
@@ -35,4 +35,3 @@ These are unlisted, public-by-URL, project-independent defaults for an assistant
 - Drafting and checking materials does not authorize an AI system to submit a manuscript, contact editors or coauthors, or make declarations on the author's behalf.
 - Funding, conflicts of interest, data availability, ethics, author contributions, and AI-use disclosures must be confirmed for each manuscript.
 - Referee reports, editor correspondence, manuscript IDs, private coauthor comments, and active submission strategy are not part of this public context.
-

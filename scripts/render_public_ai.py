@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
 from pathlib import Path
 
 import yaml
@@ -41,7 +42,8 @@ def json_text(data: dict) -> str:
 
 def validate_page_review_date(relative_path: str, expected: str, mismatches: list[str]) -> None:
     text = (ROOT / relative_path).read_text(encoding="utf-8")
-    if f"last_updated: {expected}" not in text:
+    front_matter = yaml.safe_load(text.split("---", 2)[1])
+    if str(front_matter.get("last_updated")) != expected:
         mismatches.append(f"{relative_path} last_updated")
 
 
@@ -51,6 +53,7 @@ def validate_sources(person: dict, research: dict, ai: dict, updated: str) -> No
     expected = {
         "name": person["name"],
         "email": person["email"],
+        "secondary_email": person["secondary_email"],
         "orcid": person["orcid_url"],
         "googlescholar": person["google_scholar"],
         "bio": person["sidebar_bio"],
@@ -85,6 +88,8 @@ def validate_sources(person: dict, research: dict, ai: dict, updated: str) -> No
     for page in (
         "_pages/about.md",
         "_pages/research.md",
+        "_pages/modern-home.md",
+        "_pages/premarital-property-rights.md",
         "_pages/restricting-video-games-china.md",
         "_pages/teaching.md",
         "_pages/ai-context.md",
@@ -94,6 +99,21 @@ def validate_sources(person: dict, research: dict, ai: dict, updated: str) -> No
     ):
         validate_page_review_date(page, updated, mismatches)
 
+    rhe = research["papers"]["premarital-property-rights"]
+    rhe_detail = yaml.safe_load((ROOT / "_pages/premarital-property-rights.md").read_text(encoding="utf-8").split("---", 2)[1])
+    for key, value in {
+        "citation_title": rhe["full_title"],
+        "citation_author": ["Wang, Zhejian", "Zhang, Ruoming"],
+        "citation_journal_title": rhe["journal"],
+        "citation_doi": rhe["doi"].removeprefix("https://doi.org/"),
+    }.items():
+        if rhe_detail.get(key) != value:
+            mismatches.append(f"RHE detail page {key}")
+    if any(rhe_detail.get(key) for key in ("citation_volume", "citation_issue", "citation_firstpage", "citation_lastpage")):
+        mismatches.append("RHE detail page contains unconfirmed volume/issue/pages")
+    cv = ROOT / person["cv_pdf"].lstrip("/")
+    if not cv.is_file() or hashlib.sha256(cv.read_bytes()).hexdigest() != person.get("cv_pdf_sha256"):
+        mismatches.append("current CV PDF checksum")
     if mismatches:
         raise SystemExit("Canonical site-data mismatch:\n- " + "\n- ".join(mismatches))
 
@@ -112,10 +132,21 @@ def main() -> None:
         str(ai["last_reviewed"]),
     )
     validate_sources(person, research, ai, updated)
-    publication = research["papers"][research["featured_publication"]]
+    publications = [research["papers"][key] for key in research["publication_ids"]]
+    publication_records = [{
+        **{key: paper[key] for key in ("journal", "volume", "article", "year", "doi", "corresponding_author") if key in paper},
+        "title": paper["full_title"], "authors": paper["author_names"],
+    } for paper in publications]
+    publication_text = "\n\n".join(paper["citation_text"] for paper in publications)
+    publication_markdown = "\n\n".join(
+        f"{paper['authors']}. ({paper['year']}). “{paper['full_title']}.” *{paper['journal']}*"
+        + (f", {paper['volume']}" if paper.get("volume") else "")
+        + (f", {paper['article']}" if paper.get("article") else "")
+        + f". [DOI]({paper['doi']})." for paper in publications
+    )
 
     context = {
-        "schema_version": "1.1",
+        "schema_version": "2.0",
         "visibility": "unlisted-public",
         "status": "current",
         "last_updated": updated,
@@ -127,24 +158,21 @@ def main() -> None:
             "institution": person["institution"],
             "college": person["college"],
             "public_email": person["email"],
+            "secondary_public_email": person["secondary_email"],
             "orcid": person["orcid_id"],
             "dissertation_status": person["degree_status"],
             "degree_conferred": person["degree_conferred"],
+                "degree_conferred_at": person["degree_conferred_at"],
+                "appointment_start": person["appointments"][0]["start"],
         },
         "research": {
             "umbrella_field": person["umbrella_field"],
             "primary_fields": person["primary_fields"],
             "cross_cutting_areas": person["cross_cutting_areas"],
             "summary": person["research_statement"],
+            "developing_direction": person["about_paragraphs"][2],
         },
-        "confirmed_publication": {
-            "title": publication["full_title"],
-            "journal": publication["journal"],
-            "volume": publication["volume"],
-            "article": publication["article"],
-            "year": publication["year"],
-            "doi": publication["doi"],
-        },
+        "confirmed_publications": publication_records,
         "submission": {
             "jel_core": list(ai["jel_core"]),
             "jel_project_specific": list(ai["jel_project_specific"]),
@@ -155,6 +183,7 @@ def main() -> None:
         "canonical_urls": {
             "home": person["website"],
             "research": "https://zhejianwang.com/research/",
+            "cv": "https://zhejianwang.com/cv/",
             "ai_context": "https://zhejianwang.com/ai/context/",
             "writing_guidance": "https://zhejianwang.com/ai/writing-guidance/",
             "submission_profile": "https://zhejianwang.com/ai/submission-profile/",
@@ -162,7 +191,7 @@ def main() -> None:
     }
 
     profile = {
-        "schema_version": "1.2",
+        "schema_version": "2.0",
         "visibility": "unlisted-public",
         "status": "current",
         "last_updated": updated,
@@ -171,18 +200,22 @@ def main() -> None:
             "name": person["name"],
             "pronouns": person["pronouns"],
             "field": "Economics",
-            "public_affiliation": person["institution"],
+            "public_affiliation": f"{person['college']}, {person['institution']}",
             "public_email": person["email"],
+            "secondary_public_email": person["secondary_email"],
             "academic_status": {
                 "title": person["title"],
                 "institution": person["institution"],
                 "dissertation_defended": person["dissertation_defended"],
                 "degree_conferred": person["degree_conferred"],
+                "degree_conferred_at": person["degree_conferred_at"],
+                "appointment_start": person["appointments"][0]["start"],
                 "note": person["degree_status"],
             },
             "orcid": person["orcid_url"],
         },
         "research_profile": context["research"],
+        "confirmed_publications": publication_records,
         "canonical_links": {
             **context["canonical_urls"],
             "google_scholar": person["google_scholar"],
@@ -202,20 +235,24 @@ def main() -> None:
     context_text = f"""Zhejian Wang - Public AI Context
 Last updated: {updated}
 
-Zhejian Wang is a {person['title']} at the {person['institution']}. {person['degree_status']}
+Zhejian Wang is a {person['title']} at the {person['college']}, {person['institution']}. {person['degree_status']}
 
 Research identity: {person['umbrella_field']}.
 Primary fields: {'; '.join(person['primary_fields'])}.
 Research summary: {person['research_statement']}
 
-Confirmed publication: {publication['full_title']}. {publication['journal']} {publication['volume']}, {publication['article']} ({publication['year']}). {publication['doi']}
+Publications
 
-Public email: {person['email']}
+{publication_text}
+
+PKU email: {person['email']}
+UDel email: {person['secondary_email']}
 ORCID: {person['orcid_url']}
 Google Scholar: {person['google_scholar']}
 Research: https://zhejianwang.com/research/
+CV: https://zhejianwang.com/cv/
 
-Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/
+Use only when a human intentionally supplies this exact resource for an immediate task. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. Policy: https://zhejianwang.com/content-use/
 """
 
     context_markdown = f"""<!-- visibility: unlisted-public -->
@@ -226,7 +263,7 @@ Use only when a human intentionally supplies this exact resource for an immediat
 
 **Last updated:** {updated}
 
-{person['name']} is a {person['title']} at the {person['institution']}. {person['degree_status']}
+{person['name']} is a {person['title']} at the {person['college']}, {person['institution']}. {person['degree_status']}
 
 ## Research profile
 
@@ -236,18 +273,20 @@ Use only when a human intentionally supplies this exact resource for an immediat
 
 ## Public links
 
-- Email: [{person['email']}](mailto:{person['email']})
+- PKU email: [{person['email']}](mailto:{person['email']})
+- UDel email: [{person['secondary_email']}](mailto:{person['secondary_email']})
 - ORCID: [{person['orcid_id']}]({person['orcid_url']})
 - [Research](https://zhejianwang.com/research/)
+- [CV](https://zhejianwang.com/cv/)
 - [Canonical JSON](https://zhejianwang.com/ai/context.json)
 
-## Confirmed peer-reviewed publication
+## Publications
 
-{publication['authors']}. “{publication['full_title']}.” *{publication['journal']}* {publication['volume']}, {publication['article']} ({publication['year']}). [DOI]({publication['doi']}).
+{publication_markdown}
 
 ## Boundary
 
-Use only when a human intentionally supplies this exact resource for an immediate task. Do not describe the Ph.D. as conferred until the canonical context is updated. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. See the [content-use policy](https://zhejianwang.com/content-use/).
+Use only when a human intentionally supplies this exact resource for an immediate task. This material does not authorize bulk crawling, model training, persistent ingestion, profiling, submissions, correspondence, account access, or other external action. See the [content-use policy](https://zhejianwang.com/content-use/).
 """
 
     llms = f"""# Automated Access Notice

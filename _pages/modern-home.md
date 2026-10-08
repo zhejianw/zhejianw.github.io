@@ -10,13 +10,12 @@ author_profile: false
 lang: en
 ref: home
 taste_motion: true
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 excerpt: "Applied microeconomist studying digital regulation, education policy, and household institutions."
 ---
 
 {% assign person = site.data.person %}
 {% assign research = site.data.research %}
-{% assign publication = research.papers[research.featured_publication] %}
 
 <section class="taste-home-hero" aria-labelledby="home-title">
   <div class="taste-home-hero__ambient taste-home-hero__ambient--one" aria-hidden="true"></div>
@@ -25,20 +24,20 @@ excerpt: "Applied microeconomist studying digital regulation, education policy, 
     <div class="taste-home-hero__copy">
       <p class="taste-home-hero__discipline">{{ person.umbrella_field }}</p>
       <h1 id="home-title">Zhejian<br>Wang</h1>
-      <p class="taste-home-hero__lede">{{ person.research_statement }}</p>
-      <p class="taste-home-hero__status">{{ person.title }} at the {{ person.institution }}. {{ person.degree_status }}</p>
+      {% for paragraph in person.about_paragraphs %}<p class="{% if forloop.first %}taste-home-hero__lede{% else %}taste-home-hero__status{% endif %}">{{ paragraph }}</p>{% endfor %}
       <div class="taste-actions">
         <a class="taste-button taste-button--primary" href="{{ '/research/' | relative_url }}">Explore research</a>
       </div>
       <nav class="taste-home-links" aria-label="Academic profiles and contact" data-nosnippet>
         <a href="{{ person.google_scholar }}">Google Scholar</a>
         <a href="{{ person.orcid_url }}">ORCID</a>
-        <a href="mailto:{{ person.email }}">Email</a>
+        <a href="mailto:{{ person.email }}">PKU email</a>
+        <a href="mailto:{{ person.secondary_email }}">UDel email</a>
+        <a href="{{ "/cv/" | relative_url }}">CV</a>
       </nav>
-      <aside class="taste-credential" aria-label="Peer-reviewed publication">
-        <p class="taste-credential__label">Peer-reviewed publication</p>
-        <p><a href="{{ publication.details_url | relative_url }}"><em>{{ publication.full_title }}</em></a></p>
-        <p>{{ publication.journal }}, {{ publication.volume }}, {{ publication.article }} ({{ publication.year }}) · <a href="{{ publication.details_url | relative_url }}">Paper details</a> · <a href="{{ publication.doi }}">DOI</a></p>
+      <aside class="taste-credential" aria-label="Publications">
+        <h2>Publications</h2>
+        {% include publication-list.html view="modern" %}
       </aside>
     </div>
 
@@ -78,27 +77,6 @@ excerpt: "Applied microeconomist studying digital regulation, education policy, 
         <article class="taste-bento-card {% case forloop.index %}{% when 1 %}taste-bento-card--seven{% when 2 %}taste-bento-card--five taste-bento-card--blue{% when 3 %}taste-bento-card--five taste-bento-card--warm{% endcase %} taste-animate-card"><h3>{{ program.title }}</h3><p>{{ program.summary }}</p></article>
       {% endfor %}
       <article class="taste-bento-card taste-bento-card--seven taste-bento-card--red taste-animate-card"><h3>Causal empirical evidence</h3><p>Policy variation, administrative records, and nationally representative survey data.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="taste-section taste-selected-work" aria-labelledby="selected-work-title">
-  <div class="taste-shell">
-    <div class="taste-section-heading">
-      <div><p class="taste-eyebrow">Research portfolio</p><h2 id="selected-work-title">Selected research</h2></div>
-      <a class="taste-text-link" href="{{ '/research/' | relative_url }}">View all research</a>
-    </div>
-    <div class="taste-work-accordion" data-work-accordion>
-      {% for paper_id in research.selected_home %}
-        {% assign paper = research.papers[paper_id] %}
-        <article class="taste-work-panel{% if forloop.first %} is-active{% endif %}" data-work-panel>
-          <button class="taste-work-panel__trigger" id="home-work-trigger-{{ forloop.index }}" type="button" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="home-work-panel-{{ forloop.index }}"><span class="taste-work-panel__short">{{ paper.field | default: 'Publication' }}</span></button>
-          <div class="taste-work-panel__body" id="home-work-panel-{{ forloop.index }}" role="region" aria-labelledby="home-work-trigger-{{ forloop.index }}">
-            <div><p class="taste-card__kind">{{ paper.status }}</p><h3>{{ paper.title }}</h3><p>{{ paper.question }}</p></div>
-            <div class="taste-work-panel__meta"><p>{% if paper.journal %}<em>{{ paper.journal }}</em>, {{ paper.volume }}, {{ paper.article }} ({{ paper.year }}){% else %}{{ paper.authors }}{% endif %}</p>{% if paper.details_url %}<a href="{{ paper.details_url | relative_url }}">Read paper details</a>{% elsif paper.pdf %}<a href="{{ paper.pdf | relative_url }}">Open draft</a>{% endif %}</div>
-          </div>
-        </article>
-      {% endfor %}
     </div>
   </div>
 </section>

@@ -14,6 +14,7 @@ excerpt: "A concise directory of the site's public, human-facing pages."
 - [Home]({{ '/' | relative_url }})
 - [Research]({{ '/research/' | relative_url }})
 - [Teaching]({{ '/teaching/' | relative_url }})
+- [CV]({{ '/cv/' | relative_url }})
 
   </section>
 
@@ -21,7 +22,10 @@ excerpt: "A concise directory of the site's public, human-facing pages."
 
 ## Published research
 
-- [Restricting video games in China: Effects on time use, educational achievement, and health]({{ '/research/restricting-video-games-china/' | relative_url }})
+{% for paper_id in site.data.research.publication_ids %}
+{% assign paper = site.data.research.papers[paper_id] %}
+- [{{ paper.full_title }}]({{ paper.details_url | relative_url }})
+{% endfor %}
 
   </section>
 
