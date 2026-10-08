@@ -115,7 +115,7 @@ def build_profile_social_card(source: Image.Image) -> None:
     draw.text((76, 74), "ZW", font=font(BODY_BOLD, 24), fill=RED)
     draw.text((76, 150), "Zhejian", font=font(DISPLAY, 82), fill=INK)
     draw.text((76, 235), "Wang", font=font(DISPLAY, 82), fill=INK)
-    draw.text((80, 352), "APPLIED MICROECONOMIST", font=font(BODY_BOLD, 26), fill=BLUE)
+    draw.text((80, 352), "PEKING UNIVERSITY", font=font(BODY_BOLD, 26), fill=BLUE)
     draw.text(
         (80, 415),
         "Digital regulation · Education · Households",

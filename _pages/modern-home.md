@@ -1,7 +1,7 @@
 ---
 layout: home-taste
 title: "Zhejian Wang"
-seo_title: "Zhejian Wang - Applied Microeconomist"
+seo_title: "Zhejian Wang"
 permalink: /modern/
 canonical_url: /
 noindex: true
@@ -11,7 +11,7 @@ lang: en
 ref: home
 taste_motion: true
 last_updated: 2026-10-08
-excerpt: "Applied microeconomist studying digital regulation, education policy, and household institutions."
+excerpt: "Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Peking University. His research in applied microeconomics examines digital regulation, education and human capital, and household economics."
 ---
 
 {% assign person = site.data.person %}
