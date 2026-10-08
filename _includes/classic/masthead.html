@@ -8,7 +8,7 @@
         <button type="button" aria-label="Toggle navigation"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{{ '/classic/' | relative_url }}">{{ site.title }}</a>
+            <a href="{{ site.data.version_routes.home.classic | relative_url }}">{{ site.title }}</a>
           </li>
           {% for route_pair in site.data.version_routes %}
             {% assign route_key = route_pair[0] %}

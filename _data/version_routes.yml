@@ -1,7 +1,7 @@
 home:
   label: Home
-  modern: /
-  classic: /classic/
+  modern: /modern/
+  classic: /
 
 research:
   label: Research
