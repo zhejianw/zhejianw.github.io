@@ -144,6 +144,9 @@ def main() -> None:
         + (f", {paper['article']}" if paper.get("article") else "")
         + f". [DOI]({paper['doi']})." for paper in publications
     )
+    developing_direction = (person.get("developing_direction") or "").strip()
+    direction_text = f"Developing research direction: {developing_direction}\n" if developing_direction else ""
+    direction_markdown = f"- **Developing direction:** {developing_direction}\n" if developing_direction else ""
 
     context = {
         "schema_version": "2.0",
@@ -170,7 +173,7 @@ def main() -> None:
             "primary_fields": person["primary_fields"],
             "cross_cutting_areas": person["cross_cutting_areas"],
             "summary": person["research_statement"],
-            "developing_direction": person["about_paragraphs"][2],
+            **({"developing_direction": developing_direction} if developing_direction else {}),
         },
         "confirmed_publications": publication_records,
         "submission": {
@@ -240,7 +243,7 @@ Zhejian Wang is a {person['title']} at the {person['college']}, {person['institu
 Research identity: {person['umbrella_field']}.
 Primary fields: {'; '.join(person['primary_fields'])}.
 Research summary: {person['research_statement']}
-
+{direction_text}
 Publications
 
 {publication_text}
@@ -270,7 +273,7 @@ Use only when a human intentionally supplies this exact resource for an immediat
 - **Umbrella field:** {person['umbrella_field']}
 - **Primary fields:** {'; '.join(person['primary_fields'])}
 - **Summary:** {person['research_statement']}
-
+{direction_markdown}
 ## Public links
 
 - PKU email: [{person['email']}](mailto:{person['email']})

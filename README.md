@@ -49,4 +49,6 @@ Public research pages list two confirmed publications. The three previously disp
 
 `research.publication_ids` is the explicit list for publication rendering and public AI exports. `research.ongoing_research` holds only the three existing ongoing areas. Do not restore removed manuscript titles under another label or infer a completed experiment from a forward-looking research direction.
 
+The two homepage About paragraphs are editorial copy. Public AI exports read the optional `person.developing_direction` field independently; omitted or blank values produce no empty direction field. `python scripts/test_render_public_ai.py` checks this boundary alongside the export freshness check.
+
 The classic view is a maintained rendering of current information, not the frozen historical site. Commit `48da33e` remains the pre-redesign recovery baseline.

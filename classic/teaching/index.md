@@ -14,30 +14,36 @@ excerpt: "Economics instruction at the University of Delaware."
 
 My teaching emphasizes clear economic reasoning, empirical applications, and the connection between formal concepts and real-world policy questions.
 
-## Instructor
+## {{ teaching.discussion_role }}
 
 **Undergraduate courses · Department of Economics · {{ teaching.institution }}**
 
 {% for course in teaching.instructor %}
-- *{{ course.course }} ({{ course.code }})* — {{ course.term }}
+- *{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}* — {{ course.term }}
 {% endfor %}
 
-As an instructor for discussion sections, I independently led weekly sessions for large introductory economics courses. Students registered for my sections separately from the main lecture, and I prepared materials, delivered instruction, graded assignments, and held office hours.
+{{ teaching.discussion_summary }}
 
 ## Teaching assistant
 
 ### Graduate courses
 
 {% for course in teaching.teaching_assistant.graduate %}
-- *{{ course.course }} ({{ course.code }})* — {{ course.term }}
+- *{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}* — {{ course.term }}
 {% endfor %}
 
 ### Undergraduate courses
 
 {% for course in teaching.teaching_assistant.undergraduate %}
-- *{{ course.course }} ({{ course.code }})* — {{ course.term }}
+- *{{ course.course }}{% if course.code %} ({{ course.code }}){% endif %}* — {{ course.term }}
 {% endfor %}
 
 ## Teaching approach
 
-I connect core economic principles to real-world policy questions and use short empirical exercises to reinforce theory, interpretation, and quantitative reasoning.
+{{ teaching.teaching_approach }}
+
+## Supporting students
+
+{{ teaching.supporting_students }}
+
+{% if teaching.evaluations_available %}Teaching evaluations are available upon request.{% endif %}

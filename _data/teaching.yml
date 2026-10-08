@@ -1,5 +1,13 @@
-last_reviewed: 2026-08-28
+last_reviewed: 2026-10-08
 institution: University of Delaware
+discussion_role: Discussion Section Instructor
+discussion_summary: I led discussion sections for introductory microeconomics and macroeconomics,
+  helping students work through economic concepts and course assignments.
+teaching_approach: I emphasize intuition, graphical explanation, and real-world policy examples,
+  with attention to students' differing levels of quantitative preparation.
+supporting_students: My teaching assistantships spanned undergraduate courses and the graduate
+  microeconomic theory sequence, including office hours, grading, and individual support.
+evaluations_available: true
 
 instructor:
   - course: Introduction to Microeconomics
@@ -31,5 +39,4 @@ teaching_assistant:
       code: ECON 393
       term: Fall 2023
     - course: Economics of Health Policy
-      code: ECON 367
       term: Fall 2021

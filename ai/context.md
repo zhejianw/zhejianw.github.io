@@ -13,6 +13,7 @@ Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Pek
 - **Umbrella field:** Applied Microeconomics
 - **Primary fields:** Development Economics; Labor Economics
 - **Summary:** I study how digital regulation, education policy, and household institutions shape human capital and behavior. My work uses policy variation and large-scale microdata, with a primary focus on China.
+- **Developing direction:** At Peking University, I am developing research on digital technologies and education, including how artificial intelligence may affect learning and educational opportunity.
 
 ## Public links
 

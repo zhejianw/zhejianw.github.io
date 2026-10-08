@@ -19,9 +19,8 @@ papers:
       and health?
     evidence: Nationally representative survey data and city-level administrative data; difference-in-differences
       and regression kink designs.
-    abstract: In 2021, the Chinese government introduced a highly restrictive policy that sharply limited
-      minors' access to online video games, effectively eliminating weekday play and allowing only minimal
-      play on weekends and holidays. Using nationally representative survey data and a difference-in-differences
+    abstract: In 2021, China restricted minors' online gaming to 8:00–9:00 p.m. on Fridays, weekends,
+      and statutory holidays, prohibiting access at other times. Using nationally representative survey data and a difference-in-differences
       design, I find that the policy sharply reduced minors' gaming engagement and overall Internet use,
       reflecting substantial but incomplete compliance. However, these behavioral changes did not produce
       detectable short-run improvements in academic performance, nor clear evidence of an increase in
@@ -78,7 +77,9 @@ ongoing_research:
     markets.
 - id: local-role-models
   title: Local academic role models
+  collaborators: Wei Huang and Ruoming Zhang
   summary: Ongoing research on locally salient examples of academic success and schooling decisions.
 - id: registration-frictions-marriage
   title: Marriage registration and administrative frictions
+  collaborators: Ruoming Zhang
   summary: Ongoing research on marriage-registration procedures and family formation.
