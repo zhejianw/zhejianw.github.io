@@ -117,6 +117,10 @@ kramdown:
 
 defaults:
   - scope:
+      path: "files/digital-regulation-market-responses-chinese-mobile-apps.pdf"
+    values:
+      sitemap: false
+  - scope:
       path: "files/gaming-caps-fixed-cost-circumvention.pdf"
     values:
       sitemap: false
