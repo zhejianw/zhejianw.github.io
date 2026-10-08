@@ -8,12 +8,12 @@ site_theme: "default"
 title: "Zhejian Wang - Applied Microeconomist"
 title_separator: "-"
 name: &name "Zhejian Wang"
-description: &description "Postdoctoral Fellow at the National School of Development, Peking University. Applied microeconomist studying digital regulation, education and human capital, and household economics."
+description: &description "Postdoctoral Fellow at the National School of Development, Peking University. Research in applied microeconomics, digital regulation, education and human capital, and household economics."
 url: "https://zhejianwang.com"
 baseurl: ""
 repository: "zhejianw/zhejianw.github.io"
 og_image: "social/zhejian-wang-social-card.jpg"
-og_description: "Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Peking University, and an applied microeconomist studying digital regulation, education and human capital, and household economics."
+og_description: "Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Peking University. His research in applied microeconomics examines digital regulation, education and human capital, and household economics."
 
 author:
   avatar: "portrait/zhejian-wang-480.jpg"
@@ -116,6 +116,10 @@ kramdown:
   toc_levels: 1..6
 
 defaults:
+  - scope:
+      path: "files/gaming-caps-fixed-cost-circumvention.pdf"
+    values:
+      sitemap: false
   - scope:
       path: ""
       type: pages
