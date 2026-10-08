@@ -5,7 +5,7 @@ permalink: /teaching/
 author_profile: false
 lang: en
 ref: teaching
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 excerpt: "Economics instruction across introductory, upper-level, and graduate courses at the University of Delaware."
 ---
 

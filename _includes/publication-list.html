@@ -1,0 +1,12 @@
+{% assign research = site.data.research %}
+<ul class="{% if include.view == 'classic' %}classic-paper-list{% else %}academic-publication-list{% endif %}">
+{% for paper_id in research.publication_ids %}
+  {% assign paper = research.papers[paper_id] %}
+  {% assign detail_url = paper.details_url %}
+  {% if include.view == 'classic' %}{% assign detail_url = paper.classic_details_url %}{% endif %}
+  <li>
+    <strong><a href="{{ detail_url | relative_url }}">{{ paper.full_title }}</a></strong><br>
+    {{ paper.authors }} ({{ paper.year }}). <em>{{ paper.journal }}</em>{% if paper.volume %}, {{ paper.volume }}{% endif %}{% if paper.article %}, {{ paper.article }}{% endif %}. <a href="{{ paper.doi }}">DOI</a>
+  </li>
+{% endfor %}
+</ul>

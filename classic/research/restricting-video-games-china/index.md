@@ -6,7 +6,7 @@ author_profile: true
 lang: en
 ref: publication-video-games
 canonical_url: /research/restricting-video-games-china/
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 excerpt: "Wang, Z. (2026). Journal of Development Economics, 182, 103812."
 ---
 

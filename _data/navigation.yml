@@ -1,9 +1,7 @@
-# =============================================
-# Navigation Bar for Zhejian Wang
-# =============================================
-
 main:
-  - title: "Research"
-    url: /research/
-  - title: "Teaching"
-    url: /teaching/
+- title: Research
+  url: /research/
+- title: Teaching
+  url: /teaching/
+- title: CV
+  url: /cv/

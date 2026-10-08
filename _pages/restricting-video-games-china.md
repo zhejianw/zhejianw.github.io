@@ -6,7 +6,7 @@ author_profile: false
 lang: en
 ref: publication-video-games
 taste_compact_title: true
-last_updated: 2026-08-28
+last_updated: 2026-10-08
 seo_image: "social/restricting-video-games-china.jpg"
 excerpt: "Wang, Z. (2026). Restricting video games in China: Effects on time use, educational achievement, and health. Journal of Development Economics, 182, 103812."
 

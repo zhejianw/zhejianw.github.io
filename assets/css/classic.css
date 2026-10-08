@@ -15,6 +15,9 @@ html {
 body.classic-site {
   min-width: 320px;
   margin: 0;
+  /* The Classic masthead/footer stay in flow; legacy JS adds fixed-layout offsets. */
+  padding: 0 !important;
+  margin-bottom: 0 !important;
   color: var(--classic-ink);
   background: var(--classic-paper);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -51,6 +54,7 @@ body.classic-site {
 .classic-masthead .masthead__inner-wrap {
   width: min(1280px, calc(100% - 40px));
   margin: 0 auto;
+  padding: 0;
 }
 
 .classic-masthead .greedy-nav {
@@ -75,7 +79,7 @@ body.classic-site {
 
 .classic-masthead .visible-links > li { margin: 0; }
 .classic-masthead .visible-links > li:first-child { margin-right: auto; }
-.classic-masthead .visible-links a { display: block; color: #46484e; text-decoration: none; }
+.classic-masthead .visible-links a { display: block; margin: 0; color: #46484e; text-decoration: none; }
 
 .classic-masthead .masthead__menu-item--lg a {
   color: #24252a;
@@ -90,12 +94,12 @@ body.classic-site {
 }
 
 .classic-masthead .classic-version-link {
-  padding: 7px 10px;
-  border: 1px solid #555;
-  color: #333;
+  padding: 4px 6px;
+  border: 0;
+  color: #626975;
   font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .classic-site #main {
@@ -112,8 +116,17 @@ body.classic-site {
   position: sticky;
   top: 112px;
   width: 230px;
+  height: auto;
+  margin-top: 0;
+  padding-top: 0 !important;
+  overflow: visible;
   flex: 0 0 230px;
 }
+
+.classic-site .author__avatar { display: block; width: auto; }
+.classic-site .author__content { display: block; width: 100%; padding: 0; }
+.classic-site .author__urls-wrapper { display: block; position: static; width: 100%; cursor: auto; }
+.classic-site .author__urls-wrapper button { display: none; }
 
 .classic-site .author__avatar img {
   display: block;
@@ -137,8 +150,11 @@ body.classic-site {
   font-size: 0.88rem;
 }
 
-.classic-site .author__urls { padding: 0; list-style: none; }
-.classic-site .author__urls li { margin: 8px 0; }
+.classic-site .author__urls { display: block !important; position: static; width: 100%; margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; z-index: auto; list-style: none; }
+.classic-site .author__urls::before,
+.classic-site .author__urls::after { display: none; }
+.classic-site .author__urls li { margin: 8px 0; font-size: inherit; }
+.classic-site .author__urls a { font-size: inherit; }
 
 .classic-site .page {
   width: min(880px, 100%);
@@ -258,13 +274,20 @@ body.classic-site {
   .classic-masthead .masthead__inner-wrap,
   .classic-site #main { width: min(100% - 32px, 880px); }
   .classic-site #main { display: block; padding-top: 34px; }
-  .classic-site .sidebar { position: static; width: 100%; margin-bottom: 42px; }
+  .classic-site .sidebar { position: static; width: 100%; margin-bottom: 32px; }
+  .classic-site .sidebar > div { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
+  .classic-site .author__avatar { display: block; width: 112px; }
   .classic-site .author__avatar img { width: 112px; height: 112px; }
-  .classic-site .author__urls-wrapper button { display: none; }
+  .classic-site .author__content { min-width: 0; }
+  .classic-site .author__name { margin-top: 0; }
+  .classic-site .author__urls-wrapper { grid-column: 1 / -1; }
   .classic-site .author__urls { display: flex !important; flex-wrap: wrap; gap: 4px 14px; }
+  .classic-site .author__urls li { margin: 2px 0; }
+  .classic-site .author__urls .author__desktop { display: block; flex-basis: 100%; }
+  .classic-site .page { display: flow-root; }
   .classic-site .page__title { font-size: 2.15rem; }
   .classic-masthead .greedy-nav { min-height: 0; }
   .classic-masthead .visible-links { padding: 12px 0; flex-wrap: wrap; gap: 8px 16px; }
-  .classic-masthead .visible-links > li:first-child { width: 100%; margin-right: 0; }
+  .classic-masthead .visible-links > li:first-child { width: 100%; margin-right: 0; padding-right: 0; }
   .classic-masthead .masthead__menu-item a { font-size: 0.76rem; }
 }

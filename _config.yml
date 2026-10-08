@@ -8,28 +8,27 @@ site_theme: "default"
 title: "Zhejian Wang - Applied Microeconomist"
 title_separator: "-"
 name: &name "Zhejian Wang"
-description: &description "Applied microeconomist studying digital regulation, education policy, and household institutions"
+description: &description "Postdoctoral Fellow at the National School of Development, Peking University. Applied microeconomist studying digital regulation, education and human capital, and household economics."
 url: "https://zhejianwang.com"
 baseurl: ""
 repository: "zhejianw/zhejianw.github.io"
 og_image: "social/zhejian-wang-social-card.jpg"
-og_description: "Zhejian Wang is an applied microeconomist studying digital regulation, education policy, and household institutions."
+og_description: "Zhejian Wang is a Postdoctoral Fellow at the National School of Development, Peking University, and an applied microeconomist studying digital regulation, education and human capital, and household economics."
 
 author:
   avatar: "portrait/zhejian-wang-480.jpg"
   name: "Zhejian Wang"
   pronouns: "he/him"
-  bio: "Ph.D. Candidate in Economics, University of Delaware. Applied microeconomist studying digital regulation, education policy, and household institutions."
-  location: "Newark, Delaware, USA"
-  employer: "University of Delaware"
-  email: "zhejianw@udel.edu"
+  bio: "Postdoctoral Fellow, National School of Development, Peking University."
+  location: "Beijing, China"
+  employer: "Peking University"
+  email: "zhejianw@pku.edu.cn"
+  secondary_email: "zhejianw@udel.edu"
   github: "zhejianw"
   googlescholar: "https://scholar.google.com/citations?user=fQDiJ1QAAAAJ"
   orcid: "https://orcid.org/0009-0001-0016-0421"
 
 publication_category:
-  workingpapers:
-    title: 'Working Papers'
   manuscripts:
     title: 'Publications'
   conferences:

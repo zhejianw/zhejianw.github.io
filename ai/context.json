@@ -1,42 +1,62 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "2.0",
   "visibility": "unlisted-public",
   "status": "current",
-  "last_updated": "2026-08-28",
+  "last_updated": "2026-10-08",
   "canonical_source": "https://zhejianwang.com/ai/context.json",
   "identity": {
     "name": "Zhejian Wang",
     "pronouns": "he/him",
-    "title": "Ph.D. Candidate in Economics",
-    "institution": "University of Delaware",
-    "college": "Alfred Lerner College of Business and Economics",
-    "public_email": "zhejianw@udel.edu",
+    "title": "Postdoctoral Fellow",
+    "institution": "Peking University",
+    "college": "National School of Development",
+    "public_email": "zhejianw@pku.edu.cn",
+    "secondary_public_email": "zhejianw@udel.edu",
     "orcid": "0009-0001-0016-0421",
-    "dissertation_status": "Dissertation successfully defended; degree pending formal conferral.",
-    "degree_conferred": false
+    "dissertation_status": "Ph.D. in Economics, University of Delaware, conferred August 18, 2026.",
+    "degree_conferred": true,
+    "degree_conferred_at": "2026-08-18",
+    "appointment_start": "2026-09"
   },
   "research": {
     "umbrella_field": "Applied Microeconomics",
     "primary_fields": [
-      "Economics of Education",
-      "Digital Economics",
-      "Family and Household Economics"
+      "Development Economics",
+      "Labor Economics"
     ],
     "cross_cutting_areas": [
       "Human Capital",
       "Technology Policy and Regulation",
-      "Development Economics"
+      "Family Institutions"
     ],
-    "summary": "I study how digital regulation, education policy, and household institutions shape human capital and behavior. My work uses policy variation and large-scale microdata, with a primary focus on China."
+    "summary": "I study how digital regulation, education policy, and household institutions shape human capital and behavior. My work uses policy variation and large-scale microdata, with a primary focus on China.",
+    "developing_direction": "At Peking University, I am developing research on digital technologies and education, including how artificial intelligence may affect learning and educational opportunity."
   },
-  "confirmed_publication": {
-    "title": "Restricting video games in China: Effects on time use, educational achievement, and health",
-    "journal": "Journal of Development Economics",
-    "volume": "182",
-    "article": "103812",
-    "year": 2026,
-    "doi": "https://doi.org/10.1016/j.jdeveco.2026.103812"
-  },
+  "confirmed_publications": [
+    {
+      "journal": "Journal of Development Economics",
+      "volume": "182",
+      "article": "103812",
+      "year": 2026,
+      "doi": "https://doi.org/10.1016/j.jdeveco.2026.103812",
+      "corresponding_author": "Zhejian Wang",
+      "title": "Restricting video games in China: Effects on time use, educational achievement, and health",
+      "authors": [
+        "Zhejian Wang"
+      ]
+    },
+    {
+      "journal": "Review of Economics of the Household",
+      "year": 2026,
+      "doi": "https://doi.org/10.1007/s11150-026-09890-w",
+      "corresponding_author": "Ruoming Zhang",
+      "title": "Premarital property rights and marriage entry: evidence from urban China",
+      "authors": [
+        "Zhejian Wang",
+        "Ruoming Zhang"
+      ]
+    }
+  ],
   "submission": {
     "jel_core": [
       "I21",
@@ -75,6 +95,7 @@
   "canonical_urls": {
     "home": "https://zhejianwang.com/",
     "research": "https://zhejianwang.com/research/",
+    "cv": "https://zhejianwang.com/cv/",
     "ai_context": "https://zhejianwang.com/ai/context/",
     "writing_guidance": "https://zhejianwang.com/ai/writing-guidance/",
     "submission_profile": "https://zhejianwang.com/ai/submission-profile/"
