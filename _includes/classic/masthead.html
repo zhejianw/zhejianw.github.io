@@ -4,11 +4,11 @@
 <div class="masthead classic-masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Classic site navigation">
+      <nav id="classic-site-nav" class="greedy-nav" aria-label="Classic site navigation">
         <button type="button" aria-label="Toggle navigation"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a href="{{ '/classic/' | relative_url }}">{{ site.title }}</a>
+            <a href="{{ site.data.version_routes.home.classic | relative_url }}">{{ site.title }}</a>
           </li>
           {% for route_pair in site.data.version_routes %}
             {% assign route_key = route_pair[0] %}
